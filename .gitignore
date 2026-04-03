@@ -1,0 +1,22 @@
+# ScanNet data (restricted license - do not redistribute)
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Downloaded model weights (too large)
+*.pth
+*.pt
+*.bin
+*.ckpt
