@@ -4,9 +4,8 @@ Code for the experiments of the Master's dissertation:
 **"Metric Spatial Reasoning in Vision-Language Models
 Supported by 3D Indoor Scene Information"**
 
-Federal University of Bahia — PGCOMP  
-Author: [Your Name]  
-Advisor: Prof. Dr. [Advisor Name]
+Federal University of Bahia — PPGM
+Author: Jefferson Lopes 
 
 ## Reproducing the experiments
 
