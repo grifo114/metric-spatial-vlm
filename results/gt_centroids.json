@@ -1,0 +1,8974 @@
+{
+  "scene0000_00": [
+    {
+      "object_id": 0,
+      "label": "window",
+      "centroid": [
+        4.421947215566572,
+        8.26341383820338,
+        1.900305027203844
+      ],
+      "n_points": 604,
+      "in_target": true
+    },
+    {
+      "object_id": 1,
+      "label": "window",
+      "centroid": [
+        8.06093692779541,
+        2.1252554682168094,
+        1.533684261820533
+      ],
+      "n_points": 220,
+      "in_target": true
+    },
+    {
+      "object_id": 2,
+      "label": "table",
+      "centroid": [
+        4.486607180017605,
+        6.87988033617337,
+        0.8682351255556162
+      ],
+      "n_points": 2867,
+      "in_target": true
+    },
+    {
+      "object_id": 3,
+      "label": "kitchen counter",
+      "centroid": [
+        5.959926834354153,
+        8.075408315245724,
+        1.009036313532751
+      ],
+      "n_points": 462,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "shower",
+      "centroid": [
+        6.521327905156893,
+        2.0239633584150516,
+        0.7788190723316387
+      ],
+      "n_points": 2049,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "curtain",
+      "centroid": [
+        0.8785005522372634,
+        3.484001116908739,
+        0.9831596830600606
+      ],
+      "n_points": 4154,
+      "in_target": true
+    },
+    {
+      "object_id": 6,
+      "label": "curtain",
+      "centroid": [
+        3.378339358389159,
+        0.5083935236264935,
+        1.6361975192150353
+      ],
+      "n_points": 1365,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "desk",
+      "centroid": [
+        3.0679181498103727,
+        0.8111897332767594,
+        0.4743452736912477
+      ],
+      "n_points": 1897,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "cabinet",
+      "centroid": [
+        0.7665806334432148,
+        5.8007131903571905,
+        1.3497434568732374
+      ],
+      "n_points": 4103,
+      "in_target": true
+    },
+    {
+      "object_id": 9,
+      "label": "floor",
+      "centroid": [
+        4.111215019580767,
+        4.17789346965724,
+        0.06122726479978568
+      ],
+      "n_points": 10234,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "sink",
+      "centroid": [
+        7.773530686099226,
+        3.445798944373157,
+        0.6291991352561593
+      ],
+      "n_points": 362,
+      "in_target": true
+    },
+    {
+      "object_id": 11,
+      "label": "scale",
+      "centroid": [
+        6.1872670505986065,
+        3.0655543479052456,
+        0.07118588996430238
+      ],
+      "n_points": 66,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "trash can",
+      "centroid": [
+        6.471342404683431,
+        5.9371216380181,
+        0.3131791452381445
+      ],
+      "n_points": 201,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "trash can",
+      "centroid": [
+        6.808959327069631,
+        5.95291407137032,
+        0.46997995839181195
+      ],
+      "n_points": 249,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "trash can",
+      "centroid": [
+        3.6201566892365613,
+        1.1792319240048528,
+        0.20040966927384338
+      ],
+      "n_points": 192,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "tv",
+      "centroid": [
+        0.8322948634395673,
+        5.863895251517561,
+        1.1144589756592223
+      ],
+      "n_points": 521,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "pillow",
+      "centroid": [
+        4.9481988041817475,
+        1.281248394663006,
+        0.9655816599338914
+      ],
+      "n_points": 269,
+      "in_target": true
+    },
+    {
+      "object_id": 17,
+      "label": "clock",
+      "centroid": [
+        1.6782179034274558,
+        1.0667367098124132,
+        1.8427737251571987
+      ],
+      "n_points": 46,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "backpack",
+      "centroid": [
+        2.275587977365006,
+        4.283168665198392,
+        0.2565903987504484
+      ],
+      "n_points": 258,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "wall",
+      "centroid": [
+        4.488089720582596,
+        0.8852960557237345,
+        1.451101316566938
+      ],
+      "n_points": 2733,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "wall",
+      "centroid": [
+        1.2268848171607465,
+        2.363135196087288,
+        1.9189080320879774
+      ],
+      "n_points": 1436,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "wall",
+      "centroid": [
+        4.63665670346996,
+        8.269859082731482,
+        1.4193174476628978
+      ],
+      "n_points": 2190,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "wall",
+      "centroid": [
+        6.0848237258494775,
+        2.9802377129023054,
+        0.7807456956005994
+      ],
+      "n_points": 678,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "wall",
+      "centroid": [
+        6.921597576241586,
+        6.416549927425335,
+        1.991513540344807
+      ],
+      "n_points": 1903,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "wall",
+      "centroid": [
+        8.116674519840958,
+        3.0437323506417377,
+        1.4029972066730807
+      ],
+      "n_points": 1367,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "wall",
+      "centroid": [
+        6.925684002240499,
+        3.828957272370656,
+        1.5233562481941447
+      ],
+      "n_points": 900,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "wall",
+      "centroid": [
+        6.011681840729594,
+        2.637686059518826,
+        1.305898245438576
+      ],
+      "n_points": 1793,
+      "in_target": false
+    },
+    {
+      "object_id": 27,
+      "label": "wall",
+      "centroid": [
+        7.8034929046376265,
+        2.1198668039680455,
+        0.8713787666110693
+      ],
+      "n_points": 899,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "stool",
+      "centroid": [
+        4.888882309476906,
+        6.295864590974611,
+        0.4416165294885821
+      ],
+      "n_points": 642,
+      "in_target": false
+    },
+    {
+      "object_id": 29,
+      "label": "stool",
+      "centroid": [
+        4.791033776324729,
+        6.765711570408033,
+        0.48580634593963623
+      ],
+      "n_points": 575,
+      "in_target": false
+    },
+    {
+      "object_id": 30,
+      "label": "stool",
+      "centroid": [
+        4.466441749895691,
+        7.821834064665294,
+        0.5557831586511047
+      ],
+      "n_points": 378,
+      "in_target": false
+    },
+    {
+      "object_id": 31,
+      "label": "stool",
+      "centroid": [
+        4.576069995280235,
+        7.309167910006739,
+        0.510331638307581
+      ],
+      "n_points": 496,
+      "in_target": false
+    },
+    {
+      "object_id": 32,
+      "label": "couch",
+      "centroid": [
+        3.5047836995727994,
+        5.555693332670623,
+        0.5778761105401875
+      ],
+      "n_points": 5099,
+      "in_target": false
+    },
+    {
+      "object_id": 33,
+      "label": "refrigerator",
+      "centroid": [
+        6.208857943529417,
+        6.450943101505269,
+        1.0754473550494579
+      ],
+      "n_points": 1404,
+      "in_target": true
+    },
+    {
+      "object_id": 34,
+      "label": "coffee table",
+      "centroid": [
+        2.629127118322584,
+        6.156881021730827,
+        0.36272296625556366
+      ],
+      "n_points": 792,
+      "in_target": false
+    },
+    {
+      "object_id": 35,
+      "label": "table",
+      "centroid": [
+        1.8303633916668776,
+        1.613889074616316,
+        0.29019609372608546
+      ],
+      "n_points": 820,
+      "in_target": true
+    },
+    {
+      "object_id": 36,
+      "label": "toilet",
+      "centroid": [
+        7.982783167372716,
+        2.5929377677682215,
+        0.4156147740567965
+      ],
+      "n_points": 454,
+      "in_target": true
+    },
+    {
+      "object_id": 37,
+      "label": "bed",
+      "centroid": [
+        4.819951336207871,
+        2.2108042388448217,
+        0.5154131193889321
+      ],
+      "n_points": 2954,
+      "in_target": true
+    },
+    {
+      "object_id": 38,
+      "label": "cabinet",
+      "centroid": [
+        7.302338662512178,
+        4.631921316404059,
+        1.249787320978222
+      ],
+      "n_points": 1713,
+      "in_target": true
+    },
+    {
+      "object_id": 39,
+      "label": "cabinet",
+      "centroid": [
+        2.2221902213201163,
+        0.7280683186717432,
+        0.9245260111379565
+      ],
+      "n_points": 1642,
+      "in_target": true
+    },
+    {
+      "object_id": 40,
+      "label": "kitchen cabinets",
+      "centroid": [
+        6.369346828712766,
+        6.4931425985260685,
+        2.1809170913066107
+      ],
+      "n_points": 454,
+      "in_target": false
+    },
+    {
+      "object_id": 41,
+      "label": "cabinet",
+      "centroid": [
+        5.951946036243217,
+        1.8628055060104334,
+        1.9177164753555973
+      ],
+      "n_points": 429,
+      "in_target": true
+    },
+    {
+      "object_id": 42,
+      "label": "cabinet",
+      "centroid": [
+        5.817479371681488,
+        7.688486915012057,
+        0.5417909797468632
+      ],
+      "n_points": 695,
+      "in_target": true
+    },
+    {
+      "object_id": 43,
+      "label": "kitchen cabinets",
+      "centroid": [
+        6.082982837459865,
+        7.8754581091166465,
+        1.908337556991972
+      ],
+      "n_points": 773,
+      "in_target": false
+    },
+    {
+      "object_id": 44,
+      "label": "object",
+      "centroid": [
+        6.047405934229689,
+        2.947921725860329,
+        0.7958283591446137
+      ],
+      "n_points": 229,
+      "in_target": false
+    },
+    {
+      "object_id": 45,
+      "label": "toaster oven",
+      "centroid": [
+        6.383012510372692,
+        7.2201178781153486,
+        1.0995208588228271
+      ],
+      "n_points": 418,
+      "in_target": false
+    },
+    {
+      "object_id": 46,
+      "label": "laundry basket",
+      "centroid": [
+        5.748586593239994,
+        2.2095279309709195,
+        0.3435783124007916
+      ],
+      "n_points": 295,
+      "in_target": false
+    },
+    {
+      "object_id": 47,
+      "label": "guitar",
+      "centroid": [
+        5.775978212395022,
+        3.3493875293962416,
+        0.473062458718496
+      ],
+      "n_points": 496,
+      "in_target": false
+    },
+    {
+      "object_id": 48,
+      "label": "tissue box",
+      "centroid": [
+        4.078248083591461,
+        0.8832669238249461,
+        0.7990990370512009
+      ],
+      "n_points": 120,
+      "in_target": false
+    },
+    {
+      "object_id": 49,
+      "label": "nightstand",
+      "centroid": [
+        3.9263033032041244,
+        0.9645176740474881,
+        0.4837341365001931
+      ],
+      "n_points": 317,
+      "in_target": true
+    },
+    {
+      "object_id": 50,
+      "label": "nightstand",
+      "centroid": [
+        6.007419255759212,
+        1.6983192768334354,
+        0.5695580069702196
+      ],
+      "n_points": 241,
+      "in_target": true
+    },
+    {
+      "object_id": 51,
+      "label": "dish rack",
+      "centroid": [
+        6.050429675538661,
+        8.193222743979955,
+        1.1475184294631926
+      ],
+      "n_points": 472,
+      "in_target": false
+    },
+    {
+      "object_id": 52,
+      "label": "microwave",
+      "centroid": [
+        6.257470807858875,
+        7.306193466697421,
+        1.7168037279375963
+      ],
+      "n_points": 224,
+      "in_target": false
+    },
+    {
+      "object_id": 53,
+      "label": "toaster",
+      "centroid": [
+        6.32807234260771,
+        7.7280992534425526,
+        1.1082246220774121
+      ],
+      "n_points": 72,
+      "in_target": false
+    },
+    {
+      "object_id": 54,
+      "label": "door",
+      "centroid": [
+        7.339723078303512,
+        5.541977533129944,
+        1.032710727322909
+      ],
+      "n_points": 598,
+      "in_target": true
+    },
+    {
+      "object_id": 55,
+      "label": "ceiling",
+      "centroid": [
+        3.5197817271383425,
+        5.690984540829422,
+        2.6215471504883445
+      ],
+      "n_points": 2509,
+      "in_target": false
+    },
+    {
+      "object_id": 56,
+      "label": "shelf",
+      "centroid": [
+        2.4657413928365353,
+        7.060757846590029,
+        1.2738122064986268
+      ],
+      "n_points": 4173,
+      "in_target": false
+    },
+    {
+      "object_id": 57,
+      "label": "bicycle",
+      "centroid": [
+        0.7079481055229409,
+        4.395333233788527,
+        0.5038392267714754
+      ],
+      "n_points": 1448,
+      "in_target": false
+    },
+    {
+      "object_id": 58,
+      "label": "shoes",
+      "centroid": [
+        1.4797948238461516,
+        2.3039742680483086,
+        0.1252316078820894
+      ],
+      "n_points": 43,
+      "in_target": false
+    },
+    {
+      "object_id": 59,
+      "label": "object",
+      "centroid": [
+        3.6682512025413274,
+        0.8697736062718637,
+        0.6193708710887897
+      ],
+      "n_points": 318,
+      "in_target": false
+    },
+    {
+      "object_id": 60,
+      "label": "object",
+      "centroid": [
+        5.8622680352284355,
+        2.1026869546144438,
+        1.347626587519279
+      ],
+      "n_points": 156,
+      "in_target": false
+    },
+    {
+      "object_id": 61,
+      "label": "object",
+      "centroid": [
+        3.9869997100492496,
+        2.584927938680733,
+        0.8955608585239512
+      ],
+      "n_points": 113,
+      "in_target": false
+    },
+    {
+      "object_id": 62,
+      "label": "object",
+      "centroid": [
+        4.271374082807357,
+        2.185568639469631,
+        0.8767793099892321
+      ],
+      "n_points": 197,
+      "in_target": false
+    },
+    {
+      "object_id": 63,
+      "label": "doorframe",
+      "centroid": [
+        6.72473386193023,
+        3.661161484525484,
+        1.175800722277285
+      ],
+      "n_points": 544,
+      "in_target": false
+    },
+    {
+      "object_id": 64,
+      "label": "mirror",
+      "centroid": [
+        7.905408158207571,
+        3.569835378634219,
+        1.679403474788792
+      ],
+      "n_points": 151,
+      "in_target": false
+    },
+    {
+      "object_id": 65,
+      "label": "doorframe",
+      "centroid": [
+        7.290319903808482,
+        5.507270031115588,
+        1.1551282538703698
+      ],
+      "n_points": 272,
+      "in_target": false
+    },
+    {
+      "object_id": 66,
+      "label": "guitar case",
+      "centroid": [
+        3.9129607125894346,
+        7.306477795785932,
+        0.5729179708982137
+      ],
+      "n_points": 268,
+      "in_target": false
+    }
+  ],
+  "scene0001_00": [
+    {
+      "object_id": 0,
+      "label": "couch",
+      "centroid": [
+        1.7944123452211722,
+        4.590213722493754,
+        0.937031425945871
+      ],
+      "n_points": 5994,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "couch",
+      "centroid": [
+        2.9336032930059353,
+        6.669919046118065,
+        0.7755856106970777
+      ],
+      "n_points": 6053,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "floor",
+      "centroid": [
+        4.594955529916817,
+        3.9272825424046434,
+        0.15762636530185117
+      ],
+      "n_points": 44017,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "table",
+      "centroid": [
+        4.633019003606301,
+        5.836551632919204,
+        0.39901524483598155
+      ],
+      "n_points": 2131,
+      "in_target": true
+    },
+    {
+      "object_id": 4,
+      "label": "table",
+      "centroid": [
+        6.53455948649848,
+        0.5609225076517907,
+        0.45918571256764157
+      ],
+      "n_points": 1326,
+      "in_target": true
+    },
+    {
+      "object_id": 5,
+      "label": "table",
+      "centroid": [
+        2.2803695805860897,
+        5.752817945218305,
+        0.7048619770313878
+      ],
+      "n_points": 2402,
+      "in_target": true
+    },
+    {
+      "object_id": 6,
+      "label": "coffee table",
+      "centroid": [
+        6.558757519142932,
+        2.515670451468374,
+        0.3555534942765989
+      ],
+      "n_points": 1894,
+      "in_target": false
+    },
+    {
+      "object_id": 7,
+      "label": "coffee table",
+      "centroid": [
+        6.962736756145221,
+        3.0434647166965814,
+        0.3484347580316192
+      ],
+      "n_points": 2114,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "couch",
+      "centroid": [
+        7.13218105768255,
+        4.1427671344216135,
+        0.47088704689556266
+      ],
+      "n_points": 5839,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "couch",
+      "centroid": [
+        5.82679974810401,
+        1.85561638086367,
+        0.48166605082412356
+      ],
+      "n_points": 6432,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "armchair",
+      "centroid": [
+        3.2087901798085414,
+        4.696878585552245,
+        0.7059913152395764
+      ],
+      "n_points": 3841,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "armchair",
+      "centroid": [
+        3.7239596203950507,
+        5.215601228098137,
+        0.6348232326836422
+      ],
+      "n_points": 3190,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "armchair",
+      "centroid": [
+        5.387330004896592,
+        3.293355291898364,
+        0.44959886193074544
+      ],
+      "n_points": 3931,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "armchair",
+      "centroid": [
+        5.815403153599312,
+        4.05278724241337,
+        0.44234023995537575
+      ],
+      "n_points": 2376,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "column",
+      "centroid": [
+        4.766439930993329,
+        6.442574294961704,
+        1.3663692136407888
+      ],
+      "n_points": 3015,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "column",
+      "centroid": [
+        6.172322075935503,
+        5.3010748249653385,
+        0.8670948411936429
+      ],
+      "n_points": 2361,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "wall",
+      "centroid": [
+        3.5036520507769278,
+        2.39525998957926,
+        0.809602137384196
+      ],
+      "n_points": 12091,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "window",
+      "centroid": [
+        2.211626938763946,
+        3.29653668450415,
+        1.3041374681690505
+      ],
+      "n_points": 4586,
+      "in_target": true
+    },
+    {
+      "object_id": 18,
+      "label": "picture",
+      "centroid": [
+        5.7534665572974415,
+        0.7134173776333531,
+        1.3465850049008925
+      ],
+      "n_points": 576,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "door",
+      "centroid": [
+        4.763506100406209,
+        1.2763537107906093,
+        0.673872376327519
+      ],
+      "n_points": 2223,
+      "in_target": true
+    },
+    {
+      "object_id": 20,
+      "label": "doorframe",
+      "centroid": [
+        4.987694649380932,
+        1.2302551153568906,
+        0.8695607226240496
+      ],
+      "n_points": 257,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "wall",
+      "centroid": [
+        4.748461313145135,
+        1.0266769066933663,
+        0.9087701487925745
+      ],
+      "n_points": 186,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "wall",
+      "centroid": [
+        7.239311927677157,
+        0.7539137219703098,
+        0.7641381003380907
+      ],
+      "n_points": 4613,
+      "in_target": false
+    }
+  ],
+  "scene0010_00": [
+    {
+      "object_id": 0,
+      "label": "bag",
+      "centroid": [
+        2.024128481570412,
+        2.961033184037489,
+        0.3403411282116876
+      ],
+      "n_points": 680,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "object",
+      "centroid": [
+        2.3583053846800452,
+        3.410253043700792,
+        0.8178908097362179
+      ],
+      "n_points": 281,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "object",
+      "centroid": [
+        2.008627787232399,
+        3.2483295405452903,
+        0.8361230370673266
+      ],
+      "n_points": 176,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "book",
+      "centroid": [
+        2.9553176565170287,
+        4.099256577014923,
+        1.0117886356115342
+      ],
+      "n_points": 500,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "object",
+      "centroid": [
+        2.8990180309588154,
+        4.062789252010017,
+        0.8677494895343963
+      ],
+      "n_points": 313,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "object",
+      "centroid": [
+        3.058060574153113,
+        4.020927625989157,
+        0.9493820591578408
+      ],
+      "n_points": 63,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "whiteboard",
+      "centroid": [
+        5.264098163782926,
+        3.9877460934754434,
+        1.2215663389929294
+      ],
+      "n_points": 3147,
+      "in_target": false
+    },
+    {
+      "object_id": 7,
+      "label": "recycling bin",
+      "centroid": [
+        4.768378456003699,
+        4.348860315414264,
+        0.2617461160573838
+      ],
+      "n_points": 647,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "backpack",
+      "centroid": [
+        4.927323874212908,
+        4.03393428516702,
+        0.30691916241211376
+      ],
+      "n_points": 911,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "object",
+      "centroid": [
+        5.241730346251671,
+        3.7774384794195104,
+        0.1711652033438522
+      ],
+      "n_points": 713,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "file cabinet",
+      "centroid": [
+        4.393616951663386,
+        2.185059143738313,
+        0.4055613958573138
+      ],
+      "n_points": 1408,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "window",
+      "centroid": [
+        5.28058788147311,
+        2.233975995538504,
+        1.2258222073382654
+      ],
+      "n_points": 1804,
+      "in_target": true
+    },
+    {
+      "object_id": 12,
+      "label": "laptop",
+      "centroid": [
+        5.392812049661884,
+        3.038295615174388,
+        0.9227271333905577
+      ],
+      "n_points": 655,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "paper",
+      "centroid": [
+        4.518889184534197,
+        2.2356395054851057,
+        0.8278990851704185
+      ],
+      "n_points": 338,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "backpack",
+      "centroid": [
+        3.997328814476897,
+        1.5169523383601238,
+        0.8815976957985237
+      ],
+      "n_points": 708,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "shelf",
+      "centroid": [
+        3.137635808941067,
+        0.3796245593562536,
+        1.4800898047455453
+      ],
+      "n_points": 6821,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "wall",
+      "centroid": [
+        2.713397310626122,
+        0.23823710736210826,
+        1.4321507848521913
+      ],
+      "n_points": 403,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "box",
+      "centroid": [
+        3.0497572111609186,
+        0.440405081856531,
+        1.6768173343665345
+      ],
+      "n_points": 553,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "box",
+      "centroid": [
+        3.180185257617295,
+        0.5993124419571952,
+        1.2865275521375334
+      ],
+      "n_points": 541,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "box",
+      "centroid": [
+        3.1515948991351355,
+        0.5615695174061927,
+        0.9551596292635289
+      ],
+      "n_points": 697,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "box",
+      "centroid": [
+        2.810347171056838,
+        1.1469066310866773,
+        0.400894129066487
+      ],
+      "n_points": 483,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "box",
+      "centroid": [
+        2.6316156465316487,
+        1.019031405379282,
+        0.8613231977291196
+      ],
+      "n_points": 856,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "computer tower",
+      "centroid": [
+        1.9248501461749288,
+        1.0727797323400614,
+        0.4534745929807848
+      ],
+      "n_points": 1197,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "box",
+      "centroid": [
+        2.1600713952787474,
+        0.7520207049323772,
+        0.8853240002425387
+      ],
+      "n_points": 2786,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "shelf",
+      "centroid": [
+        1.2691605222151798,
+        1.1204661342037698,
+        0.9150089883690302
+      ],
+      "n_points": 4548,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "box",
+      "centroid": [
+        1.542610676355765,
+        1.058433465344805,
+        1.3604167086977355
+      ],
+      "n_points": 568,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "fan",
+      "centroid": [
+        1.2105956817609451,
+        1.152998899808054,
+        0.5422989048486686
+      ],
+      "n_points": 2343,
+      "in_target": false
+    },
+    {
+      "object_id": 27,
+      "label": "wall",
+      "centroid": [
+        1.639993146105321,
+        3.638097025167308,
+        1.1844681222579208
+      ],
+      "n_points": 14681,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "wall",
+      "centroid": [
+        3.9946301319692115,
+        5.290489847483795,
+        0.6585334647486956
+      ],
+      "n_points": 8643,
+      "in_target": false
+    },
+    {
+      "object_id": 29,
+      "label": "wall",
+      "centroid": [
+        3.5209954579671225,
+        5.704923024253239,
+        0.42805724673801
+      ],
+      "n_points": 63,
+      "in_target": false
+    },
+    {
+      "object_id": 30,
+      "label": "wall",
+      "centroid": [
+        2.548433770598358,
+        0.286194242561611,
+        1.616063944459355
+      ],
+      "n_points": 1515,
+      "in_target": false
+    },
+    {
+      "object_id": 31,
+      "label": "wall",
+      "centroid": [
+        4.642926378211003,
+        1.6284537916819666,
+        1.0322894255641932
+      ],
+      "n_points": 4632,
+      "in_target": false
+    },
+    {
+      "object_id": 32,
+      "label": "books",
+      "centroid": [
+        5.603085592362354,
+        3.3418510231980303,
+        1.090082843331503
+      ],
+      "n_points": 1114,
+      "in_target": false
+    },
+    {
+      "object_id": 33,
+      "label": "wall",
+      "centroid": [
+        4.029873621945056,
+        0.9837635883725948,
+        0.34239458700537867
+      ],
+      "n_points": 1288,
+      "in_target": false
+    },
+    {
+      "object_id": 34,
+      "label": "floor",
+      "centroid": [
+        3.1692159368313377,
+        2.8920908392919618,
+        0.08805301603992118
+      ],
+      "n_points": 26914,
+      "in_target": false
+    },
+    {
+      "object_id": 35,
+      "label": "chair",
+      "centroid": [
+        4.610151291395488,
+        3.08845586074026,
+        0.4293194139062574
+      ],
+      "n_points": 1900,
+      "in_target": true
+    },
+    {
+      "object_id": 36,
+      "label": "chair",
+      "centroid": [
+        3.4475805774171393,
+        2.0637641383514658,
+        0.49240392609902484
+      ],
+      "n_points": 2426,
+      "in_target": true
+    },
+    {
+      "object_id": 37,
+      "label": "chair",
+      "centroid": [
+        1.6790520170309249,
+        1.9259938443031388,
+        0.7319669644703672
+      ],
+      "n_points": 1507,
+      "in_target": true
+    },
+    {
+      "object_id": 38,
+      "label": "chair",
+      "centroid": [
+        2.587894014471563,
+        2.7802847087952074,
+        0.579534648610293
+      ],
+      "n_points": 1991,
+      "in_target": true
+    },
+    {
+      "object_id": 39,
+      "label": "chair",
+      "centroid": [
+        3.327777820246862,
+        2.9862067466771562,
+        0.5762201735938951
+      ],
+      "n_points": 2029,
+      "in_target": true
+    },
+    {
+      "object_id": 40,
+      "label": "shelf",
+      "centroid": [
+        1.9851007148645563,
+        0.4227631151860171,
+        1.5268438388712422
+      ],
+      "n_points": 6069,
+      "in_target": false
+    },
+    {
+      "object_id": 41,
+      "label": "desk",
+      "centroid": [
+        1.5530169735871229,
+        2.9640995760644224,
+        0.7995713957790407
+      ],
+      "n_points": 7809,
+      "in_target": true
+    },
+    {
+      "object_id": 42,
+      "label": "speaker",
+      "centroid": [
+        1.7264301014809886,
+        3.329135576662579,
+        1.0000376367635382
+      ],
+      "n_points": 718,
+      "in_target": false
+    },
+    {
+      "object_id": 43,
+      "label": "speaker",
+      "centroid": [
+        2.472497830956669,
+        4.114722649256389,
+        0.975864533089424
+      ],
+      "n_points": 531,
+      "in_target": false
+    },
+    {
+      "object_id": 44,
+      "label": "speaker",
+      "centroid": [
+        4.903320549536442,
+        2.1479813071264737,
+        0.3105664680941381
+      ],
+      "n_points": 690,
+      "in_target": false
+    },
+    {
+      "object_id": 45,
+      "label": "monitor",
+      "centroid": [
+        2.137584662693641,
+        3.7389817872330755,
+        1.088118282152639
+      ],
+      "n_points": 1582,
+      "in_target": true
+    },
+    {
+      "object_id": 46,
+      "label": "monitor",
+      "centroid": [
+        4.571987125576624,
+        2.1228586272432266,
+        1.1289058761556319
+      ],
+      "n_points": 827,
+      "in_target": true
+    },
+    {
+      "object_id": 47,
+      "label": "monitor",
+      "centroid": [
+        3.882434025706861,
+        0.9567274487258604,
+        0.9216916461118916
+      ],
+      "n_points": 149,
+      "in_target": true
+    },
+    {
+      "object_id": 48,
+      "label": "monitor",
+      "centroid": [
+        1.3645812123410614,
+        2.989737077039263,
+        1.1589261841194833
+      ],
+      "n_points": 988,
+      "in_target": true
+    },
+    {
+      "object_id": 49,
+      "label": "monitor",
+      "centroid": [
+        0.854269528737215,
+        2.5010648784876244,
+        1.2178057639562778
+      ],
+      "n_points": 1917,
+      "in_target": true
+    },
+    {
+      "object_id": 50,
+      "label": "monitor",
+      "centroid": [
+        5.535094211786521,
+        3.0076370066683116,
+        1.222583758406225
+      ],
+      "n_points": 898,
+      "in_target": true
+    },
+    {
+      "object_id": 51,
+      "label": "monitor",
+      "centroid": [
+        5.171283503822658,
+        2.4442061241813327,
+        1.2016667930457903
+      ],
+      "n_points": 1150,
+      "in_target": true
+    },
+    {
+      "object_id": 52,
+      "label": "jacket",
+      "centroid": [
+        4.67847387641913,
+        3.3818521176652956,
+        0.7314385842464631
+      ],
+      "n_points": 2436,
+      "in_target": false
+    },
+    {
+      "object_id": 53,
+      "label": "table",
+      "centroid": [
+        4.240836182970675,
+        1.8773891802711373,
+        0.7706934150805813
+      ],
+      "n_points": 5055,
+      "in_target": true
+    },
+    {
+      "object_id": 54,
+      "label": "file cabinet",
+      "centroid": [
+        5.4297347816545445,
+        3.4422265292153384,
+        0.48028196196583334
+      ],
+      "n_points": 1269,
+      "in_target": false
+    },
+    {
+      "object_id": 55,
+      "label": "file cabinet",
+      "centroid": [
+        3.0038379816310705,
+        3.991150587913854,
+        0.4544846005766954
+      ],
+      "n_points": 1277,
+      "in_target": false
+    },
+    {
+      "object_id": 56,
+      "label": "computer tower",
+      "centroid": [
+        2.635196007244784,
+        3.7291472828884116,
+        0.42671131180435307
+      ],
+      "n_points": 1851,
+      "in_target": false
+    },
+    {
+      "object_id": 57,
+      "label": "computer tower",
+      "centroid": [
+        0.9509329301578854,
+        2.2068348075760214,
+        0.5330887137742465
+      ],
+      "n_points": 1218,
+      "in_target": false
+    },
+    {
+      "object_id": 58,
+      "label": "computer tower",
+      "centroid": [
+        5.2815794856334035,
+        3.172813743395404,
+        0.47402836684238553
+      ],
+      "n_points": 701,
+      "in_target": false
+    },
+    {
+      "object_id": 59,
+      "label": "computer tower",
+      "centroid": [
+        3.5369564116442644,
+        0.8413694772013911,
+        0.36322925249735516
+      ],
+      "n_points": 675,
+      "in_target": false
+    },
+    {
+      "object_id": 60,
+      "label": "door",
+      "centroid": [
+        3.8997870190315935,
+        5.229808867408568,
+        0.7756102196782468
+      ],
+      "n_points": 3320,
+      "in_target": true
+    },
+    {
+      "object_id": 61,
+      "label": "keyboard",
+      "centroid": [
+        3.6062320945439517,
+        1.2841388091996864,
+        0.8383748282988867
+      ],
+      "n_points": 216,
+      "in_target": false
+    },
+    {
+      "object_id": 62,
+      "label": "power strip",
+      "centroid": [
+        2.0174807376861574,
+        3.6548283214569093,
+        0.12564111429452895
+      ],
+      "n_points": 125,
+      "in_target": false
+    },
+    {
+      "object_id": 63,
+      "label": "window",
+      "centroid": [
+        0.28672183109246746,
+        1.8809162230670495,
+        1.2861757911609912
+      ],
+      "n_points": 1413,
+      "in_target": true
+    },
+    {
+      "object_id": 64,
+      "label": "wall",
+      "centroid": [
+        0.6535916204253832,
+        1.5163761848124906,
+        0.6069990337380896
+      ],
+      "n_points": 552,
+      "in_target": false
+    },
+    {
+      "object_id": 65,
+      "label": "backpack",
+      "centroid": [
+        2.037650849896404,
+        2.64520643243262,
+        0.3261733899890934
+      ],
+      "n_points": 1482,
+      "in_target": false
+    }
+  ],
+  "scene0011_00": [
+    {
+      "object_id": 0,
+      "label": "floor",
+      "centroid": [
+        5.084387771889436,
+        3.469027746513981,
+        0.07288767894760205
+      ],
+      "n_points": 54068,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "kitchen cabinets",
+      "centroid": [
+        2.7487595731139125,
+        2.716658844340241,
+        0.5119923144275002
+      ],
+      "n_points": 6153,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "table",
+      "centroid": [
+        4.591429002778899,
+        3.574275139909088,
+        0.7716604617380727
+      ],
+      "n_points": 12971,
+      "in_target": true
+    },
+    {
+      "object_id": 3,
+      "label": "armchair",
+      "centroid": [
+        7.241482505892443,
+        1.3408391040635264,
+        0.4915236556076026
+      ],
+      "n_points": 3243,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "chair",
+      "centroid": [
+        4.5303583567623615,
+        5.780104484674131,
+        0.6414262862948474
+      ],
+      "n_points": 3781,
+      "in_target": true
+    },
+    {
+      "object_id": 5,
+      "label": "chair",
+      "centroid": [
+        4.160632498978358,
+        4.784146840651023,
+        0.6409457690687613
+      ],
+      "n_points": 3152,
+      "in_target": true
+    },
+    {
+      "object_id": 6,
+      "label": "chair",
+      "centroid": [
+        3.9746584483027325,
+        3.8559368632296525,
+        0.5858936019856503
+      ],
+      "n_points": 3612,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "chair",
+      "centroid": [
+        3.9212025399551447,
+        3.040579796191402,
+        0.5375664518328844
+      ],
+      "n_points": 2694,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "chair",
+      "centroid": [
+        3.874466519117562,
+        2.2206590401103927,
+        0.5865732347159726
+      ],
+      "n_points": 3463,
+      "in_target": true
+    },
+    {
+      "object_id": 9,
+      "label": "chair",
+      "centroid": [
+        4.399031023160777,
+        1.7386911651019685,
+        0.6288158635878591
+      ],
+      "n_points": 3356,
+      "in_target": true
+    },
+    {
+      "object_id": 10,
+      "label": "chair",
+      "centroid": [
+        5.039587854599539,
+        2.3288584402935677,
+        0.6117082716360984
+      ],
+      "n_points": 3224,
+      "in_target": true
+    },
+    {
+      "object_id": 11,
+      "label": "chair",
+      "centroid": [
+        5.2642450296251395,
+        3.1968164752659045,
+        0.6186910064087102
+      ],
+      "n_points": 3800,
+      "in_target": true
+    },
+    {
+      "object_id": 12,
+      "label": "chair",
+      "centroid": [
+        5.331704172316105,
+        3.9995479208206586,
+        0.5737766822912169
+      ],
+      "n_points": 3422,
+      "in_target": true
+    },
+    {
+      "object_id": 13,
+      "label": "chair",
+      "centroid": [
+        5.414824531848129,
+        4.674480548680665,
+        0.6751517395432777
+      ],
+      "n_points": 2422,
+      "in_target": true
+    },
+    {
+      "object_id": 14,
+      "label": "wall",
+      "centroid": [
+        6.255038588188207,
+        6.5995603877547895,
+        1.0815873298191738
+      ],
+      "n_points": 6012,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "trash can",
+      "centroid": [
+        5.926620307330287,
+        6.534925771384777,
+        0.6085960157294801
+      ],
+      "n_points": 1411,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "wall",
+      "centroid": [
+        4.610290853821635,
+        6.878512763591143,
+        1.3329135040837854
+      ],
+      "n_points": 19770,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "table",
+      "centroid": [
+        5.021921378532934,
+        6.660746366635501,
+        0.6982347243763732
+      ],
+      "n_points": 4278,
+      "in_target": true
+    },
+    {
+      "object_id": 18,
+      "label": "tv",
+      "centroid": [
+        4.98160376450589,
+        6.768467312914063,
+        1.558224346628582
+      ],
+      "n_points": 9908,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "refrigerator",
+      "centroid": [
+        3.108465260740001,
+        6.396418704425129,
+        1.0915720948579364
+      ],
+      "n_points": 4892,
+      "in_target": true
+    },
+    {
+      "object_id": 20,
+      "label": "cabinet",
+      "centroid": [
+        2.7934336442146055,
+        6.178679743632055,
+        1.6941601398193715
+      ],
+      "n_points": 2166,
+      "in_target": true
+    },
+    {
+      "object_id": 21,
+      "label": "wall",
+      "centroid": [
+        2.169091648287177,
+        3.3389715369262527,
+        1.7028139314508608
+      ],
+      "n_points": 7609,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "ceiling",
+      "centroid": [
+        2.4663080887899245,
+        4.000319529627205,
+        2.451993569262048
+      ],
+      "n_points": 2094,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "window",
+      "centroid": [
+        2.3085684473373247,
+        5.030521430022968,
+        1.1845394300592824
+      ],
+      "n_points": 5281,
+      "in_target": true
+    },
+    {
+      "object_id": 24,
+      "label": "window",
+      "centroid": [
+        2.018247184237342,
+        2.107303531865101,
+        1.4087660214448872
+      ],
+      "n_points": 5590,
+      "in_target": true
+    },
+    {
+      "object_id": 25,
+      "label": "kitchen counter",
+      "centroid": [
+        2.601702459510685,
+        3.763888801989521,
+        0.8651570720205983
+      ],
+      "n_points": 5743,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "sink",
+      "centroid": [
+        2.402648264197416,
+        2.15579734092535,
+        0.7677477251097213
+      ],
+      "n_points": 1075,
+      "in_target": true
+    },
+    {
+      "object_id": 27,
+      "label": "refrigerator",
+      "centroid": [
+        2.627894715734204,
+        0.7872135264336365,
+        1.066784236706086
+      ],
+      "n_points": 6152,
+      "in_target": true
+    },
+    {
+      "object_id": 28,
+      "label": "cabinet",
+      "centroid": [
+        2.4636529602120922,
+        1.0501141110564223,
+        1.7497577195647245
+      ],
+      "n_points": 3535,
+      "in_target": true
+    },
+    {
+      "object_id": 29,
+      "label": "wall",
+      "centroid": [
+        3.9223209996187967,
+        0.20272441351446138,
+        1.0768522339812776
+      ],
+      "n_points": 3494,
+      "in_target": false
+    },
+    {
+      "object_id": 30,
+      "label": "doors",
+      "centroid": [
+        3.8214747514011282,
+        0.09507233418351994,
+        0.8056577872778901
+      ],
+      "n_points": 6336,
+      "in_target": false
+    },
+    {
+      "object_id": 31,
+      "label": "doorframe",
+      "centroid": [
+        3.7193595978072644,
+        0.16180661678176503,
+        1.1035649525690172
+      ],
+      "n_points": 1028,
+      "in_target": false
+    },
+    {
+      "object_id": 32,
+      "label": "trash can",
+      "centroid": [
+        5.318226821331197,
+        0.3556168712026566,
+        0.5571078560753151
+      ],
+      "n_points": 1148,
+      "in_target": false
+    }
+  ],
+  "scene0015_00": [
+    {
+      "object_id": 0,
+      "label": "chair",
+      "centroid": [
+        5.762024650604761,
+        3.5544193517618736,
+        0.678530582782374
+      ],
+      "n_points": 1844,
+      "in_target": true
+    },
+    {
+      "object_id": 1,
+      "label": "chair",
+      "centroid": [
+        6.364817357465123,
+        3.7690667808055878,
+        0.7941989866870173
+      ],
+      "n_points": 712,
+      "in_target": true
+    },
+    {
+      "object_id": 2,
+      "label": "window",
+      "centroid": [
+        5.30548939098136,
+        7.09682892793207,
+        1.3882635385333677
+      ],
+      "n_points": 1391,
+      "in_target": true
+    },
+    {
+      "object_id": 3,
+      "label": "windowsill",
+      "centroid": [
+        5.163528803331594,
+        6.907215796332309,
+        1.293677436858845
+      ],
+      "n_points": 1041,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "wall",
+      "centroid": [
+        4.876228168757275,
+        7.277151526826801,
+        1.450682146380646
+      ],
+      "n_points": 99,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "wall",
+      "centroid": [
+        5.41304339867472,
+        6.614911532792889,
+        1.486657243608777
+      ],
+      "n_points": 366,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "window",
+      "centroid": [
+        5.8905111802741885,
+        6.054574814314644,
+        1.3029650778820117
+      ],
+      "n_points": 1536,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "windowsill",
+      "centroid": [
+        5.650895805055531,
+        6.00382088998677,
+        1.2518671272289208
+      ],
+      "n_points": 1006,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "wall",
+      "centroid": [
+        5.4708703071113645,
+        6.282958886754795,
+        1.3847539227778518
+      ],
+      "n_points": 127,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "wall",
+      "centroid": [
+        5.979687290991138,
+        5.591321399825776,
+        1.3219597268247318
+      ],
+      "n_points": 167,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "windowsill",
+      "centroid": [
+        6.2894478725245575,
+        5.016316222565767,
+        1.200828569609011
+      ],
+      "n_points": 1483,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "wall",
+      "centroid": [
+        6.481175844434281,
+        4.565657756697964,
+        1.2855429236318023
+      ],
+      "n_points": 355,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "chair",
+      "centroid": [
+        5.543273134789621,
+        1.925314246300246,
+        0.4816184184409857
+      ],
+      "n_points": 1914,
+      "in_target": true
+    },
+    {
+      "object_id": 13,
+      "label": "chair",
+      "centroid": [
+        5.758182285594291,
+        2.392688345746929,
+        0.4539163832102909
+      ],
+      "n_points": 588,
+      "in_target": true
+    },
+    {
+      "object_id": 14,
+      "label": "wall",
+      "centroid": [
+        2.9095988461440667,
+        0.6750826607785038,
+        0.8890998803858504
+      ],
+      "n_points": 2323,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "floor",
+      "centroid": [
+        3.601222349256862,
+        4.214427448718474,
+        0.1475911339652261
+      ],
+      "n_points": 65489,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "chair",
+      "centroid": [
+        4.01925831255179,
+        6.07036366615276,
+        0.6675560969183928
+      ],
+      "n_points": 1969,
+      "in_target": true
+    },
+    {
+      "object_id": 17,
+      "label": "chair",
+      "centroid": [
+        5.160146652536928,
+        4.922054728698334,
+        0.64877702444482
+      ],
+      "n_points": 1924,
+      "in_target": true
+    },
+    {
+      "object_id": 18,
+      "label": "chair",
+      "centroid": [
+        1.8669928731056145,
+        5.280597172744361,
+        0.611518633168183
+      ],
+      "n_points": 1449,
+      "in_target": true
+    },
+    {
+      "object_id": 19,
+      "label": "chair",
+      "centroid": [
+        4.4718909021103475,
+        1.8486429826526654,
+        0.5826172356172682
+      ],
+      "n_points": 1691,
+      "in_target": true
+    },
+    {
+      "object_id": 20,
+      "label": "chair",
+      "centroid": [
+        4.002922661502623,
+        1.806028315672606,
+        0.5222486688807886
+      ],
+      "n_points": 1492,
+      "in_target": true
+    },
+    {
+      "object_id": 21,
+      "label": "chair",
+      "centroid": [
+        3.4234194677192846,
+        1.2579607966896538,
+        0.6537262142955006
+      ],
+      "n_points": 1430,
+      "in_target": true
+    },
+    {
+      "object_id": 22,
+      "label": "chair",
+      "centroid": [
+        3.233273384534768,
+        3.298771712078056,
+        0.45283262151752024
+      ],
+      "n_points": 788,
+      "in_target": true
+    },
+    {
+      "object_id": 23,
+      "label": "chair",
+      "centroid": [
+        2.1806680262868534,
+        3.860222932370404,
+        0.5788519716134937
+      ],
+      "n_points": 1911,
+      "in_target": true
+    },
+    {
+      "object_id": 24,
+      "label": "chair",
+      "centroid": [
+        2.6435922293643355,
+        2.895611508987058,
+        0.5739429089239083
+      ],
+      "n_points": 1697,
+      "in_target": true
+    },
+    {
+      "object_id": 25,
+      "label": "chair",
+      "centroid": [
+        1.5680463089607657,
+        4.0879643023014065,
+        0.6568901611724869
+      ],
+      "n_points": 1280,
+      "in_target": true
+    },
+    {
+      "object_id": 26,
+      "label": "chair",
+      "centroid": [
+        4.573215194359804,
+        4.749036557368743,
+        0.5957426506739396
+      ],
+      "n_points": 1950,
+      "in_target": true
+    },
+    {
+      "object_id": 27,
+      "label": "chair",
+      "centroid": [
+        4.346587347967906,
+        7.580074488501342,
+        0.8472610292398594
+      ],
+      "n_points": 1453,
+      "in_target": true
+    },
+    {
+      "object_id": 28,
+      "label": "chair",
+      "centroid": [
+        0.9694988451445826,
+        5.225901227789565,
+        0.6822861695108703
+      ],
+      "n_points": 1252,
+      "in_target": true
+    },
+    {
+      "object_id": 29,
+      "label": "chair",
+      "centroid": [
+        5.242011051871178,
+        1.314273602243037,
+        0.4904609041099769
+      ],
+      "n_points": 908,
+      "in_target": true
+    },
+    {
+      "object_id": 30,
+      "label": "chair",
+      "centroid": [
+        5.140528934789459,
+        3.225562231357281,
+        0.6845843630678513
+      ],
+      "n_points": 1105,
+      "in_target": true
+    },
+    {
+      "object_id": 31,
+      "label": "table",
+      "centroid": [
+        5.567948449830849,
+        2.5506023328842073,
+        0.7132712304167866
+      ],
+      "n_points": 3161,
+      "in_target": true
+    },
+    {
+      "object_id": 32,
+      "label": "table",
+      "centroid": [
+        5.329524875680818,
+        4.2877304626341735,
+        0.7584047224432339
+      ],
+      "n_points": 4679,
+      "in_target": true
+    },
+    {
+      "object_id": 33,
+      "label": "table",
+      "centroid": [
+        4.001482901167362,
+        6.664105905950251,
+        0.8369007496033034
+      ],
+      "n_points": 3290,
+      "in_target": true
+    },
+    {
+      "object_id": 34,
+      "label": "table",
+      "centroid": [
+        4.325584356640837,
+        5.511422537896497,
+        0.7622737416558412
+      ],
+      "n_points": 4653,
+      "in_target": true
+    },
+    {
+      "object_id": 35,
+      "label": "table",
+      "centroid": [
+        1.1781334998145474,
+        6.04710474290235,
+        0.788995059675712
+      ],
+      "n_points": 4078,
+      "in_target": true
+    },
+    {
+      "object_id": 36,
+      "label": "table",
+      "centroid": [
+        4.502885610939252,
+        1.028573290853217,
+        0.706987054690276
+      ],
+      "n_points": 2525,
+      "in_target": true
+    },
+    {
+      "object_id": 37,
+      "label": "table",
+      "centroid": [
+        2.758594678995902,
+        3.7597390727690088,
+        0.6980879900136919
+      ],
+      "n_points": 3420,
+      "in_target": true
+    },
+    {
+      "object_id": 38,
+      "label": "wall",
+      "centroid": [
+        2.157906844273353,
+        1.981969597467364,
+        1.0866811460652739
+      ],
+      "n_points": 4461,
+      "in_target": false
+    },
+    {
+      "object_id": 39,
+      "label": "wall",
+      "centroid": [
+        4.406094374447523,
+        0.7000400772118455,
+        0.7964272452233421
+      ],
+      "n_points": 5426,
+      "in_target": false
+    },
+    {
+      "object_id": 40,
+      "label": "whiteboard",
+      "centroid": [
+        1.8150729580023854,
+        3.250842794803536,
+        1.5006972620908212
+      ],
+      "n_points": 7566,
+      "in_target": false
+    },
+    {
+      "object_id": 41,
+      "label": "wall",
+      "centroid": [
+        1.2714598136690642,
+        4.155911000908752,
+        0.8096801628368739
+      ],
+      "n_points": 13031,
+      "in_target": false
+    },
+    {
+      "object_id": 42,
+      "label": "wall",
+      "centroid": [
+        1.7776596270506233,
+        4.950252671014132,
+        0.9264763786381841
+      ],
+      "n_points": 1613,
+      "in_target": false
+    },
+    {
+      "object_id": 43,
+      "label": "wall",
+      "centroid": [
+        1.6686394605733432,
+        4.60193517645534,
+        1.0380834721821863
+      ],
+      "n_points": 2856,
+      "in_target": false
+    },
+    {
+      "object_id": 44,
+      "label": "backpack",
+      "centroid": [
+        1.9106888554817023,
+        5.312274296339168,
+        0.8378581428712653
+      ],
+      "n_points": 645,
+      "in_target": false
+    },
+    {
+      "object_id": 45,
+      "label": "object",
+      "centroid": [
+        0.7385829338722713,
+        6.269119557840102,
+        1.3749432542720026
+      ],
+      "n_points": 1698,
+      "in_target": false
+    },
+    {
+      "object_id": 46,
+      "label": "wall",
+      "centroid": [
+        2.059755666191931,
+        7.318311636682177,
+        0.9236707393587124
+      ],
+      "n_points": 7816,
+      "in_target": false
+    },
+    {
+      "object_id": 47,
+      "label": "whiteboard",
+      "centroid": [
+        2.3911789685376545,
+        7.476616710646828,
+        1.5482693603012099
+      ],
+      "n_points": 10720,
+      "in_target": false
+    },
+    {
+      "object_id": 48,
+      "label": "wall",
+      "centroid": [
+        5.375252973512573,
+        6.233224655561459,
+        0.9461599332191525
+      ],
+      "n_points": 21311,
+      "in_target": false
+    },
+    {
+      "object_id": 49,
+      "label": "chair",
+      "centroid": [
+        4.422495726896532,
+        6.662121431916663,
+        0.717213819144671
+      ],
+      "n_points": 2167,
+      "in_target": true
+    },
+    {
+      "object_id": 50,
+      "label": "starbucks cup",
+      "centroid": [
+        4.513085567034208,
+        5.7638397583594685,
+        0.910424098945581
+      ],
+      "n_points": 104,
+      "in_target": false
+    },
+    {
+      "object_id": 51,
+      "label": "water bottle",
+      "centroid": [
+        4.923437790792496,
+        4.037526339129672,
+        0.9145329496899589
+      ],
+      "n_points": 183,
+      "in_target": false
+    },
+    {
+      "object_id": 52,
+      "label": "chair",
+      "centroid": [
+        3.9578213218859988,
+        4.659421644674609,
+        0.5727543456304399
+      ],
+      "n_points": 1316,
+      "in_target": true
+    },
+    {
+      "object_id": 53,
+      "label": "chair",
+      "centroid": [
+        5.236135261597328,
+        5.813500434717426,
+        0.694718356127086
+      ],
+      "n_points": 1979,
+      "in_target": true
+    }
+  ],
+  "scene0019_00": [
+    {
+      "object_id": 0,
+      "label": "chair",
+      "centroid": [
+        4.609434513212408,
+        5.077498538748732,
+        0.5596966722962058
+      ],
+      "n_points": 2060,
+      "in_target": true
+    },
+    {
+      "object_id": 1,
+      "label": "chair",
+      "centroid": [
+        2.5194820107713256,
+        4.340472037105237,
+        0.3948628279617277
+      ],
+      "n_points": 885,
+      "in_target": true
+    },
+    {
+      "object_id": 2,
+      "label": "floor",
+      "centroid": [
+        5.230734624379366,
+        3.4992233474342687,
+        0.09934083855439725
+      ],
+      "n_points": 31996,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "couch",
+      "centroid": [
+        6.728338315991161,
+        5.885031167787881,
+        0.5752997866938665
+      ],
+      "n_points": 6331,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "wall",
+      "centroid": [
+        7.660754795754029,
+        2.9836963469980247,
+        1.0815604383676127
+      ],
+      "n_points": 7522,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "wall",
+      "centroid": [
+        2.7310718492574724,
+        2.5086583491616383,
+        0.9471450991001349
+      ],
+      "n_points": 13194,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "wall",
+      "centroid": [
+        5.147508220146148,
+        1.0614145809436457,
+        0.887297057468515
+      ],
+      "n_points": 2681,
+      "in_target": false
+    },
+    {
+      "object_id": 7,
+      "label": "wall",
+      "centroid": [
+        4.9142101215986225,
+        5.978852703225549,
+        1.1902264782274576
+      ],
+      "n_points": 16328,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "trash can",
+      "centroid": [
+        4.787273308337759,
+        1.6172160635289459,
+        0.4390052151971871
+      ],
+      "n_points": 1455,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "vending machine",
+      "centroid": [
+        7.061754998962244,
+        3.9449655833304393,
+        1.1075639336300123
+      ],
+      "n_points": 11193,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "door",
+      "centroid": [
+        4.368889584096737,
+        2.233968448551743,
+        0.8001783747164706
+      ],
+      "n_points": 2735,
+      "in_target": true
+    },
+    {
+      "object_id": 11,
+      "label": "lamp",
+      "centroid": [
+        7.398417034440051,
+        3.1529402582214288,
+        0.852784075256851
+      ],
+      "n_points": 918,
+      "in_target": true
+    },
+    {
+      "object_id": 12,
+      "label": "chair",
+      "centroid": [
+        3.8068732505526586,
+        5.062286368841063,
+        1.0545481675993185
+      ],
+      "n_points": 1881,
+      "in_target": true
+    },
+    {
+      "object_id": 13,
+      "label": "chair",
+      "centroid": [
+        3.845483785023505,
+        4.872013915557207,
+        0.43703748780770363
+      ],
+      "n_points": 1165,
+      "in_target": true
+    },
+    {
+      "object_id": 14,
+      "label": "chair",
+      "centroid": [
+        3.0774169353859016,
+        4.785217393191664,
+        1.1172279843239459
+      ],
+      "n_points": 1867,
+      "in_target": true
+    },
+    {
+      "object_id": 15,
+      "label": "chair",
+      "centroid": [
+        3.1674052722478745,
+        4.6195477990754235,
+        0.38938450625451915
+      ],
+      "n_points": 1063,
+      "in_target": true
+    },
+    {
+      "object_id": 16,
+      "label": "chair",
+      "centroid": [
+        2.3817038559961414,
+        4.54431276068181,
+        1.1462589469486344
+      ],
+      "n_points": 1996,
+      "in_target": true
+    },
+    {
+      "object_id": 17,
+      "label": "wall",
+      "centroid": [
+        4.002599113295098,
+        2.6701179857488713,
+        0.7578703238171131
+      ],
+      "n_points": 1341,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "wall",
+      "centroid": [
+        4.75658572044703,
+        1.3303354399481622,
+        1.1643026729695278
+      ],
+      "n_points": 1616,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "door",
+      "centroid": [
+        6.470894290262441,
+        2.5727091579684926,
+        0.9349329181841575
+      ],
+      "n_points": 6469,
+      "in_target": true
+    },
+    {
+      "object_id": 20,
+      "label": "wall",
+      "centroid": [
+        7.7803142514524,
+        4.825174088095747,
+        0.9856671236569969
+      ],
+      "n_points": 4814,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "chair",
+      "centroid": [
+        7.706780208297361,
+        6.3735715245537,
+        1.2728456078815444
+      ],
+      "n_points": 5677,
+      "in_target": true
+    },
+    {
+      "object_id": 22,
+      "label": "chair",
+      "centroid": [
+        7.817945951844576,
+        6.211975371601456,
+        0.9254020254844022
+      ],
+      "n_points": 1161,
+      "in_target": true
+    },
+    {
+      "object_id": 23,
+      "label": "chair",
+      "centroid": [
+        5.238408401657005,
+        5.316741490597057,
+        0.5947224960200302
+      ],
+      "n_points": 1842,
+      "in_target": true
+    }
+  ],
+  "scene0030_00": [
+    {
+      "object_id": 0,
+      "label": "office chair",
+      "centroid": [
+        3.4462736653528947,
+        4.912757257233091,
+        0.643667050494623
+      ],
+      "n_points": 1077,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "office chair",
+      "centroid": [
+        3.6022647068038984,
+        3.6690537524199414,
+        0.5725776659121126
+      ],
+      "n_points": 1994,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "office chair",
+      "centroid": [
+        4.256716996323538,
+        3.9360651748124944,
+        0.44159236562074927
+      ],
+      "n_points": 1935,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "chair",
+      "centroid": [
+        0.6272266460249638,
+        2.3205652360603586,
+        0.5311759750793646
+      ],
+      "n_points": 3692,
+      "in_target": true
+    },
+    {
+      "object_id": 4,
+      "label": "chair",
+      "centroid": [
+        3.1299549293374587,
+        4.0262126872986705,
+        0.5281326505509668
+      ],
+      "n_points": 3988,
+      "in_target": true
+    },
+    {
+      "object_id": 5,
+      "label": "chair",
+      "centroid": [
+        2.85614050359252,
+        2.653128577014768,
+        0.5240685656857509
+      ],
+      "n_points": 2656,
+      "in_target": true
+    },
+    {
+      "object_id": 6,
+      "label": "chair",
+      "centroid": [
+        1.1682930339050857,
+        3.2271997762171805,
+        0.516580835632218
+      ],
+      "n_points": 2034,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "chair",
+      "centroid": [
+        5.037236226171573,
+        4.587128133940303,
+        0.5937469539663436
+      ],
+      "n_points": 2062,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "chair",
+      "centroid": [
+        3.992534718492242,
+        1.4281317264998816,
+        0.5675683474935292
+      ],
+      "n_points": 1571,
+      "in_target": true
+    },
+    {
+      "object_id": 9,
+      "label": "chair",
+      "centroid": [
+        4.391147327872942,
+        2.6915589428547793,
+        0.5990169632289583
+      ],
+      "n_points": 2544,
+      "in_target": true
+    },
+    {
+      "object_id": 10,
+      "label": "chair",
+      "centroid": [
+        4.587326870659851,
+        2.017215208141479,
+        0.6060575906807324
+      ],
+      "n_points": 1454,
+      "in_target": true
+    },
+    {
+      "object_id": 11,
+      "label": "chair",
+      "centroid": [
+        1.2307021606956488,
+        3.776741367481325,
+        0.5269519841790695
+      ],
+      "n_points": 1472,
+      "in_target": true
+    },
+    {
+      "object_id": 12,
+      "label": "chair",
+      "centroid": [
+        2.465450898597115,
+        4.2592211061217835,
+        0.5545951499843007
+      ],
+      "n_points": 1292,
+      "in_target": true
+    },
+    {
+      "object_id": 13,
+      "label": "chair",
+      "centroid": [
+        4.876153794658523,
+        3.8051075467094315,
+        0.5252755804465162
+      ],
+      "n_points": 1614,
+      "in_target": true
+    },
+    {
+      "object_id": 14,
+      "label": "chair",
+      "centroid": [
+        2.7700565110391646,
+        5.162397558613994,
+        0.6967431601402574
+      ],
+      "n_points": 603,
+      "in_target": true
+    },
+    {
+      "object_id": 15,
+      "label": "chair",
+      "centroid": [
+        2.5560959891874306,
+        1.8672300117192162,
+        0.5570784848091559
+      ],
+      "n_points": 1866,
+      "in_target": true
+    },
+    {
+      "object_id": 16,
+      "label": "floor",
+      "centroid": [
+        3.1360685318479424,
+        3.1450418844678603,
+        0.04637916653328831
+      ],
+      "n_points": 50496,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "bookshelf",
+      "centroid": [
+        2.5357430217991648,
+        0.9815081798547353,
+        1.2545892853005784
+      ],
+      "n_points": 7331,
+      "in_target": true
+    },
+    {
+      "object_id": 18,
+      "label": "bookshelf",
+      "centroid": [
+        4.9272517493360395,
+        0.36779116361123426,
+        1.3656534465151036
+      ],
+      "n_points": 14016,
+      "in_target": true
+    },
+    {
+      "object_id": 19,
+      "label": "bookshelf",
+      "centroid": [
+        6.536860419101402,
+        5.113814535545187,
+        0.7207413881827966
+      ],
+      "n_points": 5002,
+      "in_target": true
+    },
+    {
+      "object_id": 20,
+      "label": "bookshelf",
+      "centroid": [
+        0.6089189784331018,
+        1.1661769538810574,
+        0.8152988103250135
+      ],
+      "n_points": 2522,
+      "in_target": true
+    },
+    {
+      "object_id": 21,
+      "label": "blackboard",
+      "centroid": [
+        3.9849674444243384,
+        5.879485106959859,
+        1.5752386282796265
+      ],
+      "n_points": 16827,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "blackboard",
+      "centroid": [
+        0.5927980014550108,
+        4.183834707572734,
+        1.7426307628930713
+      ],
+      "n_points": 5589,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "book",
+      "centroid": [
+        0.6653674854149998,
+        1.1774336174384725,
+        0.24585327033093357
+      ],
+      "n_points": 1172,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "book",
+      "centroid": [
+        0.6073120947995647,
+        1.1780419903426418,
+        0.6385869836817202
+      ],
+      "n_points": 1198,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "book",
+      "centroid": [
+        0.6158643019130331,
+        1.1898077707953434,
+        0.974357875387641
+      ],
+      "n_points": 777,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "window",
+      "centroid": [
+        6.738284288308559,
+        4.510910372616447,
+        1.4918485606057192
+      ],
+      "n_points": 6162,
+      "in_target": true
+    },
+    {
+      "object_id": 27,
+      "label": "window",
+      "centroid": [
+        6.098888738216949,
+        0.8952981012203212,
+        1.5464373345964508
+      ],
+      "n_points": 5420,
+      "in_target": true
+    },
+    {
+      "object_id": 28,
+      "label": "wall",
+      "centroid": [
+        3.869574780605584,
+        5.911676178866892,
+        0.9599657998919537
+      ],
+      "n_points": 16489,
+      "in_target": false
+    },
+    {
+      "object_id": 29,
+      "label": "wall",
+      "centroid": [
+        0.6591141077456872,
+        1.0012656251852126,
+        1.609114941836018
+      ],
+      "n_points": 3782,
+      "in_target": false
+    },
+    {
+      "object_id": 30,
+      "label": "wall",
+      "centroid": [
+        0.6261743041228656,
+        4.206017730596739,
+        1.1839005444037298
+      ],
+      "n_points": 8071,
+      "in_target": false
+    },
+    {
+      "object_id": 31,
+      "label": "wall",
+      "centroid": [
+        4.522865679146061,
+        0.25341401185195417,
+        2.2573230434706795
+      ],
+      "n_points": 4566,
+      "in_target": false
+    },
+    {
+      "object_id": 32,
+      "label": "box",
+      "centroid": [
+        3.700644269767723,
+        0.6572839926679215,
+        1.8088011985884391
+      ],
+      "n_points": 1391,
+      "in_target": false
+    },
+    {
+      "object_id": 33,
+      "label": "box",
+      "centroid": [
+        5.662840456947318,
+        1.8577048728916408,
+        0.7255898000336508
+      ],
+      "n_points": 937,
+      "in_target": false
+    },
+    {
+      "object_id": 34,
+      "label": "box",
+      "centroid": [
+        6.010617698499577,
+        3.7351894829843837,
+        0.19099394612511922
+      ],
+      "n_points": 1078,
+      "in_target": false
+    },
+    {
+      "object_id": 35,
+      "label": "box",
+      "centroid": [
+        6.297478239719154,
+        4.022178125450477,
+        0.8483797331622299
+      ],
+      "n_points": 691,
+      "in_target": false
+    },
+    {
+      "object_id": 36,
+      "label": "box",
+      "centroid": [
+        5.8891898405341125,
+        1.8900130162773057,
+        0.13726423700405962
+      ],
+      "n_points": 1018,
+      "in_target": false
+    },
+    {
+      "object_id": 37,
+      "label": "box",
+      "centroid": [
+        6.022598998850417,
+        2.6098093492166012,
+        0.15642656735295418
+      ],
+      "n_points": 926,
+      "in_target": false
+    },
+    {
+      "object_id": 38,
+      "label": "box",
+      "centroid": [
+        5.909064172815394,
+        2.9528963642355834,
+        0.07561086786014062
+      ],
+      "n_points": 405,
+      "in_target": false
+    },
+    {
+      "object_id": 39,
+      "label": "box",
+      "centroid": [
+        5.949034141055469,
+        2.2456217942566705,
+        0.07306399707008025
+      ],
+      "n_points": 464,
+      "in_target": false
+    },
+    {
+      "object_id": 40,
+      "label": "box",
+      "centroid": [
+        6.156213216174012,
+        3.0417424892784815,
+        0.7952310548594784
+      ],
+      "n_points": 361,
+      "in_target": false
+    },
+    {
+      "object_id": 41,
+      "label": "box",
+      "centroid": [
+        6.192487176672205,
+        3.3597880728833087,
+        0.829502213465703
+      ],
+      "n_points": 385,
+      "in_target": false
+    },
+    {
+      "object_id": 42,
+      "label": "box",
+      "centroid": [
+        6.3024680618237925,
+        3.6307476587581786,
+        0.8763875407630234
+      ],
+      "n_points": 633,
+      "in_target": false
+    },
+    {
+      "object_id": 43,
+      "label": "box",
+      "centroid": [
+        6.114628000079461,
+        2.5499220351752996,
+        0.763635219455515
+      ],
+      "n_points": 318,
+      "in_target": false
+    },
+    {
+      "object_id": 44,
+      "label": "box",
+      "centroid": [
+        6.194763779183457,
+        2.813203100957176,
+        0.7385500564429038
+      ],
+      "n_points": 261,
+      "in_target": false
+    },
+    {
+      "object_id": 45,
+      "label": "box",
+      "centroid": [
+        6.0795356432596845,
+        2.2868288194431976,
+        0.7365217287750805
+      ],
+      "n_points": 204,
+      "in_target": false
+    },
+    {
+      "object_id": 46,
+      "label": "box",
+      "centroid": [
+        6.030276867459496,
+        2.0078275705052313,
+        0.7587415355016881
+      ],
+      "n_points": 321,
+      "in_target": false
+    },
+    {
+      "object_id": 47,
+      "label": "table",
+      "centroid": [
+        3.6334198216865006,
+        4.350547461689644,
+        0.7767958148711454
+      ],
+      "n_points": 7420,
+      "in_target": true
+    },
+    {
+      "object_id": 48,
+      "label": "table",
+      "centroid": [
+        4.177140742883768,
+        1.7506221795297419,
+        0.7663154264396316
+      ],
+      "n_points": 3211,
+      "in_target": true
+    },
+    {
+      "object_id": 49,
+      "label": "table",
+      "centroid": [
+        5.897553621731575,
+        3.0235199238637973,
+        0.5584656177454855
+      ],
+      "n_points": 3789,
+      "in_target": true
+    },
+    {
+      "object_id": 50,
+      "label": "table",
+      "centroid": [
+        0.863380643309455,
+        3.362671355810269,
+        0.5792022071176822
+      ],
+      "n_points": 2952,
+      "in_target": true
+    },
+    {
+      "object_id": 51,
+      "label": "table",
+      "centroid": [
+        2.513447493289657,
+        2.3918958502235235,
+        0.7832755028875388
+      ],
+      "n_points": 4752,
+      "in_target": true
+    },
+    {
+      "object_id": 52,
+      "label": "armchair",
+      "centroid": [
+        1.4676155992197923,
+        5.435170169731936,
+        0.5700378012691355
+      ],
+      "n_points": 5971,
+      "in_target": false
+    },
+    {
+      "object_id": 53,
+      "label": "door",
+      "centroid": [
+        1.5035407148243303,
+        0.7179397833272698,
+        1.260517573229537
+      ],
+      "n_points": 6390,
+      "in_target": true
+    },
+    {
+      "object_id": 54,
+      "label": "paper",
+      "centroid": [
+        6.27606975843036,
+        4.46178830805279,
+        0.7590063772504292
+      ],
+      "n_points": 504,
+      "in_target": false
+    },
+    {
+      "object_id": 55,
+      "label": "bag",
+      "centroid": [
+        5.806702947164599,
+        3.3789349624895935,
+        0.22765972689941738
+      ],
+      "n_points": 844,
+      "in_target": false
+    },
+    {
+      "object_id": 56,
+      "label": "clock",
+      "centroid": [
+        3.778291879075297,
+        5.904846439200841,
+        2.3031221614794783
+      ],
+      "n_points": 356,
+      "in_target": false
+    },
+    {
+      "object_id": 57,
+      "label": "trash can",
+      "centroid": [
+        0.35674880602942083,
+        1.515517326177723,
+        0.29922124735450234
+      ],
+      "n_points": 651,
+      "in_target": false
+    },
+    {
+      "object_id": 58,
+      "label": "window",
+      "centroid": [
+        6.510189905762672,
+        2.927029052438835,
+        1.1187023209252704
+      ],
+      "n_points": 768,
+      "in_target": true
+    },
+    {
+      "object_id": 59,
+      "label": "windowsill",
+      "centroid": [
+        6.228435872169183,
+        1.9503711803857688,
+        0.9069405358641123
+      ],
+      "n_points": 3282,
+      "in_target": false
+    },
+    {
+      "object_id": 60,
+      "label": "shower wall",
+      "centroid": [
+        6.032541122018676,
+        0.8410792024326079,
+        0.6622541064070058
+      ],
+      "n_points": 776,
+      "in_target": false
+    },
+    {
+      "object_id": 61,
+      "label": "box",
+      "centroid": [
+        5.736524558288763,
+        0.6643621464355073,
+        0.5936879185331126
+      ],
+      "n_points": 646,
+      "in_target": false
+    },
+    {
+      "object_id": 62,
+      "label": "box",
+      "centroid": [
+        5.763792494760043,
+        1.078973922090254,
+        0.5801277406405712
+      ],
+      "n_points": 690,
+      "in_target": false
+    },
+    {
+      "object_id": 63,
+      "label": "box",
+      "centroid": [
+        5.739549106180773,
+        1.4425452560764562,
+        0.47989801066472626
+      ],
+      "n_points": 567,
+      "in_target": false
+    },
+    {
+      "object_id": 64,
+      "label": "ceiling",
+      "centroid": [
+        5.2201177146699695,
+        0.1759394701947671,
+        2.5004509687423706
+      ],
+      "n_points": 612,
+      "in_target": false
+    },
+    {
+      "object_id": 65,
+      "label": "wall",
+      "centroid": [
+        3.31992085427256,
+        0.5487292976406296,
+        1.8489643347112013
+      ],
+      "n_points": 709,
+      "in_target": false
+    },
+    {
+      "object_id": 66,
+      "label": "box",
+      "centroid": [
+        3.6108996152635267,
+        0.6764251057092681,
+        1.3181193349077647
+      ],
+      "n_points": 983,
+      "in_target": false
+    },
+    {
+      "object_id": 67,
+      "label": "wall",
+      "centroid": [
+        3.099834912664286,
+        0.6762722831226831,
+        1.9178473958110747
+      ],
+      "n_points": 1511,
+      "in_target": false
+    },
+    {
+      "object_id": 68,
+      "label": "bookshelf",
+      "centroid": [
+        3.5288311552802045,
+        0.8043093432690492,
+        0.7724943418169989
+      ],
+      "n_points": 3229,
+      "in_target": true
+    },
+    {
+      "object_id": 69,
+      "label": "doorframe",
+      "centroid": [
+        1.5527551646872517,
+        0.7630570077276849,
+        1.072843878738808
+      ],
+      "n_points": 1155,
+      "in_target": false
+    },
+    {
+      "object_id": 70,
+      "label": "books",
+      "centroid": [
+        2.5146741489517197,
+        1.0357249587226727,
+        1.842529652625557
+      ],
+      "n_points": 1143,
+      "in_target": false
+    },
+    {
+      "object_id": 71,
+      "label": "books",
+      "centroid": [
+        2.5513212082721934,
+        1.0283137383739562,
+        1.5659893855606157
+      ],
+      "n_points": 1164,
+      "in_target": false
+    },
+    {
+      "object_id": 72,
+      "label": "books",
+      "centroid": [
+        2.475578898562393,
+        0.9990797272017138,
+        1.2708042894584546
+      ],
+      "n_points": 1173,
+      "in_target": false
+    },
+    {
+      "object_id": 73,
+      "label": "books",
+      "centroid": [
+        2.576290523474998,
+        0.9832063123764779,
+        0.9603306387600146
+      ],
+      "n_points": 1235,
+      "in_target": false
+    },
+    {
+      "object_id": 74,
+      "label": "books",
+      "centroid": [
+        2.5517023050022023,
+        1.004461016009512,
+        0.6122436877437804
+      ],
+      "n_points": 953,
+      "in_target": false
+    },
+    {
+      "object_id": 75,
+      "label": "books",
+      "centroid": [
+        2.5305423202596273,
+        1.061489107605394,
+        0.3013340514073528
+      ],
+      "n_points": 701,
+      "in_target": false
+    },
+    {
+      "object_id": 76,
+      "label": "books",
+      "centroid": [
+        3.483030549797094,
+        0.7763844051271537,
+        0.9801678626749997
+      ],
+      "n_points": 1065,
+      "in_target": false
+    },
+    {
+      "object_id": 77,
+      "label": "books",
+      "centroid": [
+        3.552453469980013,
+        0.8005136703173598,
+        0.6228065950001453
+      ],
+      "n_points": 1144,
+      "in_target": false
+    },
+    {
+      "object_id": 78,
+      "label": "books",
+      "centroid": [
+        4.404291230028257,
+        0.4366040326613486,
+        1.8573433679659468
+      ],
+      "n_points": 1259,
+      "in_target": false
+    },
+    {
+      "object_id": 79,
+      "label": "books",
+      "centroid": [
+        5.308348357558646,
+        0.2851706327443503,
+        1.836850839595858
+      ],
+      "n_points": 1505,
+      "in_target": false
+    },
+    {
+      "object_id": 80,
+      "label": "books",
+      "centroid": [
+        5.364421427551159,
+        0.2846837639970039,
+        1.525289092425405
+      ],
+      "n_points": 1385,
+      "in_target": false
+    },
+    {
+      "object_id": 81,
+      "label": "books",
+      "centroid": [
+        5.353071642613066,
+        0.30400717357794443,
+        1.248753533731912
+      ],
+      "n_points": 1035,
+      "in_target": false
+    },
+    {
+      "object_id": 82,
+      "label": "books",
+      "centroid": [
+        5.3906597936475595,
+        0.2954178278443513,
+        0.9409672143760028
+      ],
+      "n_points": 1110,
+      "in_target": false
+    },
+    {
+      "object_id": 83,
+      "label": "books",
+      "centroid": [
+        5.357692525557625,
+        0.3197048370520595,
+        0.6163466724630081
+      ],
+      "n_points": 991,
+      "in_target": false
+    },
+    {
+      "object_id": 84,
+      "label": "books",
+      "centroid": [
+        5.309869466131473,
+        0.3919191884156125,
+        0.27290281799509053
+      ],
+      "n_points": 974,
+      "in_target": false
+    },
+    {
+      "object_id": 85,
+      "label": "books",
+      "centroid": [
+        4.489236162633312,
+        0.4467614037396551,
+        1.5415946199577681
+      ],
+      "n_points": 1176,
+      "in_target": false
+    },
+    {
+      "object_id": 86,
+      "label": "books",
+      "centroid": [
+        4.477680376704001,
+        0.45389472339549103,
+        1.2332917725956263
+      ],
+      "n_points": 1283,
+      "in_target": false
+    },
+    {
+      "object_id": 87,
+      "label": "books",
+      "centroid": [
+        4.452318571897979,
+        0.45971366410088305,
+        0.9207649497511965
+      ],
+      "n_points": 1127,
+      "in_target": false
+    },
+    {
+      "object_id": 88,
+      "label": "books",
+      "centroid": [
+        4.563676073186745,
+        0.4501412102530674,
+        0.5886317184452194
+      ],
+      "n_points": 1086,
+      "in_target": false
+    },
+    {
+      "object_id": 89,
+      "label": "books",
+      "centroid": [
+        4.735291973548599,
+        0.5145538619047478,
+        0.3020541685668728
+      ],
+      "n_points": 395,
+      "in_target": false
+    }
+  ],
+  "scene0045_00": [
+    {
+      "object_id": 0,
+      "label": "floor",
+      "centroid": [
+        4.452707898798378,
+        4.022216253370381,
+        0.12322981911803418
+      ],
+      "n_points": 36238,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "chair",
+      "centroid": [
+        6.167913776757365,
+        4.119347673251513,
+        0.5341459510703543
+      ],
+      "n_points": 3638,
+      "in_target": true
+    },
+    {
+      "object_id": 2,
+      "label": "chair",
+      "centroid": [
+        3.0989239496175016,
+        3.7986445421220014,
+        0.3941294210870769
+      ],
+      "n_points": 3334,
+      "in_target": true
+    },
+    {
+      "object_id": 3,
+      "label": "couch",
+      "centroid": [
+        5.108920611672205,
+        2.626087684393878,
+        0.7371086363911497
+      ],
+      "n_points": 27891,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "table",
+      "centroid": [
+        2.663603716841192,
+        5.700270507566669,
+        0.5216095298461046
+      ],
+      "n_points": 4407,
+      "in_target": true
+    },
+    {
+      "object_id": 5,
+      "label": "wall",
+      "centroid": [
+        2.8414360109623615,
+        5.986617521663288,
+        0.9255333780818111
+      ],
+      "n_points": 10010,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "table",
+      "centroid": [
+        3.1487672634561923,
+        2.980539831321794,
+        0.45621820518996803
+      ],
+      "n_points": 1178,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "table",
+      "centroid": [
+        6.331067424018337,
+        3.3681947230081453,
+        0.645958045849247
+      ],
+      "n_points": 1181,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "object",
+      "centroid": [
+        2.750232802794667,
+        5.882691820909021,
+        0.14830539284853006
+      ],
+      "n_points": 267,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "tv",
+      "centroid": [
+        2.994581956553653,
+        5.84441489684887,
+        1.778991973005482
+      ],
+      "n_points": 1601,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "wall",
+      "centroid": [
+        4.0955819053491975,
+        5.8801137750472705,
+        0.669809507662455
+      ],
+      "n_points": 2657,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "wall",
+      "centroid": [
+        4.510389442333914,
+        5.594306541932076,
+        0.668888614973005
+      ],
+      "n_points": 3470,
+      "in_target": false
+    }
+  ],
+  "scene0050_00": [
+    {
+      "object_id": 0,
+      "label": "toolbox",
+      "centroid": [
+        6.20624315130102,
+        2.098900089392791,
+        0.5890086251157182
+      ],
+      "n_points": 333,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "piano",
+      "centroid": [
+        5.899486445176608,
+        1.111602308940944,
+        0.7018027618019864
+      ],
+      "n_points": 7604,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "floor",
+      "centroid": [
+        4.4865924517017906,
+        2.469433954424394,
+        0.08558253745079339
+      ],
+      "n_points": 24186,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "armchair",
+      "centroid": [
+        4.245042500182057,
+        3.2110442573699336,
+        0.5106685616880414
+      ],
+      "n_points": 8660,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "chair",
+      "centroid": [
+        3.0384423538523526,
+        2.2740553375549775,
+        0.45198470167738464
+      ],
+      "n_points": 4824,
+      "in_target": true
+    },
+    {
+      "object_id": 5,
+      "label": "desk",
+      "centroid": [
+        3.298079555261775,
+        3.375796005373266,
+        0.5770516412626299
+      ],
+      "n_points": 4713,
+      "in_target": true
+    },
+    {
+      "object_id": 6,
+      "label": "tissue box",
+      "centroid": [
+        4.303062601893258,
+        1.787278031433905,
+        0.5778080210734609
+      ],
+      "n_points": 439,
+      "in_target": false
+    },
+    {
+      "object_id": 7,
+      "label": "lamp",
+      "centroid": [
+        2.774502484886735,
+        2.8451867402826316,
+        1.108867251333386
+      ],
+      "n_points": 486,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "doors",
+      "centroid": [
+        2.436731588183575,
+        1.7872356718742697,
+        1.1368472243028072
+      ],
+      "n_points": 25061,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "door",
+      "centroid": [
+        3.95426448652583,
+        4.223528379073969,
+        1.0209696140971174
+      ],
+      "n_points": 3681,
+      "in_target": true
+    },
+    {
+      "object_id": 10,
+      "label": "door",
+      "centroid": [
+        5.014383229076185,
+        4.153550371568848,
+        1.1306555951994952
+      ],
+      "n_points": 3257,
+      "in_target": true
+    },
+    {
+      "object_id": 11,
+      "label": "ottoman",
+      "centroid": [
+        4.235750962200257,
+        1.822939376696573,
+        0.35818648692684685
+      ],
+      "n_points": 4574,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "piano bench",
+      "centroid": [
+        5.226896197305006,
+        1.148135217191542,
+        0.4440160403247265
+      ],
+      "n_points": 1360,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "couch",
+      "centroid": [
+        3.5404213685992025,
+        1.1257904669439283,
+        0.5705500449390859
+      ],
+      "n_points": 10811,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "backpack",
+      "centroid": [
+        4.034883958087507,
+        2.0728942981768426,
+        0.5786603432467022
+      ],
+      "n_points": 866,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "printer",
+      "centroid": [
+        3.2096247962617963,
+        3.9872624785589528,
+        0.9934758314402168
+      ],
+      "n_points": 1589,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "shelf",
+      "centroid": [
+        2.7352905742688614,
+        3.3101167959516697,
+        1.3589932787011971
+      ],
+      "n_points": 4400,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "roomba",
+      "centroid": [
+        5.477022196649662,
+        3.7977923878180087,
+        0.15223528854707005
+      ],
+      "n_points": 707,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "backpack",
+      "centroid": [
+        4.649487413991379,
+        1.7440258372913708,
+        0.5818309880913367
+      ],
+      "n_points": 1177,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "ceiling",
+      "centroid": [
+        3.31592462900201,
+        2.2664366925424586,
+        2.651028969818848
+      ],
+      "n_points": 8015,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "wall",
+      "centroid": [
+        4.20929122219557,
+        0.5216144258332203,
+        1.4276520299149362
+      ],
+      "n_points": 16795,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "clock",
+      "centroid": [
+        4.482155414624403,
+        0.5179422354630832,
+        1.9604431754451688
+      ],
+      "n_points": 177,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "wall",
+      "centroid": [
+        2.594093132697603,
+        2.0119412233061356,
+        1.9864561713561406
+      ],
+      "n_points": 8011,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "wall",
+      "centroid": [
+        2.8282105238770052,
+        3.854048974774666,
+        1.7876414867078767
+      ],
+      "n_points": 997,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "cup",
+      "centroid": [
+        3.3867251519381143,
+        3.8206714180668007,
+        0.8834310570402009
+      ],
+      "n_points": 209,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "laptop",
+      "centroid": [
+        3.2606217882577564,
+        3.3877720798581463,
+        0.9081392886394658
+      ],
+      "n_points": 557,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "bag",
+      "centroid": [
+        2.9574503048445826,
+        3.9193106473878374,
+        1.1253664863202
+      ],
+      "n_points": 516,
+      "in_target": false
+    },
+    {
+      "object_id": 27,
+      "label": "object",
+      "centroid": [
+        3.09857447942098,
+        3.3363939667424414,
+        0.8547732221319321
+      ],
+      "n_points": 282,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "laptop",
+      "centroid": [
+        3.037795087552491,
+        2.8922183801905637,
+        0.8740052143182202
+      ],
+      "n_points": 794,
+      "in_target": false
+    },
+    {
+      "object_id": 29,
+      "label": "stool",
+      "centroid": [
+        6.069406789210108,
+        2.0838941203223333,
+        0.3022788379263754
+      ],
+      "n_points": 576,
+      "in_target": false
+    },
+    {
+      "object_id": 30,
+      "label": "toolbox",
+      "centroid": [
+        5.996093934490567,
+        2.1045562371848123,
+        0.4605423052396093
+      ],
+      "n_points": 504,
+      "in_target": false
+    },
+    {
+      "object_id": 31,
+      "label": "wall",
+      "centroid": [
+        6.324016392323685,
+        1.8063641739167047,
+        1.3374044269627927
+      ],
+      "n_points": 4501,
+      "in_target": false
+    },
+    {
+      "object_id": 32,
+      "label": "doors",
+      "centroid": [
+        6.3871662357997465,
+        3.25923106242723,
+        1.1659280750772432
+      ],
+      "n_points": 6690,
+      "in_target": false
+    },
+    {
+      "object_id": 33,
+      "label": "wall",
+      "centroid": [
+        5.032775709026402,
+        4.068224863577206,
+        1.512808429694418
+      ],
+      "n_points": 13977,
+      "in_target": false
+    },
+    {
+      "object_id": 34,
+      "label": "doorframe",
+      "centroid": [
+        5.0695141899707785,
+        4.089972366448555,
+        1.2682417885816748
+      ],
+      "n_points": 1172,
+      "in_target": false
+    },
+    {
+      "object_id": 35,
+      "label": "doorframe",
+      "centroid": [
+        4.02015611470069,
+        4.1825049871993105,
+        1.250143022166993
+      ],
+      "n_points": 1106,
+      "in_target": false
+    }
+  ],
+  "scene0062_00": [
+    {
+      "object_id": 0,
+      "label": "wall",
+      "centroid": [
+        2.920768859159363,
+        2.207929260801978,
+        1.1289036618175945
+      ],
+      "n_points": 7129,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "wall",
+      "centroid": [
+        3.8227324429249365,
+        0.9475658571467542,
+        0.740227289973053
+      ],
+      "n_points": 5272,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "wall",
+      "centroid": [
+        2.3263893760280845,
+        0.39593837228097845,
+        0.6813861754893373
+      ],
+      "n_points": 6561,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "wall",
+      "centroid": [
+        1.388038524397251,
+        1.6787284527593884,
+        0.2443156267656901
+      ],
+      "n_points": 1941,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "wall",
+      "centroid": [
+        1.256949812569965,
+        1.446565303232075,
+        1.1591125120400823
+      ],
+      "n_points": 1279,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "mirror",
+      "centroid": [
+        1.5099241545536375,
+        2.1694106711637255,
+        1.1184278980597553
+      ],
+      "n_points": 596,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "counter",
+      "centroid": [
+        1.6630083471716386,
+        1.6565194637014724,
+        0.8470028360049601
+      ],
+      "n_points": 3316,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "trash can",
+      "centroid": [
+        1.7134094442391874,
+        1.3778402034485058,
+        0.3572045165251513
+      ],
+      "n_points": 1098,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "trash can",
+      "centroid": [
+        3.742185121536255,
+        0.9120565301895142,
+        0.41251493782997134
+      ],
+      "n_points": 625,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "toilet seat cover dispenser",
+      "centroid": [
+        3.9187097546176934,
+        1.346444468165553,
+        0.8384235745089488
+      ],
+      "n_points": 731,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "paper towel dispenser",
+      "centroid": [
+        1.4665943416142373,
+        1.4770578930052152,
+        1.0902525503973395
+      ],
+      "n_points": 783,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "floor",
+      "centroid": [
+        2.5709249137302486,
+        1.3693337757080088,
+        0.024465768746739638
+      ],
+      "n_points": 8339,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "toilet",
+      "centroid": [
+        3.3233479866301603,
+        0.5676882401688205,
+        0.44305664653661053
+      ],
+      "n_points": 3163,
+      "in_target": true
+    },
+    {
+      "object_id": 13,
+      "label": "toilet paper",
+      "centroid": [
+        2.714833085232369,
+        0.37455318651535435,
+        0.6085454236043182
+      ],
+      "n_points": 227,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "toilet paper",
+      "centroid": [
+        2.5692679794288122,
+        0.42656683208752266,
+        0.6105120917039415
+      ],
+      "n_points": 163,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "light switch",
+      "centroid": [
+        2.267375022172928,
+        2.4218264296650887,
+        1.148537751287222
+      ],
+      "n_points": 32,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "jacket",
+      "centroid": [
+        1.4750306022452007,
+        0.8738215752835974,
+        0.9044602244787249
+      ],
+      "n_points": 586,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "rail",
+      "centroid": [
+        2.774322953626493,
+        0.2707884140199316,
+        0.8724392824812713
+      ],
+      "n_points": 723,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "rail",
+      "centroid": [
+        3.6924063016608395,
+        0.6421617834019835,
+        0.8653912779188504
+      ],
+      "n_points": 411,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "soap dispenser",
+      "centroid": [
+        1.4301946824773804,
+        1.7638769512591155,
+        1.1226194083233318
+      ],
+      "n_points": 391,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "door",
+      "centroid": [
+        2.916539725645341,
+        2.3593862658005986,
+        1.0833287886450476
+      ],
+      "n_points": 4675,
+      "in_target": true
+    },
+    {
+      "object_id": 21,
+      "label": "sink",
+      "centroid": [
+        1.7076502821327728,
+        2.1561376890282573,
+        0.7812397071608791
+      ],
+      "n_points": 324,
+      "in_target": true
+    },
+    {
+      "object_id": 22,
+      "label": "toilet paper",
+      "centroid": [
+        3.5376858218510945,
+        0.4591092876593272,
+        0.8747000487645468
+      ],
+      "n_points": 150,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "doorframe",
+      "centroid": [
+        2.887452664809138,
+        2.289141871695202,
+        1.239964364230467
+      ],
+      "n_points": 2517,
+      "in_target": false
+    }
+  ],
+  "scene0077_00": [
+    {
+      "object_id": 0,
+      "label": "copier",
+      "centroid": [
+        1.9840311007799158,
+        2.78695351936391,
+        1.1935178565878224
+      ],
+      "n_points": 1656,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "printer",
+      "centroid": [
+        0.5544573966492294,
+        2.8475261045481335,
+        1.3200823003126434
+      ],
+      "n_points": 1802,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "printer",
+      "centroid": [
+        0.6039970464209287,
+        2.090114207564865,
+        1.143251884616061
+      ],
+      "n_points": 1621,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "window",
+      "centroid": [
+        0.16052141313964222,
+        2.705559431940772,
+        1.9543408504016528
+      ],
+      "n_points": 4846,
+      "in_target": true
+    },
+    {
+      "object_id": 4,
+      "label": "shelf",
+      "centroid": [
+        0.3181340741759564,
+        1.588068021531932,
+        2.034409588994952
+      ],
+      "n_points": 14518,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "floor",
+      "centroid": [
+        2.8295369486281987,
+        1.8556387435594626,
+        0.06539716849132962
+      ],
+      "n_points": 11197,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "cabinet",
+      "centroid": [
+        0.6105710823518193,
+        2.1055173507853513,
+        0.526447086809884
+      ],
+      "n_points": 4035,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "shelf",
+      "centroid": [
+        0.1287745659340331,
+        1.6828900526398014,
+        1.441692806443685
+      ],
+      "n_points": 2191,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "trash can",
+      "centroid": [
+        2.5690720557723346,
+        1.1944950929527833,
+        0.7334715414352604
+      ],
+      "n_points": 2152,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "door",
+      "centroid": [
+        3.482865027489336,
+        3.658057254287183,
+        0.9410589983416704
+      ],
+      "n_points": 3186,
+      "in_target": true
+    },
+    {
+      "object_id": 10,
+      "label": "doorframe",
+      "centroid": [
+        3.5066045160951287,
+        3.274011413187816,
+        0.927812212500079
+      ],
+      "n_points": 1160,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "wall",
+      "centroid": [
+        3.8033310636309565,
+        2.825191956060812,
+        0.7990526266257577
+      ],
+      "n_points": 3067,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "wall",
+      "centroid": [
+        3.9112081617289194,
+        2.3704244339397187,
+        0.7601702510305682
+      ],
+      "n_points": 1038,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "trash can",
+      "centroid": [
+        3.8081823355399522,
+        2.074329541719314,
+        0.2523336312586258
+      ],
+      "n_points": 1043,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "doorframe",
+      "centroid": [
+        3.975230554739634,
+        1.7438744947595417,
+        0.7649073424637787
+      ],
+      "n_points": 636,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "counter",
+      "centroid": [
+        0.49106728128729366,
+        1.7718726688385407,
+        1.0162661742053294
+      ],
+      "n_points": 2404,
+      "in_target": true
+    },
+    {
+      "object_id": 16,
+      "label": "table",
+      "centroid": [
+        1.6650130745917204,
+        2.63654208919498,
+        0.7990072689543427
+      ],
+      "n_points": 421,
+      "in_target": true
+    },
+    {
+      "object_id": 17,
+      "label": "ceiling",
+      "centroid": [
+        0.6557495580344904,
+        1.0917371734243924,
+        2.7434811326323962
+      ],
+      "n_points": 305,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "wall",
+      "centroid": [
+        3.996179067255708,
+        2.07941379114294,
+        0.821272837126334
+      ],
+      "n_points": 1961,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "wall",
+      "centroid": [
+        1.7317953212298214,
+        0.8017323376640441,
+        1.2978022662833004
+      ],
+      "n_points": 7182,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "door",
+      "centroid": [
+        3.5574953640053604,
+        0.9660970701141346,
+        0.6106982488829683
+      ],
+      "n_points": 6699,
+      "in_target": true
+    },
+    {
+      "object_id": 21,
+      "label": "wall",
+      "centroid": [
+        1.3698616780228265,
+        3.2409030416566287,
+        1.4611620392651425
+      ],
+      "n_points": 3513,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "copier",
+      "centroid": [
+        1.8384363658554141,
+        1.346686100972436,
+        0.7596829502188404
+      ],
+      "n_points": 3767,
+      "in_target": false
+    }
+  ],
+  "scene0086_00": [
+    {
+      "object_id": 0,
+      "label": "mirror",
+      "centroid": [
+        1.635975897595996,
+        2.216805205620876,
+        1.168273243206699
+      ],
+      "n_points": 1470,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "bathroom stall",
+      "centroid": [
+        4.4140862631753475,
+        5.898835740723131,
+        1.0426986606879036
+      ],
+      "n_points": 21520,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "wall",
+      "centroid": [
+        1.3262906207970686,
+        4.866892369996351,
+        0.8173796535825499
+      ],
+      "n_points": 6309,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "floor",
+      "centroid": [
+        2.74164023553399,
+        4.751779236250776,
+        0.05299560166047356
+      ],
+      "n_points": 27675,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "plant",
+      "centroid": [
+        2.7038280629607105,
+        2.5962401861866944,
+        1.7447299116818362
+      ],
+      "n_points": 756,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "toilet seat cover dispenser",
+      "centroid": [
+        4.972954250474013,
+        5.760406530540408,
+        1.1805827451571254
+      ],
+      "n_points": 524,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "toilet",
+      "centroid": [
+        4.757310947133562,
+        5.967909047927819,
+        0.41803661510202017
+      ],
+      "n_points": 2037,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "toilet",
+      "centroid": [
+        3.722028501210549,
+        4.429684911024291,
+        0.4161819571369811
+      ],
+      "n_points": 1106,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "door",
+      "centroid": [
+        1.2782619357149854,
+        5.003497299738547,
+        0.8308048267127756
+      ],
+      "n_points": 2923,
+      "in_target": true
+    },
+    {
+      "object_id": 9,
+      "label": "door",
+      "centroid": [
+        0.4628591139050818,
+        3.8763056573164145,
+        0.8726593849657095
+      ],
+      "n_points": 3185,
+      "in_target": true
+    },
+    {
+      "object_id": 10,
+      "label": "bathroom stall door",
+      "centroid": [
+        2.6829813799361046,
+        6.21864503246539,
+        0.8861966244862161
+      ],
+      "n_points": 2619,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "window",
+      "centroid": [
+        3.9551939383897605,
+        7.325740232859572,
+        0.9353336306261196
+      ],
+      "n_points": 3504,
+      "in_target": true
+    },
+    {
+      "object_id": 12,
+      "label": "soap dispenser",
+      "centroid": [
+        3.1776358991637266,
+        3.126333392652354,
+        1.1206608562541187
+      ],
+      "n_points": 532,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "trash can",
+      "centroid": [
+        2.6027973186563655,
+        2.272069364747594,
+        0.9069378149823003
+      ],
+      "n_points": 2319,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "trash can",
+      "centroid": [
+        4.226130982212485,
+        6.86285615264956,
+        0.6269571497189023
+      ],
+      "n_points": 721,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "rail",
+      "centroid": [
+        4.721143767038981,
+        6.576927460564507,
+        0.8847009570068783
+      ],
+      "n_points": 450,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "rail",
+      "centroid": [
+        4.936904329242128,
+        5.7384217724655615,
+        0.8737822418863123
+      ],
+      "n_points": 66,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "paper towel dispenser",
+      "centroid": [
+        2.7531092876755303,
+        2.6172740479503247,
+        1.4941426999360612
+      ],
+      "n_points": 1545,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "paper towel dispenser",
+      "centroid": [
+        2.7200592300851865,
+        2.6465888913033155,
+        1.0610500510565033
+      ],
+      "n_points": 1013,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "sink",
+      "centroid": [
+        3.1676578457432916,
+        3.6299484371810937,
+        0.8399266162677066
+      ],
+      "n_points": 1817,
+      "in_target": true
+    },
+    {
+      "object_id": 20,
+      "label": "sink",
+      "centroid": [
+        2.9111565782736335,
+        3.073549310657519,
+        0.7828705878673912
+      ],
+      "n_points": 1501,
+      "in_target": true
+    },
+    {
+      "object_id": 21,
+      "label": "toilet paper dispenser",
+      "centroid": [
+        4.544213013601775,
+        6.604621684669268,
+        1.1196330804635983
+      ],
+      "n_points": 1010,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "toilet paper dispenser",
+      "centroid": [
+        3.509616705994554,
+        4.956786320781823,
+        0.9171589217513836
+      ],
+      "n_points": 829,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "bottle",
+      "centroid": [
+        2.312960606813431,
+        1.8534147515892982,
+        1.150747937709093
+      ],
+      "n_points": 160,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "wall",
+      "centroid": [
+        3.0360312480129985,
+        2.792719331615866,
+        1.3039099192244754
+      ],
+      "n_points": 13697,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "wall",
+      "centroid": [
+        1.1186025658168215,
+        2.5785342938278566,
+        0.8185131338922342
+      ],
+      "n_points": 7374,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "doorframe",
+      "centroid": [
+        0.2420732592317191,
+        3.437534773891622,
+        1.2975906282663345
+      ],
+      "n_points": 88,
+      "in_target": false
+    },
+    {
+      "object_id": 27,
+      "label": "doorframe",
+      "centroid": [
+        1.3683603399875983,
+        5.0444497240153146,
+        0.7371578918350472
+      ],
+      "n_points": 1079,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "bathroom stall",
+      "centroid": [
+        3.405903887677971,
+        4.589268294152065,
+        1.044204408982741
+      ],
+      "n_points": 13143,
+      "in_target": false
+    },
+    {
+      "object_id": 29,
+      "label": "bathroom stall door",
+      "centroid": [
+        2.961659966799305,
+        4.624204364445466,
+        1.049291726219597
+      ],
+      "n_points": 1463,
+      "in_target": false
+    }
+  ],
+  "scene0100_00": [
+    {
+      "object_id": 0,
+      "label": "wall",
+      "centroid": [
+        3.1445709076968082,
+        2.8005179847590496,
+        0.9608534189623654
+      ],
+      "n_points": 7251,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "shower walls",
+      "centroid": [
+        3.607925325173135,
+        0.14958732198782665,
+        1.1336467103640921
+      ],
+      "n_points": 3961,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "sink",
+      "centroid": [
+        2.2168325687950614,
+        2.6872529031067285,
+        0.8578228671175264
+      ],
+      "n_points": 781,
+      "in_target": true
+    },
+    {
+      "object_id": 3,
+      "label": "cup",
+      "centroid": [
+        1.8097172764440377,
+        1.978266755739848,
+        0.9143683612346649
+      ],
+      "n_points": 96,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "bathroom cabinet",
+      "centroid": [
+        2.2257272180085645,
+        1.920707816066397,
+        0.556912799996761
+      ],
+      "n_points": 7745,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "washcloth",
+      "centroid": [
+        1.4914897273677263,
+        0.8198167076406553,
+        0.901284419288931
+      ],
+      "n_points": 129,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "towels",
+      "centroid": [
+        3.912020263656968,
+        2.0622008171059183,
+        0.9653123204202193
+      ],
+      "n_points": 2559,
+      "in_target": false
+    },
+    {
+      "object_id": 7,
+      "label": "toilet",
+      "centroid": [
+        2.4012881132128,
+        0.7678707580644268,
+        0.4130915191658009
+      ],
+      "n_points": 1776,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "step stool",
+      "centroid": [
+        3.281808278524663,
+        1.3717958912437345,
+        0.15758774397621347
+      ],
+      "n_points": 729,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "bathtub",
+      "centroid": [
+        3.435456581341791,
+        0.5003656119727992,
+        0.2370193470383915
+      ],
+      "n_points": 2278,
+      "in_target": true
+    },
+    {
+      "object_id": 10,
+      "label": "towel",
+      "centroid": [
+        3.331938993242171,
+        1.0565448070735792,
+        0.6331663686474989
+      ],
+      "n_points": 1783,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "floor",
+      "centroid": [
+        2.877843488963946,
+        1.4572758424445176,
+        0.0361959930972841
+      ],
+      "n_points": 5774,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "trash can",
+      "centroid": [
+        2.08477077673782,
+        0.9022498989647085,
+        0.20029033331877805
+      ],
+      "n_points": 440,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "rug",
+      "centroid": [
+        2.7020390933108915,
+        2.4568464060202433,
+        0.05469817494753568
+      ],
+      "n_points": 1177,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "toilet paper",
+      "centroid": [
+        2.769112803041935,
+        0.3649086285382509,
+        0.5552968719042838
+      ],
+      "n_points": 320,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "slippers",
+      "centroid": [
+        3.3326561333840354,
+        1.9068881549333272,
+        0.04378775280426469
+      ],
+      "n_points": 285,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "door",
+      "centroid": [
+        4.045773274210517,
+        2.2235182005024634,
+        0.903076773828041
+      ],
+      "n_points": 1549,
+      "in_target": true
+    },
+    {
+      "object_id": 17,
+      "label": "object",
+      "centroid": [
+        1.8359895830777422,
+        2.0787877509342367,
+        0.9330972058689175
+      ],
+      "n_points": 199,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "cup",
+      "centroid": [
+        1.918792015797383,
+        2.145832999332531,
+        0.9290035697253974
+      ],
+      "n_points": 74,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "cup",
+      "centroid": [
+        1.8860578427254904,
+        2.300107804302391,
+        0.9518885729701948
+      ],
+      "n_points": 239,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "mirror",
+      "centroid": [
+        1.936242474993663,
+        2.5742927069094645,
+        1.0163363051503451
+      ],
+      "n_points": 268,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "toothbrush",
+      "centroid": [
+        2.4234708833694456,
+        2.951936945915222,
+        0.9891702723503113
+      ],
+      "n_points": 50,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "wall",
+      "centroid": [
+        1.658003677554159,
+        1.66240118275714,
+        1.112123734625142
+      ],
+      "n_points": 1851,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "window",
+      "centroid": [
+        1.6084019064665316,
+        1.6480693005754086,
+        1.2331489971773828
+      ],
+      "n_points": 501,
+      "in_target": true
+    },
+    {
+      "object_id": 24,
+      "label": "wall",
+      "centroid": [
+        2.3846105956268824,
+        0.40841004437298883,
+        0.8468546480244695
+      ],
+      "n_points": 5191,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "shower control valve",
+      "centroid": [
+        3.447159040169638,
+        0.10072217967178,
+        0.65949931594192
+      ],
+      "n_points": 61,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "shower door",
+      "centroid": [
+        3.445468644510495,
+        1.1248288643855304,
+        1.1050934142860949
+      ],
+      "n_points": 1613,
+      "in_target": false
+    },
+    {
+      "object_id": 27,
+      "label": "towel",
+      "centroid": [
+        3.4479551956537233,
+        1.441691954311676,
+        0.6631112682825556
+      ],
+      "n_points": 963,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "wall",
+      "centroid": [
+        3.5033517686506164,
+        1.5667722950552467,
+        0.8591225825556719
+      ],
+      "n_points": 401,
+      "in_target": false
+    },
+    {
+      "object_id": 29,
+      "label": "towel",
+      "centroid": [
+        3.4190362762309268,
+        1.2725576264070473,
+        0.896398335238776
+      ],
+      "n_points": 457,
+      "in_target": false
+    },
+    {
+      "object_id": 30,
+      "label": "wall",
+      "centroid": [
+        3.5297619659067965,
+        1.710946880509829,
+        0.8502425958081419
+      ],
+      "n_points": 879,
+      "in_target": false
+    }
+  ],
+  "scene0114_00": [
+    {
+      "object_id": 0,
+      "label": "floor",
+      "centroid": [
+        3.490852254222146,
+        2.88425833044084,
+        0.03202394228381546
+      ],
+      "n_points": 23945,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "plant",
+      "centroid": [
+        2.569777170636613,
+        2.239094986433802,
+        0.9531032879689743
+      ],
+      "n_points": 6166,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "chair",
+      "centroid": [
+        3.83147743909074,
+        1.8098092382599564,
+        0.7116969216027638
+      ],
+      "n_points": 4459,
+      "in_target": true
+    },
+    {
+      "object_id": 3,
+      "label": "chair",
+      "centroid": [
+        4.6075580088561265,
+        3.0902689973214517,
+        0.524568842408615
+      ],
+      "n_points": 3857,
+      "in_target": true
+    },
+    {
+      "object_id": 4,
+      "label": "chair",
+      "centroid": [
+        5.287071045690841,
+        2.2863056345457498,
+        0.4796883522905082
+      ],
+      "n_points": 3418,
+      "in_target": true
+    },
+    {
+      "object_id": 5,
+      "label": "chair",
+      "centroid": [
+        2.270084911937913,
+        3.2036271805547254,
+        0.6785853577725823
+      ],
+      "n_points": 1148,
+      "in_target": true
+    },
+    {
+      "object_id": 6,
+      "label": "wall",
+      "centroid": [
+        2.0184511461973647,
+        2.0026301833295195,
+        1.4886794801182326
+      ],
+      "n_points": 19351,
+      "in_target": false
+    },
+    {
+      "object_id": 7,
+      "label": "telephone",
+      "centroid": [
+        3.4861251602840793,
+        0.7646233200563067,
+        1.0666267639932
+      ],
+      "n_points": 257,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "cabinet",
+      "centroid": [
+        1.4688619159855627,
+        3.4564735436416316,
+        0.8587849432779545
+      ],
+      "n_points": 15415,
+      "in_target": true
+    },
+    {
+      "object_id": 9,
+      "label": "cabinet",
+      "centroid": [
+        2.8263639924816713,
+        5.446852409682603,
+        1.0772201103568753
+      ],
+      "n_points": 7288,
+      "in_target": true
+    },
+    {
+      "object_id": 10,
+      "label": "cabinet",
+      "centroid": [
+        4.207247035854709,
+        3.6961321152878046,
+        0.5467535917241342
+      ],
+      "n_points": 3176,
+      "in_target": true
+    },
+    {
+      "object_id": 11,
+      "label": "file cabinet",
+      "centroid": [
+        3.143164633852486,
+        3.843568061231459,
+        0.38307606919353737
+      ],
+      "n_points": 1399,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "wall",
+      "centroid": [
+        4.562861331111752,
+        0.9119869089874647,
+        0.4499036954886349
+      ],
+      "n_points": 1737,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "desk",
+      "centroid": [
+        2.9229547466784163,
+        3.321781824972731,
+        0.6229211768081042
+      ],
+      "n_points": 5103,
+      "in_target": true
+    },
+    {
+      "object_id": 14,
+      "label": "desk",
+      "centroid": [
+        3.1181585195268795,
+        1.5266593952765823,
+        0.8970817118501485
+      ],
+      "n_points": 5066,
+      "in_target": true
+    },
+    {
+      "object_id": 15,
+      "label": "ledge",
+      "centroid": [
+        4.7845794570254085,
+        1.202348900683664,
+        0.7453818720227278
+      ],
+      "n_points": 2795,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "radiator",
+      "centroid": [
+        4.866213457929359,
+        1.24581750874734,
+        0.42201607843016503
+      ],
+      "n_points": 7775,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "monitor",
+      "centroid": [
+        2.910019164827782,
+        2.0356664662271724,
+        1.3132745322316066
+      ],
+      "n_points": 2293,
+      "in_target": true
+    },
+    {
+      "object_id": 18,
+      "label": "table",
+      "centroid": [
+        5.090255112400224,
+        2.6949742517241657,
+        0.4653982413113495
+      ],
+      "n_points": 789,
+      "in_target": true
+    },
+    {
+      "object_id": 19,
+      "label": "monitor",
+      "centroid": [
+        2.986036281707959,
+        1.448779752621284,
+        1.2952673286963732
+      ],
+      "n_points": 1560,
+      "in_target": true
+    },
+    {
+      "object_id": 20,
+      "label": "cabinet",
+      "centroid": [
+        3.238241013105925,
+        5.253570305499779,
+        0.32643279953319543
+      ],
+      "n_points": 1443,
+      "in_target": true
+    },
+    {
+      "object_id": 21,
+      "label": "door",
+      "centroid": [
+        1.8593538396699087,
+        5.041235611325218,
+        0.5841586187836669
+      ],
+      "n_points": 3150,
+      "in_target": true
+    },
+    {
+      "object_id": 22,
+      "label": "wall",
+      "centroid": [
+        2.1327568243925916,
+        5.314521006939446,
+        2.004689139779622
+      ],
+      "n_points": 6598,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "wall",
+      "centroid": [
+        4.592786944209948,
+        4.076336919606521,
+        1.3756599271205614
+      ],
+      "n_points": 19478,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "window",
+      "centroid": [
+        5.064459584583171,
+        1.0038718408643497,
+        1.0870434014400514
+      ],
+      "n_points": 7747,
+      "in_target": true
+    },
+    {
+      "object_id": 25,
+      "label": "wall",
+      "centroid": [
+        3.550006232867583,
+        0.1252001057692819,
+        1.4002541771251193
+      ],
+      "n_points": 362,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "cup",
+      "centroid": [
+        3.5344425881162604,
+        0.2234324151531179,
+        0.9714924294897851
+      ],
+      "n_points": 235,
+      "in_target": false
+    },
+    {
+      "object_id": 27,
+      "label": "file cabinet",
+      "centroid": [
+        3.422948839476901,
+        0.9423549432626943,
+        0.4096059326826998
+      ],
+      "n_points": 2822,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "trash can",
+      "centroid": [
+        2.7226314520595047,
+        2.5346662651408804,
+        0.25032695885559525
+      ],
+      "n_points": 495,
+      "in_target": false
+    }
+  ],
+  "scene0139_00": [
+    {
+      "object_id": 0,
+      "label": "clothes dryer",
+      "centroid": [
+        1.2005791914876047,
+        2.282181078831935,
+        0.5864258819333673
+      ],
+      "n_points": 4243,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "washing machine",
+      "centroid": [
+        1.3228451371703875,
+        1.055062456094896,
+        0.7069612623943565
+      ],
+      "n_points": 3733,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "laundry detergent",
+      "centroid": [
+        1.1359225870757703,
+        0.9505429826430137,
+        1.245918186689844
+      ],
+      "n_points": 302,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "dryer sheets",
+      "centroid": [
+        1.9533613875457452,
+        0.9632867452634479,
+        1.2166876430804412
+      ],
+      "n_points": 293,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "box",
+      "centroid": [
+        0.6658753347647761,
+        1.4171406738009626,
+        0.28323338912325324
+      ],
+      "n_points": 2233,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "wall",
+      "centroid": [
+        0.2894324654126784,
+        1.8109890678950717,
+        1.5343471630577965
+      ],
+      "n_points": 8575,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "clothes dryer",
+      "centroid": [
+        1.3060474357231944,
+        2.475090957985443,
+        1.5633333897509543
+      ],
+      "n_points": 2940,
+      "in_target": false
+    },
+    {
+      "object_id": 7,
+      "label": "pipe",
+      "centroid": [
+        1.2621569276800306,
+        2.762242296825964,
+        2.531165839157251
+      ],
+      "n_points": 2083,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "ceiling",
+      "centroid": [
+        1.1777015517774585,
+        2.536008729804805,
+        2.8314851410667456
+      ],
+      "n_points": 1909,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "wall",
+      "centroid": [
+        1.6342676763631299,
+        2.9953959744070597,
+        1.8013517759020548
+      ],
+      "n_points": 4337,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "pipes",
+      "centroid": [
+        1.684104609311664,
+        2.979895395193598,
+        1.5589812721412046
+      ],
+      "n_points": 1207,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "cabinet",
+      "centroid": [
+        2.2339656920387196,
+        2.738205902851545,
+        1.7606179867512906
+      ],
+      "n_points": 832,
+      "in_target": true
+    },
+    {
+      "object_id": 12,
+      "label": "clothes",
+      "centroid": [
+        0.29764526398967395,
+        0.7315311186249792,
+        0.8950168169141509
+      ],
+      "n_points": 859,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "shelf",
+      "centroid": [
+        2.0937642087320425,
+        0.17302981099296413,
+        1.4937832828725055
+      ],
+      "n_points": 3499,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "object",
+      "centroid": [
+        2.7095899322094064,
+        0.10301905722381213,
+        1.7251565647430909
+      ],
+      "n_points": 156,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "pipe",
+      "centroid": [
+        2.4587556644922386,
+        0.14316896853460187,
+        0.6553758690951567
+      ],
+      "n_points": 1059,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "trash can",
+      "centroid": [
+        3.0065204213697014,
+        0.2100545757777117,
+        0.311113742464189
+      ],
+      "n_points": 564,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "door",
+      "centroid": [
+        3.1587055027622424,
+        1.2688516205392457,
+        0.8043808026534102
+      ],
+      "n_points": 2167,
+      "in_target": true
+    },
+    {
+      "object_id": 18,
+      "label": "paper towel dispenser",
+      "centroid": [
+        2.946642345128253,
+        0.35469106529311795,
+        1.5105297249740974
+      ],
+      "n_points": 1061,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "soap dispenser",
+      "centroid": [
+        3.043994133289044,
+        0.6368406679167415,
+        1.5025329218679295
+      ],
+      "n_points": 273,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "doorframe",
+      "centroid": [
+        3.189187253059669,
+        1.2403884037574893,
+        0.8247056441679699
+      ],
+      "n_points": 731,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "floor",
+      "centroid": [
+        1.8035628496435878,
+        1.3865000120981885,
+        0.05907180366807063
+      ],
+      "n_points": 6653,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "wall",
+      "centroid": [
+        1.537038551954536,
+        0.19366964767082487,
+        1.3006175325686347
+      ],
+      "n_points": 7704,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "wall",
+      "centroid": [
+        3.165342805875685,
+        0.7450383784461677,
+        0.8592421973314666
+      ],
+      "n_points": 2014,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "sink",
+      "centroid": [
+        2.8078404388031286,
+        0.3027756584051128,
+        0.8683609699542197
+      ],
+      "n_points": 2165,
+      "in_target": true
+    },
+    {
+      "object_id": 25,
+      "label": "table",
+      "centroid": [
+        0.6638640176735298,
+        1.6194087825566332,
+        0.6705022610211683
+      ],
+      "n_points": 2247,
+      "in_target": true
+    },
+    {
+      "object_id": 26,
+      "label": "washing machine",
+      "centroid": [
+        2.128317114959906,
+        0.8700405806044037,
+        0.6714667427715701
+      ],
+      "n_points": 6329,
+      "in_target": false
+    }
+  ],
+  "scene0153_00": [
+    {
+      "object_id": 0,
+      "label": "scale",
+      "centroid": [
+        3.520204150712101,
+        1.1536940926967814,
+        0.041438212833790115
+      ],
+      "n_points": 337,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "sink",
+      "centroid": [
+        1.7917905594496166,
+        0.44838430184651823,
+        0.801920563859098
+      ],
+      "n_points": 272,
+      "in_target": true
+    },
+    {
+      "object_id": 2,
+      "label": "bathroom cabinet",
+      "centroid": [
+        2.0145604396157655,
+        0.47409462574893774,
+        0.6180174115291076
+      ],
+      "n_points": 2292,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "floor",
+      "centroid": [
+        2.7720171763363104,
+        0.8620623361372475,
+        0.01861332523258949
+      ],
+      "n_points": 5605,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "shower curtain",
+      "centroid": [
+        3.163177713957491,
+        1.8208343694719036,
+        1.1812367291071633
+      ],
+      "n_points": 6230,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "shower walls",
+      "centroid": [
+        2.4423633041174613,
+        2.2791623546743196,
+        1.066153825665865
+      ],
+      "n_points": 4326,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "door",
+      "centroid": [
+        3.6704097377531455,
+        0.5278227589495311,
+        0.7150676961628382
+      ],
+      "n_points": 2640,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "toilet",
+      "centroid": [
+        1.9369217978047497,
+        1.1418501125250249,
+        0.4281081299367495
+      ],
+      "n_points": 1730,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "towel",
+      "centroid": [
+        2.553103119134903,
+        0.08669992712693232,
+        1.0335871947534157
+      ],
+      "n_points": 528,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "soap dispenser",
+      "centroid": [
+        1.6651125529716755,
+        0.27926841403903635,
+        0.9396326531623972
+      ],
+      "n_points": 116,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "mirror",
+      "centroid": [
+        1.608693424757425,
+        0.3284290815457637,
+        1.3899177003216434
+      ],
+      "n_points": 231,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "wall",
+      "centroid": [
+        1.618749492971528,
+        0.9641142827195663,
+        0.9131927662740282
+      ],
+      "n_points": 3417,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "cabinet",
+      "centroid": [
+        1.8049331033316842,
+        1.1896433694301731,
+        1.4101318571254284
+      ],
+      "n_points": 548,
+      "in_target": true
+    },
+    {
+      "object_id": 13,
+      "label": "toilet paper",
+      "centroid": [
+        2.0491855676225623,
+        0.8197654417092851,
+        0.48330245193817634
+      ],
+      "n_points": 139,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "wall",
+      "centroid": [
+        2.7665726899756855,
+        0.017631869031584084,
+        0.8410732495931434
+      ],
+      "n_points": 5547,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "rail",
+      "centroid": [
+        2.7713387248044956,
+        0.06114846370935797,
+        1.2180820935500596
+      ],
+      "n_points": 334,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "wall",
+      "centroid": [
+        3.6966163121921056,
+        1.434076221105894,
+        0.7835659049186483
+      ],
+      "n_points": 2391,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "towel",
+      "centroid": [
+        3.6260609145323266,
+        1.3831339861985563,
+        0.9097710625697668
+      ],
+      "n_points": 931,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "rail",
+      "centroid": [
+        3.661487521065606,
+        1.470236505402459,
+        1.21547622150845
+      ],
+      "n_points": 135,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "shower curtain rod",
+      "centroid": [
+        2.959616839444196,
+        1.8121375154565882,
+        1.984415297155027
+      ],
+      "n_points": 270,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "towel",
+      "centroid": [
+        2.493884841181672,
+        1.8129531209575784,
+        1.7906585470982153
+      ],
+      "n_points": 758,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "wall",
+      "centroid": [
+        1.9596993358632215,
+        1.645251960507044,
+        0.8178321662359834
+      ],
+      "n_points": 2082,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "plunger",
+      "centroid": [
+        1.6854184657117746,
+        1.5585546267293666,
+        0.31259739562107697
+      ],
+      "n_points": 274,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "wall",
+      "centroid": [
+        2.2632858892613776,
+        1.8351630653857047,
+        1.3985541709665397
+      ],
+      "n_points": 838,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "wall",
+      "centroid": [
+        3.0076326722561073,
+        2.4383967481664097,
+        2.217539114219852
+      ],
+      "n_points": 1348,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "ceiling",
+      "centroid": [
+        2.932521246097706,
+        2.414959193078757,
+        2.3597576939297045
+      ],
+      "n_points": 297,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "bathtub",
+      "centroid": [
+        2.7657885473037065,
+        1.994353253050196,
+        0.2386913347317502
+      ],
+      "n_points": 2706,
+      "in_target": true
+    }
+  ],
+  "scene0164_00": [
+    {
+      "object_id": 0,
+      "label": "counter",
+      "centroid": [
+        1.4891751116715017,
+        0.879699157094919,
+        0.9690780832473571
+      ],
+      "n_points": 7836,
+      "in_target": true
+    },
+    {
+      "object_id": 1,
+      "label": "soda stream",
+      "centroid": [
+        2.461665915755125,
+        0.719226364332896,
+        1.1681441166079962
+      ],
+      "n_points": 416,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "open kitchen cabinet",
+      "centroid": [
+        2.570202595686693,
+        0.24776567442659858,
+        1.7447711869618778
+      ],
+      "n_points": 4122,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "open kitchen cabinet",
+      "centroid": [
+        0.4012106479266965,
+        1.0863967307737772,
+        1.7209508206173505
+      ],
+      "n_points": 4105,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "object",
+      "centroid": [
+        1.3271584938500673,
+        0.47524866632377827,
+        1.0811656162938998
+      ],
+      "n_points": 262,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "carton",
+      "centroid": [
+        2.433373589185799,
+        1.4645666251392484,
+        1.0768163102977681
+      ],
+      "n_points": 159,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "cooking pot",
+      "centroid": [
+        0.5294781923294067,
+        1.862543466928843,
+        1.0127320167896625
+      ],
+      "n_points": 333,
+      "in_target": false
+    },
+    {
+      "object_id": 7,
+      "label": "frying pan",
+      "centroid": [
+        0.39967042053254637,
+        1.6157691925764084,
+        1.0040136902797512
+      ],
+      "n_points": 328,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "door",
+      "centroid": [
+        1.8996764425659045,
+        3.867784741058269,
+        0.4500368166241542
+      ],
+      "n_points": 2841,
+      "in_target": true
+    },
+    {
+      "object_id": 9,
+      "label": "kitchen cabinets",
+      "centroid": [
+        0.5976833117599706,
+        2.1556790842658082,
+        1.8119421890977079
+      ],
+      "n_points": 2358,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "kitchen cabinets",
+      "centroid": [
+        2.0940827176374195,
+        0.9651835109300508,
+        0.49124691546887267
+      ],
+      "n_points": 3806,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "kitchen cabinet",
+      "centroid": [
+        2.626166022518306,
+        0.8343610614899871,
+        1.6772669974750685
+      ],
+      "n_points": 824,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "kitchen cabinet",
+      "centroid": [
+        0.8848987213386003,
+        2.3962076446061493,
+        0.5291668486450949
+      ],
+      "n_points": 930,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "kitchen cabinet",
+      "centroid": [
+        0.7106597473636208,
+        1.1502846160370284,
+        0.5507125279390837
+      ],
+      "n_points": 964,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "kitchen cabinet",
+      "centroid": [
+        2.6845847977789474,
+        1.3427678142164903,
+        1.7486332975159184
+      ],
+      "n_points": 1236,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "kitchen cabinets",
+      "centroid": [
+        2.582787928071994,
+        1.9876011012406447,
+        1.8958052733464255
+      ],
+      "n_points": 1133,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "refrigerator",
+      "centroid": [
+        2.429321987371819,
+        1.8811433835356843,
+        0.8323875446448789
+      ],
+      "n_points": 3672,
+      "in_target": true
+    },
+    {
+      "object_id": 17,
+      "label": "stove",
+      "centroid": [
+        0.44113512481502093,
+        1.8647504381923332,
+        1.0668552047639512
+      ],
+      "n_points": 1611,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "paper towel roll",
+      "centroid": [
+        2.564041043150014,
+        1.0511452301309026,
+        1.12081851501917
+      ],
+      "n_points": 232,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "dishwasher",
+      "centroid": [
+        1.0052525381049584,
+        0.8497431775770209,
+        0.502534403151447
+      ],
+      "n_points": 1307,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "wall",
+      "centroid": [
+        2.2104280576398296,
+        2.5186649905481646,
+        0.7593319716160336
+      ],
+      "n_points": 1550,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "wall",
+      "centroid": [
+        1.2850788950441736,
+        2.609437931100591,
+        1.4008348237005561
+      ],
+      "n_points": 3115,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "card",
+      "centroid": [
+        2.3586533508081544,
+        2.3388279169455344,
+        1.2474398174505124
+      ],
+      "n_points": 87,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "range hood",
+      "centroid": [
+        0.5920768286394553,
+        1.8299886452446104,
+        1.5821581325055654
+      ],
+      "n_points": 642,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "box",
+      "centroid": [
+        0.6147527766654796,
+        1.2829386707035553,
+        1.2131361997573176
+      ],
+      "n_points": 642,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "oven",
+      "centroid": [
+        0.8368208027778462,
+        1.7854299834067808,
+        0.5229889858284975
+      ],
+      "n_points": 1870,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "towel",
+      "centroid": [
+        0.8751435960523981,
+        1.6508337414047056,
+        0.7127749808661594
+      ],
+      "n_points": 493,
+      "in_target": false
+    },
+    {
+      "object_id": 27,
+      "label": "dish rack",
+      "centroid": [
+        2.251462091470944,
+        0.35136157968556125,
+        1.1126371791697174
+      ],
+      "n_points": 991,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "cooking pot",
+      "centroid": [
+        0.48617033586191494,
+        2.0739114654475244,
+        1.0444899571352992
+      ],
+      "n_points": 261,
+      "in_target": false
+    },
+    {
+      "object_id": 29,
+      "label": "picture",
+      "centroid": [
+        1.4871313487611166,
+        0.1741341332473406,
+        1.6480665919257373
+      ],
+      "n_points": 410,
+      "in_target": false
+    },
+    {
+      "object_id": 30,
+      "label": "backpack",
+      "centroid": [
+        1.2700321434199282,
+        3.6849868998808017,
+        0.20800897948846137
+      ],
+      "n_points": 1241,
+      "in_target": false
+    },
+    {
+      "object_id": 31,
+      "label": "bag",
+      "centroid": [
+        1.4318168815376306,
+        2.7341044335543048,
+        0.20038822793999514
+      ],
+      "n_points": 1234,
+      "in_target": false
+    },
+    {
+      "object_id": 32,
+      "label": "salt",
+      "centroid": [
+        0.8631632246077061,
+        2.517714586853981,
+        1.054148380458355
+      ],
+      "n_points": 80,
+      "in_target": false
+    },
+    {
+      "object_id": 33,
+      "label": "ceiling",
+      "centroid": [
+        1.531458593904972,
+        0.39852710301504257,
+        2.1283363049420028
+      ],
+      "n_points": 1664,
+      "in_target": false
+    },
+    {
+      "object_id": 34,
+      "label": "ceiling",
+      "centroid": [
+        2.4970663830680957,
+        1.6384631023599736,
+        2.4812011911504195
+      ],
+      "n_points": 1039,
+      "in_target": false
+    },
+    {
+      "object_id": 35,
+      "label": "kitchen cabinet",
+      "centroid": [
+        0.34344866064287,
+        0.5232001135426183,
+        1.5189774063325698
+      ],
+      "n_points": 310,
+      "in_target": false
+    },
+    {
+      "object_id": 36,
+      "label": "wall",
+      "centroid": [
+        0.4907164398714793,
+        1.4697108574908415,
+        2.285860859232841
+      ],
+      "n_points": 695,
+      "in_target": false
+    },
+    {
+      "object_id": 37,
+      "label": "coffee kettle",
+      "centroid": [
+        1.4644737243652344,
+        0.3872938188858804,
+        1.0684432318444885
+      ],
+      "n_points": 173,
+      "in_target": false
+    },
+    {
+      "object_id": 38,
+      "label": "object",
+      "centroid": [
+        1.5118008532810732,
+        0.6917600012867828,
+        1.0268890144395046
+      ],
+      "n_points": 183,
+      "in_target": false
+    },
+    {
+      "object_id": 39,
+      "label": "object",
+      "centroid": [
+        1.3769405848450131,
+        0.5718551871401293,
+        1.0438403890088752
+      ],
+      "n_points": 108,
+      "in_target": false
+    },
+    {
+      "object_id": 40,
+      "label": "wall",
+      "centroid": [
+        2.0245287967251215,
+        3.813281047326173,
+        0.6387094498779653
+      ],
+      "n_points": 6610,
+      "in_target": false
+    },
+    {
+      "object_id": 41,
+      "label": "box",
+      "centroid": [
+        0.6332876176204322,
+        1.0625808047798444,
+        1.0675506909188484
+      ],
+      "n_points": 477,
+      "in_target": false
+    },
+    {
+      "object_id": 42,
+      "label": "toaster",
+      "centroid": [
+        0.3060643501296828,
+        1.0061374545600343,
+        1.176582501407414
+      ],
+      "n_points": 237,
+      "in_target": false
+    },
+    {
+      "object_id": 43,
+      "label": "microwave",
+      "centroid": [
+        0.33532334164922295,
+        0.6127060457367763,
+        1.186513302036535
+      ],
+      "n_points": 1605,
+      "in_target": false
+    },
+    {
+      "object_id": 44,
+      "label": "wall",
+      "centroid": [
+        0.1958399226692813,
+        1.6536851359446696,
+        1.3249251176020522
+      ],
+      "n_points": 2158,
+      "in_target": false
+    },
+    {
+      "object_id": 45,
+      "label": "bag of coffee beans",
+      "centroid": [
+        0.48500697335531545,
+        2.288241485107777,
+        1.1253604173660279
+      ],
+      "n_points": 215,
+      "in_target": false
+    },
+    {
+      "object_id": 46,
+      "label": "object",
+      "centroid": [
+        2.5958239491452875,
+        2.0505574898621473,
+        2.260822141293398
+      ],
+      "n_points": 194,
+      "in_target": false
+    },
+    {
+      "object_id": 47,
+      "label": "water bottle",
+      "centroid": [
+        2.54861901437535,
+        1.569487699690987,
+        1.0975864462408365
+      ],
+      "n_points": 204,
+      "in_target": false
+    },
+    {
+      "object_id": 48,
+      "label": "beer bottles",
+      "centroid": [
+        2.916391837532106,
+        1.3945862874388695,
+        1.0917789306005705
+      ],
+      "n_points": 736,
+      "in_target": false
+    },
+    {
+      "object_id": 49,
+      "label": "coffee maker",
+      "centroid": [
+        0.7777760755107942,
+        2.3710973819394536,
+        1.1822780495725767
+      ],
+      "n_points": 801,
+      "in_target": false
+    },
+    {
+      "object_id": 50,
+      "label": "faucet",
+      "centroid": [
+        1.7967754729777485,
+        0.3164845240973931,
+        0.866141917090034
+      ],
+      "n_points": 674,
+      "in_target": false
+    },
+    {
+      "object_id": 51,
+      "label": "floor",
+      "centroid": [
+        1.6316007406302608,
+        2.253380329542772,
+        0.03140073239853631
+      ],
+      "n_points": 8867,
+      "in_target": false
+    },
+    {
+      "object_id": 52,
+      "label": "wall",
+      "centroid": [
+        1.2646605906340282,
+        0.20560666462939872,
+        1.5617470096336463
+      ],
+      "n_points": 4767,
+      "in_target": false
+    },
+    {
+      "object_id": 53,
+      "label": "wall",
+      "centroid": [
+        1.3139043397608057,
+        2.673780586515556,
+        0.7579306114662802
+      ],
+      "n_points": 678,
+      "in_target": false
+    },
+    {
+      "object_id": 54,
+      "label": "wall",
+      "centroid": [
+        1.2447346512460116,
+        0.7173779415391788,
+        2.2757066501126744
+      ],
+      "n_points": 1205,
+      "in_target": false
+    },
+    {
+      "object_id": 55,
+      "label": "wall",
+      "centroid": [
+        2.956822343667348,
+        1.1239642053163907,
+        1.5256706940111264
+      ],
+      "n_points": 2580,
+      "in_target": false
+    }
+  ],
+  "scene0181_00": [
+    {
+      "object_id": 0,
+      "label": "floor",
+      "centroid": [
+        4.087802043155724,
+        3.571252805399754,
+        0.1323722701000887
+      ],
+      "n_points": 37171,
+      "in_target": false
+    },
+    {
+      "object_id": 1,
+      "label": "chair",
+      "centroid": [
+        2.7309477883182387,
+        3.4831943735500794,
+        0.5884828233201818
+      ],
+      "n_points": 3637,
+      "in_target": true
+    },
+    {
+      "object_id": 2,
+      "label": "chair",
+      "centroid": [
+        3.2261016499989883,
+        2.7879405964120614,
+        0.5446762340739251
+      ],
+      "n_points": 3782,
+      "in_target": true
+    },
+    {
+      "object_id": 3,
+      "label": "chair",
+      "centroid": [
+        1.8558069305371034,
+        3.520459897980705,
+        0.5201043955223746
+      ],
+      "n_points": 2536,
+      "in_target": true
+    },
+    {
+      "object_id": 4,
+      "label": "chair",
+      "centroid": [
+        2.4240443199090986,
+        2.9343288116251185,
+        0.5285396120638611
+      ],
+      "n_points": 2058,
+      "in_target": true
+    },
+    {
+      "object_id": 5,
+      "label": "coffee table",
+      "centroid": [
+        5.597184131401669,
+        3.530134586288102,
+        0.40304828279706734
+      ],
+      "n_points": 4011,
+      "in_target": false
+    },
+    {
+      "object_id": 6,
+      "label": "wall",
+      "centroid": [
+        6.740740033428177,
+        2.192973149806943,
+        1.608975116526314
+      ],
+      "n_points": 10093,
+      "in_target": false
+    },
+    {
+      "object_id": 7,
+      "label": "wall",
+      "centroid": [
+        6.28830236136137,
+        5.063349543116619,
+        1.3538286945223654
+      ],
+      "n_points": 19348,
+      "in_target": false
+    },
+    {
+      "object_id": 8,
+      "label": "wall",
+      "centroid": [
+        2.556936942826555,
+        2.5536186229588673,
+        1.1667641130991513
+      ],
+      "n_points": 13808,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "wall",
+      "centroid": [
+        3.6342735577706233,
+        6.24448522942362,
+        1.0207723595923837
+      ],
+      "n_points": 4562,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "wall",
+      "centroid": [
+        5.04500649428404,
+        0.3368330513340171,
+        1.5888685655150556
+      ],
+      "n_points": 9815,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "wall",
+      "centroid": [
+        4.678600591962252,
+        4.9304594647055815,
+        1.234380081171144
+      ],
+      "n_points": 4417,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "wall",
+      "centroid": [
+        4.000008185660569,
+        4.4490780149564335,
+        0.9786426989855395
+      ],
+      "n_points": 1807,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "kitchen cabinets",
+      "centroid": [
+        3.1134596852078547,
+        6.097454040059534,
+        1.9196587643431733
+      ],
+      "n_points": 8187,
+      "in_target": false
+    },
+    {
+      "object_id": 14,
+      "label": "kitchen cabinets",
+      "centroid": [
+        1.80426194747341,
+        5.475383269857003,
+        0.5092360658767257
+      ],
+      "n_points": 3058,
+      "in_target": false
+    },
+    {
+      "object_id": 15,
+      "label": "kitchen cabinet",
+      "centroid": [
+        4.2748326754291694,
+        5.199458703240222,
+        0.7315060497296614
+      ],
+      "n_points": 3855,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "window",
+      "centroid": [
+        7.45147578455939,
+        3.7142091483868724,
+        1.6542936801330306
+      ],
+      "n_points": 13563,
+      "in_target": true
+    },
+    {
+      "object_id": 17,
+      "label": "shelf",
+      "centroid": [
+        4.892964613275341,
+        4.9385436335057245,
+        0.4946961232352545
+      ],
+      "n_points": 3305,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "shelf",
+      "centroid": [
+        4.874946709064479,
+        0.6233244659856835,
+        0.6547187791492146
+      ],
+      "n_points": 4406,
+      "in_target": false
+    },
+    {
+      "object_id": 19,
+      "label": "refrigerator",
+      "centroid": [
+        1.4341031398588013,
+        4.651491146488869,
+        0.9924813094901518
+      ],
+      "n_points": 6180,
+      "in_target": true
+    },
+    {
+      "object_id": 20,
+      "label": "kitchen cabinet",
+      "centroid": [
+        4.398078101679936,
+        5.046550931296724,
+        1.914153786586278
+      ],
+      "n_points": 2588,
+      "in_target": false
+    },
+    {
+      "object_id": 21,
+      "label": "stove",
+      "centroid": [
+        2.667602288187423,
+        6.172234281152863,
+        0.7984153825990905
+      ],
+      "n_points": 3962,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "door",
+      "centroid": [
+        6.174848051100413,
+        0.8470452481494961,
+        1.7314123452615366
+      ],
+      "n_points": 7174,
+      "in_target": true
+    },
+    {
+      "object_id": 23,
+      "label": "table",
+      "centroid": [
+        2.5903488306049183,
+        3.2437049092800767,
+        0.7442905485475282
+      ],
+      "n_points": 3659,
+      "in_target": true
+    },
+    {
+      "object_id": 24,
+      "label": "couch",
+      "centroid": [
+        6.5782149826845036,
+        3.0871341308082534,
+        0.5895772833038461
+      ],
+      "n_points": 6380,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "sink",
+      "centroid": [
+        1.673078268198248,
+        5.707861073095629,
+        1.0064537487988663
+      ],
+      "n_points": 577,
+      "in_target": true
+    },
+    {
+      "object_id": 26,
+      "label": "recycling bin",
+      "centroid": [
+        3.631641402060382,
+        6.000448066482217,
+        0.262811229377985
+      ],
+      "n_points": 1165,
+      "in_target": false
+    },
+    {
+      "object_id": 27,
+      "label": "wall",
+      "centroid": [
+        4.30136924833849,
+        1.1653114969614715,
+        1.1785282323215136
+      ],
+      "n_points": 2453,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "closet doors",
+      "centroid": [
+        3.8845369414345607,
+        1.9022989353706456,
+        1.1296077235706836
+      ],
+      "n_points": 4923,
+      "in_target": false
+    },
+    {
+      "object_id": 29,
+      "label": "wall",
+      "centroid": [
+        1.1644446404643078,
+        4.0942051048595385,
+        1.2617997881751586
+      ],
+      "n_points": 2410,
+      "in_target": false
+    },
+    {
+      "object_id": 30,
+      "label": "wall",
+      "centroid": [
+        1.1029585251571683,
+        5.354936124968694,
+        1.7239738804074285
+      ],
+      "n_points": 6896,
+      "in_target": false
+    },
+    {
+      "object_id": 31,
+      "label": "window",
+      "centroid": [
+        1.4312259195691945,
+        6.027913623643153,
+        1.588584641480523
+      ],
+      "n_points": 6180,
+      "in_target": true
+    },
+    {
+      "object_id": 32,
+      "label": "kitchen counter",
+      "centroid": [
+        1.788614962134864,
+        6.108058890364817,
+        1.0388283193374575
+      ],
+      "n_points": 7248,
+      "in_target": false
+    },
+    {
+      "object_id": 33,
+      "label": "ceiling",
+      "centroid": [
+        3.3166150097562976,
+        5.888306454057604,
+        2.499895390671996
+      ],
+      "n_points": 638,
+      "in_target": false
+    },
+    {
+      "object_id": 34,
+      "label": "recycling bin",
+      "centroid": [
+        3.145475141791363,
+        6.209833592017746,
+        0.2536267610435415
+      ],
+      "n_points": 939,
+      "in_target": false
+    },
+    {
+      "object_id": 35,
+      "label": "recycling bin",
+      "centroid": [
+        3.3883384312398337,
+        6.118543983775483,
+        0.25659739093844003
+      ],
+      "n_points": 845,
+      "in_target": false
+    },
+    {
+      "object_id": 36,
+      "label": "wall",
+      "centroid": [
+        4.658352870090752,
+        4.997380685907514,
+        1.1283741987772387
+      ],
+      "n_points": 1413,
+      "in_target": false
+    },
+    {
+      "object_id": 37,
+      "label": "wall",
+      "centroid": [
+        3.9133954839744116,
+        4.630497576219763,
+        1.3553383044397878
+      ],
+      "n_points": 759,
+      "in_target": false
+    },
+    {
+      "object_id": 38,
+      "label": "radiator",
+      "centroid": [
+        6.606745078431667,
+        4.78158130934889,
+        0.42073036549392123
+      ],
+      "n_points": 3991,
+      "in_target": false
+    },
+    {
+      "object_id": 39,
+      "label": "ceiling",
+      "centroid": [
+        6.6618074633162205,
+        2.3303747305541047,
+        2.365926603372079
+      ],
+      "n_points": 5915,
+      "in_target": false
+    },
+    {
+      "object_id": 40,
+      "label": "ceiling",
+      "centroid": [
+        5.666703030365665,
+        0.6215476725723535,
+        2.54023454316349
+      ],
+      "n_points": 1764,
+      "in_target": false
+    },
+    {
+      "object_id": 41,
+      "label": "wall",
+      "centroid": [
+        6.397050643915415,
+        2.0102019027432414,
+        2.4359475274261926
+      ],
+      "n_points": 2087,
+      "in_target": false
+    },
+    {
+      "object_id": 42,
+      "label": "window",
+      "centroid": [
+        6.964136447645953,
+        2.551636932778573,
+        1.4133587831675993
+      ],
+      "n_points": 14129,
+      "in_target": true
+    },
+    {
+      "object_id": 43,
+      "label": "jacket",
+      "centroid": [
+        5.390120921682577,
+        3.267363137557727,
+        0.6419147379925939
+      ],
+      "n_points": 357,
+      "in_target": false
+    },
+    {
+      "object_id": 44,
+      "label": "wall",
+      "centroid": [
+        0.7025025379297356,
+        2.4654119995747728,
+        1.8554165590778255
+      ],
+      "n_points": 2547,
+      "in_target": false
+    },
+    {
+      "object_id": 45,
+      "label": "wall",
+      "centroid": [
+        0.24374840930466687,
+        3.3186290689936273,
+        1.3847569240266204
+      ],
+      "n_points": 2878,
+      "in_target": false
+    }
+  ],
+  "scene0207_00": [
+    {
+      "object_id": 0,
+      "label": "nightstand",
+      "centroid": [
+        2.5310239115009403,
+        2.8007409046154095,
+        0.3259254069210303
+      ],
+      "n_points": 1807,
+      "in_target": true
+    },
+    {
+      "object_id": 1,
+      "label": "couch",
+      "centroid": [
+        4.9902673231396,
+        1.3599953544268064,
+        0.49073553188620345
+      ],
+      "n_points": 6416,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "wall",
+      "centroid": [
+        5.627590685572277,
+        3.9030346532283433,
+        0.9915414912342602
+      ],
+      "n_points": 4086,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "kitchen cabinets",
+      "centroid": [
+        8.070134892349218,
+        3.032951841304193,
+        1.8765005116320017
+      ],
+      "n_points": 3041,
+      "in_target": false
+    },
+    {
+      "object_id": 4,
+      "label": "box",
+      "centroid": [
+        4.4032986204255415,
+        5.6072635628728005,
+        1.3167759766074818
+      ],
+      "n_points": 653,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "door",
+      "centroid": [
+        5.851370135413275,
+        4.838972185500944,
+        0.5687256418597517
+      ],
+      "n_points": 4950,
+      "in_target": true
+    },
+    {
+      "object_id": 6,
+      "label": "refrigerator",
+      "centroid": [
+        8.488454337218132,
+        3.681731749818561,
+        0.7707518731872391
+      ],
+      "n_points": 2042,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "bed",
+      "centroid": [
+        2.943714316181164,
+        3.8493504027673318,
+        0.59778724232776
+      ],
+      "n_points": 14121,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "rack",
+      "centroid": [
+        2.598292949072174,
+        2.1607756080556357,
+        1.7428495309756822
+      ],
+      "n_points": 8452,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "cabinet",
+      "centroid": [
+        7.171360200047302,
+        2.4063868684270817,
+        1.8810908448241799
+      ],
+      "n_points": 9367,
+      "in_target": true
+    },
+    {
+      "object_id": 10,
+      "label": "chair",
+      "centroid": [
+        5.704974629235001,
+        2.1629151439946193,
+        0.3637379920849409
+      ],
+      "n_points": 1877,
+      "in_target": true
+    },
+    {
+      "object_id": 11,
+      "label": "chair",
+      "centroid": [
+        4.159720836799802,
+        1.6928678459772781,
+        0.4530129157094628
+      ],
+      "n_points": 2628,
+      "in_target": true
+    },
+    {
+      "object_id": 12,
+      "label": "window",
+      "centroid": [
+        2.8701012115327798,
+        1.3390043880012492,
+        1.428390072615103
+      ],
+      "n_points": 6201,
+      "in_target": true
+    },
+    {
+      "object_id": 13,
+      "label": "window",
+      "centroid": [
+        2.0225281328260087,
+        2.7146527669911804,
+        1.3257035405767688
+      ],
+      "n_points": 5515,
+      "in_target": true
+    },
+    {
+      "object_id": 14,
+      "label": "desk",
+      "centroid": [
+        3.6682314132751364,
+        2.6427505354175285,
+        0.5678816154011794
+      ],
+      "n_points": 5822,
+      "in_target": true
+    },
+    {
+      "object_id": 15,
+      "label": "shelf",
+      "centroid": [
+        4.795654620036638,
+        5.1084958031477665,
+        1.3041244822244302
+      ],
+      "n_points": 5489,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "bathroom vanity",
+      "centroid": [
+        5.540269833130595,
+        5.86824626103378,
+        0.5514534295488352
+      ],
+      "n_points": 3341,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "sink",
+      "centroid": [
+        7.133667932945234,
+        2.358473684933062,
+        0.8321065014694937
+      ],
+      "n_points": 886,
+      "in_target": true
+    },
+    {
+      "object_id": 18,
+      "label": "toilet",
+      "centroid": [
+        6.088573992500358,
+        6.348276900848304,
+        0.42017855063525134
+      ],
+      "n_points": 2884,
+      "in_target": true
+    },
+    {
+      "object_id": 19,
+      "label": "kitchen counter",
+      "centroid": [
+        6.785997631235974,
+        2.5609232168017098,
+        0.925290249813427
+      ],
+      "n_points": 5758,
+      "in_target": false
+    },
+    {
+      "object_id": 20,
+      "label": "door",
+      "centroid": [
+        4.304461343064844,
+        4.989702563759966,
+        1.3536587330341796
+      ],
+      "n_points": 4948,
+      "in_target": true
+    },
+    {
+      "object_id": 21,
+      "label": "ceiling",
+      "centroid": [
+        4.282573057566104,
+        3.176582460918836,
+        2.671195341350686
+      ],
+      "n_points": 15793,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "ceiling fan",
+      "centroid": [
+        3.7929808985756104,
+        2.8792958103988067,
+        2.5249245748462448
+      ],
+      "n_points": 996,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "wall",
+      "centroid": [
+        2.7200115541656054,
+        4.896496229692291,
+        1.121864586947444
+      ],
+      "n_points": 14272,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "wall",
+      "centroid": [
+        2.6064355505458736,
+        1.9377712647836112,
+        1.384196871949168
+      ],
+      "n_points": 14694,
+      "in_target": false
+    },
+    {
+      "object_id": 25,
+      "label": "floor",
+      "centroid": [
+        5.615395000528023,
+        3.5071450388159713,
+        0.030333566512326663
+      ],
+      "n_points": 31355,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "monitor",
+      "centroid": [
+        3.4802438191680505,
+        2.6517112868082737,
+        1.0082560485747187
+      ],
+      "n_points": 1513,
+      "in_target": true
+    },
+    {
+      "object_id": 27,
+      "label": "plate",
+      "centroid": [
+        3.7258998839060467,
+        3.0493111618359885,
+        0.790776735941569
+      ],
+      "n_points": 300,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "printer",
+      "centroid": [
+        2.848954127691582,
+        2.43065890451217,
+        0.8480901963863532
+      ],
+      "n_points": 1077,
+      "in_target": false
+    },
+    {
+      "object_id": 29,
+      "label": "tissue box",
+      "centroid": [
+        3.0872365221565152,
+        2.226541805856022,
+        0.8234979775216844
+      ],
+      "n_points": 405,
+      "in_target": false
+    },
+    {
+      "object_id": 30,
+      "label": "radiator",
+      "centroid": [
+        3.066950799414405,
+        1.4437227221550766,
+        0.152047522733887
+      ],
+      "n_points": 864,
+      "in_target": false
+    },
+    {
+      "object_id": 31,
+      "label": "shoes",
+      "centroid": [
+        3.073557155687104,
+        1.6541494513457675,
+        0.09599403489334216
+      ],
+      "n_points": 318,
+      "in_target": false
+    },
+    {
+      "object_id": 32,
+      "label": "laundry basket",
+      "centroid": [
+        3.9080009317421713,
+        4.488565075911681,
+        0.4694795552724266
+      ],
+      "n_points": 2017,
+      "in_target": false
+    },
+    {
+      "object_id": 33,
+      "label": "suitcase",
+      "centroid": [
+        4.081040440067168,
+        5.0602302778653305,
+        0.3626541040451129
+      ],
+      "n_points": 1426,
+      "in_target": false
+    },
+    {
+      "object_id": 34,
+      "label": "wall",
+      "centroid": [
+        4.903419741764956,
+        4.401221151634612,
+        1.7982579596978068
+      ],
+      "n_points": 5634,
+      "in_target": false
+    },
+    {
+      "object_id": 35,
+      "label": "jacket",
+      "centroid": [
+        4.108330043092851,
+        5.376456045335339,
+        0.5823243852424366
+      ],
+      "n_points": 744,
+      "in_target": false
+    },
+    {
+      "object_id": 36,
+      "label": "dresser",
+      "centroid": [
+        4.607781320272204,
+        5.061446113674355,
+        0.44000549957047413
+      ],
+      "n_points": 2603,
+      "in_target": false
+    },
+    {
+      "object_id": 37,
+      "label": "backpack",
+      "centroid": [
+        5.0500713138809274,
+        1.3668099380926413,
+        0.6349902590005791
+      ],
+      "n_points": 1083,
+      "in_target": false
+    },
+    {
+      "object_id": 38,
+      "label": "clothing",
+      "centroid": [
+        5.370763697846809,
+        1.6455707336819436,
+        0.5811808615556806
+      ],
+      "n_points": 2035,
+      "in_target": false
+    },
+    {
+      "object_id": 39,
+      "label": "backpack",
+      "centroid": [
+        5.160620862478887,
+        2.215078417092456,
+        0.23903555197647883
+      ],
+      "n_points": 1124,
+      "in_target": false
+    },
+    {
+      "object_id": 40,
+      "label": "tupperware",
+      "centroid": [
+        5.701265056361492,
+        2.1353733097705723,
+        0.7217848166186066
+      ],
+      "n_points": 491,
+      "in_target": false
+    },
+    {
+      "object_id": 41,
+      "label": "stool",
+      "centroid": [
+        6.141131687653827,
+        1.7317956143097515,
+        0.35987698086861186
+      ],
+      "n_points": 2143,
+      "in_target": false
+    },
+    {
+      "object_id": 42,
+      "label": "wall",
+      "centroid": [
+        5.813069499709629,
+        1.2501547167148366,
+        1.2545663776714597
+      ],
+      "n_points": 13014,
+      "in_target": false
+    },
+    {
+      "object_id": 43,
+      "label": "recycling bin",
+      "centroid": [
+        6.089644250449536,
+        2.8949981111479484,
+        0.20528492195179784
+      ],
+      "n_points": 1339,
+      "in_target": false
+    },
+    {
+      "object_id": 44,
+      "label": "trash can",
+      "centroid": [
+        6.271522981427829,
+        2.5328393894388577,
+        0.3782017734256432
+      ],
+      "n_points": 1838,
+      "in_target": false
+    },
+    {
+      "object_id": 45,
+      "label": "kitchen cabinets",
+      "centroid": [
+        7.349179923371786,
+        2.870752792135807,
+        0.4110833170204659
+      ],
+      "n_points": 3299,
+      "in_target": false
+    },
+    {
+      "object_id": 46,
+      "label": "stove",
+      "centroid": [
+        7.979091564019053,
+        3.008273649805079,
+        0.9230153214026368
+      ],
+      "n_points": 1699,
+      "in_target": false
+    },
+    {
+      "object_id": 47,
+      "label": "towel",
+      "centroid": [
+        7.777712472428762,
+        3.3126348566953134,
+        0.5870229829390657
+      ],
+      "n_points": 427,
+      "in_target": false
+    },
+    {
+      "object_id": 48,
+      "label": "wall",
+      "centroid": [
+        7.284250624985074,
+        2.5304398755718367,
+        2.5329596444777285
+      ],
+      "n_points": 1513,
+      "in_target": false
+    },
+    {
+      "object_id": 49,
+      "label": "paper towel roll",
+      "centroid": [
+        3.948634578716644,
+        3.2142019035646423,
+        0.923178590303604
+      ],
+      "n_points": 323,
+      "in_target": false
+    },
+    {
+      "object_id": 50,
+      "label": "door",
+      "centroid": [
+        8.602224839068985,
+        4.532631279888023,
+        0.7270156054557171
+      ],
+      "n_points": 4124,
+      "in_target": true
+    },
+    {
+      "object_id": 51,
+      "label": "wall",
+      "centroid": [
+        7.249560257919633,
+        4.839134858561552,
+        1.4901391884526098
+      ],
+      "n_points": 6117,
+      "in_target": false
+    },
+    {
+      "object_id": 52,
+      "label": "vacuum cleaner",
+      "centroid": [
+        7.100328271460921,
+        4.52796298943097,
+        0.4139110941478762
+      ],
+      "n_points": 1724,
+      "in_target": false
+    },
+    {
+      "object_id": 53,
+      "label": "table",
+      "centroid": [
+        7.671541906223445,
+        4.723587046188202,
+        0.5010231161964207
+      ],
+      "n_points": 1802,
+      "in_target": true
+    },
+    {
+      "object_id": 54,
+      "label": "microwave",
+      "centroid": [
+        8.153239062319251,
+        4.994247673693752,
+        0.897383544535537
+      ],
+      "n_points": 764,
+      "in_target": false
+    },
+    {
+      "object_id": 55,
+      "label": "doorframe",
+      "centroid": [
+        6.597781937925596,
+        4.559729177255093,
+        1.0362133746409092
+      ],
+      "n_points": 2238,
+      "in_target": false
+    },
+    {
+      "object_id": 56,
+      "label": "bathroom counter",
+      "centroid": [
+        5.351341515052609,
+        6.022658901970561,
+        0.8594449880283054
+      ],
+      "n_points": 656,
+      "in_target": false
+    },
+    {
+      "object_id": 57,
+      "label": "sink",
+      "centroid": [
+        5.3715735618104326,
+        6.201020936763033,
+        0.8336382797423829
+      ],
+      "n_points": 235,
+      "in_target": true
+    },
+    {
+      "object_id": 58,
+      "label": "mirror",
+      "centroid": [
+        5.322911010436945,
+        6.352734526120058,
+        1.3473219130307137
+      ],
+      "n_points": 2287,
+      "in_target": false
+    },
+    {
+      "object_id": 59,
+      "label": "wall",
+      "centroid": [
+        5.97768012640988,
+        6.672299034843359,
+        0.9269067790253379
+      ],
+      "n_points": 2674,
+      "in_target": false
+    },
+    {
+      "object_id": 60,
+      "label": "cabinet",
+      "centroid": [
+        6.160045618178572,
+        6.610547610728544,
+        1.6665145666925838
+      ],
+      "n_points": 5534,
+      "in_target": true
+    },
+    {
+      "object_id": 61,
+      "label": "wall",
+      "centroid": [
+        6.510579757752382,
+        6.580800804528481,
+        1.0562745295480118
+      ],
+      "n_points": 2463,
+      "in_target": false
+    },
+    {
+      "object_id": 62,
+      "label": "shower walls",
+      "centroid": [
+        7.591310946200366,
+        6.181289177791328,
+        1.5320320763652686
+      ],
+      "n_points": 7693,
+      "in_target": false
+    },
+    {
+      "object_id": 63,
+      "label": "shower curtain",
+      "centroid": [
+        6.980405910997777,
+        6.18058634139933,
+        1.1718412958303686
+      ],
+      "n_points": 3552,
+      "in_target": false
+    },
+    {
+      "object_id": 64,
+      "label": "shower curtain rod",
+      "centroid": [
+        7.214678749783348,
+        5.794247343339993,
+        2.038896759047763
+      ],
+      "n_points": 131,
+      "in_target": false
+    },
+    {
+      "object_id": 65,
+      "label": "bathtub",
+      "centroid": [
+        7.484992973089648,
+        5.98760440749709,
+        0.31425778204433524
+      ],
+      "n_points": 3879,
+      "in_target": true
+    },
+    {
+      "object_id": 66,
+      "label": "bottle",
+      "centroid": [
+        7.600269501859492,
+        6.2637243108315905,
+        0.7615098397840153
+      ],
+      "n_points": 88,
+      "in_target": false
+    },
+    {
+      "object_id": 67,
+      "label": "bottle",
+      "centroid": [
+        7.861135599089832,
+        5.82106074472753,
+        0.7892214423272668
+      ],
+      "n_points": 82,
+      "in_target": false
+    },
+    {
+      "object_id": 68,
+      "label": "wall",
+      "centroid": [
+        7.37732178836629,
+        5.072467719299206,
+        1.334263918624408
+      ],
+      "n_points": 552,
+      "in_target": false
+    },
+    {
+      "object_id": 69,
+      "label": "rail",
+      "centroid": [
+        7.018789392956616,
+        4.953331047261255,
+        1.2215814385893782
+      ],
+      "n_points": 169,
+      "in_target": false
+    },
+    {
+      "object_id": 70,
+      "label": "towel",
+      "centroid": [
+        7.1139215216133165,
+        5.041126308233841,
+        1.0328564570742365
+      ],
+      "n_points": 644,
+      "in_target": false
+    }
+  ],
+  "scene0222_00": [
+    {
+      "object_id": 0,
+      "label": "bed",
+      "centroid": [
+        2.5710218837164005,
+        2.4076515157259935,
+        0.8169780824967551
+      ],
+      "n_points": 13271,
+      "in_target": true
+    },
+    {
+      "object_id": 1,
+      "label": "wall",
+      "centroid": [
+        1.9941373499956998,
+        1.7445433616638184,
+        0.6256325060671026
+      ],
+      "n_points": 55,
+      "in_target": false
+    },
+    {
+      "object_id": 2,
+      "label": "closet wall",
+      "centroid": [
+        1.049517691239953,
+        0.9818649161831638,
+        1.2602564178911957
+      ],
+      "n_points": 4561,
+      "in_target": false
+    },
+    {
+      "object_id": 3,
+      "label": "door",
+      "centroid": [
+        2.333538967502366,
+        0.6439419884727339,
+        1.1342827278230416
+      ],
+      "n_points": 3448,
+      "in_target": true
+    },
+    {
+      "object_id": 4,
+      "label": "doorframe",
+      "centroid": [
+        1.927104454767031,
+        1.1224702890308347,
+        1.2568797868635428
+      ],
+      "n_points": 2586,
+      "in_target": false
+    },
+    {
+      "object_id": 5,
+      "label": "bed",
+      "centroid": [
+        5.653376431807565,
+        0.8206606872831408,
+        0.7172117085919869
+      ],
+      "n_points": 11614,
+      "in_target": true
+    },
+    {
+      "object_id": 6,
+      "label": "chair",
+      "centroid": [
+        3.469329178684193,
+        1.5859297443529055,
+        0.4537791441679565
+      ],
+      "n_points": 4756,
+      "in_target": true
+    },
+    {
+      "object_id": 7,
+      "label": "chair",
+      "centroid": [
+        4.113584789577349,
+        2.164756166641936,
+        0.44869817193773404
+      ],
+      "n_points": 4597,
+      "in_target": true
+    },
+    {
+      "object_id": 8,
+      "label": "floor",
+      "centroid": [
+        4.641321586096457,
+        1.6103783595086398,
+        0.052193254051214374
+      ],
+      "n_points": 17872,
+      "in_target": false
+    },
+    {
+      "object_id": 9,
+      "label": "fan",
+      "centroid": [
+        4.1970337944165355,
+        0.5778260874081282,
+        1.0702185399169404
+      ],
+      "n_points": 1984,
+      "in_target": false
+    },
+    {
+      "object_id": 10,
+      "label": "shoes",
+      "centroid": [
+        1.1679690916051146,
+        0.8240049734551419,
+        0.22059289301915835
+      ],
+      "n_points": 186,
+      "in_target": false
+    },
+    {
+      "object_id": 11,
+      "label": "shoes",
+      "centroid": [
+        6.528964263382957,
+        1.4923871425041466,
+        0.10378784454513065
+      ],
+      "n_points": 458,
+      "in_target": false
+    },
+    {
+      "object_id": 12,
+      "label": "shoes",
+      "centroid": [
+        1.3944943837630444,
+        1.081138207171208,
+        0.18598506704736978
+      ],
+      "n_points": 312,
+      "in_target": false
+    },
+    {
+      "object_id": 13,
+      "label": "desk",
+      "centroid": [
+        3.7135060459400377,
+        0.8058917892480782,
+        0.597156962651373
+      ],
+      "n_points": 7154,
+      "in_target": true
+    },
+    {
+      "object_id": 14,
+      "label": "desk",
+      "centroid": [
+        4.448451125226522,
+        2.574741137854752,
+        0.9280469277250323
+      ],
+      "n_points": 8173,
+      "in_target": true
+    },
+    {
+      "object_id": 15,
+      "label": "laundry hamper",
+      "centroid": [
+        3.3869674173685222,
+        3.257078033914933,
+        0.4989375561762315
+      ],
+      "n_points": 2080,
+      "in_target": false
+    },
+    {
+      "object_id": 16,
+      "label": "trash can",
+      "centroid": [
+        6.97833571739281,
+        1.2270302330421297,
+        0.28966923005401957
+      ],
+      "n_points": 1359,
+      "in_target": false
+    },
+    {
+      "object_id": 17,
+      "label": "trash can",
+      "centroid": [
+        6.958490815265574,
+        1.531137068065808,
+        0.3019256956821723
+      ],
+      "n_points": 1390,
+      "in_target": false
+    },
+    {
+      "object_id": 18,
+      "label": "nightstand",
+      "centroid": [
+        3.3897334850522545,
+        3.566915905791772,
+        0.6290392730263019
+      ],
+      "n_points": 1282,
+      "in_target": true
+    },
+    {
+      "object_id": 19,
+      "label": "pillow",
+      "centroid": [
+        6.659042857517706,
+        0.604940553970426,
+        0.9543807739595015
+      ],
+      "n_points": 642,
+      "in_target": true
+    },
+    {
+      "object_id": 20,
+      "label": "pillow",
+      "centroid": [
+        2.452346371351475,
+        3.546239362433668,
+        0.9334408495304574
+      ],
+      "n_points": 647,
+      "in_target": true
+    },
+    {
+      "object_id": 21,
+      "label": "mini fridge",
+      "centroid": [
+        6.876176658165024,
+        1.9406523692859226,
+        0.5607995591406901
+      ],
+      "n_points": 2656,
+      "in_target": false
+    },
+    {
+      "object_id": 22,
+      "label": "dresser",
+      "centroid": [
+        4.1680374479293825,
+        2.820942087173462,
+        1.2600358247756958
+      ],
+      "n_points": 100,
+      "in_target": false
+    },
+    {
+      "object_id": 23,
+      "label": "wall",
+      "centroid": [
+        5.250675076720495,
+        2.8100031874667093,
+        1.390906992830066
+      ],
+      "n_points": 10256,
+      "in_target": false
+    },
+    {
+      "object_id": 24,
+      "label": "door",
+      "centroid": [
+        6.340027711395416,
+        2.793838048100273,
+        1.109301189437335
+      ],
+      "n_points": 3005,
+      "in_target": true
+    },
+    {
+      "object_id": 25,
+      "label": "doorframe",
+      "centroid": [
+        6.306643837123143,
+        2.785993803948053,
+        1.255943551647701
+      ],
+      "n_points": 1881,
+      "in_target": false
+    },
+    {
+      "object_id": 26,
+      "label": "wall",
+      "centroid": [
+        7.1690913569396315,
+        1.602601367259996,
+        0.9230681623871156
+      ],
+      "n_points": 7567,
+      "in_target": false
+    },
+    {
+      "object_id": 27,
+      "label": "wall",
+      "centroid": [
+        4.975882806214766,
+        0.22437239890263344,
+        1.7690850846140709
+      ],
+      "n_points": 13623,
+      "in_target": false
+    },
+    {
+      "object_id": 28,
+      "label": "window",
+      "centroid": [
+        5.527511777094761,
+        0.06135819258142699,
+        1.4233868651382826
+      ],
+      "n_points": 3946,
+      "in_target": true
+    },
+    {
+      "object_id": 29,
+      "label": "window",
+      "centroid": [
+        4.057997564797564,
+        0.09956412581825039,
+        1.420451276367489
+      ],
+      "n_points": 4062,
+      "in_target": true
+    },
+    {
+      "object_id": 30,
+      "label": "radiator",
+      "centroid": [
+        3.729519365288371,
+        0.3306227770747898,
+        0.5368477202576699
+      ],
+      "n_points": 1112,
+      "in_target": false
+    },
+    {
+      "object_id": 31,
+      "label": "backpack",
+      "centroid": [
+        4.699342005288423,
+        0.6020542390755753,
+        0.16835456204725735
+      ],
+      "n_points": 670,
+      "in_target": false
+    },
+    {
+      "object_id": 32,
+      "label": "shoes",
+      "centroid": [
+        4.10914660888583,
+        1.1012354608185082,
+        0.08654335134518573
+      ],
+      "n_points": 601,
+      "in_target": false
+    },
+    {
+      "object_id": 33,
+      "label": "mini fridge",
+      "centroid": [
+        5.641564816471407,
+        2.2861928602800954,
+        0.43419052823923854
+      ],
+      "n_points": 1903,
+      "in_target": false
+    },
+    {
+      "object_id": 34,
+      "label": "trash can",
+      "centroid": [
+        5.227350433638304,
+        2.6123631860647545,
+        0.25934426975898406
+      ],
+      "n_points": 1361,
+      "in_target": false
+    },
+    {
+      "object_id": 35,
+      "label": "wall",
+      "centroid": [
+        3.9003119253301874,
+        3.6086186290000546,
+        1.464104831205391
+      ],
+      "n_points": 2236,
+      "in_target": false
+    },
+    {
+      "object_id": 36,
+      "label": "wall",
+      "centroid": [
+        3.0794565040011737,
+        4.029438945991146,
+        1.7349180399670414
+      ],
+      "n_points": 14792,
+      "in_target": false
+    },
+    {
+      "object_id": 37,
+      "label": "wall",
+      "centroid": [
+        2.0981223378813008,
+        2.928412331447508,
+        1.5451436401685141
+      ],
+      "n_points": 15093,
+      "in_target": false
+    },
+    {
+      "object_id": 38,
+      "label": "shoes",
+      "centroid": [
+        1.145192337839791,
+        1.0556148815244324,
+        0.2091078157728531
+      ],
+      "n_points": 267,
+      "in_target": false
+    },
+    {
+      "object_id": 39,
+      "label": "clothes",
+      "centroid": [
+        1.4132385301713606,
+        0.996345235055752,
+        1.218419376971295
+      ],
+      "n_points": 5785,
+      "in_target": false
+    },
+    {
+      "object_id": 40,
+      "label": "clothes",
+      "centroid": [
+        3.66487619204041,
+        3.557841070781547,
+        0.8616228699509656
+      ],
+      "n_points": 1708,
+      "in_target": false
+    },
+    {
+      "object_id": 41,
+      "label": "cushion",
+      "centroid": [
+        2.3481873535869906,
+        1.4139118810628084,
+        0.3109918618949768
+      ],
+      "n_points": 1192,
+      "in_target": false
+    },
+    {
+      "object_id": 42,
+      "label": "shelf",
+      "centroid": [
+        3.369269173398467,
+        0.5531785059327314,
+        1.169708695970004
+      ],
+      "n_points": 5688,
+      "in_target": false
+    }
+  ]
+}
