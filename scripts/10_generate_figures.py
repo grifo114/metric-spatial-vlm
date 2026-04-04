@@ -245,6 +245,9 @@ def fig6(d):
     for status in sorted(all_statuses):
         counts = [(df["status"] == status).sum() / 162 * 100
                   for df in methods.values()]
+        # Skip statuses that never reach 1% in any method (invisible in chart)
+        if max(counts) < 1.0:
+            continue
         ax.bar(x, counts, bottom=bottom,
                color=status_colors.get(status, "gray"),
                label=status_labels.get(status, status),
