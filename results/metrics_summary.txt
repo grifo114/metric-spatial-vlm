@@ -1,0 +1,15 @@
+FINAL EVALUATION RESULTS
+============================================================
+Dataset     : ScanNet v2
+Scenes      : 20
+Total pairs : 162
+
+Baseline A — Pixel 2D
+  MAE=0.8194 m  RelErr=65.33%  Valid=108/162
+Baseline B — DPT Monocular
+  MAE=1.0276 m  RelErr=80.03%  Valid=107/162
+Proposed — RGBD Fusion
+  MAE=0.0713 m  RelErr=5.99%  Valid=98/162
+
+Proposed RGBD vs Baseline A: -91.3% MAE
+Proposed RGBD vs Baseline B: -93.1% MAE

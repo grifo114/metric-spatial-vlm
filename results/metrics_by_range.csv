@@ -1,0 +1,10 @@
+method_name,range,n,MAE,MedianAE,RMSE,RelErr
+Baseline A — Pixel 2D,long,6,0.3183,0.3624,0.3597,9.3869
+Baseline A — Pixel 2D,medium,32,0.8864,0.7733,1.1065,46.9987
+Baseline A — Pixel 2D,short,70,0.8317,0.5985,1.1535,78.5004
+Baseline B — DPT Monocular,long,6,0.6352,0.4331,0.7681,18.331
+Baseline B — DPT Monocular,medium,31,1.1975,1.0042,1.8101,59.6971
+Baseline B — DPT Monocular,short,70,0.986,0.5474,1.4491,94.3305
+Proposed — RGBD Fusion,long,5,0.112,0.0936,0.1363,3.1047
+Proposed — RGBD Fusion,medium,26,0.0669,0.0539,0.0812,3.4251
+Proposed — RGBD Fusion,short,67,0.0699,0.0536,0.0916,7.1947

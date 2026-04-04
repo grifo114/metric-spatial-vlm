@@ -1,0 +1,4 @@
+method,n_total,n_valid,n_failed,pct_valid,MAE,MedianAE,RMSE,RelErr,MAE_short,MAE_medium,MAE_long,RelErr_short,RelErr_medium,RelErr_long
+Baseline A — Pixel 2D,162,108,54,66.7,0.8194,0.5985,1.1101,65.33,0.8317,0.8864,0.3183,78.5,47.0,9.39
+Baseline B — DPT Monocular,162,107,55,66.0,1.0276,0.7532,1.5349,80.03,0.986,1.1975,0.6352,94.33,59.7,18.33
+Proposed — RGBD Fusion,162,98,64,60.5,0.0713,0.0538,0.0918,5.99,0.0699,0.0669,0.112,7.19,3.43,3.1
