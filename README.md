@@ -5,6 +5,7 @@ Code for the experiments of the Master's dissertation:
 Supported by 3D Indoor Scene Information"**
 
 Federal University of Bahia — PPGM
+
 Author: Jefferson Lopes 
 
 ## Reproducing the experiments
