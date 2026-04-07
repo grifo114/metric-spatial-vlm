@@ -124,12 +124,12 @@ pip install -r requirements.txt
 
 ### 3. Project Structure
 metric-spatial-vlm/
-├── data/                 # ScanNet data
-├── scripts/              # experimental pipeline
-├── results/              # results and metrics
-├── figures/              # generated figures
-├── notebooks/            # exploration
-└── README.md
+- `data/`                 # ScanNet data
+- `scripts/`              # experimental pipeline
+- `results/`              # results and metrics
+- `figures/`              # generated figures
+- `notebooks/`            # exploration
+- `README.md`
 
 - `scripts/` — full experiment pipeline
 - `notebooks/` — Colab versions of the experiments
