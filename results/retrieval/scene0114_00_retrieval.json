@@ -1,0 +1,119 @@
+{
+  "scene_id": "scene0114_00",
+  "raw_query": "qual a distancia entre a cadeira e a mesa?",
+  "normalized_query": "qual a distancia entre a cadeira e a mesa",
+  "intent": "distance",
+  "object_a_text": "chair",
+  "object_b_text": "table",
+  "object_a_candidates": [
+    {
+      "object_id": 2,
+      "label": "chair",
+      "n_points": 4459,
+      "centroid": [
+        3.83147743909074,
+        1.8098092382599564,
+        0.7116969216027638
+      ],
+      "bbox_min": [
+        3.3503878116607666,
+        1.4856098890304565,
+        0.27537524700164795
+      ],
+      "bbox_max": [
+        4.0513434410095215,
+        2.068483352661133,
+        1.126392126083374
+      ],
+      "description": "chair, object 2, center side, front area, mid-height, near desk, file cabinet, monitor"
+    },
+    {
+      "object_id": 3,
+      "label": "chair",
+      "n_points": 3857,
+      "centroid": [
+        4.6075580088561265,
+        3.0902689973214517,
+        0.524568842408615
+      ],
+      "bbox_min": [
+        4.185781478881836,
+        2.547685384750366,
+        0.028579171746969223
+      ],
+      "bbox_max": [
+        5.093161106109619,
+        3.55477237701416,
+        0.9871123433113098
+      ],
+      "description": "chair, object 3, right side, middle area, low, near table, cabinet, chair"
+    },
+    {
+      "object_id": 4,
+      "label": "chair",
+      "n_points": 3418,
+      "centroid": [
+        5.287071045690841,
+        2.2863056345457498,
+        0.4796883522905082
+      ],
+      "bbox_min": [
+        4.7882304191589355,
+        1.7749532461166382,
+        0.02003295347094536
+      ],
+      "bbox_max": [
+        5.767685413360596,
+        2.82781982421875,
+        0.9867186546325684
+      ],
+      "description": "chair, object 4, right side, middle area, low, near table, chair, radiator"
+    },
+    {
+      "object_id": 5,
+      "label": "chair",
+      "n_points": 1148,
+      "centroid": [
+        2.270084911937913,
+        3.2036271805547254,
+        0.6785853577725823
+      ],
+      "bbox_min": [
+        2.0655765533447266,
+        2.8540077209472656,
+        0.027333080768585205
+      ],
+      "bbox_max": [
+        2.7275424003601074,
+        3.564976215362549,
+        1.0567991733551025
+      ],
+      "description": "chair, object 5, left side, middle area, low, near desk, cabinet, trash can"
+    }
+  ],
+  "object_b_candidates": [
+    {
+      "object_id": 18,
+      "label": "table",
+      "n_points": 789,
+      "centroid": [
+        5.090255112400224,
+        2.6949742517241657,
+        0.4653982413113495
+      ],
+      "bbox_min": [
+        4.877575397491455,
+        2.409756898880005,
+        0.050405047833919525
+      ],
+      "bbox_max": [
+        5.522364139556885,
+        3.0406291484832764,
+        0.5404080152511597
+      ],
+      "description": "table, object 18, right side, middle area, low, near chair, chair, cabinet"
+    }
+  ],
+  "n_object_a_candidates": 4,
+  "n_object_b_candidates": 1
+}

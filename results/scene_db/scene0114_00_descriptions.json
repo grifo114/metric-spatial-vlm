@@ -1,0 +1,847 @@
+{
+  "scene_id": "scene0114_00",
+  "n_objects": 29,
+  "descriptions": [
+    {
+      "object_id": 0,
+      "label": "floor",
+      "centroid": [
+        3.490852254222146,
+        2.88425833044084,
+        0.03202394228381546
+      ],
+      "description": "floor, object 0, center side, middle area, low, near trash can, desk, file cabinet",
+      "relative_position": {
+        "x": "center",
+        "y": "middle",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 28,
+          "label": "trash can"
+        },
+        {
+          "object_id": 13,
+          "label": "desk"
+        },
+        {
+          "object_id": 11,
+          "label": "file cabinet"
+        }
+      ]
+    },
+    {
+      "object_id": 1,
+      "label": "plant",
+      "centroid": [
+        2.569777170636613,
+        2.239094986433802,
+        0.9531032879689743
+      ],
+      "description": "plant, object 1, left side, middle area, mid-height, near monitor, trash can, wall",
+      "relative_position": {
+        "x": "left",
+        "y": "middle",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 17,
+          "label": "monitor"
+        },
+        {
+          "object_id": 28,
+          "label": "trash can"
+        },
+        {
+          "object_id": 6,
+          "label": "wall"
+        }
+      ]
+    },
+    {
+      "object_id": 2,
+      "label": "chair",
+      "centroid": [
+        3.83147743909074,
+        1.8098092382599564,
+        0.7116969216027638
+      ],
+      "description": "chair, object 2, center side, front area, mid-height, near desk, file cabinet, monitor",
+      "relative_position": {
+        "x": "center",
+        "y": "front",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 14,
+          "label": "desk"
+        },
+        {
+          "object_id": 27,
+          "label": "file cabinet"
+        },
+        {
+          "object_id": 19,
+          "label": "monitor"
+        }
+      ]
+    },
+    {
+      "object_id": 3,
+      "label": "chair",
+      "centroid": [
+        4.6075580088561265,
+        3.0902689973214517,
+        0.524568842408615
+      ],
+      "description": "chair, object 3, right side, middle area, low, near table, cabinet, chair",
+      "relative_position": {
+        "x": "right",
+        "y": "middle",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 18,
+          "label": "table"
+        },
+        {
+          "object_id": 10,
+          "label": "cabinet"
+        },
+        {
+          "object_id": 4,
+          "label": "chair"
+        }
+      ]
+    },
+    {
+      "object_id": 4,
+      "label": "chair",
+      "centroid": [
+        5.287071045690841,
+        2.2863056345457498,
+        0.4796883522905082
+      ],
+      "description": "chair, object 4, right side, middle area, low, near table, chair, radiator",
+      "relative_position": {
+        "x": "right",
+        "y": "middle",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 18,
+          "label": "table"
+        },
+        {
+          "object_id": 3,
+          "label": "chair"
+        },
+        {
+          "object_id": 16,
+          "label": "radiator"
+        }
+      ]
+    },
+    {
+      "object_id": 5,
+      "label": "chair",
+      "centroid": [
+        2.270084911937913,
+        3.2036271805547254,
+        0.6785853577725823
+      ],
+      "description": "chair, object 5, left side, middle area, low, near desk, cabinet, trash can",
+      "relative_position": {
+        "x": "left",
+        "y": "middle",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 13,
+          "label": "desk"
+        },
+        {
+          "object_id": 8,
+          "label": "cabinet"
+        },
+        {
+          "object_id": 28,
+          "label": "trash can"
+        }
+      ]
+    },
+    {
+      "object_id": 6,
+      "label": "wall",
+      "centroid": [
+        2.0184511461973647,
+        2.0026301833295195,
+        1.4886794801182326
+      ],
+      "description": "wall, object 6, left side, middle area, high, near plant, monitor, monitor",
+      "relative_position": {
+        "x": "left",
+        "y": "middle",
+        "z": "high"
+      },
+      "neighbors": [
+        {
+          "object_id": 1,
+          "label": "plant"
+        },
+        {
+          "object_id": 17,
+          "label": "monitor"
+        },
+        {
+          "object_id": 19,
+          "label": "monitor"
+        }
+      ]
+    },
+    {
+      "object_id": 7,
+      "label": "telephone",
+      "centroid": [
+        3.4861251602840793,
+        0.7646233200563067,
+        1.0666267639932
+      ],
+      "description": "telephone, object 7, center side, front area, mid-height, near cup, file cabinet, wall",
+      "relative_position": {
+        "x": "center",
+        "y": "front",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 26,
+          "label": "cup"
+        },
+        {
+          "object_id": 27,
+          "label": "file cabinet"
+        },
+        {
+          "object_id": 25,
+          "label": "wall"
+        }
+      ]
+    },
+    {
+      "object_id": 8,
+      "label": "cabinet",
+      "centroid": [
+        1.4688619159855627,
+        3.4564735436416316,
+        0.8587849432779545
+      ],
+      "description": "cabinet, object 8, left side, middle area, mid-height, near chair, desk, plant",
+      "relative_position": {
+        "x": "left",
+        "y": "middle",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 5,
+          "label": "chair"
+        },
+        {
+          "object_id": 13,
+          "label": "desk"
+        },
+        {
+          "object_id": 1,
+          "label": "plant"
+        }
+      ]
+    },
+    {
+      "object_id": 9,
+      "label": "cabinet",
+      "centroid": [
+        2.8263639924816713,
+        5.446852409682603,
+        1.0772201103568753
+      ],
+      "description": "cabinet, object 9, center side, back area, mid-height, near cabinet, door, wall",
+      "relative_position": {
+        "x": "center",
+        "y": "back",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 20,
+          "label": "cabinet"
+        },
+        {
+          "object_id": 21,
+          "label": "door"
+        },
+        {
+          "object_id": 22,
+          "label": "wall"
+        }
+      ]
+    },
+    {
+      "object_id": 10,
+      "label": "cabinet",
+      "centroid": [
+        4.207247035854709,
+        3.6961321152878046,
+        0.5467535917241342
+      ],
+      "description": "cabinet, object 10, right side, back area, low, near chair, wall, file cabinet",
+      "relative_position": {
+        "x": "right",
+        "y": "back",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 3,
+          "label": "chair"
+        },
+        {
+          "object_id": 23,
+          "label": "wall"
+        },
+        {
+          "object_id": 11,
+          "label": "file cabinet"
+        }
+      ]
+    },
+    {
+      "object_id": 11,
+      "label": "file cabinet",
+      "centroid": [
+        3.143164633852486,
+        3.843568061231459,
+        0.38307606919353737
+      ],
+      "description": "file cabinet, object 11, center side, back area, low, near desk, floor, cabinet",
+      "relative_position": {
+        "x": "center",
+        "y": "back",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 13,
+          "label": "desk"
+        },
+        {
+          "object_id": 0,
+          "label": "floor"
+        },
+        {
+          "object_id": 10,
+          "label": "cabinet"
+        }
+      ]
+    },
+    {
+      "object_id": 12,
+      "label": "wall",
+      "centroid": [
+        4.562861331111752,
+        0.9119869089874647,
+        0.4499036954886349
+      ],
+      "description": "wall, object 12, right side, front area, low, near radiator, ledge, window",
+      "relative_position": {
+        "x": "right",
+        "y": "front",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 16,
+          "label": "radiator"
+        },
+        {
+          "object_id": 15,
+          "label": "ledge"
+        },
+        {
+          "object_id": 24,
+          "label": "window"
+        }
+      ]
+    },
+    {
+      "object_id": 13,
+      "label": "desk",
+      "centroid": [
+        2.9229547466784163,
+        3.321781824972731,
+        0.6229211768081042
+      ],
+      "description": "desk, object 13, center side, middle area, low, near file cabinet, chair, trash can",
+      "relative_position": {
+        "x": "center",
+        "y": "middle",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 11,
+          "label": "file cabinet"
+        },
+        {
+          "object_id": 5,
+          "label": "chair"
+        },
+        {
+          "object_id": 28,
+          "label": "trash can"
+        }
+      ]
+    },
+    {
+      "object_id": 14,
+      "label": "desk",
+      "centroid": [
+        3.1181585195268795,
+        1.5266593952765823,
+        0.8970817118501485
+      ],
+      "description": "desk, object 14, center side, front area, mid-height, near monitor, monitor, chair",
+      "relative_position": {
+        "x": "center",
+        "y": "front",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 19,
+          "label": "monitor"
+        },
+        {
+          "object_id": 17,
+          "label": "monitor"
+        },
+        {
+          "object_id": 2,
+          "label": "chair"
+        }
+      ]
+    },
+    {
+      "object_id": 15,
+      "label": "ledge",
+      "centroid": [
+        4.7845794570254085,
+        1.202348900683664,
+        0.7453818720227278
+      ],
+      "description": "ledge, object 15, right side, front area, mid-height, near radiator, wall, window",
+      "relative_position": {
+        "x": "right",
+        "y": "front",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 16,
+          "label": "radiator"
+        },
+        {
+          "object_id": 12,
+          "label": "wall"
+        },
+        {
+          "object_id": 24,
+          "label": "window"
+        }
+      ]
+    },
+    {
+      "object_id": 16,
+      "label": "radiator",
+      "centroid": [
+        4.866213457929359,
+        1.24581750874734,
+        0.42201607843016503
+      ],
+      "description": "radiator, object 16, right side, front area, low, near ledge, wall, window",
+      "relative_position": {
+        "x": "right",
+        "y": "front",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 15,
+          "label": "ledge"
+        },
+        {
+          "object_id": 12,
+          "label": "wall"
+        },
+        {
+          "object_id": 24,
+          "label": "window"
+        }
+      ]
+    },
+    {
+      "object_id": 17,
+      "label": "monitor",
+      "centroid": [
+        2.910019164827782,
+        2.0356664662271724,
+        1.3132745322316066
+      ],
+      "description": "monitor, object 17, center side, middle area, mid-height, near plant, monitor, desk",
+      "relative_position": {
+        "x": "center",
+        "y": "middle",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 1,
+          "label": "plant"
+        },
+        {
+          "object_id": 19,
+          "label": "monitor"
+        },
+        {
+          "object_id": 14,
+          "label": "desk"
+        }
+      ]
+    },
+    {
+      "object_id": 18,
+      "label": "table",
+      "centroid": [
+        5.090255112400224,
+        2.6949742517241657,
+        0.4653982413113495
+      ],
+      "description": "table, object 18, right side, middle area, low, near chair, chair, cabinet",
+      "relative_position": {
+        "x": "right",
+        "y": "middle",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 4,
+          "label": "chair"
+        },
+        {
+          "object_id": 3,
+          "label": "chair"
+        },
+        {
+          "object_id": 10,
+          "label": "cabinet"
+        }
+      ]
+    },
+    {
+      "object_id": 19,
+      "label": "monitor",
+      "centroid": [
+        2.986036281707959,
+        1.448779752621284,
+        1.2952673286963732
+      ],
+      "description": "monitor, object 19, center side, front area, mid-height, near desk, monitor, telephone",
+      "relative_position": {
+        "x": "center",
+        "y": "front",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 14,
+          "label": "desk"
+        },
+        {
+          "object_id": 17,
+          "label": "monitor"
+        },
+        {
+          "object_id": 7,
+          "label": "telephone"
+        }
+      ]
+    },
+    {
+      "object_id": 20,
+      "label": "cabinet",
+      "centroid": [
+        3.238241013105925,
+        5.253570305499779,
+        0.32643279953319543
+      ],
+      "description": "cabinet, object 20, center side, back area, low, near cabinet, file cabinet, door",
+      "relative_position": {
+        "x": "center",
+        "y": "back",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 9,
+          "label": "cabinet"
+        },
+        {
+          "object_id": 11,
+          "label": "file cabinet"
+        },
+        {
+          "object_id": 21,
+          "label": "door"
+        }
+      ]
+    },
+    {
+      "object_id": 21,
+      "label": "door",
+      "centroid": [
+        1.8593538396699087,
+        5.041235611325218,
+        0.5841586187836669
+      ],
+      "description": "door, object 21, left side, back area, low, near cabinet, cabinet, wall",
+      "relative_position": {
+        "x": "left",
+        "y": "back",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 9,
+          "label": "cabinet"
+        },
+        {
+          "object_id": 20,
+          "label": "cabinet"
+        },
+        {
+          "object_id": 22,
+          "label": "wall"
+        }
+      ]
+    },
+    {
+      "object_id": 22,
+      "label": "wall",
+      "centroid": [
+        2.1327568243925916,
+        5.314521006939446,
+        2.004689139779622
+      ],
+      "description": "wall, object 22, left side, back area, high, near cabinet, door, cabinet",
+      "relative_position": {
+        "x": "left",
+        "y": "back",
+        "z": "high"
+      },
+      "neighbors": [
+        {
+          "object_id": 9,
+          "label": "cabinet"
+        },
+        {
+          "object_id": 21,
+          "label": "door"
+        },
+        {
+          "object_id": 20,
+          "label": "cabinet"
+        }
+      ]
+    },
+    {
+      "object_id": 23,
+      "label": "wall",
+      "centroid": [
+        4.592786944209948,
+        4.076336919606521,
+        1.3756599271205614
+      ],
+      "description": "wall, object 23, right side, back area, high, near cabinet, chair, table",
+      "relative_position": {
+        "x": "right",
+        "y": "back",
+        "z": "high"
+      },
+      "neighbors": [
+        {
+          "object_id": 10,
+          "label": "cabinet"
+        },
+        {
+          "object_id": 3,
+          "label": "chair"
+        },
+        {
+          "object_id": 18,
+          "label": "table"
+        }
+      ]
+    },
+    {
+      "object_id": 24,
+      "label": "window",
+      "centroid": [
+        5.064459584583171,
+        1.0038718408643497,
+        1.0870434014400514
+      ],
+      "description": "window, object 24, right side, front area, mid-height, near ledge, radiator, wall",
+      "relative_position": {
+        "x": "right",
+        "y": "front",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 15,
+          "label": "ledge"
+        },
+        {
+          "object_id": 16,
+          "label": "radiator"
+        },
+        {
+          "object_id": 12,
+          "label": "wall"
+        }
+      ]
+    },
+    {
+      "object_id": 25,
+      "label": "wall",
+      "centroid": [
+        3.550006232867583,
+        0.1252001057692819,
+        1.4002541771251193
+      ],
+      "description": "wall, object 25, center side, front area, high, near cup, telephone, file cabinet",
+      "relative_position": {
+        "x": "center",
+        "y": "front",
+        "z": "high"
+      },
+      "neighbors": [
+        {
+          "object_id": 26,
+          "label": "cup"
+        },
+        {
+          "object_id": 7,
+          "label": "telephone"
+        },
+        {
+          "object_id": 27,
+          "label": "file cabinet"
+        }
+      ]
+    },
+    {
+      "object_id": 26,
+      "label": "cup",
+      "centroid": [
+        3.5344425881162604,
+        0.2234324151531179,
+        0.9714924294897851
+      ],
+      "description": "cup, object 26, center side, front area, mid-height, near wall, telephone, file cabinet",
+      "relative_position": {
+        "x": "center",
+        "y": "front",
+        "z": "mid-height"
+      },
+      "neighbors": [
+        {
+          "object_id": 25,
+          "label": "wall"
+        },
+        {
+          "object_id": 7,
+          "label": "telephone"
+        },
+        {
+          "object_id": 27,
+          "label": "file cabinet"
+        }
+      ]
+    },
+    {
+      "object_id": 27,
+      "label": "file cabinet",
+      "centroid": [
+        3.422948839476901,
+        0.9423549432626943,
+        0.4096059326826998
+      ],
+      "description": "file cabinet, object 27, center side, front area, low, near telephone, desk, cup",
+      "relative_position": {
+        "x": "center",
+        "y": "front",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 7,
+          "label": "telephone"
+        },
+        {
+          "object_id": 14,
+          "label": "desk"
+        },
+        {
+          "object_id": 26,
+          "label": "cup"
+        }
+      ]
+    },
+    {
+      "object_id": 28,
+      "label": "trash can",
+      "centroid": [
+        2.7226314520595047,
+        2.5346662651408804,
+        0.25032695885559525
+      ],
+      "description": "trash can, object 28, left side, middle area, low, near plant, floor, desk",
+      "relative_position": {
+        "x": "left",
+        "y": "middle",
+        "z": "low"
+      },
+      "neighbors": [
+        {
+          "object_id": 1,
+          "label": "plant"
+        },
+        {
+          "object_id": 0,
+          "label": "floor"
+        },
+        {
+          "object_id": 13,
+          "label": "desk"
+        }
+      ]
+    }
+  ]
+}

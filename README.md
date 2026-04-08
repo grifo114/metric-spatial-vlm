@@ -160,6 +160,45 @@ Manual demo: available
 Natural language query integration: in progress
 
 ---
+## Natural Language Query Demo
+
+This prototype extends the manual demo by introducing a natural language query pipeline.
+
+Current flow:
+- parse a natural language question
+- retrieve candidate objects from the scene
+- disambiguate the objects
+- compute the 3D distance
+- visualize the result in the scene
+
+Current scripts:
+- `scripts/13_parse_natural_query.py`
+- `scripts/14_retrieve_scene_candidates.py`
+- `scripts/15_disambiguate_with_gemma.py`
+- `scripts/16_query_distance_pipeline.py`
+- `scripts/17_demo_interactive_scene.py`
+
+Example query:
+```text
+What is the distance between the chair and the table?
+
+Current status in 07/04/2026:
+retrieval and distance computation are working
+visualization is working
+Gemma integration is still semi-manual
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## License
 
