@@ -178,17 +178,18 @@ Current scripts:
 - `scripts/16_query_distance_pipeline.py`
 - `scripts/17_demo_interactive_scene.py`
 
-Example query:
+## Example query:
 ```text
 What is the distance between the chair and the table?
 
-- Current status in 07/04/2026:
+---
+## Current status in 07/04/2026:
 retrieval and distance computation are working
 visualization is working
 Gemma integration is still semi-manual
 
-
-- License
+---
+## License
 
 MIT License — code is free to use.  
 ScanNet data follows its own academic license.
