@@ -176,16 +176,37 @@ Current scripts:
 - `scripts/15_disambiguate_with_gemma.py`
 - `scripts/16_query_distance_pipeline.py`
 - `scripts/17_demo_interactive_scene.py`
+- `scripts/13_parse_natural_query.py`
+- `scripts/14_retrieve_scene_candidates.py`
+- `scripts/15b_disambiguate_with_gemma_ollama.py`
+- `scripts/16_query_distance_pipeline.py`
+- `scripts/17_demo_interactive_scene.py`
 
 ### Example query:
 
 What is the distance between the chair and the table?
 
 
-### Current status in 07/04/2026:
-retrieval and distance computation are working
-visualization is working
-Gemma integration is still semi-manual
+## Natural Language Query Prototype
+
+This project now includes a first end-to-end prototype for natural language querying over a ScanNet scene.
+
+Current pipeline:
+- parse a natural language query
+- retrieve candidate objects in the scene
+- disambiguate objects with Gemma (via Ollama)
+- compute the 3D distance
+- visualize the result in the scene
+
+Example query:
+```text
+qual a distancia entre a cadeira e a mesa?
+
+Example output:
+
+object_a: chair (object_id = 2)
+object_b: table (object_id = 18)
+distance: 1.5584 m
 
 
 ### License
