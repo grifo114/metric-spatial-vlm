@@ -117,7 +117,7 @@ Note: ScanNet raw data (.sens, meshes, and segmentation files) must be properly
 downloaded and placed under data/scannet/scans/. The dataset is not included
 in this repository due to licensing restrictions.
 
-### 2. Installation
+2. Installation
 ```bash
 pip install -r requirements.txt
 ```
@@ -179,16 +179,16 @@ Current scripts:
 - `scripts/17_demo_interactive_scene.py`
 
 ## Example query:
-```text
+
 What is the distance between the chair and the table?
 
----
+
 ## Current status in 07/04/2026:
 retrieval and distance computation are working
 visualization is working
 Gemma integration is still semi-manual
 
----
+
 ## License
 
 MIT License — code is free to use.  
