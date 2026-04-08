@@ -148,7 +148,7 @@ python scripts/06_proposed_method.py
 python scripts/07_evaluate.py
 python scripts/08_language_grounding_gpt.py
 python scripts/09_language_grounding_llava.py
-python scripts/110_generate_figures.py
+python scripts/10_generate_figures.py
 ```
 
 Results are saved to `results/`.
@@ -183,13 +183,13 @@ Current scripts:
 What is the distance between the chair and the table?
 
 
-## Current status in 07/04/2026:
+### Current status in 07/04/2026:
 retrieval and distance computation are working
 visualization is working
 Gemma integration is still semi-manual
 
 
-## License
+### License
 
 MIT License — code is free to use.  
 ScanNet data follows its own academic license.
