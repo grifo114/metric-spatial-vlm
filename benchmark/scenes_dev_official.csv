@@ -1,0 +1,21 @@
+scene_id,scene_type,room_group,n_valid_objects,n_valid_categories,n_valid_chair,n_valid_table,n_valid_desk,n_valid_sofa,n_valid_bed,n_valid_door,n_valid_cabinet,n_valid_monitor,selection_score,family_id
+scene0006_02,bedroom / hotel,bedroom,11,6,3,2,0,0,2,2,1,1,22.5,scene0006
+scene0051_01,bedroom / hotel,bedroom,9,6,2,0,1,0,1,3,1,1,20.0,scene0051
+scene0222_00,bedroom / hotel,bedroom,10,4,2,0,2,0,2,4,0,0,17.5,scene0222
+scene0059_00,living room / lounge,living_room,30,5,14,2,0,3,0,8,3,0,29.5,scene0059
+scene0002_00,living room / lounge,living_room,19,6,3,2,0,1,0,7,4,2,26.5,scene0002
+scene0022_01,living room / lounge,living_room,22,5,13,4,0,1,0,2,2,0,25.5,scene0022
+scene0024_01,living room / lounge,living_room,16,5,7,5,0,1,0,2,1,0,22.5,scene0024
+scene0001_00,living room / lounge,living_room,15,4,4,5,0,4,0,2,0,0,20.0,scene0001
+scene0207_00,apartment,mixed_other,15,8,2,1,1,1,1,4,4,1,29.0,scene0207
+scene0054_00,apartment,mixed_other,19,7,2,2,1,1,0,11,1,1,28.5,scene0054
+scene0000_00,apartment,mixed_other,17,7,0,3,1,1,1,3,7,1,26.5,scene0000
+scene0056_00,computercluster,mixed_other,26,4,15,3,0,0,0,1,0,7,25.5,scene0056
+scene0011_00,kitchen,mixed_other,19,5,11,2,0,0,0,2,3,1,24.0,scene0011
+scene0041_01,unknown,mixed_other,25,3,18,5,0,0,0,2,0,0,22.5,scene0041
+scene0040_00,office,office_study,19,7,4,1,3,1,0,1,5,4,28.5,scene0040
+scene0010_01,office,office_study,22,6,5,1,3,0,0,2,4,7,27.5,scene0010
+scene0025_01,office,office_study,16,7,2,1,1,2,0,2,4,4,27.0,scene0025
+scene0058_01,office,office_study,17,6,5,1,2,0,0,1,2,6,25.0,scene0058
+scene0114_00,office,office_study,16,6,4,1,2,0,0,1,6,2,24.5,scene0114
+scene0030_02,classroom,office_study,25,3,17,6,0,0,0,2,0,0,22.5,scene0030

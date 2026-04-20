@@ -1,0 +1,2 @@
+n_total,acc_ann_1_vs_gt,acc_ann_2_vs_gt,acc_ann_3_vs_gt,kappa_ann1_ann2,kappa_ann1_ann3,kappa_ann2_ann3,acc_majority_vs_gt
+40,0.725,0.725,0.75,0.8992443324937027,0.849246231155779,0.7461928934010152,0.725

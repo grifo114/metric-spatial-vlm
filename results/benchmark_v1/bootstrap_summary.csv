@@ -1,0 +1,2 @@
+dist_n,dist_ci_width_mean,dist_ci_width_median,dist_ci_width_max,dist_ci_relative_mean_pct,near_n,near_gt_stability_mean,near_gt_stability_median,near_gt_stability_min,near_n_above_95pct
+45,0.012942073080274745,0.0106335133314132,0.0727089643478393,4.24974036575633,39,1.0,1.0,1.0,39

@@ -1,215 +1,102 @@
-# metric-spatial-vlm
+# Raciocínio Espacial sobre Cenas 3D via Representação Geométrica Explícita
 
-Code for the experiments of the Master's dissertation.
+Dissertação de Mestrado — PPGM/UFBA 2026  
+Autor: Jefferson Lopes  
+Orientador: [nome do orientador]
 
-Federal University of Bahia — Graduate Program in Mechatronics  
-Author: Jefferson Lopes
+## Resumo
 
-Estimation of distances between objects in 3D scenes from natural language queries.
+Este repositório contém o código, benchmark e resultados da dissertação que investiga o papel da representação geométrica explícita na execução de consultas espaciais sobre cenas 3D estruturadas. O trabalho propõe uma arquitetura modular que separa a identificação das entidades da cena (grounding) da execução de operadores geométricos explícitos.
 
-> How to measure distances in meters between objects referenced by natural language in a three-dimensional scene?
+## Operadores Espaciais
 
-The approach separates two stages:
-- language → identify the objects
-- geometry → measure the distance
+| Operador | Descrição | Métrica |
+|---|---|---|
+| `distance(A, B)` | Distância entre superfícies de dois objetos | MAE (metros) |
+| `nearest(ref, cat)` | Objeto mais próximo de uma referência | Top-1 accuracy |
+| `between(X, A, B)` | X está entre A e B no plano XY? | F1 binário |
+| `aligned(A, B, C)` | A, B e C estão alinhados no plano XY? | F1 binário |
 
----
+## Resultados Principais (Test Official Stage1)
 
-## Core Idea
+| Operador | Superfície | Centróide |
+|---|---|---|
+| distance (MAE) | **0.000 m** | 0.944 m |
+| nearest (Top-1) | **1.000** | 1.000 |
+| between (F1) | **1.000** | — |
+| aligned (F1) | **1.000** | — |
 
-Vision-language models can describe qualitative spatial relations:
-- "the chair is to the right of the table"
-- "the monitor is on top of the desk"
-
-But they are not designed to provide metric measurements:
-- "what is the distance between the chair and the table?"
-
-The limitation is related to the absence of explicit metric scale.  
-This project treats distance as a geometric problem, not a semantic one.
-
----
-
-## 1. Geometric Pipeline
-
-Implementation of a pipeline to measure distances between objects in 3D scenes:
-- object extraction from ScanNet
-- 3D centroid computation
-- Euclidean distance calculation between objects
-
----
-
-## 2. Baselines
-
-Three approaches were compared:
-- Baseline A: pixel ratio (2D)
-- Baseline B: monocular depth
-- Proposed method: RGB-D geometry (3D)
-
----
-
-## 3. Experiments
-
-- Dataset: ScanNet
-- 20 scenes
-- 162 object pairs
-
----
-
-## 4. Main Result
-
-Mean error: 0.819 m → 0.071 m  
-Approximately 91% reduction in error.
-
-The result is associated with the use of explicit metric scale.
-
-These results refer to distance estimation using controlled object selection.  
-Automatic object identification from natural language is addressed separately.
-
----
-
-## 5. Linguistic Grounding (initial exploration)
-
-Models were tested for identifying objects from language:
-- GPT-4.1
-- LLaVA 13B
-- LLaVA 7B
-
-Observations:
-- when identification is correct, the final error converges to the geometric error
-- when identification fails, the error increases
-
----
-
-## 6. Quick Start
-
-Shows distance measurement between two objects in a ScanNet scene.
-
-**File:** `scripts/00_demo_manual_scene0114.py`
-
-Requires Open3D and ScanNet scene files properly placed in the data directory.
-
-What the demo does:
-- loads scene `scene0114_00`
-- manually selects two objects:
-  - chair (objectId = 2)
-  - desk (objectId = 13)
-- computes the distance between centroids
-- displays:
-  - original scene (.ply)
-  - object bounding boxes
-  - line between the objects
-  - distance in meters
-
-Activate the virtual environment and execute:
+## Estrutura do Repositório
+metric-spatial-vlm/
+├── benchmark/          # Queries e ground truth oficiais (dev + test)
+├── configs/            # Configurações do benchmark
+│   ├── benchmark_config.yaml
+│   └── label_map.yaml
+├── src/                # Motor geométrico e utilitários
+│   ├── geometry/       # Operadores espaciais
+│   ├── dataset/        # Carregamento de dados
+│   ├── evaluation/     # Métricas
+│   └── queries/        # Geração de queries
+├── scripts/
+│   ├── benchmark/      # Construção do benchmark (scripts 00-71)
+│   ├── experiments/    # Experimentos (scripts 81-91)
+│   └── demo/           # Demonstração visual (scripts 72-80, 92-106)
+├── results/benchmark_v1/  # Resultados oficiais
+├── figures/            # Figuras geradas
+└── notebooks/          # Análises e demos interativos
+## Instalação
 
 ```bash
-python scripts/00_demo_manual_scene0114.py
-
-Reproducing the Experiments
-1. Data Access
-
-Experiments use the ScanNet v2 dataset.
-Request access at: http://www.scan-net.org
-
-After approval, download the scenes listed in data/scenes_used.txt.
-
-Note: ScanNet raw data (.sens, meshes, and segmentation files) must be properly
-downloaded and placed under data/scannet/scans/. The dataset is not included
-in this repository due to licensing restrictions.
-
-2. Installation
-```bash
+git clone https://github.com/grifo114/metric-spatial-vlm
+cd metric-spatial-vlm
+python -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 7. Project Structure
-metric-spatial-vlm/
-- `data/`                 # ScanNet data
-- `scripts/`              # experimental pipeline
-- `results/`              # results and metrics
-- `figures/`              # generated figures
-- `notebooks/`            # exploration
-- `scripts/`              # full experiment pipeline
-- `notebooks/`            # Colab versions of the experiments
-- `results/`              # generated CSVs and JSONs (auditable)
-- `figures/`              # plots generated by the scripts
-- `README.md`
+## Reprodução dos Resultados
 
-## 8. Run the Pipeline
 ```bash
-python scripts/01_extract_gt_centroids.py
-python scripts/02_select_pairs.py
-python scripts/03_extract_sens_frames.py
-python scripts/03b_extract_all_poses.py
-python scripts/04_baseline_pixel2d.py
-python scripts/05_baseline_monocular.py
-python scripts/06_proposed_method.py
-python scripts/07_evaluate.py
-python scripts/08_language_grounding_gpt.py
-python scripts/09_language_grounding_llava.py
-python scripts/10_generate_figures.py
+# 1. Benchmark métrico (distance + nearest)
+python scripts/benchmark/61_run_benchmark_distance_nearest_test_official_stage1.py
+
+# 2. Benchmark relacional (between + aligned)
+python scripts/benchmark/70_run_benchmark_relational_binary_test_official_stage1.py
+
+# 3. Baseline VLM
+python scripts/experiments/81_vlm_baseline_distance_nearest.py
+
+# 4. Experimento E2E GPT-4.1
+python scripts/experiments/84_e2e_grounding_test_official.py
 ```
 
-Results are saved to `results/`.
+## Dataset
 
-Current Status
-Geometric pipeline: implemented and validated
-Language grounding: initial experiments completed
-Manual demo: available
-Natural language query integration: in progress
+O benchmark usa cenas do [ScanNet](http://www.scan-net.org/). Os dados geométricos não são distribuídos neste repositório por questões de licença. Siga as instruções em [ScanNet](http://www.scan-net.org/) para obter acesso.
 
----
-## 9. Natural Language Query Demo
+Os arquivos de benchmark (queries, ground truth, manifestos) estão em `benchmark/` e não dependem dos dados brutos do ScanNet para reprodução das métricas.
 
-This prototype extends the manual demo by introducing a natural language query pipeline.
+## Limiares Oficiais
 
-Current flow:
-- parse a natural language question
-- retrieve candidate objects from the scene
-- disambiguate the objects
-- compute the 3D distance
-- visualize the result in the scene
+Calibrados no conjunto de desenvolvimento (dev official):
 
-Current scripts:
-- `scripts/13_parse_natural_query.py`
-- `scripts/14_retrieve_scene_candidates.py`
-- `scripts/15_disambiguate_with_gemma.py`
-- `scripts/16_query_distance_pipeline.py`
-- `scripts/17_demo_interactive_scene.py`
-- `scripts/13_parse_natural_query.py`
-- `scripts/14_retrieve_scene_candidates.py`
-- `scripts/15b_disambiguate_with_gemma_ollama.py`
-- `scripts/16_query_distance_pipeline.py`
-- `scripts/17_demo_interactive_scene.py`
+- `τ_between = 0.30`
+- `τ_aligned = 0.25`
 
-### Example query:
+Definidos em `configs/benchmark_config.yaml`.
 
-What is the distance between the chair and the table?
+## Citação
 
+```bibtex
+@mastersthesis{lopes2026spatial,
+  author  = {Lopes, Jefferson},
+  title   = {Raciocínio Espacial sobre Cenas 3D via Representação Geométrica Explícita},
+  school  = {Universidade Federal da Bahia},
+  year    = {2026},
+  program = {Programa de Pós-Graduação em Mecatrônica}
+}
+```
 
-## Natural Language Query Prototype
+## Licença
 
-This project now includes a first end-to-end prototype for natural language querying over a ScanNet scene.
-
-Current pipeline:
-- parse a natural language query
-- retrieve candidate objects in the scene
-- disambiguate objects with Gemma (via Ollama)
-- compute the 3D distance
-- visualize the result in the scene
-
-Example query:
-```text
-qual a distancia entre a cadeira e a mesa?
-
-Example output:
-
-object_a: chair (object_id = 2)
-object_b: table (object_id = 18)
-distance: 1.5584 m
-
-
-### License
-
-MIT License — code is free to use.  
-ScanNet data follows its own academic license.
+MIT License — veja `LICENSE` para detalhes.

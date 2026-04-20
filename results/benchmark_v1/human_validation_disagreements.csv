@@ -1,0 +1,12 @@
+ann_num,image_file,binary_query_id,scene_id,operator,natural_query,geometric_label,annotator_1,annotator_2,annotator_3,notes,Unnamed: 11,majority_vote
+3,ann_003_aligned_neg.jpg,test_stage1_rel_0003__neg,scene0012_01,aligned,"scene0012_01__chair_001, scene0012_01__door_032 e scene0012_01__chair_002 estão alinhados?",0,1,0,1,,,1
+9,ann_009_aligned_neg.jpg,test_stage1_rel_0009__neg,scene0081_01,aligned,"scene0081_01__chair_000, scene0081_01__monitor_026 e scene0081_01__chair_001 estão alinhados?",0,1,1,1,,,1
+13,ann_013_aligned_pos.jpg,test_stage1_rel_0014__pos,scene0101_00,aligned,"scene0101_00__bed_032, scene0101_00__monitor_038 e scene0101_00__table_025 estão alinhados?",1,0,0,0,,,0
+14,ann_014_aligned_pos.jpg,test_stage1_rel_0027__pos,scene0138_00,aligned,"scene0138_00__cabinet_003, scene0138_00__chair_021 e scene0138_00__desk_018 estão alinhados?",1,0,0,0,,,0
+17,ann_017_aligned_pos.jpg,test_stage1_rel_0016__pos,scene0101_00,aligned,"scene0101_00__cabinet_043, scene0101_00__chair_039 e scene0101_00__desk_027 estão alinhados?",1,0,0,0,,,0
+20,ann_020_aligned_pos.jpg,test_stage1_rel_0037__pos,scene0142_00,aligned,"scene0142_00__cabinet_008, scene0142_00__chair_019 e scene0142_00__monitor_040 estão alinhados?",1,0,0,0,,,0
+21,ann_021_between_neg.jpg,test_stage1_rel_0063__neg,scene0141_00,between,scene0141_00__chair_008 está entre scene0141_00__desk_012 e scene0141_00__desk_028?,0,1,1,1,,,1
+25,ann_025_between_neg.jpg,test_stage1_rel_0052__neg,scene0106_00,between,scene0106_00__chair_009 está entre scene0106_00__table_001 e scene0106_00__table_003?,0,1,1,0,,,1
+28,ann_028_between_neg.jpg,test_stage1_rel_0068__neg,scene0181_00,between,scene0181_00__chair_002 está entre scene0181_00__table_005 e scene0181_00__table_023?,0,1,1,1,,,1
+33,ann_033_between_pos.jpg,test_stage1_rel_0059__pos,scene0132_00,between,scene0132_00__chair_008 está entre scene0132_00__table_011 e scene0132_00__table_013?,1,0,0,0,,,0
+36,ann_036_between_pos.jpg,test_stage1_rel_0057__pos,scene0132_00,between,scene0132_00__chair_006 está entre scene0132_00__table_010 e scene0132_00__table_013?,1,0,0,1,,,0

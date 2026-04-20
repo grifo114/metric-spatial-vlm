@@ -1,0 +1,94 @@
+scene_id,scene_type,room_group,n_valid_objects,n_valid_categories,n_valid_chair,n_valid_table,n_valid_desk,n_valid_sofa,n_valid_bed,n_valid_door,n_valid_cabinet,n_valid_monitor,selection_score,family_id
+scene0137_01,bedroom / hotel,bedroom,13,6,2,1,1,0,3,4,0,2,23.5,scene0137
+scene0143_01,bedroom / hotel,bedroom,9,6,2,0,1,0,1,2,2,1,20.0,scene0143
+scene0137_00,bedroom / hotel,bedroom,11,5,2,0,1,0,2,4,0,2,19.0,scene0137
+scene0137_02,bedroom / hotel,bedroom,11,5,2,0,1,0,2,4,0,2,19.0,scene0137
+scene0092_03,bedroom / hotel,bedroom,9,6,1,0,1,0,1,2,1,3,18.5,scene0092
+scene0092_04,bedroom / hotel,bedroom,9,6,1,0,1,0,1,2,1,3,18.5,scene0092
+scene0110_00,bedroom / hotel,bedroom,8,4,2,0,2,0,2,2,0,0,16.5,scene0110
+scene0144_00,bedroom / hotel,bedroom,8,4,3,1,0,0,1,3,0,0,15.0,scene0144
+scene0050_02,living room / lounge,living_room,11,5,2,1,1,1,0,6,0,0,20.0,scene0050
+scene0012_01,living room / lounge,living_room,19,3,4,1,0,0,0,14,0,0,18.0,scene0012
+scene0012_00,living room / lounge,living_room,17,3,4,1,0,0,0,12,0,0,17.0,scene0012
+scene0012_02,living room / lounge,living_room,17,3,4,1,0,0,0,12,0,0,17.0,scene0012
+scene0087_00,living room / lounge,living_room,9,4,5,2,0,1,0,1,0,0,17.0,scene0087
+scene0087_01,living room / lounge,living_room,9,4,5,2,0,1,0,1,0,0,17.0,scene0087
+scene0087_02,living room / lounge,living_room,9,4,5,2,0,1,0,1,0,0,17.0,scene0087
+scene0050_00,living room / lounge,living_room,10,4,2,0,1,1,0,6,0,0,16.0,scene0050
+scene0050_01,living room / lounge,living_room,10,4,2,0,1,1,0,6,0,0,16.0,scene0050
+scene0106_00,computercluster,mixed_other,26,5,13,4,0,2,0,1,0,6,28.0,scene0106
+scene0106_01,computercluster,mixed_other,26,5,12,4,0,2,0,1,0,7,28.0,scene0106
+scene0081_01,lobby,mixed_other,34,3,26,7,0,0,0,0,0,1,27.5,scene0081
+scene0101_00,apartment,mixed_other,12,8,1,1,1,1,1,3,3,1,26.0,scene0101
+scene0101_05,apartment,mixed_other,10,8,1,1,1,1,1,2,2,1,25.0,scene0101
+scene0008_00,lobby,mixed_other,15,5,4,5,0,2,0,2,0,2,22.5,scene0008
+scene0101_01,apartment,mixed_other,12,7,1,0,1,1,1,3,4,1,22.5,scene0101
+scene0101_02,apartment,mixed_other,11,7,1,0,1,1,1,3,3,1,22.0,scene0101
+scene0101_03,apartment,mixed_other,10,7,1,0,1,1,1,3,2,1,21.5,scene0101
+scene0132_00,lobby,mixed_other,16,4,10,4,0,1,0,0,0,1,21.0,scene0132
+scene0132_01,lobby,mixed_other,16,4,9,5,0,1,0,0,0,1,21.0,scene0132
+scene0132_02,lobby,mixed_other,16,4,10,4,0,1,0,0,0,1,21.0,scene0132
+scene0181_00,kitchen,mixed_other,13,5,4,2,0,1,0,2,4,0,21.0,scene0181
+scene0023_00,misc.,mixed_other,20,3,16,3,0,0,0,0,0,1,20.5,scene0023
+scene0076_00,kitchen,mixed_other,17,4,13,1,0,0,0,0,2,1,19.5,scene0076
+scene0079_01,hallway,mixed_other,10,5,4,2,1,0,0,2,0,1,19.5,scene0079
+scene0046_00,apartment,mixed_other,8,6,1,1,1,0,1,3,0,1,19.5,scene0046
+scene0005_00,misc.,mixed_other,9,5,4,2,0,0,0,1,1,1,19.0,scene0005
+scene0005_01,misc.,mixed_other,9,5,4,2,0,0,0,1,1,1,19.0,scene0005
+scene0047_00,kitchen,mixed_other,16,4,3,1,0,0,0,6,6,0,18.5,scene0047
+scene0102_01,dining room,mixed_other,16,4,10,1,0,0,0,4,1,0,18.5,scene0102
+scene0046_02,apartment,mixed_other,8,6,1,0,1,0,1,3,1,1,18.0,scene0046
+scene0102_00,dining room,mixed_other,14,4,9,1,0,0,0,3,1,0,17.5,scene0102
+scene0111_00,kitchen,mixed_other,11,5,0,1,0,1,0,3,4,2,17.5,scene0111
+scene0111_01,kitchen,mixed_other,11,5,0,1,0,1,0,3,4,2,17.5,scene0111
+scene0111_02,kitchen,mixed_other,11,5,0,1,0,1,0,4,3,2,17.5,scene0111
+scene0118_02,hallway,mixed_other,10,4,4,2,0,0,0,3,1,0,17.0,scene0118
+scene0079_00,bookstore / library,mixed_other,9,4,5,2,0,0,0,1,0,1,17.0,scene0079
+scene0048_01,lobby,mixed_other,11,3,7,2,0,0,0,0,2,0,15.5,scene0048
+scene0057_00,storage/basement/garage,mixed_other,9,4,1,3,0,0,0,1,4,0,15.0,scene0057
+scene0063_00,kitchen,mixed_other,9,4,4,1,0,0,0,1,3,0,15.0,scene0063
+scene0118_00,hallway,mixed_other,9,3,4,2,0,0,0,3,0,0,14.5,scene0118
+scene0118_01,hallway,mixed_other,9,3,4,2,0,0,0,3,0,0,14.5,scene0118
+scene0057_01,storage/basement/garage,mixed_other,8,4,1,2,0,0,0,1,4,0,14.5,scene0057
+scene0048_00,lobby,mixed_other,8,3,4,2,0,0,0,0,2,0,14.0,scene0048
+scene0149_00,kitchen,mixed_other,11,3,1,1,0,0,0,0,9,0,12.5,scene0149
+scene0138_00,office,office_study,26,6,7,1,3,0,0,1,7,7,29.5,scene0138
+scene0095_00,classroom,office_study,29,5,16,1,0,0,0,1,1,10,27.5,scene0095
+scene0142_00,office,office_study,21,6,5,5,1,0,0,1,4,5,27.0,scene0142
+scene0095_01,classroom,office_study,29,4,17,1,0,0,0,0,1,10,25.5,scene0095
+scene0141_00,office,office_study,17,6,3,0,3,1,0,2,4,4,25.5,scene0141
+scene0141_01,office,office_study,17,6,3,0,3,1,0,2,4,4,25.5,scene0141
+scene0141_02,office,office_study,17,6,3,0,3,1,0,2,4,4,25.5,scene0141
+scene0066_00,conference room,office_study,29,4,26,1,0,0,0,1,1,0,25.0,scene0066
+scene0140_00,conference room,office_study,29,4,24,1,0,0,0,2,2,0,25.0,scene0140
+scene0140_01,conference room,office_study,28,4,24,1,0,0,0,1,2,0,24.5,scene0140
+scene0142_01,office,office_study,20,5,5,0,6,0,0,1,3,5,24.5,scene0142
+scene0106_02,office,office_study,19,5,7,3,0,2,0,1,0,6,24.5,scene0106
+scene0088_02,conference room,office_study,27,4,24,1,0,0,0,1,1,0,24.0,scene0088
+scene0088_00,conference room,office_study,28,3,25,1,0,0,0,2,0,0,22.5,scene0088
+scene0131_02,office,office_study,15,5,9,0,1,1,0,0,1,3,21.0,scene0131
+scene0088_03,conference room,office_study,24,3,22,1,0,0,0,1,0,0,20.5,scene0088
+scene0088_01,conference room,office_study,21,3,18,2,0,0,0,1,0,0,20.5,scene0088
+scene0126_00,office,office_study,11,5,3,0,2,0,0,1,3,2,20.0,scene0126
+scene0017_01,office,office_study,13,5,4,0,1,0,0,1,3,4,19.5,scene0017
+scene0098_01,office,office_study,10,5,4,0,2,0,0,1,2,1,19.5,scene0098
+scene0126_01,office,office_study,10,5,3,0,2,0,0,1,2,2,19.5,scene0126
+scene0126_02,office,office_study,10,5,3,0,2,0,0,1,2,2,19.5,scene0126
+scene0017_00,office,office_study,12,5,4,0,1,0,0,1,2,4,19.0,scene0017
+scene0131_00,office,office_study,14,4,9,0,1,1,0,0,0,3,18.5,scene0131
+scene0131_01,office,office_study,14,4,9,0,1,1,0,0,0,3,18.5,scene0131
+scene0017_02,office,office_study,10,5,4,1,0,0,0,1,2,2,18.0,scene0017
+scene0098_00,office,office_study,10,5,4,0,1,0,0,1,2,2,18.0,scene0098
+scene0093_00,office,office_study,12,4,5,1,0,0,0,0,2,4,17.0,scene0093
+scene0093_01,office,office_study,12,4,5,1,0,0,0,0,2,4,17.0,scene0093
+scene0093_02,office,office_study,12,4,5,1,0,0,0,0,2,4,17.0,scene0093
+scene0089_01,office,office_study,9,4,4,0,2,0,0,2,0,1,17.0,scene0089
+scene0089_02,office,office_study,9,4,4,0,2,0,0,2,0,1,17.0,scene0089
+scene0108_00,office,office_study,8,4,4,0,2,0,0,1,0,1,16.5,scene0108
+scene0075_00,conference room,office_study,13,3,11,1,0,0,0,0,0,1,15.5,scene0075
+scene0130_00,conference room,office_study,9,4,5,1,0,0,0,1,0,2,15.5,scene0130
+scene0089_00,office,office_study,8,4,4,0,1,0,0,2,0,1,15.0,scene0089
+scene0103_00,conference room,office_study,8,3,6,1,0,0,0,1,0,0,12.5,scene0103
+scene0103_01,conference room,office_study,8,3,6,1,0,0,0,1,0,0,12.5,scene0103
+scene0122_00,conference room,office_study,8,3,5,1,0,0,0,2,0,0,12.5,scene0122
+scene0122_01,conference room,office_study,8,3,5,1,0,0,0,2,0,0,12.5,scene0122

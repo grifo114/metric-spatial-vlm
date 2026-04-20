@@ -1,0 +1,2 @@
+model,n_distance,n_nearest,excluded_categories,distance_grounding,distance_MAE,nearest_grounding,nearest_Top1
+SpatialLM1.1-Qwen-0.5B,21,12,"monitor,door",0.14285714285714285,1.4550007254587882e-08,0.08333333333333333,1.0

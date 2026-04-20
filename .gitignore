@@ -1,22 +1,33 @@
-# ScanNet data (restricted license - do not redistribute)
-data/
-
 # Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-.env
 venv/
-.venv/
-
-# macOS
+__pycache__/
+*.pyc
+*.pyo
 .DS_Store
+
+# Dados pesados (não versionar)
+data/
+artifacts/object_points_*/
+artifacts/vlm_baseline_renders/
+artifacts/e2e_grounding_renders/
+artifacts/human_annotation/
+artifacts/demo_video/
+
+# Resultados intermediários (só versionar os oficiais)
+results/pilot/
+results/demos/
+results/query_results/
+results/query_eval/
+
+# Layouts do SpatialLM (gerados externamente)
+layouts/
+
+# Overleaf/dissertação
+dissertation/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Downloaded model weights (too large)
-*.pth
-*.pt
-*.bin
-*.ckpt
+# Credenciais
+*.env
+.env

@@ -1,0 +1,2 @@
+distance_n_total,distance_n_parsed,distance_parse_rate,distance_MAE_vlm,distance_MedAE_vlm,distance_MAE_centroid,distance_MedAE_centroid,distance_MAE_surface,distance_MedAE_surface,nearest_n_total,nearest_n_parsed,nearest_parse_rate,nearest_Top1_vlm,nearest_Top1_centroid,nearest_Top1_surface
+45,41,0.9111111111111111,0.3327839674746118,0.14329377412796018,0.9443,0.8895,0.0,0.0,39,39,1.0,0.358974358974359,1.0,1.0

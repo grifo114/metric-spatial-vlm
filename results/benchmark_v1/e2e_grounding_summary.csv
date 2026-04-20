@@ -1,0 +1,2 @@
+distance_n_total,distance_n_grounding_correct,distance_grounding_accuracy,distance_MAE_geometric,distance_MAE_total,distance_MAE_grounding_contribution,distance_MedAE_geometric,distance_MedAE_total,nearest_n_total,nearest_n_grounding_correct,nearest_grounding_accuracy,nearest_Top1_geometric,nearest_Top1_total,nearest_Top1_grounding_cost
+45,15,0.3333333333333333,0.0,0.7856628102810199,0.7856628102810199,0.0,0.3596991663945774,39,15,0.38461538461538464,1.0,0.6923076923076923,0.3076923076923077

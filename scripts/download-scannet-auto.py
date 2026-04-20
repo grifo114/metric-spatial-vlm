@@ -65,11 +65,11 @@ if __name__ == '__main__':
 
     scenes = [
 
-          'scene0153_00',
+          'scene0142_00',
 
-          'scene0164_00',
+          #'scene0164_00',
 
-          'scene0181_00',
+          #'scene0181_00',
 
     ]
 

@@ -1,0 +1,13 @@
+DISTANCE
+n = 45
+Surface MAE  = 0.000000
+Centroid MAE = 0.944260
+Surface MedAE  = 0.000000
+Centroid MedAE = 0.889530
+Mean improvement (centroid - surface) = 0.944260
+
+NEAREST
+n = 39
+Surface Top-1  = 1.000000
+Centroid Top-1 = 1.000000
+Centroid failures = 0
