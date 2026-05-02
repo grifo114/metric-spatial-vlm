@@ -73,4 +73,15 @@ Citation
 
 Citation information will be added after submission or acceptance.
 
+## License
 
+The code in this repository is released under the MIT License.
+
+The benchmark metadata, prompts, configuration files, and result-processing
+scripts are provided for research and reproducibility purposes.
+
+Raw ScanNet data are not redistributed in this repository. Access to
+ScanNet is subject to the original ScanNet license and terms of use.
+
+Model outputs included in this repository are provided only to support
+auditability and reproduction of the paper results.
