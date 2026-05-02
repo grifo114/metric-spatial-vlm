@@ -1,0 +1,11 @@
+open3d==0.17.0
+numpy==1.26.4
+torch>=2.2.0
+torchvision>=0.17.0
+transformers>=4.40.0
+opencv-python>=4.9.0
+pandas>=2.1.0
+matplotlib>=3.8.0
+scipy>=1.12.0
+tqdm>=4.66.0
+Pillow>=10.0.0

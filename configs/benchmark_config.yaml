@@ -1,0 +1,28 @@
+operators:
+  - distance
+  - nearest
+  - between
+  - aligned
+
+distance:
+  primary_metric: surface_distance
+  baseline_metric: centroid_distance
+  min_surface_distance_m: 0.10
+  max_surface_distance_m: 5.0
+
+nearest:
+  metric: surface_distance
+  ambiguity_margin_m: 0.05
+
+between:
+  projection_plane: xy
+  tau_between_m: 0.30
+
+aligned:
+  projection_plane: xy
+  tau_align_m: 0.25
+
+query_generation:
+  max_queries_per_scene_per_operator: 3
+  exclude_ambiguous: true
+  exclude_touching_pairs: true

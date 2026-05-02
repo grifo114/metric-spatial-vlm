@@ -1,0 +1,48 @@
+allowed_categories:
+  - chair
+  - table
+  - desk
+  - sofa
+  - bed
+  - door
+  - cabinet
+  - monitor
+
+label_map:
+  chair: chair
+  office chair: chair
+  dining chair: chair
+  armchair: chair
+  desk chair: chair
+
+  table: table
+  dining table: table
+  coffee table: table
+  side table: table
+  end table: table
+
+  desk: desk
+  writing desk: desk
+  computer desk: desk
+
+  sofa: sofa
+  couch: sofa
+  loveseat: sofa
+
+  bed: bed
+  bunk bed: bed
+  single bed: bed
+  double bed: bed
+
+  door: door
+
+  cabinet: cabinet
+  cupboard: cabinet
+  storage cabinet: cabinet
+  kitchen cabinet: cabinet
+
+  monitor: monitor
+  tv: monitor
+  television: monitor
+  computer monitor: monitor
+  display: monitor
