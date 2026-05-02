@@ -1,33 +1,60 @@
 # Python
-venv/
 __pycache__/
 *.pyc
-*.pyo
+venv/
+.venv/
+env/
+
+# Mac
 .DS_Store
 
-# Dados pesados (não versionar)
+# Secrets
+.env
+*.env
+api_keys.*
+secrets.*
+*.key
+
+# Raw datasets / large data
 data/
-artifacts/object_points_*/
-artifacts/vlm_baseline_renders/
-artifacts/e2e_grounding_renders/
-artifacts/human_annotation/
-artifacts/demo_video/
+datasets/
+ScanNet/
+scannet/
+*.sens
+*.ply
+*.obj
+*.glb
+*.npz
+*.npy
 
-# Resultados intermediários (só versionar os oficiais)
-results/pilot/
-results/demos/
-results/query_results/
-results/query_eval/
-
-# Layouts do SpatialLM (gerados externamente)
+# Local archives and temporary folders
+*.zip
+files/
+files 2/
+artifacts/
 layouts/
-
-# Overleaf/dissertação
+legacy_exploratory/
+notebooks/
 dissertation/
 
-# Jupyter
-.ipynb_checkpoints/
+# Root PDFs generated during writing
+*.pdf
 
-# Credenciais
-*.env
-.env
+# LaTeX temporary files
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot	
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Private or exploratory outputs
+results/demos/
+results/experiments/
+results/pilot/
+results/query_eval/
+results/query_results/
