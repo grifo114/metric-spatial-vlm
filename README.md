@@ -48,7 +48,7 @@ The benchmark contains:
 
 ## Repository structure
 
-text
+```text
 benchmark/      Benchmark metadata and reviewed query files.
 configs/        Model and benchmark configuration files.
 docs/           Benchmark card, data access, and reproducibility notes.
@@ -56,7 +56,7 @@ figures/        Figures used in the paper.
 prompts/        Prompt templates for each condition.
 results/        Raw and processed outputs used in the paper.
 scripts/        Evaluation and analysis scripts.
-
+```
 ## Data access
 
 Raw ScanNet data are not redistributed. Users must obtain ScanNet through
@@ -73,7 +73,7 @@ Citation
 Citation information will be added after submission or acceptance.
 
 
-License
+## License
 
 The code in this repository is released under the MIT License.
 
