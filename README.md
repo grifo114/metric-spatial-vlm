@@ -83,6 +83,16 @@ L3 descriptor specificity results are available in
 ```bash
 PYTHONPATH=. python scripts/analyze_l3_descriptor_specificity.py
 ```
+
+## Geometric Baselines
+
+AABB geometric baseline results are available in
+`results/geometric_baselines/`, and the analysis can be reproduced with:
+
+```bash
+PYTHONPATH=. python scripts/analyze_aabb_distance_baseline.py
+```
+
 ## Citation
    
 Citation information will be added after submission or acceptance.
