@@ -57,21 +57,28 @@ prompts/        Prompt templates for each condition.
 results/        Raw and processed outputs used in the paper.
 scripts/        Evaluation and analysis scripts.
 ```
-## Data access
+
+## Reproducibility
 
 Raw ScanNet data are not redistributed. Users must obtain ScanNet through
 the official access procedure and follow the original dataset terms.
 
-See docs/DATA_ACCESS.md.
+See docs/DATA_ACCESS.md
 
-Reproducibility
+See docs/BENCHMARK_CARD.md
 
-See docs/REPRODUCIBILITY.md.
+## Sampling Sensitivity
+
+Surface point-set sampling sensitivity results are available in
+`results/sampling_sensitivity/`, and the analysis can be reproduced with:
+
+```bash
+PYTHONPATH=. python scripts/analyze_surface_point_sampling_sensitivity.py
+```
 
 Citation
-
+   
 Citation information will be added after submission or acceptance.
-
 
 ## License
 
