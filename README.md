@@ -83,16 +83,6 @@ Definidos em `configs/benchmark_config.yaml`.
 
 ## Citação
 
-```bibtex
-@mastersthesis{lopes2026spatial,
-  author  = {Lopes, Jefferson},
-  title   = {Raciocínio Espacial sobre Cenas 3D via Representação Geométrica Explícita},
-  school  = {Universidade Federal da Bahia},
-  year    = {2026},
-  program = {Programa de Pós-Graduação em Mecatrônica}
-}
-```
-
 ## Licença
 
 MIT License — veja `LICENSE` para detalhes.
