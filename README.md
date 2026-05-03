@@ -1,33 +1,28 @@
 # Raciocínio Espacial sobre Cenas 3D via Representação Geométrica Explícita
-
-Dissertação de Mestrado — PPGM/UFBA 2026  
-Autor: Jefferson Lopes  
-Orientador: [nome do orientador]
-
 ## Resumo
 
 Este repositório contém o código, benchmark e resultados da dissertação que investiga o papel da representação geométrica explícita na execução de consultas espaciais sobre cenas 3D estruturadas. O trabalho propõe uma arquitetura modular que separa a identificação das entidades da cena (grounding) da execução de operadores geométricos explícitos.
 
 ## Operadores Espaciais
 
-| Operador | Descrição | Métrica |
+```| Operador | Descrição | Métrica |
 |---|---|---|
 | `distance(A, B)` | Distância entre superfícies de dois objetos | MAE (metros) |
 | `nearest(ref, cat)` | Objeto mais próximo de uma referência | Top-1 accuracy |
 | `between(X, A, B)` | X está entre A e B no plano XY? | F1 binário |
 | `aligned(A, B, C)` | A, B e C estão alinhados no plano XY? | F1 binário |
-
+```
 ## Resultados Principais (Test Official Stage1)
 
-| Operador | Superfície | Centróide |
+```| Operador | Superfície | Centróide |
 |---|---|---|
 | distance (MAE) | **0.000 m** | 0.944 m |
 | nearest (Top-1) | **1.000** | 1.000 |
 | between (F1) | **1.000** | — |
 | aligned (F1) | **1.000** | — |
-
+```
 ## Estrutura do Repositório
-metric-spatial-vlm/
+```metric-spatial-vlm/
 ├── benchmark/          # Queries e ground truth oficiais (dev + test)
 ├── configs/            # Configurações do benchmark
 │   ├── benchmark_config.yaml
@@ -45,7 +40,7 @@ metric-spatial-vlm/
 ├── figures/            # Figuras geradas
 └── notebooks/          # Análises e demos interativos
 ## Instalação
-
+```
 ```bash
 git clone https://github.com/grifo114/metric-spatial-vlm
 cd metric-spatial-vlm
