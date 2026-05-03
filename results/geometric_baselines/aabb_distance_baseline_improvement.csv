@@ -1,0 +1,2 @@
+n,mean_improvement_over_centroid_m,median_improvement_over_centroid_m,aabb_better_than_centroid_count,aabb_better_than_centroid_pct,aabb_equal_centroid_count,aabb_worse_than_centroid_count
+45,0.7535272055590797,0.7530390116567851,43,95.55555555555556,0,2
