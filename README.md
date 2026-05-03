@@ -75,8 +75,15 @@ Surface point-set sampling sensitivity results are available in
 ```bash
 PYTHONPATH=. python scripts/analyze_surface_point_sampling_sensitivity.py
 ```
+## Descriptor Specificity
 
-Citation
+L3 descriptor specificity results are available in
+`results/descriptor_specificity/`, and the analysis can be reproduced with:
+
+```bash
+PYTHONPATH=. python scripts/analyze_l3_descriptor_specificity.py
+```
+## Citation
    
 Citation information will be added after submission or acceptance.
 
