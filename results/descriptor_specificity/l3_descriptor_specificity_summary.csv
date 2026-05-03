@@ -1,0 +1,2 @@
+n_queries,unique_l3_a_pct,unique_l3_b_pct,unique_l3_both_pct,median_pair_reduction_ratio,p25_pair_reduction_ratio,p75_pair_reduction_ratio,n_l3_reduces_to_single_pair,l3_reduces_to_single_pair_pct
+45,100.0,100.0,100.0,0.25,0.05,0.5,45,100.0
