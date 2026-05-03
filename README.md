@@ -39,8 +39,9 @@ Este repositório contém o código, benchmark e resultados da dissertação que
 ├── results/benchmark_v1/  # Resultados oficiais
 ├── figures/            # Figuras geradas
 └── notebooks/          # Análises e demos interativos
-## Instalação
 ```
+## Instalação
+
 ```bash
 git clone https://github.com/grifo114/metric-spatial-vlm
 cd metric-spatial-vlm
