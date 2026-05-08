@@ -1,0 +1,5 @@
+model,min_pct,median_pct,max_pct,mean_pct
+gpt-4.1,75.6,80.0,88.9,81.8
+qwen3vl235b,84.4,86.7,91.1,87.6
+qwen3vl32b,91.1,93.3,95.6,93.3
+qwen3vl8b,77.8,86.7,93.3,86.7

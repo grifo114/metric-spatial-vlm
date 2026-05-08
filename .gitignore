@@ -15,7 +15,7 @@ api_keys.*
 secrets.*
 *.key
 
-# Raw datasets / large data
+# Raw datasets and large files
 data/
 datasets/
 ScanNet/
@@ -27,17 +27,20 @@ scannet/
 *.npz
 *.npy
 
-# Local archives and temporary folders
-*.zip
+# Local work folders not part of the article release
+artifacts/
 files/
 files 2/
-artifacts/
 layouts/
 legacy_exploratory/
 notebooks/
 dissertation/
+spatial_qa_system/
 
-# Root PDFs generated during writing
+# Archives
+*.zip
+
+# Root PDFs and drafts
 *.pdf
 
 # LaTeX temporary files
@@ -47,14 +50,15 @@ dissertation/
 *.out
 *.toc
 *.lof
-*.lot	
+*.lot
 *.synctex.gz
 *.fls
 *.fdb_latexmk
 
-# Private or exploratory outputs
+# Exploratory or non-paper results
 results/demos/
 results/experiments/
 results/pilot/
 results/query_eval/
 results/query_results/
+results/*threshold_sensitivity.csv

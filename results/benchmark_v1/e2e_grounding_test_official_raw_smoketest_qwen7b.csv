@@ -1,0 +1,2 @@
+query_id,scene_id,operator,prompt_mode,descriptor_level,context_scope,language,example_a,example_b,example_ref,gt_value,gt_object_a,gt_object_b,grounded_a,grounded_b,grounding_correct,e_total_surface,e_total_centroid,nearest_vlm_answer,nearest_vlm_dist,vlm_response,error
+test_stage1_dn_0000,scene0008_00,distance,,,,,,,,,,,,,,,,,,ERROR,API_ERROR: API falhou após 3 tentativas
