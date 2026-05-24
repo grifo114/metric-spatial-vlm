@@ -4,101 +4,42 @@
 
 Versão estendida do script 83 com Spatial Context Injection.
 
-==============================================================
-Métrica usada (IMPORTANTE — Métrica A: grounding rate)
-==============================================================
-Este script mede a *taxa de grounding correto*, igual ao 83 original:
-
-  - distance(label_a, label_b):
-        grounding_correct = VLM identificou os dois objetos certos
-                            (gt_object_a e gt_object_b).
-        O motor geométrico calcula a distância depois.
-
-  - nearest(target_category, reference_label):
-        grounding_correct = VLM identificou o objeto de referência certo
-                            (gt_ref).
-        O motor geométrico calcula qual instância de target_category está
-        mais próxima depois (find_nearest_surface).
-
-Esta é a métrica que produziu os números 33% (distance) / 38.5% (nearest)
-do pilot anterior. NÃO é "VLM acertou a resposta da query"; é "VLM
-identificou a referência certa entre instâncias da mesma categoria".
-
-==============================================================
-Diferenças vs 83 original
-==============================================================
+Adições vs versão original:
 
   --prompt-mode {original,context}
-      original : prompt funcionalmente idêntico ao 83 original.
+      original : prompt idêntico ao 83 original (baseline reproduzível).
       context  : a lista de objetos numerados ganha um descritor
-                 scene-relative (sem vazar GT) entre parênteses.
+                 scene-relative entre parênteses para cada objeto.
 
   --descriptor-level {1,2,3}
       Profundidade do descritor (só usado em --prompt-mode context):
-        1 : quadrante na cena
+        1 : quadrante na cena (light, ~quadrante 3x3)
         2 : quadrante + ordenação entre objetos da mesma categoria (default)
         3 : quadrante + ordenação + categorias-vizinhas mais próximas
 
   --language {pt,en}
-      Idioma dos descritores. Default = pt.
+      Idioma dos descritores. Default = pt (consistente com prompts originais).
+      Mudar para en quando rodar com Qwen / paper em inglês.
 
   --output-suffix STR
-      Sufixo opcional do CSV de saída.
+      Sufixo opcional do CSV de saída para separar runs:
+        results/benchmark_v1/e2e_grounding_test_official_raw{suffix}.csv
 
-  --print-prompts
-      Imprime o prompt antes de chamar a API. Use com --no-api para sanity
-      check sem gastar token.
+Uso típico:
 
-  --no-api
-      Não chama API e não renderiza imagem. Apenas monta os prompts.
+    # Reproduzir baseline antigo (idêntico ao 83 original):
+    python scripts/83_e2e_grounding_test_official_v2.py \\
+        --prompt-mode original --output-suffix _baseline_repro
 
-  --provider {openai,openrouter}
-      Backend de API. 'openai' usa api.openai.com com OPENAI_API_KEY
-      (default). 'openrouter' usa openrouter.ai/api/v1 com
-      OPENROUTER_API_KEY. OpenRouter oferece API OpenAI-compatível para
-      acesso unificado a múltiplos provedores (Qwen, Anthropic, Google,
-      etc.) sem mudança no formato da requisição.
+    # Spatial context injection level 2 (recomendado para rodar primeiro):
+    python scripts/83_e2e_grounding_test_official_v2.py \\
+        --prompt-mode context --descriptor-level 2 \\
+        --output-suffix _ctx_l2
 
-  --model NAME
-      Identificador do modelo. Default = "gpt-4.1" (apropriado para
-      provider=openai). Para OpenRouter, use os identificadores oficiais
-      como "qwen/qwen2.5-vl-7b-instruct" ou
-      "qwen/qwen2.5-vl-72b-instruct". Veja https://openrouter.ai/models
-      para a lista completa.
-
-==============================================================
-Mudanças metodológicas vs versão anterior do v2
-==============================================================
-
-1. Exemplo no fim do prompt agora é ADAPTATIVO. O 83 original usava
-   "scene0008_00__monitor_029, scene0008_00__table_032" hardcoded, o que
-   citava IDs reais e potencialmente o próprio GT em scene0008_00. Aqui
-   o exemplo é sorteado deterministicamente entre objetos que NÃO são GT
-   e cujas categorias NÃO são as da query (quando possível).
-
-2. Parser de resposta aceita tanto IDs completos quanto números da lista
-   (extraído da edição anterior — mantido por ser melhoria genuína).
-
-3. CSV de saída ganha colunas: prompt_mode, descriptor_level, language,
-   example_a, example_b/example_ref. Permite auditoria post-hoc.
-
-==============================================================
-Uso típico
-==============================================================
-
-    # Sanity check seco (sem API):
+    # Sanity check seco (sem chamar API):
     python scripts/83_e2e_grounding_test_official_v2.py \\
         --prompt-mode context --descriptor-level 2 \\
         --dry-run 5 --print-prompts --no-api
-
-    # Reproduzir baseline com template corrigido (exemplo adaptativo):
-    OPENAI_API_KEY=sk-... python scripts/83_e2e_grounding_test_official_v2.py \\
-        --prompt-mode original --output-suffix _baseline_v2
-
-    # Spatial context injection level 2:
-    OPENAI_API_KEY=sk-... python scripts/83_e2e_grounding_test_official_v2.py \\
-        --prompt-mode context --descriptor-level 2 \\
-        --output-suffix _ctx_l2
 """
 
 from __future__ import annotations
@@ -133,7 +74,6 @@ from src.grounding.prompt_enrichment import (  # noqa: E402
     format_object_list,
     format_object_list_with_context,
 )
-from src.grounding.example_selection import pick_example_ids  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -159,25 +99,14 @@ CATEGORY_PALETTE = [
     (100, 149, 237), (85,  107,  47),
 ]
 
-MAX_TOKENS  = 100
+MODEL       = "gpt-4.1"
+MAX_TOKENS_DEFAULT = 2048
 MAX_RETRIES = 3
 RETRY_DELAY = 6
 
-# API endpoints. Both providers expose an OpenAI-compatible /chat/completions
-# interface, so the same payload format works for both. Provider is selected
-# at runtime via --provider; model identifier is passed via --model.
-API_ENDPOINTS = {
-    "openai":     "https://api.openai.com/v1/chat/completions",
-    "openrouter": "https://openrouter.ai/api/v1/chat/completions",
-}
-API_KEY_ENV = {
-    "openai":     "OPENAI_API_KEY",
-    "openrouter": "OPENROUTER_API_KEY",
-}
-
 
 # ---------------------------------------------------------------------------
-# Geometric utilities (copied verbatim from 83 original)
+# Geometric utilities (unchanged from original 83)
 # ---------------------------------------------------------------------------
 
 def load_points(obj_id: str, scene_id: str) -> np.ndarray | None:
@@ -204,7 +133,7 @@ def centroid_distance(pts_a: np.ndarray, pts_b: np.ndarray) -> float:
 def find_nearest_surface(
     ref_pts: np.ndarray,
     candidates: list[tuple[str, np.ndarray]],
-) -> tuple[str | None, float]:
+) -> tuple[str, float]:
     best_id, best_dist = None, float("inf")
     tree_ref = cKDTree(ref_pts)
     for cid, cpts in candidates:
@@ -217,7 +146,7 @@ def find_nearest_surface(
 
 
 # ---------------------------------------------------------------------------
-# Render (copied verbatim from 83 original)
+# Render (unchanged from original 83)
 # ---------------------------------------------------------------------------
 
 def _load_mesh(scene_id: str) -> pv.PolyData:
@@ -329,7 +258,7 @@ def render_scene_numbered(
 
 
 # ---------------------------------------------------------------------------
-# Number map (copied verbatim from 83 original)
+# Number map (unchanged from original 83)
 # ---------------------------------------------------------------------------
 
 def build_number_map(scene_df: pd.DataFrame):
@@ -347,20 +276,12 @@ def build_number_map(scene_df: pd.DataFrame):
 
 
 # ---------------------------------------------------------------------------
-# Prompts — bilingual. Selected by --language at runtime.
-#
-# EN templates use Option 2 (explicit role labeling): the prompt names each
-# query category as "A" and "B" and tells the VLM exactly what to identify
-# and in which order. This addresses the category-confusion failure mode
-# observed in the PT pilot, where the VLM tended to answer in the target
-# category instead of the reference category.
-#
-# Both templates use ADAPTIVE example IDs (pick_example_ids) — never the
-# ground truth, never IDs from the query categories when possible.
+# Prompts — kept in PT to preserve baseline comparability.
+# Format strings are language-agnostic; descriptor language is set separately
+# by --language and the descriptors get inlined in the {object_list} field.
 # ---------------------------------------------------------------------------
 
-PROMPTS_PT = {
-    "distance": """\
+PROMPT_DISTANCE = """\
 Você está observando uma cena 3D de ambiente interno em vista superior.
 Cada objeto está marcado com um número (círculo colorido).
 
@@ -374,11 +295,15 @@ e qual é o {label_b} referenciados.
 Se houver múltiplas instâncias da mesma categoria, escolha a mais \
 proeminente ou a que fizer mais sentido visualmente no contexto da cena.
 
-Responda APENAS com dois IDs exatamente como aparecem na lista, \
-separados por vírgula. Exemplo de formato:
-{example_a}, {example_b}""",
+RCRÍTICO: a primeira linha da resposta deve conter apenas dois IDs exatamente
+como aparecem na lista, separados por vírgula. Não escreva nada antes da
+primeira linha. Exemplo:
+scene0008_00__monitor_029, scene0008_00__table_032
 
-    "nearest": """\
+Após a primeira linha, você pode explicar brevemente se necessário.
+"""
+
+PROMPT_NEAREST = """\
 Você está observando uma cena 3D de ambiente interno em vista superior.
 Cada objeto está marcado com um número (círculo colorido).
 
@@ -392,76 +317,12 @@ Identifique qual objeto específico da lista é o {reference_label} \
 referenciado como ponto de referência.
 Se houver múltiplas instâncias da categoria, escolha a mais proeminente.
 
-Responda APENAS com um ID exatamente como aparece na lista. \
-Exemplo de formato:
-{example_ref}""",
-}
-
-PROMPTS_EN = {
-    "distance": """\
-You are looking at a top-down view of a 3D indoor scene.
-Each object is marked with a number (colored circle).
-
-Objects in the scene:
-{object_list}
-
-The query asks for the distance between two objects:
-- A: a {label_a}
-- B: a {label_b}
-
-Your task is to identify which specific object in the list is A (the {label_a}) \
-and which is B (the {label_b}). If multiple instances of the same category \
-exist in the scene, choose the most prominent or contextually meaningful one.
-
-Respond ONLY with two object_ids from the list, separated by a comma. \
-The first ID must be the {label_a} (A); the second must be the {label_b} (B). \
-Example format:
-{example_a}, {example_b}""",
-
-    "nearest": """\
-You are looking at a top-down view of a 3D indoor scene.
-Each object is marked with a number (colored circle).
-
-Objects in the scene:
-{object_list}
-
-The query asks: "Which {target_category} is closest to a {reference_label}?"
-
-The query mentions two categories with different roles:
-- TARGET: {target_category} (what we want to FIND — DO NOT pick this)
-- REFERENCE: {reference_label} (the anchor — IDENTIFY this)
-
-Your task is ONLY to identify which specific object in the list is the \
-{reference_label} reference point. Do NOT pick the {target_category}; the \
-geometric engine will compute the answer from the reference you provide. \
-If multiple instances of {reference_label} exist, choose the most prominent \
-or contextually meaningful one.
-
-Respond ONLY with one object_id of category {reference_label} from the list. \
-Example format:
-{example_ref}""",
-}
-
-
-def get_prompt_template(language: str, operator: str) -> str:
-    if language == "en":
-        return PROMPTS_EN[operator]
-    return PROMPTS_PT[operator]
+Responda APENAS com um ID exatamente como aparece na lista. Exemplo:
+scene0008_00__monitor_029"""
 
 
 # ---------------------------------------------------------------------------
-# API call — provider-agnostic.
-# ---------------------------------------------------------------------------
-# Both OpenAI and OpenRouter accept the same chat/completions payload format.
-# The only differences are (a) the URL, (b) the API key env var, and (c) the
-# model identifier string. We pass all three explicitly so the script can be
-# reproduced against either provider with identical request semantics.
-#
-# Note on rate limiting: OpenAI applies prompt caching automatically when the
-# same image+prefix is reused across calls, which gave us ~75-90% discount on
-# repeated calls within a scene during prior runs ($0.26 for 90 GPT-4.1 calls).
-# OpenRouter forwards to the upstream provider; caching behavior depends on
-# which model is selected.
+# VLM API calls: OpenAI, OpenRouter, Gemini
 # ---------------------------------------------------------------------------
 
 def img_to_b64(path: Path) -> str:
@@ -469,102 +330,170 @@ def img_to_b64(path: Path) -> str:
         return base64.b64encode(f.read()).decode("utf-8")
 
 
-def call_vlm(api_url: str, api_key: str, model: str,
-             prompt: str, img_path: Path) -> str:
-    """Send a multimodal chat completion request and return the raw text.
+def call_openai_compatible(
+    api_url: str,
+    api_key: str,
+    model: str,
+    prompt: str,
+    img_path: Path,
+    temperature: float,
+    max_tokens: int,
+) -> str:
+    """Call OpenAI-compatible Chat Completions APIs.
 
-    Parameters
-    ----------
-    api_url : str
-        Full URL of the chat/completions endpoint.
-    api_key : str
-        Bearer token for the provider.
-    model : str
-        Provider-specific model identifier (e.g. 'gpt-4.1' for OpenAI,
-        'qwen/qwen2.5-vl-72b-instruct' for OpenRouter).
-    prompt : str
-        Textual prompt (assembled by the caller).
-    img_path : Path
-        Path to the rendered scene image (jpg/png).
+    Works for:
+      - OpenAI:     https://api.openai.com/v1/chat/completions
+      - OpenRouter: https://openrouter.ai/api/v1/chat/completions
     """
     b64 = img_to_b64(img_path)
+
     payload = {
         "model": model,
-        "max_tokens": MAX_TOKENS,
+        "max_tokens": max_tokens,
+        "temperature": temperature,
         "messages": [{
             "role": "user",
             "content": [
-                {"type": "image_url",
-                 "image_url": {"url": f"data:image/jpeg;base64,{b64}",
-                               "detail": "high"}},
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:image/jpeg;base64,{b64}",
+                        "detail": "high",
+                    },
+                },
                 {"type": "text", "text": prompt},
             ],
         }],
     }
-    data = json.dumps(payload).encode()
+
+    data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(
         api_url,
         data=data,
-        headers={"Content-Type": "application/json",
-                 "Authorization": f"Bearer {api_key}"},
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+        },
     )
-    with urllib.request.urlopen(req, timeout=90) as resp:
-        result = json.loads(resp.read().decode())
+
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        result = json.loads(resp.read().decode("utf-8"))
+
     return result["choices"][0]["message"]["content"].strip()
 
 
-def call_with_retry(api_url: str, api_key: str, model: str,
-                    prompt: str, img_path: Path) -> str:
-    """Wrapper around call_vlm with exponential-ish backoff."""
+def call_gemini(
+    api_key: str,
+    model: str,
+    prompt: str,
+    img_path: Path,
+    temperature: float,
+    max_tokens: int,
+) -> str:
+    """Call Google Gemini generateContent API with inline image data."""
+    b64 = img_to_b64(img_path)
+
+    url = (
+        "https://generativelanguage.googleapis.com/v1beta/"
+        f"models/{model}:generateContent?key={api_key}"
+    )
+
+    payload = {
+        "contents": [{
+            "role": "user",
+            "parts": [
+                {"text": prompt},
+                {
+                    "inline_data": {
+                        "mime_type": "image/jpeg",
+                        "data": b64,
+                    }
+                },
+            ],
+        }],
+        "generationConfig": {
+            "temperature": temperature,
+            "maxOutputTokens": max_tokens,
+        },
+    }
+
+    data = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=data,
+        headers={"Content-Type": "application/json"},
+    )
+
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        result = json.loads(resp.read().decode("utf-8"))
+
+    try:
+        return result["candidates"][0]["content"]["parts"][0]["text"].strip()
+    except Exception:
+        raise RuntimeError(f"Resposta inesperada do Gemini: {result}")
+
+
+def call_with_retry(
+    provider: str,
+    api_url: str | None,
+    api_key: str,
+    model: str,
+    prompt: str,
+    img_path: Path,
+    temperature: float,
+    max_tokens: int,
+) -> str:
     for attempt in range(MAX_RETRIES):
         try:
-            return call_vlm(api_url, api_key, model, prompt, img_path)
+            if provider == "gemini":
+                return call_gemini(
+                    api_key=api_key,
+                    model=model,
+                    prompt=prompt,
+                    img_path=img_path,
+                    temperature=temperature,
+                    max_tokens=max_tokens,
+                )
+
+            if api_url is None:
+                raise ValueError(f"api_url is required for provider={provider}")
+
+            return call_openai_compatible(
+                    api_url=api_url,
+                    api_key=api_key,
+                    model=model,
+                    prompt=prompt,
+                    img_path=img_path,
+                    temperature=temperature,
+                    max_tokens=max_tokens,
+                )
+
         except urllib.error.HTTPError as e:
-            err = f"HTTP {e.code}: {e.read().decode('utf-8','replace')[:200]}"
+            err_body = e.read().decode("utf-8", "replace")[:800]
+            err = f"HTTP {e.code}: {err_body}"
         except Exception as e:
             err = str(e)
+
         print(f"  [tentativa {attempt+1}/{MAX_RETRIES}] {err}")
+
         if attempt < MAX_RETRIES - 1:
             time.sleep(RETRY_DELAY * (attempt + 1))
+
     raise RuntimeError(f"API falhou após {MAX_RETRIES} tentativas")
 
 
 # ---------------------------------------------------------------------------
-# Response parsing
-#
-# Handles three response shapes:
-#   - full id:    "scene0008_00__chair_011"
-#   - number:     "10"
-#   - mixed:      "scene0008_00__monitor_029, scene0008_00__table_032"
+# Response parsing (unchanged)
 # ---------------------------------------------------------------------------
 
-def extract_ids(
-    response: str,
-    valid_ids: set[str],
-    n: int,
-    num_to_id: dict[int, str] | None = None,
-) -> list[str | None]:
-    found: list[str] = []
-
-    # 1) Full IDs
+def extract_ids(response: str, valid_ids: set[str], n: int) -> list[str | None]:
+    found = []
     for token in re.split(r"[\s,;]+", response):
         token = token.strip().strip(".,;\"'")
         if token in valid_ids and token not in found:
             found.append(token)
         if len(found) == n:
             break
-
-    # 2) List numbers (e.g. "10" → num_to_id[10])
-    if len(found) < n and num_to_id is not None:
-        for token in re.split(r"[\s,;]+", response):
-            token = token.strip().strip(".,;\"'")
-            if token.isdigit():
-                obj_id = num_to_id.get(int(token))
-                if obj_id and obj_id in valid_ids and obj_id not in found:
-                    found.append(obj_id)
-            if len(found) == n:
-                break
-
     while len(found) < n:
         found.append(None)
     return found[:n]
@@ -582,6 +511,8 @@ def main() -> None:
                         help="Skip render generation if file already exists.")
     parser.add_argument("--operator", choices=["distance", "nearest", "all"],
                         default="all")
+
+    # NEW FLAGS
     parser.add_argument("--prompt-mode", choices=["original", "context"],
                         default="original",
                         help="original = baseline 83; context = inject "
@@ -589,13 +520,11 @@ def main() -> None:
     parser.add_argument("--descriptor-level", type=int, choices=[1, 2, 3],
                         default=2,
                         help="Descriptor depth (only used in context mode).")
-    parser.add_argument("--context-scope", choices=["all", "reference_only"],
+    parser.add_argument("--context-scope",
+                        choices=["all", "reference_only"],
                         default="all",
-                        help="Where to inject context (only used in context "
-                             "mode). 'all' adds descriptors to every object. "
-                             "'reference_only' adds them only to candidates "
-                             "of the reference category (nearest) or to both "
-                             "query categories (distance).")
+                        help="all = descriptors for all visible objects; "
+                         "reference_only = descriptors only for query-relevant categories.")
     parser.add_argument("--language", choices=["pt", "en"], default="pt",
                         help="Descriptor language. Defaults to PT to match the "
                              "language of the prompts. Use EN for Qwen runs.")
@@ -604,40 +533,48 @@ def main() -> None:
     parser.add_argument("--print-prompts", action="store_true",
                         help="Print the assembled prompt for each query.")
     parser.add_argument("--no-api", action="store_true",
-                        help="Skip API calls and rendering. Useful with "
-                             "--print-prompts and --dry-run.")
-    parser.add_argument("--provider", choices=["openai", "openrouter"],
+                        help="Skip API calls. Useful with --print-prompts and "
+                             "--dry-run for sanity checks before spending tokens.")
+    parser.add_argument("--provider",
+                        choices=["openai", "openrouter", "gemini"],
                         default="openai",
-                        help="API backend. 'openai' uses api.openai.com with "
-                             "OPENAI_API_KEY (default; matches all prior "
-                             "GPT-4.1 runs). 'openrouter' uses "
-                             "openrouter.ai/api/v1 with OPENROUTER_API_KEY.")
-    parser.add_argument("--model", default="gpt-4.1",
-                        help="Provider-specific model identifier. Default = "
-                             "'gpt-4.1' (appropriate for --provider openai). "
-                             "For --provider openrouter, use identifiers like "
-                             "'qwen/qwen2.5-vl-7b-instruct' or "
-                             "'qwen/qwen2.5-vl-72b-instruct'.")
+                        help="API provider to use.")
+    parser.add_argument("--model", default=MODEL,
+                        help="Model name for the selected provider.")
+    parser.add_argument("--temperature", type=float, default=0.0,
+                        help="Decoding temperature. Default = 0 for reproducibility.")
+    parser.add_argument("--max-tokens", type=int, default=MAX_TOKENS_DEFAULT,
+                        help="Maximum output tokens. Use 2048 or more for Claude.")
     args = parser.parse_args()
 
-    # --- Resolve API endpoint and key based on provider ----------------------
-    api_url     = API_ENDPOINTS[args.provider]
-    api_key_env = API_KEY_ENV[args.provider]
-    api_key     = os.environ.get(api_key_env, "").strip()
+    if args.provider == "openai":
+        api_key = os.environ.get("OPENAI_API_KEY", "").strip()
+        api_url = "https://api.openai.com/v1/chat/completions"
+    elif args.provider == "openrouter":
+        api_key = os.environ.get("OPENROUTER_API_KEY", "").strip()
+        api_url = "https://openrouter.ai/api/v1/chat/completions"
+    elif args.provider == "gemini":
+        api_key = os.environ.get("GEMINI_API_KEY", "").strip()
+        api_url = None
+    else:
+        raise ValueError(f"Provider inválido: {args.provider}")
+
     if not args.no_api and not api_key:
-        sys.exit(f"{api_key_env} não definida (provider={args.provider}).")
+        sys.exit(f"API key não definida para provider={args.provider}.")
 
     output_csv = RESULTS_DIR / f"e2e_grounding_test_official_raw{args.output_suffix}.csv"
 
     print(f"== Config ==")
     print(f"  provider         : {args.provider}")
     print(f"  model            : {args.model}")
+    print(f"  temperature      : {args.temperature}")
     print(f"  prompt_mode      : {args.prompt_mode}")
     print(f"  descriptor_level : {args.descriptor_level}")
-    print(f"  context_scope    : {args.context_scope}")
     print(f"  language         : {args.language}")
     print(f"  operator         : {args.operator}")
     print(f"  output           : {output_csv.name}")
+    print(f"  max_tokens       : {args.max_tokens}")
+    print(f"  context_scope    : {args.context_scope}")
     if args.no_api:
         print(f"  API CALLS        : DISABLED (--no-api)")
     print()
@@ -734,82 +671,57 @@ def main() -> None:
                 reference_label=row.get("reference_label"),
                 target_category=row.get("target_category"),
             )
+        if args.context_scope == "all":
+            obj_list = format_object_list_with_context(
+                num_to_id, sdf,
+                level=args.descriptor_level,
+                excluded_categories=excluded,
+                language=args.language,
+    )
+        else:
+            if operator == "distance":
+                label_a_q = str(row.get("label_a") or "")
+                label_b_q = str(row.get("label_b") or "")
 
-            if args.context_scope == "all":
+                list_a = format_object_list_with_context(
+                    num_to_id, sdf,
+                    level=args.descriptor_level,
+                    excluded_categories=excluded,
+                    language=args.language,
+                    scope_category=label_a_q,
+                ).splitlines()
+
+                list_b = format_object_list_with_context(
+                    num_to_id, sdf,
+                    level=args.descriptor_level,
+                    excluded_categories=excluded,
+                    language=args.language,
+                    scope_category=label_b_q,
+                ).splitlines()
+
+                merged_lines = []
+                for la, lb in zip(list_a, list_b):
+                    merged_lines.append(la if "(" in la else lb)
+
+                obj_list = "\n".join(merged_lines)
+            else:
                 obj_list = format_object_list_with_context(
                     num_to_id, sdf,
                     level=args.descriptor_level,
                     excluded_categories=excluded,
                     language=args.language,
-                    scope_category=None,
                 )
-            else:  # reference_only
-                # For nearest: scope = reference_label (the thing the VLM
-                #   needs to disambiguate).
-                # For distance: scope is both query categories. We achieve
-                #   this by calling the formatter twice and merging — but
-                #   the simpler implementation is to call once with scope
-                #   set to label_a then patch label_b's lines.
-                if operator == "nearest":
-                    scope = str(row.get("reference_label") or "")
-                    obj_list = format_object_list_with_context(
-                        num_to_id, sdf,
-                        level=args.descriptor_level,
-                        excluded_categories=excluded,
-                        language=args.language,
-                        scope_category=scope,
-                    )
-                elif operator == "distance":
-                    # Build twice and merge: both label_a and label_b lines
-                    # carry descriptors, others stay plain.
-                    label_a_q = str(row.get("label_a") or "")
-                    label_b_q = str(row.get("label_b") or "")
-                    list_a = format_object_list_with_context(
-                        num_to_id, sdf,
-                        level=args.descriptor_level,
-                        excluded_categories=excluded,
-                        language=args.language,
-                        scope_category=label_a_q,
-                    ).splitlines()
-                    list_b = format_object_list_with_context(
-                        num_to_id, sdf,
-                        level=args.descriptor_level,
-                        excluded_categories=excluded,
-                        language=args.language,
-                        scope_category=label_b_q,
-                    ).splitlines()
-                    # Pick the version with a descriptor when either has one
-                    merged_lines = []
-                    for la, lb in zip(list_a, list_b):
-                        merged_lines.append(la if "(" in la else lb)
-                    obj_list = "\n".join(merged_lines)
-                else:
-                    obj_list = format_object_list(num_to_id, sdf)
 
         # ---- Assemble prompt ----
         if operator == "distance":
-            label_a  = str(row.get("label_a") or "")
-            label_b  = str(row.get("label_b") or "")
+            label_a = str(row.get("label_a") or "")
+            label_b = str(row.get("label_b") or "")
             gt_obj_a = str(row["gt_object_a"])
             gt_obj_b = str(row["gt_object_b"])
             gt_val   = float(row["gt_distance_m"])
-
-            example_a, example_b = pick_example_ids(
-                sdf, "distance",
-                gt_object_a=gt_obj_a, gt_object_b=gt_obj_b,
-                label_a=label_a, label_b=label_b,
-                seed_key=qid,
-            )
-            if example_a is None or example_b is None:
-                ids = sorted(valid_ids)
-                example_a = ids[0] if ids else "OBJECT_A"
-                example_b = ids[1] if len(ids) > 1 else "OBJECT_B"
-
-            prompt = get_prompt_template(args.language, "distance").format(
+            prompt = PROMPT_DISTANCE.format(
                 object_list=obj_list, label_a=label_a, label_b=label_b,
-                example_a=example_a, example_b=example_b,
             )
-            example_ref = None  # for unified result record below
 
         elif operator == "nearest":
             ref_label  = str(row.get("reference_label") or "")
@@ -817,24 +729,11 @@ def main() -> None:
             gt_ref     = str(row["gt_object_a"])
             gt_answer  = str(row.get("gt_answer_object", ""))
             gt_val     = gt_answer
-
-            example_ref, _ = pick_example_ids(
-                sdf, "nearest",
-                gt_object_a=gt_ref,
-                reference_label=ref_label, target_category=target_cat,
-                seed_key=qid,
-            )
-            if example_ref is None:
-                ids = sorted(valid_ids)
-                example_ref = ids[0] if ids else "OBJECT_REF"
-
-            prompt = get_prompt_template(args.language, "nearest").format(
+            prompt = PROMPT_NEAREST.format(
                 object_list=obj_list,
                 target_category=target_cat,
                 reference_label=ref_label,
-                example_ref=example_ref,
             )
-            example_a, example_b = None, None
         else:
             continue
 
@@ -850,8 +749,16 @@ def main() -> None:
 
         # ---- VLM call ----
         try:
-            response = call_with_retry(api_url, api_key, args.model,
-                                       prompt, render_path)
+            response = call_with_retry(
+                provider=args.provider,
+                api_url=api_url,
+                api_key=api_key,
+                model=args.model,
+                prompt=prompt,
+                img_path=render_path,
+                temperature=args.temperature,
+                max_tokens=args.max_tokens,
+            )
             print(f"  {args.model} → {response!r}")
         except Exception as e:
             print(f"  ERRO API: {e}")
@@ -860,17 +767,14 @@ def main() -> None:
             time.sleep(RETRY_DELAY)
             continue
 
-        # ---- Parse + grounding check (Metric A) ----
+        # ---- Parse + grounding check (unchanged from 83) ----
         if operator == "distance":
-            ids = extract_ids(response, valid_ids, 2, num_to_id=num_to_id)
+            ids = extract_ids(response, valid_ids, 2)
             grounded_a, grounded_b = ids[0], ids[1]
+            grounding_correct = (grounded_a == gt_obj_a and grounded_b == gt_obj_b) or \
+                                (grounded_a == gt_obj_b and grounded_b == gt_obj_a)
 
-            grounding_correct = (
-                (grounded_a == gt_obj_a and grounded_b == gt_obj_b) or
-                (grounded_a == gt_obj_b and grounded_b == gt_obj_a)
-            )
-
-            e_total_surface  = None
+            e_total_surface = None
             e_total_centroid = None
             if grounded_a and grounded_b:
                 pts_a = load_points(grounded_a, scene_id)
@@ -884,31 +788,23 @@ def main() -> None:
                 "provider": args.provider, "model": args.model,
                 "prompt_mode": args.prompt_mode,
                 "descriptor_level": args.descriptor_level if args.prompt_mode == "context" else None,
-                "context_scope": args.context_scope if args.prompt_mode == "context" else None,
                 "language": args.language,
-                "example_a": example_a, "example_b": example_b,
-                "example_ref": None,
                 "gt_value": gt_val,
                 "gt_object_a": gt_obj_a, "gt_object_b": gt_obj_b,
                 "grounded_a": grounded_a, "grounded_b": grounded_b,
                 "grounding_correct": grounding_correct,
                 "e_total_surface": e_total_surface,
                 "e_total_centroid": e_total_centroid,
-                "nearest_vlm_answer": None,
-                "nearest_vlm_dist":   None,
                 "vlm_response": response, "error": None,
+                "context_scope": args.context_scope if args.prompt_mode == "context" else None,
             }
 
-        else:  # nearest — Metric A: VLM identifies the REFERENCE OBJECT.
-            ids = extract_ids(response, valid_ids, 1, num_to_id=num_to_id)
+        else:  # nearest
+            ids = extract_ids(response, valid_ids, 1)
             grounded_ref = ids[0]
             grounding_correct = (grounded_ref == gt_ref)
 
-            # Geometric engine answers the actual nearest query, given the
-            # VLM's grounding of the reference. If the VLM grounded the
-            # wrong reference, the engine still computes nearest-from-that-
-            # wrong-object, which is what e_total_surface compares to GT.
-            nearest_vlm  = None
+            nearest_vlm = None
             nearest_dist = None
             if grounded_ref:
                 ref_pts = load_points(grounded_ref, scene_id)
@@ -932,10 +828,7 @@ def main() -> None:
                 "provider": args.provider, "model": args.model,
                 "prompt_mode": args.prompt_mode,
                 "descriptor_level": args.descriptor_level if args.prompt_mode == "context" else None,
-                "context_scope": args.context_scope if args.prompt_mode == "context" else None,
                 "language": args.language,
-                "example_a": None, "example_b": None,
-                "example_ref": example_ref,
                 "gt_value": gt_val,
                 "gt_object_a": gt_ref, "gt_object_b": None,
                 "grounded_a": grounded_ref, "grounded_b": None,
@@ -946,6 +839,7 @@ def main() -> None:
                 "nearest_vlm_answer": nearest_vlm,
                 "nearest_vlm_dist":   nearest_dist,
                 "vlm_response": response, "error": None,
+                "context_scope": args.context_scope if args.prompt_mode == "context" else None,
             }
 
         _save(output_csv, result)
@@ -972,18 +866,15 @@ def _save(path: Path, data: dict) -> None:
 
 
 def _err_row(qid, scene_id, operator, err) -> dict:
-    return {
-        "query_id": qid, "scene_id": scene_id, "operator": operator,
-        "prompt_mode": None, "descriptor_level": None,
-        "context_scope": None, "language": None,
-        "example_a": None, "example_b": None, "example_ref": None,
-        "gt_value": None, "gt_object_a": None, "gt_object_b": None,
-        "grounded_a": None, "grounded_b": None,
-        "grounding_correct": None,
-        "e_total_surface": None, "e_total_centroid": None,
-        "nearest_vlm_answer": None, "nearest_vlm_dist": None,
-        "vlm_response": "ERROR", "error": err,
-    }
+    return {"query_id": qid, "scene_id": scene_id, "operator": operator,
+            "provider": None, "model": None,
+            "prompt_mode": None, "descriptor_level": None, "language": None,
+            "gt_value": None, "gt_object_a": None, "gt_object_b": None,
+            "grounded_a": None, "grounded_b": None,
+            "grounding_correct": None,
+            "e_total_surface": None, "e_total_centroid": None,
+            "context_scope": None,
+            "vlm_response": "ERROR", "error": err}
 
 
 if __name__ == "__main__":
