@@ -90,25 +90,25 @@ paper/          Paper source files, if included.
 
 ## Main scripts   
 
-# Main VLM grounding experiment
+### Main VLM grounding experiment
 python scripts/83_e2e_grounding_test_official_v2.py
 
-# Claude-specific runner through the Anthropic API
+### Claude-specific runner through the Anthropic API
 python scripts/83b_claude_e2e_grounding.py
 
-# End-to-end MAE computation
+### End-to-end MAE computation
 python scripts/mae.py
 
-# McNemar tests at query-run level
+### McNemar tests at query-run level
 python scripts/mcnemar.py
 
-# Query-level McNemar aggregation checks
+### Query-level McNemar aggregation checks
 python scripts/mcnemar_query_level.py
 
-# Section V statistics
+### Section V statistics
 python scripts/extract_section_v_stats.py
 
-# Plot generation
+### Plot generation
 python scripts/plot_accuracy_all_models.py
 python scripts/plot_mae_surface_all_models.py
 
