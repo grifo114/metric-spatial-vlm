@@ -25,7 +25,7 @@ distance between the two reconstructed object meshes.
 
 A short system demo is available on YouTube:
 
-[Watch the demo](COLE_AQUI_O_LINK_DO_YOUTUBE)
+[Watch the demo](https://www.youtube.com/watch?v=zgJ7WpDbcK8)
 
 The demo illustrates the main pipeline: top-down scene rendering, numbered
 candidate objects, textual object list construction, VLM-based object
