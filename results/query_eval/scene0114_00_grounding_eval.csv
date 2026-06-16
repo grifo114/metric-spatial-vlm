@@ -1,0 +1,7 @@
+scene_id,query,expected_label_a,expected_label_b,pred_object_a,pred_label_a,pred_object_b,pred_label_b,distance_m,answer,grounding_ok,notes
+scene0114_00,"qual a distancia entre a cadeira e a mesa?",chair,table,2,chair,18,table,1.5584,"The chair is 1.56 m from the table.",partial,"multiple chairs; selected a plausible instance"
+scene0114_00,"qual a distancia entre a cadeira e a porta?",chair,door,2,chair,21,door,3.7878,"The chair is 3.79 m from the door.",partial,"multiple chairs; arbitrary selection"
+scene0114_00,"qual a distancia entre a cadeira e a escrivaninha?",chair,desk,5,chair,14,desk,1.8919,"The chair is 1.89 m from the desk.",partial,"multiple chairs; selected instance not uniquely defined"
+scene0114_00,"qual a distancia entre o monitor e a mesa?",monitor,table,17,monitor,18,table,2.4304,"The monitor is 2.43 m from the table.",yes,"unique objects"
+scene0114_00,"qual a distancia entre a planta e a cadeira?",plant,chair,1,plant,2,chair,1.3544,"The plant is 1.35 m from the chair.",yes,"plant is unique; chair selection acceptable"
+scene0114_00,"qual a distancia entre a lixeira e a escrivaninha?",trash can,desk,28,trash can,13,desk,0.8936,"The trash can is 0.89 m from the desk.",yes,"objects clearly identifiable"

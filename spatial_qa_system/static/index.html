@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spatial QA System</title>
+<style>
+  :root {
+    --bg:      #0f1117;
+    --panel:   #1a1d27;
+    --border:  #2a2d3a;
+    --accent:  #00c88c;
+    --accent2: #3264e0;
+    --text:    #e8e8f0;
+    --muted:   #8888a0;
+    --error:   #e05050;
+    --radius:  10px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 14px; height: 100vh; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+
+  /* Header */
+  header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 20px; border-bottom: 1px solid var(--border);
+    background: var(--panel);
+  }
+  header h1 { font-size: 16px; font-weight: 600; color: var(--accent); }
+  header .sub { font-size: 12px; color: var(--muted); }
+  #status-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--muted); margin-left: auto;
+  }
+  #status-dot.ok  { background: var(--accent); }
+  #status-dot.err { background: var(--error); }
+  #status-label { font-size: 12px; color: var(--muted); }
+
+  /* Layout principal */
+  main {
+    display: flex; flex: 1; overflow: hidden;
+  }
+
+  /* Painel esquerdo — upload + objetos */
+  #left-panel {
+    width: 280px; min-width: 220px;
+    background: var(--panel); border-right: 1px solid var(--border);
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .panel-section {
+    padding: 14px; border-bottom: 1px solid var(--border);
+  }
+  .panel-section h2 {
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--muted); margin-bottom: 10px;
+  }
+
+  /* Upload */
+  #drop-zone {
+    border: 2px dashed var(--border); border-radius: var(--radius);
+    padding: 16px; text-align: center; cursor: pointer;
+    transition: border-color .2s, background .2s;
+    color: var(--muted); font-size: 13px;
+  }
+  #drop-zone:hover, #drop-zone.drag { border-color: var(--accent); background: #00c88c12; }
+  #drop-zone .icon { font-size: 28px; margin-bottom: 6px; }
+  #file-inputs { display: none; }
+
+  .btn {
+    display: block; width: 100%; padding: 8px 12px;
+    background: var(--accent); color: #111; border: none;
+    border-radius: 6px; font-size: 13px; font-weight: 600;
+    cursor: pointer; margin-top: 8px; transition: opacity .2s;
+  }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+  .btn.secondary {
+    background: var(--border); color: var(--text); font-weight: 400;
+  }
+
+  /* Progresso */
+  #progress-bar-wrap {
+    height: 3px; background: var(--border); border-radius: 2px;
+    margin-top: 8px; overflow: hidden; display: none;
+  }
+  #progress-bar {
+    height: 100%; background: var(--accent);
+    width: 0%; transition: width .3s;
+    animation: progress-pulse 1.5s infinite;
+  }
+  @keyframes progress-pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+
+  /* Lista de objetos */
+  #objects-list {
+    flex: 1; overflow-y: auto; padding: 8px;
+  }
+  .obj-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 6px 8px; border-radius: 6px;
+    cursor: pointer; transition: background .15s;
+    font-size: 12px;
+  }
+  .obj-item:hover { background: #ffffff08; }
+  .obj-item.selected { background: #00c88c18; }
+  .obj-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+  }
+  .obj-id { font-weight: 600; color: var(--text); }
+  .obj-pos { color: var(--muted); font-size: 11px; margin-left: auto; }
+
+  /* Centro — visualização 3D */
+  #center {
+    flex: 1; display: flex; flex-direction: column; overflow: hidden;
+  }
+  #viewer-wrap {
+    flex: 1; position: relative; background: #0a0b10;
+  }
+  #canvas3d { width: 100%; height: 100%; display: block; }
+  #viewer-hint {
+    position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+    background: #00000088; color: var(--muted); font-size: 11px;
+    padding: 4px 10px; border-radius: 20px; pointer-events: none;
+    white-space: nowrap;
+  }
+  #no-scene {
+    position: absolute; inset: 0; display: flex;
+    align-items: center; justify-content: center;
+    color: var(--muted); font-size: 15px; flex-direction: column; gap: 8px;
+  }
+  #no-scene .icon { font-size: 48px; }
+
+  /* Painel direito — chat */
+  #right-panel {
+    width: 340px; min-width: 260px;
+    background: var(--panel); border-left: 1px solid var(--border);
+    display: flex; flex-direction: column;
+  }
+  #chat-header {
+    padding: 14px; border-bottom: 1px solid var(--border);
+    font-size: 11px; text-transform: uppercase;
+    letter-spacing: .08em; color: var(--muted);
+  }
+  #chat-messages {
+    flex: 1; overflow-y: auto; padding: 12px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .msg {
+    max-width: 90%; border-radius: var(--radius);
+    padding: 10px 12px; font-size: 13px; line-height: 1.5;
+    animation: fadeIn .2s ease;
+  }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:none} }
+  .msg.user {
+    background: var(--accent2); color: #fff; align-self: flex-end;
+  }
+  .msg.bot {
+    background: var(--border); color: var(--text); align-self: flex-start;
+  }
+  .msg.error { background: #e0505020; color: var(--error); }
+  .msg .op-tag {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    padding: 1px 6px; border-radius: 4px;
+    background: var(--accent); color: #111; margin-bottom: 4px;
+  }
+  .msg .answer { font-size: 18px; font-weight: 700; color: var(--accent); }
+  .msg .detail { font-size: 11px; color: var(--muted); margin-top: 4px; }
+  .msg .ranking { font-size: 11px; color: var(--muted); margin-top: 6px; }
+  .msg .ranking li { margin-left: 14px; }
+
+  .welcome {
+    color: var(--muted); font-size: 12px; text-align: center;
+    padding: 20px 0;
+  }
+  .welcome .examples { margin-top: 10px; text-align: left; }
+  .example-q {
+    display: block; margin: 4px 0; padding: 5px 8px;
+    background: #ffffff08; border-radius: 5px; cursor: pointer;
+    font-size: 11px; color: var(--text); border: 1px solid transparent;
+    transition: border-color .15s;
+  }
+  .example-q:hover { border-color: var(--accent); }
+
+  #chat-input-wrap {
+    padding: 12px; border-top: 1px solid var(--border);
+    display: flex; gap: 8px;
+  }
+  #chat-input {
+    flex: 1; background: var(--bg); border: 1px solid var(--border);
+    border-radius: 8px; padding: 9px 12px; color: var(--text);
+    font-size: 13px; outline: none; resize: none;
+    transition: border-color .2s;
+    font-family: inherit;
+  }
+  #chat-input:focus { border-color: var(--accent); }
+  #send-btn {
+    background: var(--accent); border: none; border-radius: 8px;
+    width: 38px; cursor: pointer; font-size: 18px;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity .2s;
+  }
+  #send-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div>
+    <h1>🧭 Spatial QA System</h1>
+    <div class="sub">Consultas espaciais sobre cenas 3D · PT-BR / EN</div>
+  </div>
+  <div id="status-dot"></div>
+  <div id="status-label">Conectando...</div>
+</header>
+
+<!-- Main -->
+<main>
+
+  <!-- Painel esquerdo -->
+  <div id="left-panel">
+    <div class="panel-section">
+      <h2>Carregar Cena</h2>
+      <div id="drop-zone" onclick="document.getElementById('ply-input').click()">
+        <div class="icon">📦</div>
+        <div>Clique ou arraste um arquivo <strong>.ply</strong></div>
+        <div style="font-size:11px;margin-top:4px">Opcionalmente adicione o layout .txt do SpatialLM</div>
+      </div>
+      <input type="file" id="ply-input" accept=".ply" class="file-inputs">
+      <input type="file" id="layout-input" accept=".txt" class="file-inputs">
+      <button class="btn" id="upload-btn" disabled onclick="uploadScene()">
+        Processar Cena
+      </button>
+      <div id="progress-bar-wrap"><div id="progress-bar"></div></div>
+      <div id="upload-status" style="font-size:11px;color:var(--muted);margin-top:6px"></div>
+    </div>
+
+    <div class="panel-section" style="flex:1;overflow:hidden;display:flex;flex-direction:column">
+      <h2>Objetos Detectados <span id="obj-count" style="color:var(--accent)"></span></h2>
+      <div id="objects-list">
+        <div style="color:var(--muted);font-size:12px;padding:8px">
+          Nenhuma cena carregada
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Visualizador 3D -->
+  <div id="center">
+    <div id="viewer-wrap">
+      <canvas id="canvas3d"></canvas>
+      <div id="no-scene">
+        <div class="icon">🏠</div>
+        <div>Carregue uma cena .ply para visualizar</div>
+      </div>
+      <div id="viewer-hint" style="display:none">
+        Arraste para rotacionar · Scroll para zoom · Duplo clique para resetar
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <div id="right-panel">
+    <div id="chat-header">💬 Consultas em Linguagem Natural</div>
+    <div id="chat-messages">
+      <div class="welcome">
+        <div>Faça perguntas sobre a cena em português ou inglês.</div>
+        <div class="examples">
+          <strong style="font-size:11px;color:var(--muted)">Exemplos:</strong>
+          <span class="example-q" onclick="useExample(this)">Qual a distância entre chair_0 e table_0?</span>
+          <span class="example-q" onclick="useExample(this)">Qual cadeira está mais próxima da mesa?</span>
+          <span class="example-q" onclick="useExample(this)">chair_0 está entre desk_0 e wardrobe_0?</span>
+          <span class="example-q" onclick="useExample(this)">chair_0, desk_0 e table_0 estão alinhados?</span>
+          <span class="example-q" onclick="useExample(this)">What is the distance between chair_0 and desk_0?</span>
+          <span class="example-q" onclick="useExample(this)">Which chair is closest to the wardrobe?</span>
+        </div>
+      </div>
+    </div>
+    <div id="chat-input-wrap">
+      <textarea id="chat-input" rows="2"
+        placeholder="Digite sua consulta..." 
+        onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendQuery()}"
+      ></textarea>
+      <button id="send-btn" onclick="sendQuery()" disabled>➤</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- Three.js via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+// ============================================================
+// Estado global
+// ============================================================
+const state = {
+  plyFile:    null,
+  layoutFile: null,
+  objects:    [],
+  scene3d:    null,
+  selected:   new Set(),
+};
+
+// ============================================================
+// Three.js — visualizador 3D simples de nuvem de pontos
+// ============================================================
+let renderer, camera, scene3d, controls3d, animFrame;
+
+function initThree() {
+  const canvas = document.getElementById('canvas3d');
+  const wrap   = document.getElementById('viewer-wrap');
+
+  renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setClearColor(0x0a0b10, 1);
+
+  scene3d = new THREE.Scene();
+
+  camera = new THREE.PerspectiveCamera(60, 1, 0.01, 100);
+  camera.position.set(5, 5, 5);
+  camera.lookAt(0, 0, 0);
+
+  // Luz ambiente
+  scene3d.add(new THREE.AmbientLight(0xffffff, 0.6));
+
+  // Grid
+  const grid = new THREE.GridHelper(20, 20, 0x222233, 0x1a1c28);
+  scene3d.add(grid);
+
+  // Controles de órbita simples
+  setupOrbitControls(canvas);
+
+  // Resize observer
+  const ro = new ResizeObserver(() => resizeRenderer());
+  ro.observe(wrap);
+  resizeRenderer();
+
+  animate();
+}
+
+function resizeRenderer() {
+  const wrap = document.getElementById('viewer-wrap');
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+
+function animate() {
+  animFrame = requestAnimationFrame(animate);
+  renderer.render(scene3d, camera);
+}
+
+// Controles de órbita manual simples
+let isDragging = false, lastX = 0, lastY = 0;
+let spherical = { theta: Math.PI/4, phi: Math.PI/3, radius: 10 };
+let target    = new THREE.Vector3(2.5, 0, 2.5);
+
+function setupOrbitControls(canvas) {
+  canvas.addEventListener('mousedown', e => { isDragging = true; lastX = e.clientX; lastY = e.clientY; });
+  window.addEventListener('mouseup',   () => { isDragging = false; });
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    const dx = (e.clientX - lastX) * 0.01;
+    const dy = (e.clientY - lastY) * 0.01;
+    spherical.theta -= dx;
+    spherical.phi   = Math.max(0.1, Math.min(Math.PI - 0.1, spherical.phi + dy));
+    lastX = e.clientX; lastY = e.clientY;
+    updateCamera();
+  });
+  canvas.addEventListener('wheel', e => {
+    spherical.radius = Math.max(1, Math.min(50, spherical.radius + e.deltaY * 0.02));
+    updateCamera();
+  });
+  canvas.addEventListener('dblclick', () => {
+    spherical = { theta: Math.PI/4, phi: Math.PI/3, radius: 10 };
+    target.set(2.5, 0, 2.5);
+    updateCamera();
+  });
+}
+
+function updateCamera() {
+  camera.position.set(
+    target.x + spherical.radius * Math.sin(spherical.phi) * Math.sin(spherical.theta),
+    target.y + spherical.radius * Math.cos(spherical.phi),
+    target.z + spherical.radius * Math.sin(spherical.phi) * Math.cos(spherical.theta),
+  );
+  camera.lookAt(target);
+}
+
+// Paleta de cores por categoria
+const CAT_COLORS = {
+  chair:        0xdc3c3c,
+  sofa:         0x3264dc,
+  table:        0xdcaa1e,
+  dining_table: 0xdcaa1e,
+  desk:         0x32aadc,
+  cabinet:      0xaa64dc,
+  wardrobe:     0xaa64dc,
+  bed:          0x64dc32,
+  monitor:      0xdc6432,
+  door:         0x64aaaa,
+};
+
+function getCatColor(cat) {
+  return CAT_COLORS[cat] || 0x888888;
+}
+
+// Renderiza os objetos como caixas no visualizador 3D
+function renderObjects(objects) {
+  // Remove objetos antigos (mantém grid e luz)
+  const toRemove = [];
+  scene3d.traverse(o => { if (o.userData.isObject) toRemove.push(o); });
+  toRemove.forEach(o => scene3d.remove(o));
+
+  if (!objects.length) return;
+
+  // Calcula centro da cena para ajustar câmera
+  let cx = 0, cy = 0, cz = 0;
+  objects.forEach(o => { cx += o.cx; cy += o.cy; cz += o.cz; });
+  cx /= objects.length; cy /= objects.length; cz /= objects.length;
+  target.set(cx, cy / 2, cz);
+  spherical.radius = 8 + objects.length * 0.3;
+  updateCamera();
+
+  objects.forEach(obj => {
+    const color = getCatColor(obj.category);
+    const geo   = new THREE.BoxGeometry(
+      Math.max(obj.dx || 0.6, 0.1),
+      Math.max(obj.dz || 0.8, 0.1),
+      Math.max(obj.dy || 0.6, 0.1),
+    );
+    const mat = new THREE.MeshLambertMaterial({
+      color, transparent: true, opacity: 0.7,
+    });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.position.set(obj.cx, obj.cz / 2, obj.cy);
+    mesh.rotation.y = -(obj.angle || 0);
+    mesh.userData = { isObject: true, obj_id: obj.obj_id };
+
+    // Aresta
+    const edges = new THREE.LineSegments(
+      new THREE.EdgesGeometry(geo),
+      new THREE.LineBasicMaterial({ color: 0xffffff, opacity: 0.3, transparent: true })
+    );
+    mesh.add(edges);
+
+    scene3d.add(mesh);
+  });
+
+  document.getElementById('no-scene').style.display = 'none';
+  document.getElementById('viewer-hint').style.display = 'block';
+}
+
+// Destaca objetos selecionados
+function highlightObjects(objIds) {
+  scene3d.traverse(o => {
+    if (!o.userData.isObject) return;
+    const isHighlighted = objIds.includes(o.userData.obj_id);
+    if (o.material) {
+      o.material.opacity    = isHighlighted ? 1.0 : 0.3;
+      o.material.emissive   = isHighlighted
+        ? new THREE.Color(0x00c88c)
+        : new THREE.Color(0x000000);
+      o.material.emissiveIntensity = isHighlighted ? 0.3 : 0;
+    }
+  });
+}
+
+function resetHighlight() {
+  scene3d.traverse(o => {
+    if (!o.userData.isObject || !o.material) return;
+    o.material.opacity             = 0.7;
+    o.material.emissiveIntensity   = 0;
+  });
+}
+
+// ============================================================
+// Upload da cena
+// ============================================================
+
+document.getElementById('ply-input').addEventListener('change', e => {
+  state.plyFile = e.target.files[0];
+  updateUploadBtn();
+});
+document.getElementById('layout-input').addEventListener('change', e => {
+  state.layoutFile = e.target.files[0];
+  updateUploadBtn();
+});
+
+// Drag and drop
+const dropZone = document.getElementById('drop-zone');
+dropZone.addEventListener('dragover',  e => { e.preventDefault(); dropZone.classList.add('drag'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault(); dropZone.classList.remove('drag');
+  const files = Array.from(e.dataTransfer.files);
+  files.forEach(f => {
+    if (f.name.endsWith('.ply'))   { state.plyFile    = f; }
+    if (f.name.endsWith('.txt'))   { state.layoutFile = f; }
+  });
+  updateUploadBtn();
+  setUploadStatus(
+    state.plyFile
+      ? `📦 ${state.plyFile.name}${state.layoutFile ? ' + layout.txt' : ''}`
+      : 'Nenhum PLY encontrado'
+  );
+});
+
+function updateUploadBtn() {
+  document.getElementById('upload-btn').disabled = !state.plyFile;
+}
+
+function setUploadStatus(msg, color='var(--muted)') {
+  const el = document.getElementById('upload-status');
+  el.textContent = msg;
+  el.style.color = color;
+}
+
+async function uploadScene() {
+  if (!state.plyFile) return;
+
+  const btn  = document.getElementById('upload-btn');
+  const prog = document.getElementById('progress-bar-wrap');
+  const bar  = document.getElementById('progress-bar');
+  btn.disabled = true;
+  prog.style.display = 'block';
+  bar.style.width    = '30%';
+  setUploadStatus('Processando cena...', 'var(--accent)');
+
+  const fd = new FormData();
+  fd.append('file', state.plyFile);
+  if (state.layoutFile) fd.append('layout_file', state.layoutFile);
+
+  try {
+    bar.style.width = '60%';
+    const resp = await fetch('/upload', { method: 'POST', body: fd });
+    bar.style.width = '90%';
+    const data = await resp.json();
+
+    if (!resp.ok) {
+      setUploadStatus(`Erro: ${data.detail || 'Falha no servidor'}`, 'var(--error)');
+      return;
+    }
+
+    state.objects = data.objects;
+    renderObjects(data.objects);
+    renderObjectsList(data.objects);
+    setUploadStatus(
+      `✓ ${data.n_objects} objetos detectados (${data.method === 'layout_preloaded' ? 'layout pré-carregado' : 'inferência SpatialLM'})`,
+      'var(--accent)'
+    );
+    document.getElementById('send-btn').disabled = false;
+    document.getElementById('chat-input').disabled = false;
+
+    bar.style.width = '100%';
+    setTimeout(() => { prog.style.display = 'none'; bar.style.width = '0%'; }, 600);
+
+  } catch (err) {
+    setUploadStatus(`Erro de conexão: ${err.message}`, 'var(--error)');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+function renderObjectsList(objects) {
+  const list = document.getElementById('objects-list');
+  document.getElementById('obj-count').textContent = `(${objects.length})`;
+
+  if (!objects.length) {
+    list.innerHTML = '<div style="color:var(--muted);font-size:12px;padding:8px">Nenhum objeto detectado</div>';
+    return;
+  }
+
+  list.innerHTML = objects.map(o => `
+    <div class="obj-item" onclick="selectObject('${o.obj_id}')" data-id="${o.obj_id}">
+      <div class="obj-dot" style="background:#${getCatColor(o.category).toString(16).padStart(6,'0')}"></div>
+      <div>
+        <div class="obj-id">${o.obj_id}</div>
+        <div style="font-size:10px;color:var(--muted)">${o.category}</div>
+      </div>
+      <div class="obj-pos">(${o.cx.toFixed(1)}, ${o.cy.toFixed(1)})</div>
+    </div>
+  `).join('');
+}
+
+function selectObject(objId) {
+  document.querySelectorAll('.obj-item').forEach(el => {
+    el.classList.toggle('selected', el.dataset.id === objId);
+  });
+  highlightObjects([objId]);
+  setTimeout(resetHighlight, 1500);
+}
+
+// ============================================================
+// Chat / consultas
+// ============================================================
+
+function useExample(el) {
+  document.getElementById('chat-input').value = el.textContent;
+  document.getElementById('chat-input').focus();
+}
+
+function addMessage(html, type='bot') {
+  const msgs = document.getElementById('chat-messages');
+  const div  = document.createElement('div');
+  div.className = `msg ${type}`;
+  div.innerHTML = html;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function formatResult(data) {
+  const { parsed, result } = data;
+  const op = parsed.operator.toUpperCase();
+  let html = `<div class="op-tag">${op}</div>`;
+
+  if (result.error) {
+    return `<div class="op-tag">${op}</div><div style="color:var(--error)">${result.error}</div>`;
+  }
+
+  if (parsed.operator === 'distance') {
+    html += `<div class="answer">${result.answer}</div>`;
+    html += `<div class="detail">
+      ${result.object_a} ↔ ${result.object_b}<br>
+      Superfície: <strong>${result.distance_surface_m} m</strong> · 
+      Centróide: ${result.distance_centroid_m} m
+    </div>`;
+    highlightObjects([result.object_a, result.object_b]);
+
+  } else if (parsed.operator === 'nearest') {
+    html += `<div class="answer">${result.winner}</div>`;
+    html += `<div class="detail">Mais próximo de ${result.ref} · ${result.distance_m} m</div>`;
+    if (result.ranking && result.ranking.length > 1) {
+      html += `<div class="ranking">Ranking:<ul>`;
+      result.ranking.forEach(r => {
+        html += `<li>${r.obj_id} — ${r.distance_m} m</li>`;
+      });
+      html += `</ul></div>`;
+    }
+    highlightObjects([result.ref, result.winner]);
+
+  } else if (parsed.operator === 'between') {
+    const ans = result.answer === 'Sim' ? '✅ Sim' : '❌ Não';
+    html += `<div class="answer">${ans}</div>`;
+    html += `<div class="detail">
+      ${result.object_x} entre ${result.object_a} e ${result.object_b}<br>
+      τ = ${result.tau} · dist. lateral = ${result.lateral_dist} m
+    </div>`;
+    highlightObjects([result.object_x, result.object_a, result.object_b]);
+
+  } else if (parsed.operator === 'aligned') {
+    const ans = result.answer === 'Sim' ? '✅ Sim' : '❌ Não';
+    html += `<div class="answer">${ans}</div>`;
+    html += `<div class="detail">
+      ${result.object_a}, ${result.object_b}, ${result.object_c}<br>
+      τ = ${result.tau} · dist. lateral = ${result.lateral_dist} m
+    </div>`;
+    highlightObjects([result.object_a, result.object_b, result.object_c]);
+  }
+
+  return html;
+}
+
+async function sendQuery() {
+  const input = document.getElementById('chat-input');
+  const q     = input.value.trim();
+  if (!q) return;
+
+  addMessage(q, 'user');
+  input.value = '';
+  input.disabled = true;
+  document.getElementById('send-btn').disabled = true;
+
+  try {
+    const resp = await fetch('/query', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ query: q }),
+    });
+    const data = await resp.json();
+
+    if (!data.ok) {
+      addMessage(
+        `<strong>⚠️ Não reconhecido</strong><br><pre style="font-size:11px;white-space:pre-wrap">${data.error}</pre>` +
+        (data.hint ? `<div class="detail">${data.hint}</div>` : ''),
+        'error'
+      );
+    } else {
+      addMessage(formatResult(data), 'bot');
+      // Reset highlight depois de 3s
+      setTimeout(resetHighlight, 3000);
+    }
+
+  } catch (err) {
+    addMessage(`Erro de conexão: ${err.message}`, 'error');
+  } finally {
+    input.disabled = false;
+    document.getElementById('send-btn').disabled = false;
+    input.focus();
+  }
+}
+
+// ============================================================
+// Status / health check
+// ============================================================
+
+async function checkHealth() {
+  try {
+    const resp = await fetch('/health');
+    const data = await resp.json();
+    const dot  = document.getElementById('status-dot');
+    const lbl  = document.getElementById('status-label');
+
+    dot.className = 'ok';
+    lbl.textContent = data.spatiallm_available
+      ? `SpatialLM pronto · ${data.objects_loaded} obj`
+      : 'Servidor OK (SpatialLM não encontrado)';
+    lbl.style.color = data.spatiallm_available ? 'var(--accent)' : 'var(--error)';
+
+    if (data.objects_loaded > 0) {
+      document.getElementById('send-btn').disabled = false;
+    }
+  } catch {
+    document.getElementById('status-dot').className = 'err';
+    document.getElementById('status-label').textContent = 'Servidor offline';
+  }
+}
+
+// ============================================================
+// Init
+// ============================================================
+
+initThree();
+checkHealth();
+setInterval(checkHealth, 10000);
+</script>
+</body>
+</html>

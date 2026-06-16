@@ -1,0 +1,2 @@
+query_id,scene_id,operator,structured_query,gt_object_a,gt_object_b,gt_distance_m,gt_answer_object,surface_pred_distance_m,surface_pred_answer_object,centroid_pred_distance_m,centroid_pred_answer_object
+dev_q_0066,scene0030_00,nearest,"nearest(""scene0030_00__table_049"", ""chair"")",scene0030_00__table_049,,0.439788,scene0030_00__chair_007,0.4397882223129272,scene0030_00__chair_007,1.2865617275238037,scene0030_00__chair_013

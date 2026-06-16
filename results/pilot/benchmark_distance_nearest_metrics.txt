@@ -1,0 +1,9 @@
+DISTANCE
+n = 28
+MAE   = 0.000000
+MedAE = 0.000000
+RMSE  = 0.000000
+
+NEAREST
+n = 24
+Top-1 Accuracy = 1.000000

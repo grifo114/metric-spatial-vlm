@@ -61,7 +61,7 @@ ax.set_xticks(x)
 ax.set_xticklabels(conditions)
 
 ax.set_xlabel("Spatial Context Condition", labelpad=18)
-ax.set_ylabel("End-to-end surface MAE (m)", labelpad=20)
+ax.set_ylabel(r"$\mathrm{MAE}^{\mathrm{prot}}_{\mathrm{surf,all}}$ (m)", labelpad=20)
 
 ax.set_ylim(0.4, 1.7)
 ax.set_yticks(np.arange(0.4, 1.8, 0.2))

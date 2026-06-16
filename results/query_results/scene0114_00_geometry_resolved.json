@@ -1,0 +1,10 @@
+{
+  "scene_id": "scene0114_00",
+  "raw_query": "qual a distancia entre a cadeira e a mesa?",
+  "object_a": 4,
+  "object_b": 18,
+  "object_a_label": "chair",
+  "object_b_label": "table",
+  "distance_m": 0.4538,
+  "criterion": "minimum_centroid_distance"
+}

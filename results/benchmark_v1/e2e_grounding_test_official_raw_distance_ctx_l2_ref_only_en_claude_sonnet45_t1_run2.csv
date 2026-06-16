@@ -1,0 +1,221 @@
+query_id,scene_id,operator,provider,model,prompt_mode,descriptor_level,context_scope,language,example_a,example_b,example_ref,gt_value,gt_object_a,gt_object_b,grounded_a,grounded_b,grounding_correct,e_total_surface,e_total_centroid,nearest_vlm_answer,nearest_vlm_dist,vlm_response,error
+test_stage1_dn_0000,scene0008_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0008_00__sofa_000,scene0008_00__door_010,,0.4495985805988312,scene0008_00__monitor_029,scene0008_00__table_032,scene0008_00__monitor_029,scene0008_00__table_008,False,1.2377844663220965,2.2342519760131836,,,"scene0008_00__monitor_029, scene0008_00__table_008
+
+The query asks for the distance between ""a monitor"" and ""a table"". Looking at the scene, monitor 8 (scene0008_00__monitor_029) is centrally located, and table 12 (scene0008_00__table_008) is in the upper-left area. These two objects appear to be in reasonable proximity to each other in the workspace layout.",
+test_stage1_dn_0001,scene0012_01,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0012_01__door_016,scene0012_01__door_029,,0.4960574507713318,scene0012_01__chair_002,scene0012_01__table_008,scene0012_01__chair_001,scene0012_01__table_008,False,0.6916658839676922,1.310062050819397,,,"scene0012_01__chair_001, scene0012_01__table_008
+
+The query asks for the distance between ""a chair"" and ""a table"". There is only one table in the scene (object 19: scene0012_01__table_008) located in the upper-left area. Among the four chairs, I selected chair_001 (object 1) as it appears to be one of the chairs in the scene. The table is in the upper-left area while this chair is on the left side of the scene.",
+test_stage1_dn_0002,scene0012_01,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0012_01__chair_002,scene0012_01__chair_001,,0.5864425897598267,scene0012_01__door_032,scene0012_01__table_008,scene0012_01__door_033,scene0012_01__table_008,False,0.7212722242864544,1.4108028411865234,,,"scene0012_01__door_033, scene0012_01__table_008
+
+The query asks for the distance between a door and a table. Looking at the scene, there is one table marked as object 19 (scene0012_01__table_008) in the upper-left area. The closest door to this table appears to be door 18 (scene0012_01__door_033), which is located in the upper part of the scene and is the 6th door from left to right. This door is in close proximity to the table in the upper-left quadrant of the scene.",
+test_stage1_dn_0003,scene0050_02,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0050_02__door_008,scene0050_02__sofa_005,,0.1923689544200897,scene0050_02__chair_000,scene0050_02__desk_003,scene0050_02__chair_001,scene0050_02__desk_003,False,0.08713190369372793,1.06912100315094,,,"scene0050_02__chair_001, scene0050_02__desk_003
+
+The query asks for the distance between ""a chair"" and ""a desk"". Looking at the scene, there is one desk (object 3, scene0050_02__desk_003) located in the upper-left area. There are two chairs in the scene - chair 1 in the upper part and chair 2 on the left side. Chair 2 (scene0050_02__chair_001) appears to be closer and more directly associated with the desk in the upper-left area, making it the most contextually meaningful pairing.",
+test_stage1_dn_0004,scene0050_02,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0050_02__door_010,scene0050_02__door_008,,0.1670646965503692,scene0050_02__sofa_005,scene0050_02__table_011,scene0050_02__sofa_005,scene0050_02__table_011,True,0.16706469218811415,1.0019477605819702,,,"scene0050_02__sofa_005, scene0050_02__table_011
+
+The query asks for the distance between ""a sofa"" and ""a table"". Looking at the scene:
+- There is one sofa marked as object 10 (scene0050_02__sofa_005) in the lower-left area
+- There is one table marked as object 11 (scene0050_02__table_011) in the lower part of the scene
+
+These are the only instances of sofa and table in the scene, so they are the correct objects to measure the distance between.",
+test_stage1_dn_0005,scene0066_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0066_00__door_032,scene0066_00__table_022,,0.8375847339630127,scene0066_00__cabinet_003,scene0066_00__chair_019,scene0066_00__cabinet_003,scene0066_00__chair_004,False,2.141927157805783,2.5940606594085693,,,"scene0066_00__cabinet_003, scene0066_00__chair_004
+
+The query asks for the distance between a cabinet and a chair. There is only one cabinet in the scene (object 1: scene0066_00__cabinet_003) located in the lower-left area. Among the 26 chairs, I selected chair 2 (scene0066_00__chair_004) as it appears to be one of the chairs in the left side of the scene, which would provide a meaningful distance measurement to the cabinet in the lower-left area.",
+test_stage1_dn_0006,scene0066_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0066_00__cabinet_003,scene0066_00__door_032,,0.298779159784317,scene0066_00__chair_007,scene0066_00__table_022,scene0066_00__chair_023,scene0066_00__table_022,False,0.004649452943535014,1.172372817993164,,,"scene0066_00__chair_023, scene0066_00__table_022
+
+The query asks for the distance between ""a chair"" and ""a table"". There is only one table in the scene (object 29: scene0066_00__table_022) located on the left side. Among the 26 chairs, I selected chair 19 (scene0066_00__chair_023) as it appears to be one of the chairs in the lower-left area that would be contextually associated with the table on the left side of the scene.",
+test_stage1_dn_0007,scene0066_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0066_00__cabinet_003,scene0066_00__table_022,,0.4286984205245971,scene0066_00__chair_013,scene0066_00__door_032,scene0066_00__chair_004,scene0066_00__door_032,False,4.327068575019316,5.119826316833496,,,"scene0066_00__chair_004, scene0066_00__door_032
+
+The query asks for the distance between ""a chair"" and ""a door"". Since there are 26 chairs in the scene but only one door (object 28), the door is unambiguous. For the chair, I selected chair_004 (object 2) as it appears to be one of the more prominent chairs in the scene based on its position in the left side of the scene.",
+test_stage1_dn_0008,scene0081_01,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0081_01__table_018,scene0081_01__table_021,,0.1527515649795532,scene0081_01__chair_030,scene0081_01__monitor_026,scene0081_01__chair_030,scene0081_01__monitor_026,True,0.15275156436032913,0.6805809736251831,,,"scene0081_01__chair_030, scene0081_01__monitor_026
+
+The query asks for the distance between a chair and a monitor. There is only one monitor in the scene (object 27, scene0081_01__monitor_026) located on the left side. The closest chair to this monitor is chair 17 (scene0081_01__chair_030), which is also described as being on the left side of the scene, making it the most contextually relevant chair for measuring distance to the monitor.",
+test_stage1_dn_0009,scene0087_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0087_00__table_006,scene0087_00__table_012,,0.8706968426704407,scene0087_00__chair_004,scene0087_00__door_015,scene0087_00__chair_004,scene0087_00__door_015,True,0.8706968403654078,2.0273876190185547,,,"scene0087_00__chair_004, scene0087_00__door_015
+
+The query asks for the distance between ""a chair"" and ""a door"". Since there is only one door in the scene (object 6: scene0087_00__door_015), that is clearly object B. For the chair, I selected object 1 (scene0087_00__chair_004) as it appears to be the chair on the right side of the scene, which is the most prominent chair relative to the door's position in the lower-right area.",
+test_stage1_dn_0010,scene0087_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0087_00__chair_008,scene0087_00__door_015,,0.3623756170272827,scene0087_00__sofa_003,scene0087_00__table_012,scene0087_00__sofa_003,scene0087_00__table_012,True,0.36237560578492367,1.043918251991272,,,"scene0087_00__sofa_003, scene0087_00__table_012
+
+The query asks for the distance between a sofa and a table. Looking at the scene:
+- There is one sofa (object 7) in the upper part of the scene
+- There are two tables: object 8 in the lower-left area and object 9 in the center
+
+Object 9 (scene0087_00__table_012) appears to be the more prominent table in the center of the scene and is closer to the sofa than object 8. Therefore, I've selected the sofa (scene0087_00__sofa_003) and the central table (scene0087_00__table_012) as the most meaningful pair.",
+test_stage1_dn_0011,scene0092_03,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0092_03__chair_057,scene0092_03__desk_059,,0.5432937741279602,scene0092_03__bed_062,scene0092_03__monitor_018,scene0092_03__bed_062,scene0092_03__monitor_017,False,1.2676193815808738,1.9572697877883911,,,"scene0092_03__bed_062, scene0092_03__monitor_017
+
+The query asks for the distance between a bed and a monitor. Object 1 is the bed (scene0092_03__bed_062) located in the lower-left area. Among the three monitors in the scene, monitor 7 (scene0092_03__monitor_017) appears to be the closest to the bed based on their positions in the lower part of the scene.",
+test_stage1_dn_0012,scene0092_03,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0092_03__cabinet_051,scene0092_03__monitor_017,,0.3827621340751648,scene0092_03__chair_057,scene0092_03__desk_059,scene0092_03__chair_057,scene0092_03__desk_059,True,0.3827621481971366,0.9091058373451233,,,"scene0092_03__chair_057, scene0092_03__desk_059
+
+The query asks for the distance between ""a chair"" and ""a desk"". Looking at the scene, there is one chair labeled as object 3 (scene0092_03__chair_057) on the left side of the scene, and one desk labeled as object 4 (scene0092_03__desk_059) also on the left side of the scene. These are the only instances of these object categories in the scene, making them the clear choices for the query.",
+test_stage1_dn_0013,scene0095_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0095_00__chair_038,scene0095_00__monitor_004,,0.2239548116922378,scene0095_00__cabinet_016,scene0095_00__table_017,scene0095_00__cabinet_016,scene0095_00__table_017,True,0.2239548191702792,2.627775192260742,,,"scene0095_00__cabinet_016, scene0095_00__table_017
+
+The query asks for the distance between a cabinet and a table. Looking at the scene:
+- There is only one cabinet visible: object 1 (scene0095_00__cabinet_016) located in the upper-right area
+- There is only one table visible: object 29 (scene0095_00__table_017) located in the upper part of the scene
+
+These are the only instances of these object categories in the scene, making them the clear choices for the query.",
+test_stage1_dn_0014,scene0095_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0095_00__door_057,scene0095_00__table_017,,0.3191365003585815,scene0095_00__chair_035,scene0095_00__monitor_018,scene0095_00__chair_014,scene0095_00__monitor_004,False,0.4272833472991289,0.6723561882972717,,,"scene0095_00__chair_014, scene0095_00__monitor_004
+
+The query asks for the distance between ""a chair"" and ""a monitor"". Since there are multiple instances of both objects, I need to select contextually meaningful ones. I chose:
+- Chair 5 (scene0095_00__chair_014) - located in the lower part of the scene, 9th of 16 chairs
+- Monitor 22 (scene0095_00__monitor_004) - located in the center of the scene, 6th of 10 monitors
+
+These two objects appear to be in relatively central positions and would represent a typical chair-to-monitor relationship in this computer lab or office setting.",
+test_stage1_dn_0015,scene0101_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0101_00__door_083,scene0101_00__chair_039,,0.2716908752918243,scene0101_00__bed_032,scene0101_00__desk_027,scene0101_00__bed_032,scene0101_00__desk_027,True,0.2716908913465737,1.754355788230896,,,"scene0101_00__bed_032, scene0101_00__desk_027
+
+The query asks for the distance between a bed and a desk. Looking at the scene:
+- There is one bed marked as object 1 (scene0101_00__bed_032) in the upper-left area
+- There is one desk marked as object 6 (scene0101_00__desk_027) on the left side of the scene
+
+These are the only instances of these object categories in the scene, making them the clear choices for the query.",
+test_stage1_dn_0016,scene0101_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0101_00__cabinet_004,scene0101_00__cabinet_079,,0.2685104012489319,scene0101_00__desk_027,scene0101_00__sofa_019,scene0101_00__desk_027,scene0101_00__sofa_019,True,0.26851038777563135,1.769300937652588,,,"scene0101_00__desk_027, scene0101_00__sofa_019
+
+The query asks for the distance between a desk and a sofa. Looking at the scene:
+- The desk is object 6 (scene0101_00__desk_027) located on the left side of the scene
+- The sofa is object 11 (scene0101_00__sofa_019) located in the lower-left area of the scene
+
+These are the only instances of desk and sofa in the scene, making them the clear choices for the query.",
+test_stage1_dn_0017,scene0106_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0106_00__monitor_029,scene0106_00__monitor_033,,0.3147442936897278,scene0106_00__chair_010,scene0106_00__door_037,scene0106_00__chair_009,scene0106_00__door_037,False,1.6413701806649872,2.2641642093658447,,,"scene0106_00__chair_009, scene0106_00__door_037
+
+The query asks for the distance between ""a chair"" and ""a door"". There is only one door in the scene (object 14: scene0106_00__door_037) located in the upper-right area. For the chair, I selected chair_009 (object 1) as it appears to be one of the more prominent chairs on the right side of the scene, which would provide a meaningful distance measurement to the door in the upper-right area.",
+test_stage1_dn_0018,scene0106_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0106_00__sofa_006,scene0106_00__table_000,,0.2984196841716766,scene0106_00__chair_018,scene0106_00__monitor_033,scene0106_00__chair_012,scene0106_00__monitor_020,False,1.0855498900658627,1.5584728717803955,,,"scene0106_00__chair_012, scene0106_00__monitor_020
+
+The query asks for the distance between ""a chair"" and ""a monitor"". Looking at the scene, I need to identify a meaningful chair-monitor pair. 
+
+Chair 4 (scene0106_00__chair_012) is located in the center of the scene and appears to be positioned near Monitor 16 (scene0106_00__monitor_020), which is also in the center of the scene. This pairing represents a typical workstation setup where a chair would be positioned in front of a monitor, making it the most contextually meaningful pair to measure distance between.",
+test_stage1_dn_0019,scene0106_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0106_00__door_037,scene0106_00__monitor_021,,0.1978783160448074,scene0106_00__chair_018,scene0106_00__table_002,scene0106_00__chair_009,scene0106_00__table_000,False,0.005097670733849673,1.0492922067642212,,,"scene0106_00__chair_009, scene0106_00__table_000
+
+The query asks for the distance between ""a chair"" and ""a table"". Looking at the scene, I need to identify which chair and which table are most contextually related or prominent.
+
+Chair 1 (scene0106_00__chair_009) is located on the right side of the scene and is described as ""8 of 13 chairs (top to bottom)"".
+
+Table 23 (scene0106_00__table_000) is also on the right side of the scene and is described as ""3 of 4 tables (top to bottom)"".
+
+These two objects appear to be in close proximity to each other based on their spatial descriptions, making them a contextually meaningful pair to measure distance between.",
+test_stage1_dn_0020,scene0110_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0110_00__chair_001,scene0110_00__desk_010,,0.3989245295524597,scene0110_00__bed_013,scene0110_00__door_004,scene0110_00__bed_013,scene0110_00__door_004,True,0.3989245363207067,1.3562543392181396,,,"scene0110_00__bed_013, scene0110_00__door_004
+
+The query asks for the distance between ""a bed"" and ""a door"". Looking at the scene, there are 2 beds and 2 doors. I selected bed_013 (the lower-left bed, labeled as 1) and door_004 (the left side door, labeled as 7) as they appear to be in closest proximity to each other based on the top-down view of the scene.",
+test_stage1_dn_0021,scene0110_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0110_00__desk_014,scene0110_00__bed_013,,2.170804023742676,scene0110_00__chair_000,scene0110_00__door_004,scene0110_00__chair_001,scene0110_00__door_028,False,3.4203791688938643,4.2340168952941895,,,"scene0110_00__chair_001, scene0110_00__door_028
+
+The query asks for the distance between ""a chair"" and ""a door"". Looking at the scene:
+- There are 2 chairs: chair_000 (lower part) and chair_001 (right side)
+- There are 2 doors: door_004 (left side) and door_028 (upper-left area)
+
+Chair_001 (marked with orange circle #4 on the right side) and door_028 (upper-left area, marked with #8) appear to be a reasonable pairing for measuring distance between a chair and a door in this scene.",
+test_stage1_dn_0022,scene0110_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0110_00__bed_013,scene0110_00__chair_000,,1.6564383506774902,scene0110_00__desk_014,scene0110_00__door_004,scene0110_00__desk_014,scene0110_00__door_004,True,1.6564383469391275,2.6948657035827637,,,"scene0110_00__desk_014, scene0110_00__door_004
+
+The query asks for the distance between ""a desk"" and ""a door"". Looking at the scene, there are 2 desks and 2 doors. The most contextually meaningful pairing appears to be desk #6 (scene0110_00__desk_014) in the lower-left area and door #7 (scene0110_00__door_004) on the left side, as they are in close proximity to each other in that region of the scene.",
+test_stage1_dn_0023,scene0132_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0132_00__sofa_002,scene0132_00__table_010,,0.5601621270179749,scene0132_00__chair_001,scene0132_00__monitor_014,scene0132_00__chair_001,scene0132_00__monitor_014,True,0.560162113957308,1.1986804008483887,,,"scene0132_00__chair_001, scene0132_00__monitor_014
+
+The query asks for the distance between ""a chair"" and ""a monitor"". There is only one monitor in the scene (object 11: scene0132_00__monitor_014) located in the upper-left area. The closest chair to this monitor is chair 1 (scene0132_00__chair_001), which is also in the upper-left area of the scene.",
+test_stage1_dn_0024,scene0132_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0132_00__chair_016,scene0132_00__chair_007,,0.2692267298698425,scene0132_00__sofa_002,scene0132_00__table_010,scene0132_00__sofa_002,scene0132_00__table_013,False,1.7091298984085856,2.707812786102295,,,"scene0132_00__sofa_002, scene0132_00__table_013
+
+The query asks for the distance between a sofa and a table. Looking at the scene:
+- There is one sofa (object 12) located in the lower-left area
+- There are 4 tables in the scene (objects 13, 14, 15, 16)
+
+The sofa (#12) is positioned in the lower-left area of the scene. The closest table to it appears to be table #13 (scene0132_00__table_013), which is also described as being in the ""lower-left area of the scene"" and is the 2nd of 4 tables from left to right. This makes it the most contextually relevant table to measure distance from the sofa.",
+test_stage1_dn_0025,scene0137_01,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0137_01__monitor_013,scene0137_01__chair_007,,0.6580235362052917,scene0137_01__bed_003,scene0137_01__door_034,scene0137_01__bed_002,scene0137_01__door_028,False,3.2849665813715525,5.073482513427734,,,"scene0137_01__bed_002, scene0137_01__door_028
+
+The query asks for the distance between ""a bed"" and ""a door"". Looking at the scene:
+
+- There are 3 beds (objects 1, 2, 3) in the lower portion of the scene
+- There are 4 doors (objects 7, 8, 9, 10) on the right side of the scene
+
+I selected bed_002 (object 1) as it's the leftmost bed and door_028 (object 7) as it's the uppermost door. These two objects appear to have a significant distance between them, spanning from the lower-left area to the upper-right area of the scene.",
+test_stage1_dn_0026,scene0137_01,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0137_01__table_015,scene0137_01__bed_002,,0.2886812686920166,scene0137_01__chair_007,scene0137_01__monitor_009,scene0137_01__chair_006,scene0137_01__monitor_009,False,1.107643763758982,2.075493097305298,,,"scene0137_01__chair_006, scene0137_01__monitor_009
+
+The query asks for the distance between ""a chair"" and ""a monitor"". Looking at the scene, there are 2 chairs (objects 4 and 5) and 2 monitors (objects 11 and 12). 
+
+Chair 4 (scene0137_01__chair_006) is located in the upper part of the scene near the desk area where the monitors are positioned. Monitor 11 (scene0137_01__monitor_009) is in the upper-left area. These two objects appear to be in close proximity to each other in the workspace area, making them the most contextually meaningful pair to measure distance between.",
+test_stage1_dn_0027,scene0137_01,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0137_01__door_029,scene0137_01__bed_004,,0.2481965869665146,scene0137_01__desk_000,scene0137_01__monitor_013,scene0137_01__desk_000,scene0137_01__monitor_013,True,0.2481965902776258,1.4108365774154663,,,"scene0137_01__desk_000, scene0137_01__monitor_013
+
+The query asks for the distance between ""a desk"" and ""a monitor"". 
+
+Looking at the scene:
+- There is one desk (object 6: scene0137_01__desk_000) located in the upper-left area
+- There are two monitors (objects 11 and 12), both also located in the upper-left area near the desk
+
+Since both monitors are in the upper-left area near the desk, I chose monitor 12 (scene0137_01__monitor_013) as it appears to be the primary monitor associated with the desk based on the spatial description indicating it's ""1 of 2 monitors (top to bottom)"".",
+test_stage1_dn_0028,scene0138_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0138_00__cabinet_038,scene0138_00__chair_023,,0.1779582500457763,scene0138_00__desk_018,scene0138_00__monitor_005,scene0138_00__desk_019,scene0138_00__monitor_013,False,0.006235644278404763,0.9097111225128174,,,"scene0138_00__desk_019, scene0138_00__monitor_013
+
+The query asks for the distance between ""a desk"" and ""a monitor"". Looking at the scene, I need to identify which desk and which monitor are most relevant or prominent.
+
+From the spatial layout:
+- Desk 16 (scene0138_00__desk_019) is on the left side of the scene
+- Monitor 21 (scene0138_00__monitor_013) is also on the left side of the scene and appears to be the closest monitor to desk 16
+
+These two objects appear to be naturally paired together in the workspace layout, making them the most contextually meaningful pair to measure distance between.",
+test_stage1_dn_0029,scene0140_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0140_00__cabinet_033,scene0140_00__table_001,,0.7120874524116516,scene0140_00__chair_025,scene0140_00__door_034,scene0140_00__chair_024,scene0140_00__door_034,False,7.287325685343631,7.787667274475098,,,"scene0140_00__chair_024, scene0140_00__door_034
+
+The query asks for the distance between ""a chair"" and ""a door"". Looking at the scene, there are 24 chairs and 2 doors. The most contextually meaningful pairing would be the chair closest to a door. Chair 24 (scene0140_00__chair_025) is located in the lower part of the scene, and door 27 (scene0140_00__door_034) is also in the lower part of the scene, making them likely the closest chair-door pair.",
+test_stage1_dn_0030,scene0140_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0140_00__door_034,scene0140_00__cabinet_002,,0.183088332414627,scene0140_00__chair_046,scene0140_00__table_001,scene0140_00__chair_010,scene0140_00__table_001,False,0.0055369827980693165,0.8404843211174011,,,"scene0140_00__chair_010, scene0140_00__table_001
+
+The query asks for the distance between ""a chair"" and ""a table"". Since there is only one table in the scene (object 29: scene0140_00__table_001 at the center), that is clearly object B.
+
+For object A (a chair), I selected chair_010 (object 9) which is described as being in the ""center of the scene; 18 of 24 chairs"" - this chair appears to be one of the chairs positioned near the central table, making it a contextually meaningful choice for measuring distance to the table.",
+test_stage1_dn_0031,scene0141_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0141_00__chair_008,scene0141_00__monitor_014,,0.3524557948112488,scene0141_00__cabinet_057,scene0141_00__desk_012,scene0141_00__cabinet_018,scene0141_00__desk_012,False,0.0032605416994265844,0.9237262606620789,,,"scene0141_00__cabinet_018, scene0141_00__desk_012
+
+The query asks for the distance between ""a cabinet"" and ""a desk"". Looking at the scene, I need to identify which cabinet and which desk are most relevant or prominent.
+
+Cabinet 1 (scene0141_00__cabinet_018) is located in the upper part of the scene, and Desk 9 (scene0141_00__desk_012) is also in the upper part of the scene. These two objects appear to be in close proximity to each other in the upper portion of the room, making them a contextually meaningful pair to measure distance between.",
+test_stage1_dn_0032,scene0141_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0141_00__door_023,scene0141_00__chair_008,,0.1614396125078201,scene0141_00__desk_011,scene0141_00__sofa_001,scene0141_00__desk_011,scene0141_00__sofa_001,True,0.16143961152045028,1.4242788553237915,,,"scene0141_00__desk_011, scene0141_00__sofa_001
+
+The query asks for the distance between ""a desk"" and ""a sofa"". There is only one sofa in the scene (object 17: scene0141_00__sofa_001) located in the lower part of the scene. Among the three desks, desk_011 (object 8) is in the lower-right area, which is the closest desk to the sofa in the lower part of the scene, making it the most contextually meaningful pairing.",
+test_stage1_dn_0033,scene0141_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0141_00__cabinet_018,scene0141_00__monitor_017,,0.1721944063901901,scene0141_00__door_023,scene0141_00__sofa_001,scene0141_00__door_013,scene0141_00__sofa_001,False,0.22854512547430153,1.3896979093551636,,,"scene0141_00__door_013, scene0141_00__sofa_001
+
+The query asks for the distance between a door and a sofa. Looking at the scene:
+- There are 2 doors in the lower-left area (objects 11 and 12)
+- There is 1 sofa in the lower part of the scene (object 17)
+
+I selected door_013 (object 11) as it appears to be one of the two doors in the lower-left area, and sofa_001 (object 17) as it's the only sofa in the scene located in the lower part.",
+test_stage1_dn_0034,scene0142_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0142_00__monitor_025,scene0142_00__monitor_000,,0.2170539945363998,scene0142_00__cabinet_037,scene0142_00__chair_019,scene0142_00__cabinet_008,scene0142_00__chair_023,False,1.9356240779779732,2.5515661239624023,,,"scene0142_00__cabinet_008, scene0142_00__chair_023
+
+The query asks for the distance between a cabinet and a chair. Looking at the scene, I need to identify which cabinet and which chair would be most meaningful to measure between.
+
+Cabinet 1 (scene0142_00__cabinet_008) is on the left side of the scene, and Chair 8 (scene0142_00__chair_023) is in the upper part of the scene. These appear to be prominent instances that would provide a meaningful distance measurement in this office/workspace environment.",
+test_stage1_dn_0035,scene0142_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0142_00__chair_021,scene0142_00__chair_020,,0.1605832576751709,scene0142_00__cabinet_037,scene0142_00__table_006,scene0142_00__cabinet_008,scene0142_00__table_003,False,0.5632435599251533,1.212034821510315,,,"scene0142_00__cabinet_008, scene0142_00__table_003
+
+The query asks for the distance between a cabinet and a table. I've selected:
+- Cabinet 1 (scene0142_00__cabinet_008) on the left side of the scene
+- Table 17 (scene0142_00__table_003) in the center of the scene
+
+These two objects appear to be in relatively close proximity based on the top-down view, making them a reasonable pair to measure distance between.",
+test_stage1_dn_0036,scene0142_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0142_00__cabinet_045,scene0142_00__chair_023,,0.1954696178436279,scene0142_00__monitor_035,scene0142_00__table_005,scene0142_00__monitor_040,scene0142_00__table_006,False,0.006235114095339772,0.5531013011932373,,,"scene0142_00__monitor_040, scene0142_00__table_006
+
+The query asks for the distance between ""a monitor"" and ""a table"". Looking at the scene, monitor 15 (scene0142_00__monitor_040) is located in the lower-right area, and table 20 (scene0142_00__table_006) is also in the lower-right area. These two objects appear to be in close proximity to each other, making them a natural pair to measure the distance between.",
+test_stage1_dn_0037,scene0143_01,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0143_01__desk_008,scene0143_01__door_005,,0.793123722076416,scene0143_01__bed_011,scene0143_01__cabinet_004,scene0143_01__bed_011,scene0143_01__cabinet_003,False,1.3820748699473315,3.003809690475464,,,"scene0143_01__bed_011, scene0143_01__cabinet_003
+
+The query asks for the distance between a bed and a cabinet. Looking at the scene:
+- The bed is object 1 (cyan dot) in the upper part of the scene
+- There are two cabinets: object 2 (pink dot, lower-left) and object 3 (green dot, lower part)
+
+Object 2 (cabinet_003) appears to be the more prominent cabinet in the lower-left area, and would be the primary cabinet to measure distance from the bed.",
+test_stage1_dn_0038,scene0143_01,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0143_01__monitor_017,scene0143_01__door_005,,0.5786240696907043,scene0143_01__cabinet_004,scene0143_01__desk_008,scene0143_01__cabinet_003,scene0143_01__desk_008,False,3.130116081583923,3.9891979694366455,,,"scene0143_01__cabinet_003, scene0143_01__desk_008
+
+The query asks for the distance between ""a cabinet"" and ""a desk"". There are two cabinets in the scene (cabinet_003 and cabinet_004) and one desk (desk_008). Cabinet_003 is located in the lower-left area of the scene, while the desk_008 is in the lower-right area. This appears to be the most meaningful pairing to measure distance between these object categories.",
+test_stage1_dn_0039,scene0144_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0144_00__chair_004,scene0144_00__table_001,,1.6725764274597168,scene0144_00__bed_000,scene0144_00__door_019,scene0144_00__bed_000,scene0144_00__door_007,False,2.2091190651068335,3.3157734870910645,,,"scene0144_00__bed_000, scene0144_00__door_007
+
+The query asks for the distance between a bed and a door. Looking at the scene:
+- There is one bed (object 1) in the upper-left area
+- There are three doors (objects 5, 6, 7)
+
+I selected door 007 (object 5) as it appears to be the main entrance door on the right side of the scene, which would be the most contextually meaningful door relative to the bed.",
+test_stage1_dn_0040,scene0144_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0144_00__door_019,scene0144_00__bed_000,,0.2603173851966858,scene0144_00__chair_003,scene0144_00__table_001,scene0144_00__chair_003,scene0144_00__table_001,True,0.2603173926348811,0.8641960024833679,,,"scene0144_00__chair_003, scene0144_00__table_001
+
+The query asks for the distance between a chair and a table. Looking at the scene, there is one table (object 8, labeled as ""table (upper part of the scene)"") and three chairs. Chair 2 (scene0144_00__chair_003) appears to be positioned closest to the table in the upper part of the scene, making this the most contextually meaningful chair-table pair.",
+test_stage1_dn_0041,scene0144_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0144_00__table_001,scene0144_00__bed_000,,0.172589436173439,scene0144_00__chair_021,scene0144_00__door_011,scene0144_00__chair_003,scene0144_00__door_007,False,2.154664012839186,2.7702693939208984,,,"scene0144_00__chair_003, scene0144_00__door_007
+
+The query asks for the distance between a chair and a door. I selected chair_003 (marker 2, in the upper area) as it appears to be one of the prominent chairs in the scene, and door_007 (marker 5, in the lower-right area) as it is clearly visible and well-positioned in the scene.",
+test_stage1_dn_0042,scene0181_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0181_00__cabinet_013,scene0181_00__cabinet_014,,0.3271380960941314,scene0181_00__chair_002,scene0181_00__door_028,scene0181_00__chair_001,scene0181_00__door_022,False,3.9164368297423833,4.485089302062988,,,"scene0181_00__chair_001, scene0181_00__door_022
+
+The query asks for the distance between a chair and a door. I selected chair_001 (object 5) as it is one of the clearly marked chairs in the scene, and door_022 (object 9) as it is one of the two doors present in the scene. These two objects provide a meaningful distance measurement between the seating area on the left side and the door in the lower-right area.",
+test_stage1_dn_0043,scene0181_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0181_00__cabinet_013,scene0181_00__cabinet_014,,0.5557606220245361,scene0181_00__door_028,scene0181_00__table_023,scene0181_00__door_028,scene0181_00__table_023,True,0.5557606070412532,1.903356909751892,,,"scene0181_00__door_028, scene0181_00__table_023
+
+The query asks for the distance between ""a door"" and ""a table"". Looking at the scene:
+- There are 2 doors: door_022 (lower-right) and door_028 (lower part)
+- There are 2 tables: table_005 (right side) and table_023 (left side)
+
+The most prominent pairing would be door_028 (labeled as object 10 in the lower part of the scene) and table_023 (labeled as object 13 on the left side), as they appear to be in closer proximity based on the floor plan layout.",
+test_stage1_dn_0044,scene0181_00,distance,anthropic,claude-sonnet-4-5,context,2,reference_only,en,scene0181_00__chair_002,scene0181_00__cabinet_020,,0.3954781591892242,scene0181_00__sofa_024,scene0181_00__table_005,scene0181_00__sofa_024,scene0181_00__table_005,True,0.39547816256919477,1.092464566230774,,,"scene0181_00__sofa_024, scene0181_00__table_005
+
+The query asks for the distance between a sofa and a table. There is only one sofa in the scene (object 11, scene0181_00__sofa_024) located on the right side. There are two tables in the scene - object 12 (scene0181_00__table_005) on the right side and object 13 (scene0181_00__table_023) on the left side. Since the sofa is on the right side of the scene, the most contextually meaningful pairing is with table 12 (scene0181_00__table_005), which is also on the right side and appears to be closer to the sofa.",

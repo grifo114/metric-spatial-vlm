@@ -1,0 +1,10 @@
+DISTANCE
+n = 28
+Surface MAE  = 0.000000
+Centroid MAE = 0.962265
+Mean improvement (centroid - surface) = 0.962265
+
+NEAREST
+n = 24
+Surface Top-1  = 1.000000
+Centroid Top-1 = 0.958333

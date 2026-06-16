@@ -1,0 +1,511 @@
+query_id,prompt_enriched
+nearest_0000,"Which sofa is closest to the table?
+
+Candidates:
+scene0008_00__sofa_001: closest to the table
+scene0008_00__sofa_000: second closest to the table
+
+Answer with the object_id only."
+nearest_0001,"Which sofa is closest to the table?
+
+Candidates:
+scene0008_00__sofa_000: closest to the table
+scene0008_00__sofa_001: second closest to the table
+
+Answer with the object_id only."
+nearest_0002,"Which sofa is closest to the table?
+
+Candidates:
+scene0008_00__sofa_000: closest to the table
+scene0008_00__sofa_001: second closest to the table
+
+Answer with the object_id only."
+nearest_0003,"Which chair is closest to the door?
+
+Candidates:
+scene0012_01__chair_001: closest to the door
+scene0012_01__chair_002: second closest to the door
+scene0012_01__chair_003: third closest to the door
+scene0012_01__chair_010: farthest from the door
+
+Answer with the object_id only."
+nearest_0004,"Which chair is closest to the door?
+
+Candidates:
+scene0012_01__chair_001: closest to the door
+scene0012_01__chair_003: second closest to the door
+scene0012_01__chair_002: third closest to the door
+scene0012_01__chair_010: farthest from the door
+
+Answer with the object_id only."
+nearest_0005,"Which chair is closest to the door?
+
+Candidates:
+scene0012_01__chair_001: closest to the door
+scene0012_01__chair_003: second closest to the door
+scene0012_01__chair_002: third closest to the door
+scene0012_01__chair_010: farthest from the door
+
+Answer with the object_id only."
+nearest_0006,"Which chair is closest to the door?
+
+Candidates:
+scene0050_02__chair_000: closest to the door
+scene0050_02__chair_001: second closest to the door
+
+Answer with the object_id only."
+nearest_0007,"Which chair is closest to the door?
+
+Candidates:
+scene0050_02__chair_000: closest to the door
+scene0050_02__chair_001: second closest to the door
+
+Answer with the object_id only."
+nearest_0008,"Which chair is closest to the door?
+
+Candidates:
+scene0050_02__chair_000: closest to the door
+scene0050_02__chair_001: second closest to the door
+
+Answer with the object_id only."
+nearest_0009,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0066_00__chair_019: closest to the cabinet
+scene0066_00__chair_023: second closest to the cabinet
+scene0066_00__chair_005: third closest to the cabinet
+scene0066_00__chair_004: 4th closest to the cabinet
+scene0066_00__chair_012: 5th closest to the cabinet
+scene0066_00__chair_025: 6th closest to the cabinet
+scene0066_00__chair_016: 7th closest to the cabinet
+scene0066_00__chair_007: 8th closest to the cabinet
+scene0066_00__chair_035: 9th closest to the cabinet
+scene0066_00__chair_010: 10th closest to the cabinet
+scene0066_00__chair_026: 11th closest to the cabinet
+scene0066_00__chair_018: 12th closest to the cabinet
+scene0066_00__chair_036: 13th closest to the cabinet
+scene0066_00__chair_033: 14th closest to the cabinet
+scene0066_00__chair_006: 15th closest to the cabinet
+scene0066_00__chair_008: 16th closest to the cabinet
+scene0066_00__chair_015: 17th closest to the cabinet
+scene0066_00__chair_011: 18th closest to the cabinet
+scene0066_00__chair_009: 19th closest to the cabinet
+scene0066_00__chair_014: 20th closest to the cabinet
+scene0066_00__chair_017: 21th closest to the cabinet
+scene0066_00__chair_028: 22th closest to the cabinet
+scene0066_00__chair_020: 23th closest to the cabinet
+scene0066_00__chair_030: 24th closest to the cabinet
+scene0066_00__chair_013: 25th closest to the cabinet
+scene0066_00__chair_029: farthest from the cabinet
+
+Answer with the object_id only."
+nearest_0010,"Which chair is closest to the door?
+
+Candidates:
+scene0066_00__chair_013: closest to the door
+scene0066_00__chair_020: second closest to the door
+scene0066_00__chair_017: third closest to the door
+scene0066_00__chair_009: 4th closest to the door
+scene0066_00__chair_006: 5th closest to the door
+scene0066_00__chair_018: 6th closest to the door
+scene0066_00__chair_033: 7th closest to the door
+scene0066_00__chair_010: 8th closest to the door
+scene0066_00__chair_007: 9th closest to the door
+scene0066_00__chair_011: 10th closest to the door
+scene0066_00__chair_012: 11th closest to the door
+scene0066_00__chair_035: 12th closest to the door
+scene0066_00__chair_014: 13th closest to the door
+scene0066_00__chair_016: 14th closest to the door
+scene0066_00__chair_026: 15th closest to the door
+scene0066_00__chair_005: 16th closest to the door
+scene0066_00__chair_015: 17th closest to the door
+scene0066_00__chair_030: 18th closest to the door
+scene0066_00__chair_025: 19th closest to the door
+scene0066_00__chair_004: 20th closest to the door
+scene0066_00__chair_029: 21th closest to the door
+scene0066_00__chair_008: 22th closest to the door
+scene0066_00__chair_036: 23th closest to the door
+scene0066_00__chair_028: 24th closest to the door
+scene0066_00__chair_023: 25th closest to the door
+scene0066_00__chair_019: farthest from the door
+
+Answer with the object_id only."
+nearest_0011,"Which chair is closest to the monitor?
+
+Candidates:
+scene0081_01__chair_030: closest to the monitor
+scene0081_01__chair_037: second closest to the monitor
+scene0081_01__chair_001: third closest to the monitor
+scene0081_01__chair_012: 4th closest to the monitor
+scene0081_01__chair_005: 5th closest to the monitor
+scene0081_01__chair_035: 6th closest to the monitor
+scene0081_01__chair_029: 7th closest to the monitor
+scene0081_01__chair_033: 8th closest to the monitor
+scene0081_01__chair_032: 9th closest to the monitor
+scene0081_01__chair_038: 10th closest to the monitor
+scene0081_01__chair_006: 11th closest to the monitor
+scene0081_01__chair_002: 12th closest to the monitor
+scene0081_01__chair_036: 13th closest to the monitor
+scene0081_01__chair_014: 14th closest to the monitor
+scene0081_01__chair_034: 15th closest to the monitor
+scene0081_01__chair_009: 16th closest to the monitor
+scene0081_01__chair_010: 17th closest to the monitor
+scene0081_01__chair_039: 18th closest to the monitor
+scene0081_01__chair_003: 19th closest to the monitor
+scene0081_01__chair_031: 20th closest to the monitor
+scene0081_01__chair_008: 21th closest to the monitor
+scene0081_01__chair_007: 22th closest to the monitor
+scene0081_01__chair_000: 23th closest to the monitor
+scene0081_01__chair_011: 24th closest to the monitor
+scene0081_01__chair_013: 25th closest to the monitor
+scene0081_01__chair_004: farthest from the monitor
+
+Answer with the object_id only."
+nearest_0012,"Which chair is closest to the table?
+
+Candidates:
+scene0081_01__chair_036: closest to the table
+scene0081_01__chair_008: second closest to the table
+scene0081_01__chair_012: third closest to the table
+scene0081_01__chair_011: 4th closest to the table
+scene0081_01__chair_014: 5th closest to the table
+scene0081_01__chair_003: 6th closest to the table
+scene0081_01__chair_013: 7th closest to the table
+scene0081_01__chair_006: 8th closest to the table
+scene0081_01__chair_001: 9th closest to the table
+scene0081_01__chair_005: 10th closest to the table
+scene0081_01__chair_037: 11th closest to the table
+scene0081_01__chair_002: 12th closest to the table
+scene0081_01__chair_007: 13th closest to the table
+scene0081_01__chair_035: 14th closest to the table
+scene0081_01__chair_038: 15th closest to the table
+scene0081_01__chair_039: 16th closest to the table
+scene0081_01__chair_030: 17th closest to the table
+scene0081_01__chair_033: 18th closest to the table
+scene0081_01__chair_010: 19th closest to the table
+scene0081_01__chair_009: 20th closest to the table
+scene0081_01__chair_032: 21th closest to the table
+scene0081_01__chair_029: 22th closest to the table
+scene0081_01__chair_034: 23th closest to the table
+scene0081_01__chair_031: 24th closest to the table
+scene0081_01__chair_000: 25th closest to the table
+scene0081_01__chair_004: farthest from the table
+
+Answer with the object_id only."
+nearest_0013,"Which chair is closest to the door?
+
+Candidates:
+scene0087_00__chair_004: closest to the door
+scene0087_00__chair_008: second closest to the door
+scene0087_00__chair_010: third closest to the door
+scene0087_00__chair_009: 4th closest to the door
+scene0087_00__chair_011: farthest from the door
+
+Answer with the object_id only."
+nearest_0014,"Which chair is closest to the monitor?
+
+Candidates:
+scene0095_00__chair_014: closest to the monitor
+scene0095_00__chair_037: second closest to the monitor
+scene0095_00__chair_032: third closest to the monitor
+scene0095_00__chair_033: 4th closest to the monitor
+scene0095_00__chair_038: 5th closest to the monitor
+scene0095_00__chair_011: 6th closest to the monitor
+scene0095_00__chair_034: 7th closest to the monitor
+scene0095_00__chair_036: 8th closest to the monitor
+scene0095_00__chair_039: 9th closest to the monitor
+scene0095_00__chair_035: 10th closest to the monitor
+scene0095_00__chair_031: 11th closest to the monitor
+scene0095_00__chair_030: 12th closest to the monitor
+scene0095_00__chair_015: 13th closest to the monitor
+scene0095_00__chair_013: 14th closest to the monitor
+scene0095_00__chair_012: 15th closest to the monitor
+scene0095_00__chair_051: farthest from the monitor
+
+Answer with the object_id only."
+nearest_0015,"Which chair is closest to the door?
+
+Candidates:
+scene0106_00__chair_010: closest to the door
+scene0106_00__chair_016: second closest to the door
+scene0106_00__chair_009: third closest to the door
+scene0106_00__chair_031: 4th closest to the door
+scene0106_00__chair_014: 5th closest to the door
+scene0106_00__chair_015: 6th closest to the door
+scene0106_00__chair_011: 7th closest to the door
+scene0106_00__chair_012: 8th closest to the door
+scene0106_00__chair_018: 9th closest to the door
+scene0106_00__chair_017: 10th closest to the door
+scene0106_00__chair_023: 11th closest to the door
+scene0106_00__chair_040: 12th closest to the door
+scene0106_00__chair_013: farthest from the door
+
+Answer with the object_id only."
+nearest_0016,"Which chair is closest to the monitor?
+
+Candidates:
+scene0132_00__chair_001: closest to the monitor
+scene0132_00__chair_005: second closest to the monitor
+scene0132_00__chair_008: third closest to the monitor
+scene0132_00__chair_006: 4th closest to the monitor
+scene0132_00__chair_007: 5th closest to the monitor
+scene0132_00__chair_004: 6th closest to the monitor
+scene0132_00__chair_009: 7th closest to the monitor
+scene0132_00__chair_016: 8th closest to the monitor
+scene0132_00__chair_015: 9th closest to the monitor
+scene0132_00__chair_003: farthest from the monitor
+
+Answer with the object_id only."
+nearest_0017,"Which chair is closest to the door?
+
+Candidates:
+scene0137_01__chair_006: closest to the door
+scene0137_01__chair_007: second closest to the door
+
+Answer with the object_id only."
+nearest_0018,"Which chair is closest to the door?
+
+Candidates:
+scene0137_01__chair_006: closest to the door
+scene0137_01__chair_007: second closest to the door
+
+Answer with the object_id only."
+nearest_0019,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0138_00__chair_024: closest to the cabinet
+scene0138_00__chair_021: second closest to the cabinet
+scene0138_00__chair_025: third closest to the cabinet
+scene0138_00__chair_022: 4th closest to the cabinet
+scene0138_00__chair_023: 5th closest to the cabinet
+scene0138_00__chair_027: 6th closest to the cabinet
+scene0138_00__chair_026: farthest from the cabinet
+
+Answer with the object_id only."
+nearest_0020,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0138_00__chair_024: closest to the cabinet
+scene0138_00__chair_021: second closest to the cabinet
+scene0138_00__chair_025: third closest to the cabinet
+scene0138_00__chair_022: 4th closest to the cabinet
+scene0138_00__chair_023: 5th closest to the cabinet
+scene0138_00__chair_027: 6th closest to the cabinet
+scene0138_00__chair_026: farthest from the cabinet
+
+Answer with the object_id only."
+nearest_0021,"Which chair is closest to the monitor?
+
+Candidates:
+scene0138_00__chair_024: closest to the monitor
+scene0138_00__chair_022: second closest to the monitor
+scene0138_00__chair_021: third closest to the monitor
+scene0138_00__chair_026: 4th closest to the monitor
+scene0138_00__chair_027: 5th closest to the monitor
+scene0138_00__chair_023: 6th closest to the monitor
+scene0138_00__chair_025: farthest from the monitor
+
+Answer with the object_id only."
+nearest_0022,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0140_00__chair_023: closest to the cabinet
+scene0140_00__chair_008: second closest to the cabinet
+scene0140_00__chair_012: third closest to the cabinet
+scene0140_00__chair_022: 4th closest to the cabinet
+scene0140_00__chair_013: 5th closest to the cabinet
+scene0140_00__chair_045: 6th closest to the cabinet
+scene0140_00__chair_011: 7th closest to the cabinet
+scene0140_00__chair_025: 8th closest to the cabinet
+scene0140_00__chair_006: 9th closest to the cabinet
+scene0140_00__chair_010: 10th closest to the cabinet
+scene0140_00__chair_007: 11th closest to the cabinet
+scene0140_00__chair_046: 12th closest to the cabinet
+scene0140_00__chair_021: 13th closest to the cabinet
+scene0140_00__chair_020: 14th closest to the cabinet
+scene0140_00__chair_009: 15th closest to the cabinet
+scene0140_00__chair_018: 16th closest to the cabinet
+scene0140_00__chair_004: 17th closest to the cabinet
+scene0140_00__chair_005: 18th closest to the cabinet
+scene0140_00__chair_016: 19th closest to the cabinet
+scene0140_00__chair_015: 20th closest to the cabinet
+scene0140_00__chair_024: 21th closest to the cabinet
+scene0140_00__chair_019: 22th closest to the cabinet
+scene0140_00__chair_014: 23th closest to the cabinet
+scene0140_00__chair_017: farthest from the cabinet
+
+Answer with the object_id only."
+nearest_0023,"Which chair is closest to the door?
+
+Candidates:
+scene0140_00__chair_025: closest to the door
+scene0140_00__chair_006: second closest to the door
+scene0140_00__chair_012: third closest to the door
+scene0140_00__chair_008: 4th closest to the door
+scene0140_00__chair_010: 5th closest to the door
+scene0140_00__chair_023: 6th closest to the door
+scene0140_00__chair_013: 7th closest to the door
+scene0140_00__chair_021: 8th closest to the door
+scene0140_00__chair_022: 9th closest to the door
+scene0140_00__chair_011: 10th closest to the door
+scene0140_00__chair_045: 11th closest to the door
+scene0140_00__chair_004: 12th closest to the door
+scene0140_00__chair_009: 13th closest to the door
+scene0140_00__chair_007: 14th closest to the door
+scene0140_00__chair_046: 15th closest to the door
+scene0140_00__chair_018: 16th closest to the door
+scene0140_00__chair_016: 17th closest to the door
+scene0140_00__chair_020: 18th closest to the door
+scene0140_00__chair_017: 19th closest to the door
+scene0140_00__chair_015: 20th closest to the door
+scene0140_00__chair_005: 21th closest to the door
+scene0140_00__chair_014: 22th closest to the door
+scene0140_00__chair_019: 23th closest to the door
+scene0140_00__chair_024: farthest from the door
+
+Answer with the object_id only."
+nearest_0024,"Which chair is closest to the door?
+
+Candidates:
+scene0140_00__chair_017: closest to the door
+scene0140_00__chair_015: second closest to the door
+scene0140_00__chair_016: third closest to the door
+scene0140_00__chair_014: 4th closest to the door
+scene0140_00__chair_018: 5th closest to the door
+scene0140_00__chair_009: 6th closest to the door
+scene0140_00__chair_004: 7th closest to the door
+scene0140_00__chair_019: 8th closest to the door
+scene0140_00__chair_046: 9th closest to the door
+scene0140_00__chair_024: 10th closest to the door
+scene0140_00__chair_005: 11th closest to the door
+scene0140_00__chair_021: 12th closest to the door
+scene0140_00__chair_007: 13th closest to the door
+scene0140_00__chair_020: 14th closest to the door
+scene0140_00__chair_010: 15th closest to the door
+scene0140_00__chair_011: 16th closest to the door
+scene0140_00__chair_013: 17th closest to the door
+scene0140_00__chair_006: 18th closest to the door
+scene0140_00__chair_045: 19th closest to the door
+scene0140_00__chair_012: 20th closest to the door
+scene0140_00__chair_022: 21th closest to the door
+scene0140_00__chair_025: 22th closest to the door
+scene0140_00__chair_008: 23th closest to the door
+scene0140_00__chair_023: farthest from the door
+
+Answer with the object_id only."
+nearest_0025,"Which chair is closest to the door?
+
+Candidates:
+scene0141_00__chair_008: closest to the door
+scene0141_00__chair_006: second closest to the door
+scene0141_00__chair_007: third closest to the door
+
+Answer with the object_id only."
+nearest_0026,"Which chair is closest to the door?
+
+Candidates:
+scene0141_00__chair_008: closest to the door
+scene0141_00__chair_006: second closest to the door
+scene0141_00__chair_007: third closest to the door
+
+Answer with the object_id only."
+nearest_0027,"Which chair is closest to the monitor?
+
+Candidates:
+scene0141_00__chair_007: closest to the monitor
+scene0141_00__chair_008: second closest to the monitor
+scene0141_00__chair_006: third closest to the monitor
+
+Answer with the object_id only."
+nearest_0028,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0142_00__chair_042: closest to the cabinet
+scene0142_00__chair_019: second closest to the cabinet
+scene0142_00__chair_020: third closest to the cabinet
+scene0142_00__chair_021: 4th closest to the cabinet
+scene0142_00__chair_023: farthest from the cabinet
+
+Answer with the object_id only."
+nearest_0029,"Which chair is closest to the monitor?
+
+Candidates:
+scene0142_00__chair_042: closest to the monitor
+scene0142_00__chair_019: second closest to the monitor
+scene0142_00__chair_020: third closest to the monitor
+scene0142_00__chair_021: 4th closest to the monitor
+scene0142_00__chair_023: farthest from the monitor
+
+Answer with the object_id only."
+nearest_0030,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0143_01__chair_012: closest to the cabinet
+scene0143_01__chair_000: second closest to the cabinet
+
+Answer with the object_id only."
+nearest_0031,"Which chair is closest to the desk?
+
+Candidates:
+scene0143_01__chair_012: closest to the desk
+scene0143_01__chair_000: second closest to the desk
+
+Answer with the object_id only."
+nearest_0032,"Which chair is closest to the monitor?
+
+Candidates:
+scene0143_01__chair_012: closest to the monitor
+scene0143_01__chair_000: second closest to the monitor
+
+Answer with the object_id only."
+nearest_0033,"Which chair is closest to the door?
+
+Candidates:
+scene0144_00__chair_021: closest to the door
+scene0144_00__chair_004: second closest to the door
+scene0144_00__chair_003: third closest to the door
+
+Answer with the object_id only."
+nearest_0034,"Which chair is closest to the door?
+
+Candidates:
+scene0144_00__chair_021: closest to the door
+scene0144_00__chair_003: second closest to the door
+scene0144_00__chair_004: third closest to the door
+
+Answer with the object_id only."
+nearest_0035,"Which chair is closest to the door?
+
+Candidates:
+scene0144_00__chair_021: closest to the door
+scene0144_00__chair_003: second closest to the door
+scene0144_00__chair_004: third closest to the door
+
+Answer with the object_id only."
+nearest_0036,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0181_00__chair_003: closest to the cabinet
+scene0181_00__chair_001: second closest to the cabinet
+scene0181_00__chair_004: third closest to the cabinet
+scene0181_00__chair_002: farthest from the cabinet
+
+Answer with the object_id only."
+nearest_0037,"Which chair is closest to the door?
+
+Candidates:
+scene0181_00__chair_002: closest to the door
+scene0181_00__chair_004: second closest to the door
+scene0181_00__chair_001: third closest to the door
+scene0181_00__chair_003: farthest from the door
+
+Answer with the object_id only."
+nearest_0038,"Which chair is closest to the door?
+
+Candidates:
+scene0181_00__chair_002: closest to the door
+scene0181_00__chair_004: second closest to the door
+scene0181_00__chair_001: third closest to the door
+scene0181_00__chair_003: farthest from the door
+
+Answer with the object_id only."

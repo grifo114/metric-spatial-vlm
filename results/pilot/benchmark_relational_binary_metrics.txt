@@ -1,0 +1,32 @@
+OVERALL
+n = 58
+tp = 29
+tn = 29
+fp = 0
+fn = 0
+accuracy = 1.0
+precision = 1.0
+recall = 1.0
+f1 = 1.0
+
+BETWEEN
+n = 22
+tp = 11
+tn = 11
+fp = 0
+fn = 0
+accuracy = 1.0
+precision = 1.0
+recall = 1.0
+f1 = 1.0
+
+ALIGNED
+n = 36
+tp = 18
+tn = 18
+fp = 0
+fn = 0
+accuracy = 1.0
+precision = 1.0
+recall = 1.0
+f1 = 1.0

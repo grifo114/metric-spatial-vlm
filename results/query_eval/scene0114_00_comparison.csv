@@ -1,0 +1,7 @@
+query,expected_a,expected_b,llm_object_a,llm_label_a,llm_object_b,llm_label_b,llm_distance,hybrid_object_a,hybrid_label_a,hybrid_object_b,hybrid_label_b,hybrid_distance,better_method,notes
+qual a distancia entre a cadeira e a mesa?,chair,table,2,chair,18,table,1.5584,4,chair,18,table,0.4538,hybrid,"hybrid selects closest chair; llm selection arbitrary"
+qual a distancia entre a cadeira e a porta?,chair,door,2,chair,21,door,3.7878,5,chair,21,door,1.8853,hybrid,"hybrid selects closer chair; llm far instance"
+qual a distancia entre a cadeira e a escrivaninha?,chair,desk,2,chair,13,desk,1.7662,5,chair,13,desk,0.6658,hybrid,"multiple chairs; hybrid resolves ambiguity"
+qual a distancia entre o monitor e a mesa?,monitor,table,17,monitor,18,table,2.4304,17,monitor,18,table,2.4304,same,"single instance objects"
+qual a distancia entre a planta e a cadeira?,plant,chair,2,chair,1,plant,1.3544,1,plant,5,chair,1.0467,hybrid,"llm swapped roles; hybrid consistent"
+qual a distancia entre a lixeira e a escrivaninha?,trash can,desk,28,trash can,13,desk,0.8936,28,trash can,13,desk,0.8936,same,"single instance objects"

@@ -1,0 +1,982 @@
+query_id,scene_id,reference_object,reference_label,target_category,answer_object,answer_distance_m,second_best_object,second_best_distance_m,margin_to_second_m,n_candidates,prompt_baseline,prompt_enriched
+nearest_0000,scene0008_00,scene0008_00__table_007,table,sofa,scene0008_00__sofa_001,0.28728,scene0008_00__sofa_000,2.017909,1.730629,2,"Which sofa is closest to the table?
+
+Candidates:
+scene0008_00__sofa_001
+scene0008_00__sofa_000
+
+Answer with the object_id only.","Which sofa is closest to the table?
+
+Candidates:
+scene0008_00__sofa_001: close to the table
+scene0008_00__sofa_000: far from the table
+
+Answer with the object_id only."
+nearest_0001,scene0008_00,scene0008_00__table_008,table,sofa,scene0008_00__sofa_000,0.332752,scene0008_00__sofa_001,3.001792,2.669041,2,"Which sofa is closest to the table?
+
+Candidates:
+scene0008_00__sofa_000
+scene0008_00__sofa_001
+
+Answer with the object_id only.","Which sofa is closest to the table?
+
+Candidates:
+scene0008_00__sofa_000: close to the table
+scene0008_00__sofa_001: far from the table
+
+Answer with the object_id only."
+nearest_0002,scene0008_00,scene0008_00__table_009,table,sofa,scene0008_00__sofa_000,2.227355,scene0008_00__sofa_001,4.941106,2.713751,2,"Which sofa is closest to the table?
+
+Candidates:
+scene0008_00__sofa_000
+scene0008_00__sofa_001
+
+Answer with the object_id only.","Which sofa is closest to the table?
+
+Candidates:
+scene0008_00__sofa_000: far from the table
+scene0008_00__sofa_001: far from the table
+
+Answer with the object_id only."
+nearest_0003,scene0012_01,scene0012_01__door_000,door,chair,scene0012_01__chair_001,0.545814,scene0012_01__chair_002,1.421032,0.875218,4,"Which chair is closest to the door?
+
+Candidates:
+scene0012_01__chair_001
+scene0012_01__chair_002
+scene0012_01__chair_003
+scene0012_01__chair_010
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0012_01__chair_001: close to the door
+scene0012_01__chair_002: far from the door
+scene0012_01__chair_003: far from the door
+scene0012_01__chair_010: far from the door
+
+Answer with the object_id only."
+nearest_0004,scene0012_01,scene0012_01__door_018,door,chair,scene0012_01__chair_001,0.548346,scene0012_01__chair_002,1.390535,0.84219,4,"Which chair is closest to the door?
+
+Candidates:
+scene0012_01__chair_001
+scene0012_01__chair_003
+scene0012_01__chair_002
+scene0012_01__chair_010
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0012_01__chair_001: close to the door
+scene0012_01__chair_003: far from the door
+scene0012_01__chair_002: far from the door
+scene0012_01__chair_010: far from the door
+
+Answer with the object_id only."
+nearest_0005,scene0012_01,scene0012_01__door_019,door,chair,scene0012_01__chair_001,0.524262,scene0012_01__chair_002,1.362177,0.837915,4,"Which chair is closest to the door?
+
+Candidates:
+scene0012_01__chair_001
+scene0012_01__chair_003
+scene0012_01__chair_002
+scene0012_01__chair_010
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0012_01__chair_001: close to the door
+scene0012_01__chair_003: far from the door
+scene0012_01__chair_002: far from the door
+scene0012_01__chair_010: far from the door
+
+Answer with the object_id only."
+nearest_0006,scene0050_02,scene0050_02__door_008,door,chair,scene0050_02__chair_000,1.603404,scene0050_02__chair_001,2.953846,1.350442,2,"Which chair is closest to the door?
+
+Candidates:
+scene0050_02__chair_000
+scene0050_02__chair_001
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0050_02__chair_000: far from the door
+scene0050_02__chair_001: far from the door
+
+Answer with the object_id only."
+nearest_0007,scene0050_02,scene0050_02__door_009,door,chair,scene0050_02__chair_000,0.503201,scene0050_02__chair_001,2.118851,1.61565,2,"Which chair is closest to the door?
+
+Candidates:
+scene0050_02__chair_000
+scene0050_02__chair_001
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0050_02__chair_000: close to the door
+scene0050_02__chair_001: far from the door
+
+Answer with the object_id only."
+nearest_0008,scene0050_02,scene0050_02__door_033,door,chair,scene0050_02__chair_000,0.430445,scene0050_02__chair_001,2.044451,1.614006,2,"Which chair is closest to the door?
+
+Candidates:
+scene0050_02__chair_000
+scene0050_02__chair_001
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0050_02__chair_000: close to the door
+scene0050_02__chair_001: far from the door
+
+Answer with the object_id only."
+nearest_0009,scene0066_00,scene0066_00__cabinet_003,cabinet,chair,scene0066_00__chair_019,0.837585,scene0066_00__chair_023,1.304268,0.466683,26,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0066_00__chair_019
+scene0066_00__chair_023
+scene0066_00__chair_005
+scene0066_00__chair_004
+scene0066_00__chair_012
+scene0066_00__chair_025
+scene0066_00__chair_016
+scene0066_00__chair_007
+scene0066_00__chair_035
+scene0066_00__chair_010
+scene0066_00__chair_026
+scene0066_00__chair_018
+scene0066_00__chair_036
+scene0066_00__chair_033
+scene0066_00__chair_006
+scene0066_00__chair_008
+scene0066_00__chair_015
+scene0066_00__chair_011
+scene0066_00__chair_009
+scene0066_00__chair_014
+scene0066_00__chair_017
+scene0066_00__chair_028
+scene0066_00__chair_020
+scene0066_00__chair_030
+scene0066_00__chair_013
+scene0066_00__chair_029
+
+Answer with the object_id only.","Which chair is closest to the cabinet?
+
+Candidates:
+scene0066_00__chair_019: close to the cabinet
+scene0066_00__chair_023: far from the cabinet
+scene0066_00__chair_005: far from the cabinet
+scene0066_00__chair_004: far from the cabinet
+scene0066_00__chair_012: far from the cabinet
+scene0066_00__chair_025: far from the cabinet
+scene0066_00__chair_016: far from the cabinet
+scene0066_00__chair_007: far from the cabinet
+scene0066_00__chair_035: far from the cabinet
+scene0066_00__chair_010: far from the cabinet
+scene0066_00__chair_026: far from the cabinet
+scene0066_00__chair_018: far from the cabinet
+scene0066_00__chair_036: far from the cabinet
+scene0066_00__chair_033: far from the cabinet
+scene0066_00__chair_006: far from the cabinet
+scene0066_00__chair_008: far from the cabinet
+scene0066_00__chair_015: far from the cabinet
+scene0066_00__chair_011: far from the cabinet
+scene0066_00__chair_009: far from the cabinet
+scene0066_00__chair_014: far from the cabinet
+scene0066_00__chair_017: far from the cabinet
+scene0066_00__chair_028: far from the cabinet
+scene0066_00__chair_020: far from the cabinet
+scene0066_00__chair_030: far from the cabinet
+scene0066_00__chair_013: far from the cabinet
+scene0066_00__chair_029: far from the cabinet
+
+Answer with the object_id only."
+nearest_0010,scene0066_00,scene0066_00__door_032,door,chair,scene0066_00__chair_013,0.428698,scene0066_00__chair_017,0.942447,0.513748,26,"Which chair is closest to the door?
+
+Candidates:
+scene0066_00__chair_013
+scene0066_00__chair_020
+scene0066_00__chair_017
+scene0066_00__chair_009
+scene0066_00__chair_006
+scene0066_00__chair_018
+scene0066_00__chair_033
+scene0066_00__chair_010
+scene0066_00__chair_007
+scene0066_00__chair_011
+scene0066_00__chair_012
+scene0066_00__chair_035
+scene0066_00__chair_014
+scene0066_00__chair_016
+scene0066_00__chair_026
+scene0066_00__chair_005
+scene0066_00__chair_015
+scene0066_00__chair_030
+scene0066_00__chair_025
+scene0066_00__chair_004
+scene0066_00__chair_029
+scene0066_00__chair_008
+scene0066_00__chair_036
+scene0066_00__chair_028
+scene0066_00__chair_023
+scene0066_00__chair_019
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0066_00__chair_013: close to the door
+scene0066_00__chair_020: close to the door
+scene0066_00__chair_017: far from the door
+scene0066_00__chair_009: far from the door
+scene0066_00__chair_006: far from the door
+scene0066_00__chair_018: far from the door
+scene0066_00__chair_033: far from the door
+scene0066_00__chair_010: far from the door
+scene0066_00__chair_007: far from the door
+scene0066_00__chair_011: far from the door
+scene0066_00__chair_012: far from the door
+scene0066_00__chair_035: far from the door
+scene0066_00__chair_014: far from the door
+scene0066_00__chair_016: far from the door
+scene0066_00__chair_026: far from the door
+scene0066_00__chair_005: far from the door
+scene0066_00__chair_015: far from the door
+scene0066_00__chair_030: far from the door
+scene0066_00__chair_025: far from the door
+scene0066_00__chair_004: far from the door
+scene0066_00__chair_029: far from the door
+scene0066_00__chair_008: far from the door
+scene0066_00__chair_036: far from the door
+scene0066_00__chair_028: far from the door
+scene0066_00__chair_023: far from the door
+scene0066_00__chair_019: far from the door
+
+Answer with the object_id only."
+nearest_0011,scene0081_01,scene0081_01__monitor_026,monitor,chair,scene0081_01__chair_030,0.152752,scene0081_01__chair_001,0.656213,0.503461,26,"Which chair is closest to the monitor?
+
+Candidates:
+scene0081_01__chair_030
+scene0081_01__chair_037
+scene0081_01__chair_001
+scene0081_01__chair_012
+scene0081_01__chair_005
+scene0081_01__chair_035
+scene0081_01__chair_029
+scene0081_01__chair_033
+scene0081_01__chair_032
+scene0081_01__chair_038
+scene0081_01__chair_006
+scene0081_01__chair_002
+scene0081_01__chair_036
+scene0081_01__chair_014
+scene0081_01__chair_034
+scene0081_01__chair_009
+scene0081_01__chair_010
+scene0081_01__chair_039
+scene0081_01__chair_003
+scene0081_01__chair_031
+scene0081_01__chair_008
+scene0081_01__chair_007
+scene0081_01__chair_000
+scene0081_01__chair_011
+scene0081_01__chair_013
+scene0081_01__chair_004
+
+Answer with the object_id only.","Which chair is closest to the monitor?
+
+Candidates:
+scene0081_01__chair_030: close to the monitor
+scene0081_01__chair_037: close to the monitor
+scene0081_01__chair_001: close to the monitor
+scene0081_01__chair_012: far from the monitor
+scene0081_01__chair_005: far from the monitor
+scene0081_01__chair_035: far from the monitor
+scene0081_01__chair_029: far from the monitor
+scene0081_01__chair_033: far from the monitor
+scene0081_01__chair_032: far from the monitor
+scene0081_01__chair_038: far from the monitor
+scene0081_01__chair_006: far from the monitor
+scene0081_01__chair_002: far from the monitor
+scene0081_01__chair_036: far from the monitor
+scene0081_01__chair_014: far from the monitor
+scene0081_01__chair_034: far from the monitor
+scene0081_01__chair_009: far from the monitor
+scene0081_01__chair_010: far from the monitor
+scene0081_01__chair_039: far from the monitor
+scene0081_01__chair_003: far from the monitor
+scene0081_01__chair_031: far from the monitor
+scene0081_01__chair_008: far from the monitor
+scene0081_01__chair_007: far from the monitor
+scene0081_01__chair_000: far from the monitor
+scene0081_01__chair_011: far from the monitor
+scene0081_01__chair_013: far from the monitor
+scene0081_01__chair_004: far from the monitor
+
+Answer with the object_id only."
+nearest_0012,scene0081_01,scene0081_01__table_023,table,chair,scene0081_01__chair_036,0.261047,scene0081_01__chair_008,0.578887,0.31784,26,"Which chair is closest to the table?
+
+Candidates:
+scene0081_01__chair_036
+scene0081_01__chair_008
+scene0081_01__chair_012
+scene0081_01__chair_011
+scene0081_01__chair_014
+scene0081_01__chair_003
+scene0081_01__chair_013
+scene0081_01__chair_006
+scene0081_01__chair_001
+scene0081_01__chair_005
+scene0081_01__chair_037
+scene0081_01__chair_002
+scene0081_01__chair_007
+scene0081_01__chair_035
+scene0081_01__chair_038
+scene0081_01__chair_039
+scene0081_01__chair_030
+scene0081_01__chair_033
+scene0081_01__chair_010
+scene0081_01__chair_009
+scene0081_01__chair_032
+scene0081_01__chair_029
+scene0081_01__chair_034
+scene0081_01__chair_031
+scene0081_01__chair_000
+scene0081_01__chair_004
+
+Answer with the object_id only.","Which chair is closest to the table?
+
+Candidates:
+scene0081_01__chair_036: close to the table
+scene0081_01__chair_008: close to the table
+scene0081_01__chair_012: close to the table
+scene0081_01__chair_011: far from the table
+scene0081_01__chair_014: far from the table
+scene0081_01__chair_003: far from the table
+scene0081_01__chair_013: far from the table
+scene0081_01__chair_006: far from the table
+scene0081_01__chair_001: far from the table
+scene0081_01__chair_005: far from the table
+scene0081_01__chair_037: far from the table
+scene0081_01__chair_002: far from the table
+scene0081_01__chair_007: far from the table
+scene0081_01__chair_035: far from the table
+scene0081_01__chair_038: far from the table
+scene0081_01__chair_039: far from the table
+scene0081_01__chair_030: far from the table
+scene0081_01__chair_033: far from the table
+scene0081_01__chair_010: far from the table
+scene0081_01__chair_009: far from the table
+scene0081_01__chair_032: far from the table
+scene0081_01__chair_029: far from the table
+scene0081_01__chair_034: far from the table
+scene0081_01__chair_031: far from the table
+scene0081_01__chair_000: far from the table
+scene0081_01__chair_004: far from the table
+
+Answer with the object_id only."
+nearest_0013,scene0087_00,scene0087_00__door_015,door,chair,scene0087_00__chair_004,0.870697,scene0087_00__chair_008,2.964439,2.093742,5,"Which chair is closest to the door?
+
+Candidates:
+scene0087_00__chair_004
+scene0087_00__chair_008
+scene0087_00__chair_010
+scene0087_00__chair_009
+scene0087_00__chair_011
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0087_00__chair_004: far from the door
+scene0087_00__chair_008: far from the door
+scene0087_00__chair_010: far from the door
+scene0087_00__chair_009: far from the door
+scene0087_00__chair_011: far from the door
+
+Answer with the object_id only."
+nearest_0014,scene0095_00,scene0095_00__monitor_004,monitor,chair,scene0095_00__chair_014,0.427283,scene0095_00__chair_037,0.653059,0.225776,16,"Which chair is closest to the monitor?
+
+Candidates:
+scene0095_00__chair_014
+scene0095_00__chair_037
+scene0095_00__chair_032
+scene0095_00__chair_033
+scene0095_00__chair_038
+scene0095_00__chair_011
+scene0095_00__chair_034
+scene0095_00__chair_036
+scene0095_00__chair_039
+scene0095_00__chair_035
+scene0095_00__chair_031
+scene0095_00__chair_030
+scene0095_00__chair_015
+scene0095_00__chair_013
+scene0095_00__chair_012
+scene0095_00__chair_051
+
+Answer with the object_id only.","Which chair is closest to the monitor?
+
+Candidates:
+scene0095_00__chair_014: very close to the monitor
+scene0095_00__chair_037: close to the monitor
+scene0095_00__chair_032: close to the monitor
+scene0095_00__chair_033: close to the monitor
+scene0095_00__chair_038: close to the monitor
+scene0095_00__chair_011: far from the monitor
+scene0095_00__chair_034: far from the monitor
+scene0095_00__chair_036: far from the monitor
+scene0095_00__chair_039: far from the monitor
+scene0095_00__chair_035: far from the monitor
+scene0095_00__chair_031: far from the monitor
+scene0095_00__chair_030: far from the monitor
+scene0095_00__chair_015: far from the monitor
+scene0095_00__chair_013: far from the monitor
+scene0095_00__chair_012: far from the monitor
+scene0095_00__chair_051: far from the monitor
+
+Answer with the object_id only."
+nearest_0015,scene0106_00,scene0106_00__door_037,door,chair,scene0106_00__chair_010,0.314744,scene0106_00__chair_016,1.420069,1.105324,13,"Which chair is closest to the door?
+
+Candidates:
+scene0106_00__chair_010
+scene0106_00__chair_016
+scene0106_00__chair_009
+scene0106_00__chair_031
+scene0106_00__chair_014
+scene0106_00__chair_015
+scene0106_00__chair_011
+scene0106_00__chair_012
+scene0106_00__chair_018
+scene0106_00__chair_017
+scene0106_00__chair_023
+scene0106_00__chair_040
+scene0106_00__chair_013
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0106_00__chair_010: close to the door
+scene0106_00__chair_016: far from the door
+scene0106_00__chair_009: far from the door
+scene0106_00__chair_031: far from the door
+scene0106_00__chair_014: far from the door
+scene0106_00__chair_015: far from the door
+scene0106_00__chair_011: far from the door
+scene0106_00__chair_012: far from the door
+scene0106_00__chair_018: far from the door
+scene0106_00__chair_017: far from the door
+scene0106_00__chair_023: far from the door
+scene0106_00__chair_040: far from the door
+scene0106_00__chair_013: far from the door
+
+Answer with the object_id only."
+nearest_0016,scene0132_00,scene0132_00__monitor_014,monitor,chair,scene0132_00__chair_001,0.560162,scene0132_00__chair_005,1.641388,1.081225,10,"Which chair is closest to the monitor?
+
+Candidates:
+scene0132_00__chair_001
+scene0132_00__chair_005
+scene0132_00__chair_008
+scene0132_00__chair_006
+scene0132_00__chair_007
+scene0132_00__chair_004
+scene0132_00__chair_009
+scene0132_00__chair_016
+scene0132_00__chair_015
+scene0132_00__chair_003
+
+Answer with the object_id only.","Which chair is closest to the monitor?
+
+Candidates:
+scene0132_00__chair_001: close to the monitor
+scene0132_00__chair_005: far from the monitor
+scene0132_00__chair_008: far from the monitor
+scene0132_00__chair_006: far from the monitor
+scene0132_00__chair_007: far from the monitor
+scene0132_00__chair_004: far from the monitor
+scene0132_00__chair_009: far from the monitor
+scene0132_00__chair_016: far from the monitor
+scene0132_00__chair_015: far from the monitor
+scene0132_00__chair_003: far from the monitor
+
+Answer with the object_id only."
+nearest_0017,scene0137_01,scene0137_01__door_029,door,chair,scene0137_01__chair_006,1.464857,scene0137_01__chair_007,4.747771,3.282914,2,"Which chair is closest to the door?
+
+Candidates:
+scene0137_01__chair_006
+scene0137_01__chair_007
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0137_01__chair_006: far from the door
+scene0137_01__chair_007: far from the door
+
+Answer with the object_id only."
+nearest_0018,scene0137_01,scene0137_01__door_030,door,chair,scene0137_01__chair_006,1.50281,scene0137_01__chair_007,4.744736,3.241926,2,"Which chair is closest to the door?
+
+Candidates:
+scene0137_01__chair_006
+scene0137_01__chair_007
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0137_01__chair_006: far from the door
+scene0137_01__chair_007: far from the door
+
+Answer with the object_id only."
+nearest_0019,scene0138_00,scene0138_00__cabinet_030,cabinet,chair,scene0138_00__chair_024,0.140814,scene0138_00__chair_021,1.860947,1.720133,7,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0138_00__chair_024
+scene0138_00__chair_021
+scene0138_00__chair_025
+scene0138_00__chair_022
+scene0138_00__chair_023
+scene0138_00__chair_027
+scene0138_00__chair_026
+
+Answer with the object_id only.","Which chair is closest to the cabinet?
+
+Candidates:
+scene0138_00__chair_024: close to the cabinet
+scene0138_00__chair_021: far from the cabinet
+scene0138_00__chair_025: far from the cabinet
+scene0138_00__chair_022: far from the cabinet
+scene0138_00__chair_023: far from the cabinet
+scene0138_00__chair_027: far from the cabinet
+scene0138_00__chair_026: far from the cabinet
+
+Answer with the object_id only."
+nearest_0020,scene0138_00,scene0138_00__cabinet_038,cabinet,chair,scene0138_00__chair_024,0.344912,scene0138_00__chair_021,2.512129,2.167217,7,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0138_00__chair_024
+scene0138_00__chair_021
+scene0138_00__chair_025
+scene0138_00__chair_022
+scene0138_00__chair_023
+scene0138_00__chair_027
+scene0138_00__chair_026
+
+Answer with the object_id only.","Which chair is closest to the cabinet?
+
+Candidates:
+scene0138_00__chair_024: close to the cabinet
+scene0138_00__chair_021: far from the cabinet
+scene0138_00__chair_025: far from the cabinet
+scene0138_00__chair_022: far from the cabinet
+scene0138_00__chair_023: far from the cabinet
+scene0138_00__chair_027: far from the cabinet
+scene0138_00__chair_026: far from the cabinet
+
+Answer with the object_id only."
+nearest_0021,scene0138_00,scene0138_00__monitor_037,monitor,chair,scene0138_00__chair_024,1.133184,scene0138_00__chair_022,2.481307,1.348124,7,"Which chair is closest to the monitor?
+
+Candidates:
+scene0138_00__chair_024
+scene0138_00__chair_022
+scene0138_00__chair_021
+scene0138_00__chair_026
+scene0138_00__chair_027
+scene0138_00__chair_023
+scene0138_00__chair_025
+
+Answer with the object_id only.","Which chair is closest to the monitor?
+
+Candidates:
+scene0138_00__chair_024: far from the monitor
+scene0138_00__chair_022: far from the monitor
+scene0138_00__chair_021: far from the monitor
+scene0138_00__chair_026: far from the monitor
+scene0138_00__chair_027: far from the monitor
+scene0138_00__chair_023: far from the monitor
+scene0138_00__chair_025: far from the monitor
+
+Answer with the object_id only."
+nearest_0022,scene0140_00,scene0140_00__cabinet_002,cabinet,chair,scene0140_00__chair_023,0.130576,scene0140_00__chair_008,0.598407,0.467832,24,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0140_00__chair_023
+scene0140_00__chair_008
+scene0140_00__chair_012
+scene0140_00__chair_022
+scene0140_00__chair_013
+scene0140_00__chair_045
+scene0140_00__chair_011
+scene0140_00__chair_025
+scene0140_00__chair_006
+scene0140_00__chair_010
+scene0140_00__chair_007
+scene0140_00__chair_046
+scene0140_00__chair_021
+scene0140_00__chair_020
+scene0140_00__chair_009
+scene0140_00__chair_018
+scene0140_00__chair_004
+scene0140_00__chair_005
+scene0140_00__chair_016
+scene0140_00__chair_015
+scene0140_00__chair_024
+scene0140_00__chair_019
+scene0140_00__chair_014
+scene0140_00__chair_017
+
+Answer with the object_id only.","Which chair is closest to the cabinet?
+
+Candidates:
+scene0140_00__chair_023: close to the cabinet
+scene0140_00__chair_008: close to the cabinet
+scene0140_00__chair_012: far from the cabinet
+scene0140_00__chair_022: far from the cabinet
+scene0140_00__chair_013: far from the cabinet
+scene0140_00__chair_045: far from the cabinet
+scene0140_00__chair_011: far from the cabinet
+scene0140_00__chair_025: far from the cabinet
+scene0140_00__chair_006: far from the cabinet
+scene0140_00__chair_010: far from the cabinet
+scene0140_00__chair_007: far from the cabinet
+scene0140_00__chair_046: far from the cabinet
+scene0140_00__chair_021: far from the cabinet
+scene0140_00__chair_020: far from the cabinet
+scene0140_00__chair_009: far from the cabinet
+scene0140_00__chair_018: far from the cabinet
+scene0140_00__chair_004: far from the cabinet
+scene0140_00__chair_005: far from the cabinet
+scene0140_00__chair_016: far from the cabinet
+scene0140_00__chair_015: far from the cabinet
+scene0140_00__chair_024: far from the cabinet
+scene0140_00__chair_019: far from the cabinet
+scene0140_00__chair_014: far from the cabinet
+scene0140_00__chair_017: far from the cabinet
+
+Answer with the object_id only."
+nearest_0023,scene0140_00,scene0140_00__door_034,door,chair,scene0140_00__chair_025,0.712087,scene0140_00__chair_006,1.70108,0.988993,24,"Which chair is closest to the door?
+
+Candidates:
+scene0140_00__chair_025
+scene0140_00__chair_006
+scene0140_00__chair_012
+scene0140_00__chair_008
+scene0140_00__chair_010
+scene0140_00__chair_023
+scene0140_00__chair_013
+scene0140_00__chair_021
+scene0140_00__chair_022
+scene0140_00__chair_011
+scene0140_00__chair_045
+scene0140_00__chair_004
+scene0140_00__chair_009
+scene0140_00__chair_007
+scene0140_00__chair_046
+scene0140_00__chair_018
+scene0140_00__chair_016
+scene0140_00__chair_020
+scene0140_00__chair_017
+scene0140_00__chair_015
+scene0140_00__chair_005
+scene0140_00__chair_014
+scene0140_00__chair_019
+scene0140_00__chair_024
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0140_00__chair_025: close to the door
+scene0140_00__chair_006: far from the door
+scene0140_00__chair_012: far from the door
+scene0140_00__chair_008: far from the door
+scene0140_00__chair_010: far from the door
+scene0140_00__chair_023: far from the door
+scene0140_00__chair_013: far from the door
+scene0140_00__chair_021: far from the door
+scene0140_00__chair_022: far from the door
+scene0140_00__chair_011: far from the door
+scene0140_00__chair_045: far from the door
+scene0140_00__chair_004: far from the door
+scene0140_00__chair_009: far from the door
+scene0140_00__chair_007: far from the door
+scene0140_00__chair_046: far from the door
+scene0140_00__chair_018: far from the door
+scene0140_00__chair_016: far from the door
+scene0140_00__chair_020: far from the door
+scene0140_00__chair_017: far from the door
+scene0140_00__chair_015: far from the door
+scene0140_00__chair_005: far from the door
+scene0140_00__chair_014: far from the door
+scene0140_00__chair_019: far from the door
+scene0140_00__chair_024: far from the door
+
+Answer with the object_id only."
+nearest_0024,scene0140_00,scene0140_00__door_040,door,chair,scene0140_00__chair_017,0.753683,scene0140_00__chair_015,0.994962,0.241279,24,"Which chair is closest to the door?
+
+Candidates:
+scene0140_00__chair_017
+scene0140_00__chair_015
+scene0140_00__chair_016
+scene0140_00__chair_014
+scene0140_00__chair_018
+scene0140_00__chair_009
+scene0140_00__chair_004
+scene0140_00__chair_019
+scene0140_00__chair_046
+scene0140_00__chair_024
+scene0140_00__chair_005
+scene0140_00__chair_021
+scene0140_00__chair_007
+scene0140_00__chair_020
+scene0140_00__chair_010
+scene0140_00__chair_011
+scene0140_00__chair_013
+scene0140_00__chair_006
+scene0140_00__chair_045
+scene0140_00__chair_012
+scene0140_00__chair_022
+scene0140_00__chair_025
+scene0140_00__chair_008
+scene0140_00__chair_023
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0140_00__chair_017: close to the door
+scene0140_00__chair_015: far from the door
+scene0140_00__chair_016: far from the door
+scene0140_00__chair_014: far from the door
+scene0140_00__chair_018: far from the door
+scene0140_00__chair_009: far from the door
+scene0140_00__chair_004: far from the door
+scene0140_00__chair_019: far from the door
+scene0140_00__chair_046: far from the door
+scene0140_00__chair_024: far from the door
+scene0140_00__chair_005: far from the door
+scene0140_00__chair_021: far from the door
+scene0140_00__chair_007: far from the door
+scene0140_00__chair_020: far from the door
+scene0140_00__chair_010: far from the door
+scene0140_00__chair_011: far from the door
+scene0140_00__chair_013: far from the door
+scene0140_00__chair_006: far from the door
+scene0140_00__chair_045: far from the door
+scene0140_00__chair_012: far from the door
+scene0140_00__chair_022: far from the door
+scene0140_00__chair_025: far from the door
+scene0140_00__chair_008: far from the door
+scene0140_00__chair_023: far from the door
+
+Answer with the object_id only."
+nearest_0025,scene0141_00,scene0141_00__door_013,door,chair,scene0141_00__chair_008,1.05619,scene0141_00__chair_006,2.466646,1.410455,3,"Which chair is closest to the door?
+
+Candidates:
+scene0141_00__chair_008
+scene0141_00__chair_006
+scene0141_00__chair_007
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0141_00__chair_008: far from the door
+scene0141_00__chair_006: far from the door
+scene0141_00__chair_007: far from the door
+
+Answer with the object_id only."
+nearest_0026,scene0141_00,scene0141_00__door_023,door,chair,scene0141_00__chair_008,1.571822,scene0141_00__chair_006,3.048965,1.477142,3,"Which chair is closest to the door?
+
+Candidates:
+scene0141_00__chair_008
+scene0141_00__chair_006
+scene0141_00__chair_007
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0141_00__chair_008: far from the door
+scene0141_00__chair_006: far from the door
+scene0141_00__chair_007: far from the door
+
+Answer with the object_id only."
+nearest_0027,scene0141_00,scene0141_00__monitor_017,monitor,chair,scene0141_00__chair_007,0.54356,scene0141_00__chair_008,1.459193,0.915632,3,"Which chair is closest to the monitor?
+
+Candidates:
+scene0141_00__chair_007
+scene0141_00__chair_008
+scene0141_00__chair_006
+
+Answer with the object_id only.","Which chair is closest to the monitor?
+
+Candidates:
+scene0141_00__chair_007: close to the monitor
+scene0141_00__chair_008: far from the monitor
+scene0141_00__chair_006: far from the monitor
+
+Answer with the object_id only."
+nearest_0028,scene0142_00,scene0142_00__cabinet_045,cabinet,chair,scene0142_00__chair_042,0.319057,scene0142_00__chair_019,2.749891,2.430834,5,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0142_00__chair_042
+scene0142_00__chair_019
+scene0142_00__chair_020
+scene0142_00__chair_021
+scene0142_00__chair_023
+
+Answer with the object_id only.","Which chair is closest to the cabinet?
+
+Candidates:
+scene0142_00__chair_042: close to the cabinet
+scene0142_00__chair_019: far from the cabinet
+scene0142_00__chair_020: far from the cabinet
+scene0142_00__chair_021: far from the cabinet
+scene0142_00__chair_023: far from the cabinet
+
+Answer with the object_id only."
+nearest_0029,scene0142_00,scene0142_00__monitor_041,monitor,chair,scene0142_00__chair_042,0.417174,scene0142_00__chair_019,1.792272,1.375098,5,"Which chair is closest to the monitor?
+
+Candidates:
+scene0142_00__chair_042
+scene0142_00__chair_019
+scene0142_00__chair_020
+scene0142_00__chair_021
+scene0142_00__chair_023
+
+Answer with the object_id only.","Which chair is closest to the monitor?
+
+Candidates:
+scene0142_00__chair_042: close to the monitor
+scene0142_00__chair_019: far from the monitor
+scene0142_00__chair_020: far from the monitor
+scene0142_00__chair_021: far from the monitor
+scene0142_00__chair_023: far from the monitor
+
+Answer with the object_id only."
+nearest_0030,scene0143_01,scene0143_01__cabinet_004,cabinet,chair,scene0143_01__chair_012,1.035748,scene0143_01__chair_000,2.201947,1.1662,2,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0143_01__chair_012
+scene0143_01__chair_000
+
+Answer with the object_id only.","Which chair is closest to the cabinet?
+
+Candidates:
+scene0143_01__chair_012: far from the cabinet
+scene0143_01__chair_000: far from the cabinet
+
+Answer with the object_id only."
+nearest_0031,scene0143_01,scene0143_01__desk_008,desk,chair,scene0143_01__chair_012,0.130698,scene0143_01__chair_000,1.743781,1.613083,2,"Which chair is closest to the desk?
+
+Candidates:
+scene0143_01__chair_012
+scene0143_01__chair_000
+
+Answer with the object_id only.","Which chair is closest to the desk?
+
+Candidates:
+scene0143_01__chair_012: close to the desk
+scene0143_01__chair_000: far from the desk
+
+Answer with the object_id only."
+nearest_0032,scene0143_01,scene0143_01__monitor_017,monitor,chair,scene0143_01__chair_012,1.367629,scene0143_01__chair_000,2.585877,1.218248,2,"Which chair is closest to the monitor?
+
+Candidates:
+scene0143_01__chair_012
+scene0143_01__chair_000
+
+Answer with the object_id only.","Which chair is closest to the monitor?
+
+Candidates:
+scene0143_01__chair_012: far from the monitor
+scene0143_01__chair_000: far from the monitor
+
+Answer with the object_id only."
+nearest_0033,scene0144_00,scene0144_00__door_007,door,chair,scene0144_00__chair_021,1.016124,scene0144_00__chair_004,1.683225,0.6671,3,"Which chair is closest to the door?
+
+Candidates:
+scene0144_00__chair_021
+scene0144_00__chair_004
+scene0144_00__chair_003
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0144_00__chair_021: close to the door
+scene0144_00__chair_004: far from the door
+scene0144_00__chair_003: far from the door
+
+Answer with the object_id only."
+nearest_0034,scene0144_00,scene0144_00__door_011,door,chair,scene0144_00__chair_021,0.172589,scene0144_00__chair_003,2.338992,2.166403,3,"Which chair is closest to the door?
+
+Candidates:
+scene0144_00__chair_021
+scene0144_00__chair_003
+scene0144_00__chair_004
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0144_00__chair_021: close to the door
+scene0144_00__chair_003: far from the door
+scene0144_00__chair_004: far from the door
+
+Answer with the object_id only."
+nearest_0035,scene0144_00,scene0144_00__door_019,door,chair,scene0144_00__chair_021,0.747755,scene0144_00__chair_003,2.467282,1.719527,3,"Which chair is closest to the door?
+
+Candidates:
+scene0144_00__chair_021
+scene0144_00__chair_003
+scene0144_00__chair_004
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0144_00__chair_021: close to the door
+scene0144_00__chair_003: far from the door
+scene0144_00__chair_004: far from the door
+
+Answer with the object_id only."
+nearest_0036,scene0181_00,scene0181_00__cabinet_014,cabinet,chair,scene0181_00__chair_003,1.08063,scene0181_00__chair_001,1.564543,0.483913,4,"Which chair is closest to the cabinet?
+
+Candidates:
+scene0181_00__chair_003
+scene0181_00__chair_001
+scene0181_00__chair_004
+scene0181_00__chair_002
+
+Answer with the object_id only.","Which chair is closest to the cabinet?
+
+Candidates:
+scene0181_00__chair_003: far from the cabinet
+scene0181_00__chair_001: far from the cabinet
+scene0181_00__chair_004: far from the cabinet
+scene0181_00__chair_002: far from the cabinet
+
+Answer with the object_id only."
+nearest_0037,scene0181_00,scene0181_00__door_022,door,chair,scene0181_00__chair_002,3.216962,scene0181_00__chair_001,3.916437,0.699475,4,"Which chair is closest to the door?
+
+Candidates:
+scene0181_00__chair_002
+scene0181_00__chair_004
+scene0181_00__chair_001
+scene0181_00__chair_003
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0181_00__chair_002: far from the door
+scene0181_00__chair_004: far from the door
+scene0181_00__chair_001: far from the door
+scene0181_00__chair_003: far from the door
+
+Answer with the object_id only."
+nearest_0038,scene0181_00,scene0181_00__door_028,door,chair,scene0181_00__chair_002,0.327138,scene0181_00__chair_004,0.952474,0.625336,4,"Which chair is closest to the door?
+
+Candidates:
+scene0181_00__chair_002
+scene0181_00__chair_004
+scene0181_00__chair_001
+scene0181_00__chair_003
+
+Answer with the object_id only.","Which chair is closest to the door?
+
+Candidates:
+scene0181_00__chair_002: close to the door
+scene0181_00__chair_004: far from the door
+scene0181_00__chair_001: far from the door
+scene0181_00__chair_003: far from the door
+
+Answer with the object_id only."
