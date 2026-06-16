@@ -136,7 +136,7 @@ as métricas sem os dados brutos.
 @mastersthesis{lopes2026raciocinio,
   author  = {Jefferson Lopes},
   title   = {Raciocínio Espacial sobre Cenas 3D via Representação Geométrica Explícita},
-  school  = {Universidade Federal da Bahia (UFBA), PGCOMP},
+  school  = {Programa de Pós-Graduação em Mecatrônica (PPGM), Universidade Federal da Bahia (UFBA)},
   year    = {2026},
   type    = {Qualificação de Mestrado}
 }
