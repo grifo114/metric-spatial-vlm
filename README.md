@@ -1,76 +1,147 @@
+# Raciocínio Espacial sobre Cenas 3D via Representação Geométrica Explícita
 
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
-[![ScanNet](https://img.shields.io/badge/Dataset-ScanNet-orange.svg)](http://www.scan-net.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+Código, benchmark e resultados do trabalho de qualificação de mestrado
+(PGCOMP/UFBA) que investiga o papel da representação geométrica explícita na
+execução de consultas espaciais sobre cenas 3D estruturadas. O trabalho propõe
+uma arquitetura modular que separa a identificação das entidades da cena
+(*grounding*) da execução de operadores geométricos explícitos, formalizada pela
+decomposição do erro total:
 
-# Spatial Context Injection for Metric Distance Queries in 3D Indoor Scenes
+```
+E_total = E_grounding + E_geométrico
+```
 
-This repository contains the code, benchmark metadata, prompts, figures,
-and processed outputs used in the paper:
+> **Branches deste repositório**
+> - **`main`** — estado correspondente ao trabalho de qualificação (benchmark
+>   completo, operadores, experimentos VLM, SCI e sistema de QA). É a branch de
+>   referência citada na dissertação.
+> - **`article-release-clean`** — recorte isolado do artigo SIBGRAPI, restrito à
+>   Spatial Context Injection (SCI). Mantida separada por escopo.
 
-**Spatial Context Injection for Metric Distance Queries in 3D Indoor Scenes**
+## Operadores Espaciais
 
-The paper evaluates metric distance queries over reconstructed 3D indoor
-scenes by separating two sources of error:
+| Operador | Descrição | Métrica |
+|---|---|---|
+| `distance(A, B)` | Distância entre superfícies de dois objetos | MAE (metros) |
+| `nearest(ref, cat)` | Objeto mais próximo de uma referência | Top-1 |
+| `between(X, A, B)` | X está entre A e B no plano XY? | F1 binário |
+| `aligned(A, B, C)` | A, B e C estão alinhados no plano XY? | F1 binário |
 
-1. instance grounding error;
-2. geometric distance-computation error.
+## Resultados Principais (teste oficial — stage 1)
 
-The proposed Spatial Context Injection (SCI) strategy enriches candidate
-object lists with scene-relative textual descriptors while keeping the
-visual input fixed.
+| Operador | Superfície | Centróide |
+|---|---|---|
+| distance (MAE) | **0.000 m** | 0.944 m |
+| nearest (Top-1) | **1.000** | 1.000 |
+| between (F1) | **1.000** | n/a |
+| aligned (F1) | **1.000** | n/a |
 
-## Repository scope
+`n/a` indica que a comparação centróide/superfície não se aplica aos operadores
+relacionais. O MAE de superfície de 0.000 m é **definicional**: a referência é
+derivada da mesma representação de superfície usada pelo operador.
 
-This repository is intended for reproducibility and audit of the paper
-experiments. It does not contain raw ScanNet data.
+A injeção de contexto espacial (**SCI**) foi avaliada sobre `distance` em uma
+matriz de seis modelos de visão e linguagem (GPT-4.1, Claude Sonnet, Gemini 2.5
+Flash, Qwen3-VL 8B/32B/235B). O ganho de *grounding* é dependente da capacidade
+do modelo, expressivo nos modelos maiores e ausente na menor escala avaliada.
 
-## Benchmark
+## Estrutura do Repositório
 
-The benchmark contains:
+```
+metric-spatial-vlm/
+├── benchmark/             # Queries e ground truth oficiais (dev + test)
+├── configs/               # Configurações do benchmark e label maps
+├── src/                   # Motor geométrico e utilitários
+│   ├── geometry/          # Operadores espaciais
+│   ├── dataset/           # Carregamento de dados
+│   ├── evaluation/        # Métricas
+│   └── queries/           # Geração de queries
+├── scripts/
+│   ├── benchmark/         # Construção do benchmark
+│   ├── experiments/       # Baseline VLM, E2E, SCI
+│   └── (análises)         # Estratificação, p-valores, sensibilidade
+├── results/               # Resultados oficiais (CSV)
+├── figures/               # Figuras geradas
+├── spatial_qa_system/     # Protótipo de QA espacial (FastAPI + visualização)
+└── notebooks/             # Análises interativas
+```
 
-- 20 ScanNet scenes;
-- 45 reviewed distance queries;
-- 8 object categories;
-- explicit ground-truth instance pairs for each query;
-- 4 VLMs;
-- 5 prompt conditions;
-- 2 runs per condition;
-- 1,800 multimodal calls.
+## Mapeamento Dissertação → Código
 
-## Prompt conditions
+> Preencher os números reais das tabelas/figuras da versão final.
 
-- Baseline: no spatial descriptors.
-- L1: object position in a 3 x 3 scene grid.
-- L2: L1 plus peer ordering within the same category.
-- L3: L2 plus nearby object categories.
-- L2-Ref: L2 descriptors only for queried categories.
+| Resultado na dissertação | Script |
+|---|---|
+| Tab. — distance/nearest (teste oficial) | `scripts/benchmark/61_run_benchmark_distance_nearest_test_official_stage1.py` |
+| Tab. — between/aligned (teste oficial) | `scripts/benchmark/70_run_benchmark_relational_binary_test_official_stage1.py` |
+| Fig. — sensibilidade de limiares (dev) | `results/dev_official_*_threshold_sensitivity.csv` |
+| Tab. — baseline VLM | `scripts/experiments/81_vlm_baseline_distance_nearest.py` |
+| Sec./Cap. — E2E GPT-4.1 e SpatialLM | `scripts/experiments/84_e2e_grounding_test_official.py` |
+| SCI — matriz multi-VLM | `scripts/plot_context_vs_no_context_ieee_final.py` |
+| Estratificação de ambiguidade | `scripts/extract_ambiguity_stratification.py` |
+| p-valores (McNemar) por query | `scripts/extract_query_level_pvalues.py` |
+| Validação da distância de superfície | `scripts/validate_surface_distance_against_triangle_oracle.py` |
 
-## Repository structure
+## Instalação
 
-```text
-benchmark/      Benchmark metadata and reviewed query files.
-configs/        Model and benchmark configuration files.
-docs/           Benchmark card, data access, and reproducibility notes.
-figures/        Figures used in the paper.
-prompts/        Prompt templates for each condition.
-results/        Raw and processed outputs used in the paper.
-scripts/        Evaluation and analysis scripts.
-paper/          Paper source files, if included.
+```bash
+git clone https://github.com/grifo114/metric-spatial-vlm
+cd metric-spatial-vlm
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
-Data access
+## Reprodução dos Resultados
 
-Raw ScanNet data are not redistributed. Users must obtain ScanNet through
-the official access procedure and follow the original dataset terms.
+```bash
+# Benchmark métrico (distance + nearest)
+python scripts/benchmark/61_run_benchmark_distance_nearest_test_official_stage1.py
 
-See docs/DATA_ACCESS.md.
+# Benchmark relacional (between + aligned)
+python scripts/benchmark/70_run_benchmark_relational_binary_test_official_stage1.py
 
-Reproducibility
+# Baseline VLM
+python scripts/experiments/81_vlm_baseline_distance_nearest.py
 
-See docs/REPRODUCIBILITY.md.
+# Experimento E2E (grounding automático)
+python scripts/experiments/84_e2e_grounding_test_official.py
+```
 
-Citation
+As chaves de API dos modelos de visão e linguagem são lidas de variáveis de
+ambiente (ex.: `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY`). Defina-as
+em um arquivo `.env` local (não versionado).
 
-Citation information will be added after submission or acceptance.
+## Limiares Oficiais
 
+Calibrados no conjunto de desenvolvimento como o menor valor em que acurácia,
+revocação e F1 atingem o platô em 1.0 sem degradar a precisão:
 
+- `τ_between = 0.30`
+- `τ_aligned = 0.25`
+
+Definidos em `configs/benchmark_config.yaml`.
+
+## Dataset
+
+O benchmark usa cenas do [ScanNet](http://www.scan-net.org/). Os dados
+geométricos brutos não são redistribuídos neste repositório por questões de
+licença; siga as instruções do ScanNet para obter acesso. Os arquivos de
+benchmark (queries, ground truth, manifestos) em `benchmark/` permitem reproduzir
+as métricas sem os dados brutos.
+
+## Citação
+
+```bibtex
+@mastersthesis{lopes2026raciocinio,
+  author  = {Jefferson Lopes},
+  title   = {Raciocínio Espacial sobre Cenas 3D via Representação Geométrica Explícita},
+  school  = {Universidade Federal da Bahia (UFBA), PGCOMP},
+  year    = {2026},
+  type    = {Qualificação de Mestrado}
+}
+```
+
+## Licença
+
+MIT License — veja `LICENSE`.
