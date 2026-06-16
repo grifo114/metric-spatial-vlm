@@ -1,7 +1,7 @@
 # Raciocínio Espacial sobre Cenas 3D via Representação Geométrica Explícita
 
 Código, benchmark e resultados do trabalho de qualificação de mestrado
-(PGCOMP/UFBA) que investiga o papel da representação geométrica explícita na
+(PPGM/UFBA) que investiga o papel da representação geométrica explícita na
 execução de consultas espaciais sobre cenas 3D estruturadas. O trabalho propõe
 uma arquitetura modular que separa a identificação das entidades da cena
 (*grounding*) da execução de operadores geométricos explícitos, formalizada pela
