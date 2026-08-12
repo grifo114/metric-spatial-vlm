@@ -5,13 +5,13 @@ import numpy as np
 conditions = ["Baseline", "L1", "L2", "L3", "L2-Ref"]
 x = np.arange(len(conditions))
 
-# ===== Dados (substitua pelos seus valores finais) =====
+# ===== Dados =====
 gpt41 = [31.1, 50.0, 43.3, 48.9, 44.4]
 qwen_235b = [27.0, 43.5, 49.0, 47.0, 48.0]
 qwen_32b = [32.0, 41.0, 38.0, 45.0, 37.0]
 qwen_8b = [30.0, 34.0, 29.0, 29.0, 27.0]
 
-# ===== Estilo IEEE =====
+# ===== IEEE =====
 plt.rcParams.update({
     "font.family": "serif",
     "font.size": 9
