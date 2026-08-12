@@ -2,12 +2,11 @@
 """
 83_e2e_grounding_test_official_v2.py
 
-Versão estendida do script 83 com Spatial Context Injection.
+script 83 Spatial Context Injection.
 
-Adições vs versão original:
 
   --prompt-mode {original,context}
-      original : prompt idêntico ao 83 original (baseline reproduzível).
+      original : prompt 83 original (baseline reproduzível).
       context  : a lista de objetos numerados ganha um descritor
                  scene-relative entre parênteses para cada objeto.
 
@@ -19,7 +18,6 @@ Adições vs versão original:
 
   --language {pt,en}
       Idioma dos descritores. Default = pt (consistente com prompts originais).
-      Mudar para en quando rodar com Qwen / paper em inglês.
 
   --output-suffix STR
       Sufixo opcional do CSV de saída para separar runs:
