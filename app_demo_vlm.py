@@ -1,4 +1,3 @@
-import os
 import sys
 import importlib.util
 from pathlib import Path
@@ -8,7 +7,7 @@ import streamlit as st
 
 
 # ============================================================
-# Configuração básica
+# Basic configuration
 # ============================================================
 
 ROOT = Path(__file__).resolve().parent
@@ -17,246 +16,30 @@ SCRIPT_PATH = ROOT / "scripts" / "83_e2e_grounding_test_official_v2.py"
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-
-# ============================================================
-# Importa o script principal, mesmo ele começando com número
-# ============================================================
-
 spec = importlib.util.spec_from_file_location("e2e_script", SCRIPT_PATH)
 mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
 
+API_ENDPOINTS_LOCAL = {
+    "openai": "https://api.openai.com/v1/chat/completions",
+    "openrouter": "https://openrouter.ai/api/v1/chat/completions",
+}
+
+OPENAI_MODELS = [
+    "gpt-4.1",
+    "gpt-4.1-mini",
+]
+
+OPENROUTER_MODELS = [
+    "qwen/qwen3-vl-8b-instruct",
+    "qwen/qwen3-vl-32b-instruct",
+    "qwen/qwen3-vl-235b-a22b-instruct",
+]
+
 
 # ============================================================
-# Funções auxiliares da interface
+# Local helper functions
 # ============================================================
-
-def evaluate_and_show_result(
-    grounded_a,
-    grounded_b,
-    gt_obj_a,
-    gt_obj_b,
-    gt_distance,
-    scene_id,
-    mod,
-):    
-
-    def pick_example_ids_local(
-        sdf,
-        operator,
-        gt_object_a=None,
-        gt_object_b=None,
-        label_a=None,
-        label_b=None,
-        seed_key=None,
-    ):
-        """
-        Escolhe dois objetos válidos para usar como exemplo no prompt.
-        Evita usar o próprio par de ground truth quando possível.
-        """
-
-        if sdf is None or sdf.empty:
-            return None, None
-
-        valid_ids = set(sdf["object_id"].dropna().astype(str).tolist())
-
-        if len(valid_ids) < 2:
-            ids = sorted(valid_ids)
-            if len(ids) == 1:
-                return ids[0], None
-            return None, None
-
-        forbidden = {str(gt_object_a), str(gt_object_b)}
-
-        candidates = sdf.copy()
-        candidates["object_id"] = candidates["object_id"].astype(str)
-
-        # O manifesto do seu projeto usa label_norm, não category
-        if "label_norm" in candidates.columns:
-            a_candidates = candidates[
-                (candidates["label_norm"].astype(str) == str(label_a)) &
-                (~candidates["object_id"].isin(forbidden))
-            ]["object_id"].tolist()
-
-            b_candidates = candidates[
-                (candidates["label_norm"].astype(str) == str(label_b)) &
-                (~candidates["object_id"].isin(forbidden))
-            ]["object_id"].tolist()
-
-            if a_candidates and b_candidates:
-                for a in sorted(a_candidates):
-                    for b in sorted(b_candidates):
-                        if a != b:
-                            return a, b
-
-        ids = sorted([oid for oid in valid_ids if oid not in forbidden])
-
-        if len(ids) >= 2:
-            return ids[0], ids[1]
-
-        ids = sorted(valid_ids)
-        return ids[0], ids[1]
-
-
-    def get_prompt_template_local(language, operator):
-        """
-        Retorna o template de prompt usado pela demonstração.
-        Por enquanto, o script 83 só tem prompt em português.
-        """
-
-        if operator == "distance":
-            return mod.PROMPT_DISTANCE
-
-        if operator == "nearest":
-            return mod.PROMPT_NEAREST
-
-        raise ValueError(f"Operador não suportado no demo: {operator}")
-
-
-    API_ENDPOINTS_LOCAL = {
-        "openai": "https://api.openai.com/v1/chat/completions",
-        "openrouter": "https://openrouter.ai/api/v1/chat/completions",
-    }
-
-
-    """
-    Avalia o par selecionado, calcula a distância e mostra o diagnóstico.
-    Esta função é usada nos três modos:
-    - VLM via API
-    - Manual sem VLM
-    - Oracle ground truth
-    """
-
-    grounding_correct = (
-        (grounded_a == gt_obj_a and grounded_b == gt_obj_b) or
-        (grounded_a == gt_obj_b and grounded_b == gt_obj_a)
-    )
-
-    # ============================================================
-    # Diagnóstico específico do grounding
-    # ============================================================
-
-    st.subheader("Diagnóstico do grounding")
-
-    a_correct = grounded_a == gt_obj_a
-    b_correct = grounded_b == gt_obj_b
-
-    if grounding_correct:
-        st.success(
-            "O grounding está correto: as instâncias selecionadas correspondem "
-            "às instâncias esperadas no benchmark."
-        )
-    else:
-        st.error(
-            "Erro de grounding: pelo menos uma instância selecionada é diferente "
-            "da instância esperada no benchmark."
-        )
-
-        if a_correct:
-            st.success(f"Objeto A correto: {grounded_a}")
-        else:
-            st.warning(
-                f"Objeto A incorreto: esperado {gt_obj_a}, "
-                f"selecionado {grounded_a}"
-            )
-
-        if b_correct:
-            st.success(f"Objeto B correto: {grounded_b}")
-        else:
-            st.warning(
-                f"Objeto B incorreto: esperado {gt_obj_b}, "
-                f"selecionado {grounded_b}"
-            )
-
-    st.subheader("Objetos usados no cálculo")
-
-    st.code(
-        f"""
-Objeto A esperado:      {gt_obj_a}
-Objeto B esperado:      {gt_obj_b}
-
-Objeto A selecionado:   {grounded_a}
-Objeto B selecionado:   {grounded_b}
-
-Grounding correto:      {grounding_correct}
-""",
-        language="text",
-    )
-
-    # ============================================================
-    # Cálculo geométrico
-    # ============================================================
-
-    e_surface = None
-    e_centroid = None
-
-    if grounded_a and grounded_b:
-        pts_a = mod.load_points(grounded_a, scene_id)
-        pts_b = mod.load_points(grounded_b, scene_id)
-
-        if pts_a is not None and pts_b is not None:
-            e_surface = mod.surface_distance(pts_a, pts_b)
-            e_centroid = mod.centroid_distance(pts_a, pts_b)
-
-    st.subheader("Diagnóstico do resultado")
-
-    if e_surface is not None:
-        surface_error_m = abs(e_surface - gt_distance)
-
-        if gt_distance > 0:
-            surface_error_pct = (surface_error_m / gt_distance) * 100
-        else:
-            surface_error_pct = None
-
-        col_a, col_b, col_c = st.columns(3)
-
-        with col_a:
-            st.metric("Distância correta", f"{gt_distance:.4f} m")
-
-        with col_b:
-            st.metric("Distância calculada", f"{e_surface:.4f} m")
-
-        with col_c:
-            st.metric("Erro absoluto", f"{surface_error_m:.4f} m")
-
-        if surface_error_pct is not None:
-            st.metric("Erro percentual", f"{surface_error_pct:.2f}%")
-        else:
-            st.warning(
-                "Não foi possível calcular erro percentual porque a distância correta é zero."
-            )
-
-        st.subheader("Quem errou?")
-
-        if not grounding_correct:
-            st.error(
-                "O erro veio da escolha das instâncias. A engine geométrica "
-                "calculou a distância entre os objetos selecionados, mas esse "
-                "par não corresponde ao par correto do benchmark."
-            )
-        else:
-            st.success(
-                "As instâncias foram selecionadas corretamente. Neste caso, "
-                "a distância foi calculada entre os objetos corretos do benchmark."
-            )
-
-        st.subheader("Comparação das formas de distância")
-
-        col1, col2, col3 = st.columns(3)
-
-        with col1:
-            st.metric("Surface distance", f"{e_surface:.4f} m")
-
-        with col2:
-            st.metric("Centroid distance", f"{e_centroid:.4f} m")
-
-        with col3:
-            st.metric("Ground truth distance", f"{gt_distance:.4f} m")
-
-    else:
-        st.warning(
-            "Não foi possível calcular a distância. Pontos dos objetos não encontrados."
-        )
 
 def pick_example_ids_local(
     sdf,
@@ -267,10 +50,7 @@ def pick_example_ids_local(
     label_b=None,
     seed_key=None,
 ):
-    """
-    Escolhe dois objetos válidos para usar como exemplo no prompt.
-    Evita usar o próprio par de ground truth quando possível.
-    """
+    """Select two valid object IDs to use as examples in the prompt."""
 
     if sdf is None or sdf.empty:
         return None, None
@@ -290,13 +70,13 @@ def pick_example_ids_local(
 
     if "label_norm" in candidates.columns:
         a_candidates = candidates[
-            (candidates["label_norm"].astype(str) == str(label_a)) &
-            (~candidates["object_id"].isin(forbidden))
+            (candidates["label_norm"].astype(str) == str(label_a))
+            & (~candidates["object_id"].isin(forbidden))
         ]["object_id"].tolist()
 
         b_candidates = candidates[
-            (candidates["label_norm"].astype(str) == str(label_b)) &
-            (~candidates["object_id"].isin(forbidden))
+            (candidates["label_norm"].astype(str) == str(label_b))
+            & (~candidates["object_id"].isin(forbidden))
         ]["object_id"].tolist()
 
         if a_candidates and b_candidates:
@@ -317,47 +97,177 @@ def pick_example_ids_local(
 
     return ids[0], None
 
+
 def get_prompt_template_local(language, operator):
-    """
-    Retorna o template de prompt usado pela demo.
-    No script 83 os prompts disponíveis são PROMPT_DISTANCE e PROMPT_NEAREST.
-    """
+    """Return the prompt template used by the demo."""
 
-    if operator == "distance":
-        return mod.PROMPT_DISTANCE
+    language = str(language).lower()
+    operator = str(operator).lower()
 
-    if operator == "nearest":
-        return mod.PROMPT_NEAREST
+    english_templates = {
+        "distance": """You are given a top-down view of an indoor 3D scene and a numbered object list.\n\nObject list:\n{object_list}\n\nQuestion:\nWhat is the distance between {label_a} and {label_b}?\n\nReturn only valid JSON in this format:\n{{\"object_a\": \"{example_a}\", \"object_b\": \"{example_b}\"}}""",
+        "nearest": """You are given a top-down view of an indoor 3D scene and a numbered object list.\n\nObject list:\n{object_list}\n\nQuestion:\nWhich object is nearest to {label_a}?\n\nReturn only valid JSON in this format:\n{{\"object_a\": \"{example_a}\", \"object_b\": \"{example_b}\"}}""",
+    }
 
-    raise ValueError(f"Operador não suportado: {operator}")
+    portuguese_templates = {
+        "distance": """Você receberá uma vista superior de uma cena 3D interna e uma lista numerada de objetos.\n\nLista de objetos:\n{object_list}\n\nPergunta:\nQual é a distância entre {label_a} e {label_b}?\n\nResponda apenas com um JSON válido neste formato:\n{{\"object_a\": \"{example_a}\", \"object_b\": \"{example_b}\"}}""",
+        "nearest": """Você receberá uma vista superior de uma cena 3D interna e uma lista numerada de objetos.\n\nLista de objetos:\n{object_list}\n\nPergunta:\nQual objeto está mais próximo de {label_a}?\n\nResponda apenas com um JSON válido neste formato:\n{{\"object_a\": \"{example_a}\", \"object_b\": \"{example_b}\"}}""",
+    }
+
+    templates = portuguese_templates if language == "pt" else english_templates
+
+    if operator not in templates:
+        raise ValueError(f"Operator not supported in the demo: {operator}")
+
+    return templates[operator]
 
 
-API_ENDPOINTS_LOCAL = {
-    "openai": "https://api.openai.com/v1/chat/completions",
-    "openrouter": "https://openrouter.ai/api/v1/chat/completions",
-}
+def compute_result(grounded_a, grounded_b, gt_obj_a, gt_obj_b, gt_distance, scene_id):
+    """Compute grounding status, surface distance, centroid distance, and errors."""
+
+    grounding_correct = (
+        (grounded_a == gt_obj_a and grounded_b == gt_obj_b)
+        or (grounded_a == gt_obj_b and grounded_b == gt_obj_a)
+    )
+
+    e_surface = None
+    e_centroid = None
+
+    if grounded_a and grounded_b:
+        pts_a = mod.load_points(grounded_a, scene_id)
+        pts_b = mod.load_points(grounded_b, scene_id)
+
+        if pts_a is not None and pts_b is not None:
+            e_surface = mod.surface_distance(pts_a, pts_b)
+            e_centroid = mod.centroid_distance(pts_a, pts_b)
+
+    absolute_error = None
+    percentage_error = None
+
+    if e_surface is not None:
+        absolute_error = abs(e_surface - gt_distance)
+        if gt_distance > 0:
+            percentage_error = (absolute_error / gt_distance) * 100
+
+    return {
+        "grounding_correct": grounding_correct,
+        "surface_distance": e_surface,
+        "centroid_distance": e_centroid,
+        "absolute_error": absolute_error,
+        "percentage_error": percentage_error,
+    }
+
+
+def show_compact_result(result, grounded_a, grounded_b, gt_obj_a, gt_obj_b, gt_distance):
+    """Render result diagnostics in a compact single-panel layout."""
+
+    if result["grounding_correct"]:
+        st.success("Grounding correct")
+    else:
+        st.error("Grounding error")
+
+    m1, m2 = st.columns(2)
+    with m1:
+        st.metric("Reference", f"{gt_distance:.4f} m")
+    with m2:
+        if result["surface_distance"] is not None:
+            st.metric("Surface", f"{result['surface_distance']:.4f} m")
+        else:
+            st.metric("Surface", "N/A")
+
+    m3, m4 = st.columns(2)
+    with m3:
+        if result["centroid_distance"] is not None:
+            st.metric("Centroid", f"{result['centroid_distance']:.4f} m")
+        else:
+            st.metric("Centroid", "N/A")
+    with m4:
+        if result["absolute_error"] is not None:
+            st.metric("Abs. error", f"{result['absolute_error']:.4f} m")
+        else:
+            st.metric("Abs. error", "N/A")
+
+    with st.expander("Object-pair diagnosis", expanded=True):
+        st.code(
+            f"""Expected A: {gt_obj_a}\nExpected B: {gt_obj_b}\nSelected A: {grounded_a}\nSelected B: {grounded_b}""",
+            language="text",
+        )
+
+
 # ============================================================
-# Interface
+# Page setup and compact CSS
 # ============================================================
 
-st.set_page_config(page_title="Demo VLM Grounding", layout="wide")
+st.set_page_config(page_title="VLM Grounding Demo", layout="wide")
 
-st.title("Sistema Demonstrativo de Grounding e Distância em Cenas 3D")
-
-st.caption(
-    "Seleção de cena, consulta espacial, escolha de instâncias e cálculo geométrico "
-    "de distância. O sistema permite testar com VLM, seleção manual ou ground truth."
+st.markdown(
+    """
+    <style>
+    .block-container {
+        padding-top: 0.6rem !important;
+        padding-bottom: 0.3rem !important;
+        padding-left: 1.1rem !important;
+        padding-right: 1.1rem !important;
+        max-width: 100% !important;
+    }
+    h1 {
+        font-size: 1.45rem !important;
+        margin-bottom: 0.15rem !important;
+    }
+    h2, h3 {
+        font-size: 1.0rem !important;
+        margin-top: 0.25rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+    div[data-testid="stVerticalBlock"] {
+        gap: 0.35rem !important;
+    }
+    div[data-testid="stHorizontalBlock"] {
+        gap: 0.55rem !important;
+    }
+    div[data-testid="stMetric"] {
+        background: rgba(240, 242, 246, 0.55);
+        border-radius: 0.45rem;
+        padding: 0.25rem 0.45rem;
+    }
+    div[data-testid="stMetricLabel"] {
+        font-size: 0.75rem !important;
+    }
+    div[data-testid="stMetricValue"] {
+        font-size: 1.0rem !important;
+    }
+    .stTextArea textarea {
+        font-size: 0.74rem !important;
+        line-height: 1.1rem !important;
+    }
+    .stCodeBlock pre {
+        font-size: 0.72rem !important;
+        line-height: 1.05rem !important;
+    }
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True,
 )
 
+st.title("Grounding and Distance Demo for 3D Scenes")
+st.caption("Single-screen layout: scene, prompt, execution, and diagnostics.")
+
 
 # ============================================================
-# Carrega os dados
+# Load data
 # ============================================================
 
-gt_df = pd.read_csv(mod.GT_CSV)
-queries_df = pd.read_csv(mod.QUERIES_CSV)
-manifest_df = pd.read_csv(mod.MANIFEST_CSV)
+@st.cache_data(show_spinner=False)
+def load_tables():
+    gt = pd.read_csv(mod.GT_CSV)
+    queries = pd.read_csv(mod.QUERIES_CSV)
+    manifest = pd.read_csv(mod.MANIFEST_CSV)
+    return gt, queries, manifest
 
+
+gt_df, queries_df, manifest_df = load_tables()
 queries_df = queries_df[queries_df["review_keep"] == "yes"].copy()
 
 extra_cols = [
@@ -381,103 +291,95 @@ merged = gt_df.merge(
     on=["scene_id", "operator", "structured_query"],
     how="left",
 )
-
-# Para a demonstração, vamos focar em distance
 merged = merged[merged["operator"] == "distance"].copy()
 
 
 # ============================================================
-# Seleção da cena e da query
+# Top control strip
 # ============================================================
 
 scene_ids = sorted(merged["scene_id"].dropna().unique().tolist())
 
-col1, col2 = st.columns([1, 2])
+r1c1, r1c2, r1c3, r1c4 = st.columns([1.0, 2.35, 1.05, 1.05])
 
-with col1:
-    scene_id = st.selectbox("Escolha a cena", scene_ids)
+with r1c1:
+    scene_id = st.selectbox("Scene", scene_ids, label_visibility="collapsed")
 
 scene_queries = merged[merged["scene_id"] == scene_id].copy()
+query_options = [f"{r['query_id']} | {r['structured_query']}" for _, r in scene_queries.iterrows()]
 
-query_options = []
-for _, r in scene_queries.iterrows():
-    query_options.append(
-        f"{r['query_id']} | {r['structured_query']}"
+with r1c2:
+    selected_query_text = st.selectbox("Query", query_options, label_visibility="collapsed")
+
+with r1c3:
+    execution_mode = st.selectbox(
+        "Mode",
+        ["VLM via API", "Manual", "Oracle"],
+        label_visibility="collapsed",
     )
 
-with col2:
-    selected_query_text = st.selectbox("Escolha a query", query_options)
+with r1c4:
+    prompt_mode = st.selectbox(
+        "Prompt",
+        ["original", "context"],
+        label_visibility="collapsed",
+    )
+
+r2c1, r2c2, r2c3, r2c4, r2c5 = st.columns([1.0, 1.55, 1.05, 1.05, 2.0])
+
+with r2c1:
+    provider = st.selectbox("Provider", ["openai", "openrouter"], label_visibility="collapsed")
+
+with r2c2:
+    model = st.selectbox(
+        "Model",
+        OPENAI_MODELS if provider == "openai" else OPENROUTER_MODELS,
+        label_visibility="collapsed",
+    )
+
+with r2c3:
+    language = st.selectbox("Prompt language", ["en", "pt"], index=0, label_visibility="collapsed")
+
+with r2c4:
+    if prompt_mode == "context":
+        sci_mode = st.selectbox(
+            "SCI",
+            ["L1", "L2", "L3", "L2-Ref"],
+            index=2,
+            label_visibility="collapsed",
+        )
+
+        if sci_mode == "L1":
+            descriptor_level = 1
+        elif sci_mode == "L2":
+            descriptor_level = 2
+        elif sci_mode == "L3":
+            descriptor_level = 3
+        elif sci_mode == "L2-Ref":
+            descriptor_level = 2
+    else:
+        descriptor_level = None
+        st.caption("SCI: off")
+
+with r2c5:
+    api_key = st.text_input(
+        "API key",
+        type="password",
+        placeholder="API key, only needed for VLM mode",
+        label_visibility="collapsed",
+    )
 
 selected_query_id = selected_query_text.split(" | ")[0]
 row = scene_queries[scene_queries["query_id"] == selected_query_id].iloc[0]
 
 
 # ============================================================
-# Configurações do experimento
-# ============================================================
-
-st.subheader("Configuração do experimento")
-
-execution_mode = st.selectbox(
-    "Modo de execução",
-    ["VLM via API", "Manual sem VLM", "Oracle ground truth"],
-    help=(
-        "VLM via API chama o modelo. Manual sem VLM permite selecionar os objetos "
-        "manualmente. Oracle ground truth usa diretamente o par correto do benchmark."
-    ),
-)
-
-c1, c2, c3, c4 = st.columns(4)
-
-with c1:
-    provider = st.selectbox(
-        "Provider",
-        ["openai", "openrouter"],
-        help="OpenAI usa modelos GPT. OpenRouter permite usar modelos Qwen3-VL."
-    )
-
-OPENAI_MODELS = [
-    "gpt-4.1",
-    "gpt-4.1-mini",
-]
-
-OPENROUTER_MODELS = [
-    "qwen/qwen3-vl-8b-instruct",
-    "qwen/qwen3-vl-32b-instruct",
-    "qwen/qwen3-vl-235b-a22b-instruct",
-]
-
-with c2:
-    if provider == "openai":
-        model = st.selectbox("VLM", OPENAI_MODELS)
-    else:
-        model = st.selectbox("VLM", OPENROUTER_MODELS)
-
-with c3:
-    prompt_mode = st.selectbox("Prompt mode", ["original", "context"])
-
-with c4:
-    language = st.selectbox("Idioma", ["en", "pt"], index=0)
-
-descriptor_level = None
-if prompt_mode == "context":
-    descriptor_level = st.selectbox("Nível SCI", [1, 2, 3], index=1)
-
-api_key = st.text_input(
-    "API key",
-    type="password",
-    placeholder="Cole sua chave aqui. Ela não ficará visível na tela.",
-    help="A chave é usada apenas durante esta execução local do Streamlit."
-)
-
-
-# ============================================================
-# Carrega objetos da cena e renderiza imagem
+# Build scene, prompt, and ground truth
 # ============================================================
 
 sdf = manifest_df[
-    (manifest_df["scene_id"] == scene_id) &
-    (manifest_df["is_valid_object"] == True)
+    (manifest_df["scene_id"] == scene_id)
+    & (manifest_df["is_valid_object"] == True)
 ].copy()
 
 num_to_id, id_to_num, cat_color = mod.build_number_map(sdf)
@@ -493,11 +395,6 @@ if not render_path.exists():
         category_colors=cat_color,
         out_path=render_path,
     )
-
-
-# ============================================================
-# Monta a lista de objetos
-# ============================================================
 
 operator = "distance"
 label_a = str(row.get("label_a") or "")
@@ -518,21 +415,19 @@ else:
         target_category=None,
     )
 
+    scope_category = [label_a, label_b] if sci_mode == "L2-Ref" else None
+
     obj_list = mod.format_object_list_with_context(
         num_to_id,
         sdf,
         level=descriptor_level,
         excluded_categories=excluded,
         language=language,
-        scope_category=None,
+        scope_category=scope_category,
     )
 
-
-# ============================================================
-# Escolhe exemplo adaptativo e monta prompt
-# ============================================================
-
-valid_ids = set(sdf["object_id"].tolist())
+valid_ids = set(sdf["object_id"].astype(str).tolist())
+object_ids = sorted(valid_ids)
 
 example_a, example_b = pick_example_ids_local(
     sdf,
@@ -559,162 +454,73 @@ prompt = get_prompt_template_local(language, "distance").format(
 
 
 # ============================================================
-# Exibição visual
+# Main single-screen layout
 # ============================================================
 
-left, right = st.columns([1, 1])
+left, middle, right = st.columns([1.05, 1.25, 0.95])
 
 with left:
-    st.subheader("Imagem enviada ao VLM")
-    st.image(str(render_path), caption=f"Cena: {scene_id}", use_container_width=True)
+    st.subheader("Scene")
+    st.image(str(render_path), caption=f"{scene_id} | {row['query_id']}", use_container_width=True)
+
+with middle:
+    st.subheader("Prompt")
+    st.text_area("Prompt", prompt, height=460, label_visibility="collapsed")
 
 with right:
-    st.subheader("Prompt enviado ao VLM")
-    st.text_area("Prompt", prompt, height=520)
-
-
-# ============================================================
-# Informações do ground truth
-# ============================================================
-
-st.subheader("Ground truth da query")
-
-st.code(
-    f"""
-Query ID: {row['query_id']}
-Cena: {scene_id}
-Consulta: {row['structured_query']}
-
-Objeto A esperado: {gt_obj_a}
-Objeto B esperado: {gt_obj_b}
-Distância de referência: {gt_distance:.4f} m
-""",
-    language="text",
-)
-
-
-# ============================================================
-# Execução
-# ============================================================
-
-st.subheader("Execução")
-
-object_ids = sorted(valid_ids)
-
-# ------------------------------------------------------------
-# Modo 1: VLM via API
-# ------------------------------------------------------------
-
-if execution_mode == "VLM via API":
-    run_api = st.button("Enviar imagem + prompt para o VLM")
-
-    if run_api:
-        api_url = API_ENDPOINTS_LOCAL[provider]
-
-        if not api_key:
-            st.error("Informe a API key no campo acima antes de chamar o VLM.")
-            st.stop()
-
-        api_key = api_key.strip()
-
-        with st.spinner(f"Chamando o VLM: {model}..."):
-            response = mod.call_with_retry(
-                provider=provider,
-                api_url=api_url,
-                api_key=api_key,
-                model=model,
-                prompt=prompt,
-                img_path=render_path,
-                temperature=0.0,
-                max_tokens=2048,
-            )
-
-        st.subheader("Resposta bruta do VLM")
-        st.code(response, language="text")
-
-        ids = mod.extract_ids(response, valid_ids, 2)
-        grounded_a, grounded_b = ids[0], ids[1]
-
-        st.subheader("Objetos selecionados pelo VLM")
-
-        st.code(
-            f"""
-Objeto A selecionado: {grounded_a}
-Objeto B selecionado: {grounded_b}
-""",
-            language="text",
-        )
-
-        evaluate_and_show_result(
-            grounded_a=grounded_a,
-            grounded_b=grounded_b,
-            gt_obj_a=gt_obj_a,
-            gt_obj_b=gt_obj_b,
-            gt_distance=gt_distance,
-            scene_id=scene_id,
-            mod=mod,
-        )
-
-
-# ------------------------------------------------------------
-# Modo 2: Manual sem VLM
-# ------------------------------------------------------------
-
-elif execution_mode == "Manual sem VLM":
-    st.info(
-        "Neste modo, você simula manualmente o papel do VLM. "
-        "Escolha o Objeto A e o Objeto B, e o sistema calculará a distância."
-    )
-
-    col_a, col_b = st.columns(2)
-
-    with col_a:
-        grounded_a = st.selectbox("Selecione manualmente o Objeto A", object_ids)
-
-    with col_b:
-        grounded_b = st.selectbox("Selecione manualmente o Objeto B", object_ids)
-
-    run_manual = st.button("Calcular distância sem VLM")
-
-    if run_manual:
-        evaluate_and_show_result(
-            grounded_a=grounded_a,
-            grounded_b=grounded_b,
-            gt_obj_a=gt_obj_a,
-            gt_obj_b=gt_obj_b,
-            gt_distance=gt_distance,
-            scene_id=scene_id,
-            mod=mod,
-        )
-
-
-# ------------------------------------------------------------
-# Modo 3: Oracle ground truth
-# ------------------------------------------------------------
-
-elif execution_mode == "Oracle ground truth":
-    st.info(
-        "Neste modo, o sistema usa diretamente o par correto do benchmark. "
-        "Isso mostra o comportamento da engine geométrica quando o grounding está correto."
-    )
-
+    st.subheader("Ground truth")
     st.code(
-        f"""
-Objeto A usado: {gt_obj_a}
-Objeto B usado: {gt_obj_b}
-""",
+        f"""Query: {row['structured_query']}\nA: {gt_obj_a}\nB: {gt_obj_b}\nDistance: {gt_distance:.4f} m""",
         language="text",
     )
 
-    run_oracle = st.button("Calcular usando ground truth")
+    grounded_a = None
+    grounded_b = None
+    response = None
 
-    if run_oracle:
-        evaluate_and_show_result(
-            grounded_a=gt_obj_a,
-            grounded_b=gt_obj_b,
+    if execution_mode == "VLM via API":
+        run = st.button("Run VLM", use_container_width=True)
+        if run:
+            if not api_key:
+                st.error("Enter the API key before calling the VLM.")
+                st.stop()
+
+            with st.spinner(f"Calling {model}..."):
+                response = mod.call_with_retry(
+                    provider=provider,
+                    api_url=API_ENDPOINTS_LOCAL[provider],
+                    api_key=api_key.strip(),
+                    model=model,
+                    prompt=prompt,
+                    img_path=render_path,
+                    temperature=0.0,
+                    max_tokens=2048,
+                )
+
+            ids = mod.extract_ids(response, valid_ids, 2)
+            grounded_a, grounded_b = ids[0], ids[1]
+
+            with st.expander("Raw response", expanded=False):
+                st.code(response, language="text")
+
+    elif execution_mode == "Manual":
+        grounded_a = st.selectbox("Selected A", object_ids)
+        grounded_b = st.selectbox("Selected B", object_ids)
+        run = st.button("Compute", use_container_width=True)
+
+    else:
+        st.info("Oracle mode uses the benchmark pair.")
+        grounded_a = gt_obj_a
+        grounded_b = gt_obj_b
+        run = st.button("Compute oracle", use_container_width=True)
+
+    if grounded_a and grounded_b and (execution_mode == "VLM via API" or run):
+        result = compute_result(
+            grounded_a=grounded_a,
+            grounded_b=grounded_b,
             gt_obj_a=gt_obj_a,
             gt_obj_b=gt_obj_b,
             gt_distance=gt_distance,
             scene_id=scene_id,
-            mod=mod,
         )
+        show_compact_result(result, grounded_a, grounded_b, gt_obj_a, gt_obj_b, gt_distance)
