@@ -127,3 +127,13 @@ scripts, statistical tests, and plotting scripts.
 See docs/REPRODUCIBILITY.md, if available.
 
 ## Citation
+If you use this repository, benchmark, or code, please cite the associated manuscript:
+
+```bibtex
+@misc{lopes2026spatialcontextinjection,
+  title        = {Spatial Context Injection for Metric Distance Queries in 3D Indoor Scenes},
+  author       = {Silva, Jefferson Lopes Bispo and Araújo Júnior, Pompílio José Silva and Oliveira, Luciano Rebouças de},
+  year         = {2026},
+  note         = {Submitted manuscript},
+  url          = {https://github.com/grifo114/metric-spatial-vlm}
+}
