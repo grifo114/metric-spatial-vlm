@@ -4,6 +4,7 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+from src.demo_visuals import draw_topdown_overlay, render_scene_3d_static, find_perspective_image, draw_perspective_overlay
 
 
 # ============================================================
@@ -457,29 +458,59 @@ prompt = get_prompt_template_local(language, "distance").format(
 # Main single-screen layout
 # ============================================================
 
-left, middle, right = st.columns([1.05, 1.25, 0.95])
-
-with left:
-    st.subheader("Scene")
-    st.image(str(render_path), caption=f"{scene_id} | {row['query_id']}", use_container_width=True)
-
-with middle:
-    st.subheader("Prompt")
-    st.text_area("Prompt", prompt, height=460, label_visibility="collapsed")
-
-with right:
-    st.subheader("Ground truth")
-    st.code(
-        f"""Query: {row['structured_query']}\nA: {gt_obj_a}\nB: {gt_obj_b}\nDistance: {gt_distance:.4f} m""",
-        language="text",
+def _safe_file_token(value):
+    return (
+        str(value)
+        .replace("/", "_")
+        .replace("\\", "_")
+        .replace(":", "_")
+        .replace(" ", "_")
     )
 
-    grounded_a = None
-    grounded_b = None
-    response = None
 
+def _result_distance_value(result):
+    if not isinstance(result, dict):
+        return None
+
+    for key in [
+        "e_surface",
+        "surface_distance",
+        "computed_surface_distance",
+        "pred_distance_m",
+        "distance_m",
+    ]:
+        value = result.get(key)
+        if value is not None:
+            try:
+                return float(value)
+            except Exception:
+                pass
+
+    return None
+
+
+grounded_a = None
+grounded_b = None
+response = None
+result = None
+run = False
+
+# ------------------------------------------------------------
+# Execution controls before visual rendering
+# ------------------------------------------------------------
+
+exec_box = st.container()
+
+with exec_box:
     if execution_mode == "VLM via API":
-        run = st.button("Run VLM", use_container_width=True)
+        c_run, c_note = st.columns([0.9, 3.0])
+
+        with c_run:
+            run = st.button("Run VLM", width="stretch")
+
+        with c_note:
+            st.caption("The VLM selects the object instances. The geometric engine computes the distance.")
+
         if run:
             if not api_key:
                 st.error("Enter the API key before calling the VLM.")
@@ -500,27 +531,187 @@ with right:
             ids = mod.extract_ids(response, valid_ids, 2)
             grounded_a, grounded_b = ids[0], ids[1]
 
-            with st.expander("Raw response", expanded=False):
-                st.code(response, language="text")
-
     elif execution_mode == "Manual":
-        grounded_a = st.selectbox("Selected A", object_ids)
-        grounded_b = st.selectbox("Selected B", object_ids)
-        run = st.button("Compute", use_container_width=True)
+        c_a, c_b, c_run = st.columns([2.2, 2.2, 0.9])
+
+        with c_a:
+            grounded_a = st.selectbox("Selected A", object_ids, label_visibility="visible")
+
+        with c_b:
+            grounded_b = st.selectbox("Selected B", object_ids, label_visibility="visible")
+
+        with c_run:
+            st.write("")
+            run = st.button("Compute", width="stretch")
 
     else:
-        st.info("Oracle mode uses the benchmark pair.")
+        c_info, c_run = st.columns([3.0, 0.9])
+
+        with c_info:
+            st.caption("Oracle mode uses the benchmark ground-truth pair.")
+
         grounded_a = gt_obj_a
         grounded_b = gt_obj_b
-        run = st.button("Compute oracle", use_container_width=True)
 
-    if grounded_a and grounded_b and (execution_mode == "VLM via API" or run):
-        result = compute_result(
-            grounded_a=grounded_a,
-            grounded_b=grounded_b,
-            gt_obj_a=gt_obj_a,
-            gt_obj_b=gt_obj_b,
-            gt_distance=gt_distance,
+        with c_run:
+            run = st.button("Compute oracle", width="stretch")
+
+
+# ------------------------------------------------------------
+# Compute result when requested
+# ------------------------------------------------------------
+
+should_compute = bool(grounded_a and grounded_b and (execution_mode == "VLM via API" or run))
+
+if should_compute:
+    result = compute_result(
+        grounded_a=grounded_a,
+        grounded_b=grounded_b,
+        gt_obj_a=gt_obj_a,
+        gt_obj_b=gt_obj_b,
+        gt_distance=gt_distance,
+        scene_id=scene_id,
+    )
+
+distance_for_overlay = _result_distance_value(result)
+
+# ------------------------------------------------------------
+# Build visual render paths
+# ------------------------------------------------------------
+
+demo_visual_dir = ROOT / "artifacts" / "demo_visuals"
+demo_visual_dir.mkdir(parents=True, exist_ok=True)
+
+query_token = _safe_file_token(row["query_id"])
+
+topdown_display_path = render_path
+
+perspective_base_path = find_perspective_image(ROOT, scene_id)
+perspective_display_path = perspective_base_path
+
+# Fallback if no manually provided perspective image exists.
+scene3d_fallback_path = demo_visual_dir / f"{scene_id}_{query_token}_3d_fallback.png"
+
+if grounded_a and grounded_b:
+    a_token = _safe_file_token(grounded_a)
+    b_token = _safe_file_token(grounded_b)
+
+    topdown_display_path = demo_visual_dir / f"{scene_id}_{query_token}_{a_token}_{b_token}_topdown.jpg"
+
+    try:
+        draw_topdown_overlay(
+            render_path=render_path,
+            scene_df=sdf,
+            selected_a=grounded_a,
+            selected_b=grounded_b,
+            distance_m=distance_for_overlay,
+            out_path=topdown_display_path,
             scene_id=scene_id,
+            load_points=mod.load_points,
         )
+    except Exception as exc:
+        topdown_display_path = render_path
+        st.warning(f"Could not draw top-down overlay: {exc}")
+
+    if perspective_base_path is not None:
+        perspective_display_path = demo_visual_dir / f"{scene_id}_{query_token}_{a_token}_{b_token}_perspective.png"
+
+        try:
+            draw_perspective_overlay(
+                image_path=perspective_base_path,
+                root=ROOT,
+                scene_id=scene_id,
+                selected_a=grounded_a,
+                selected_b=grounded_b,
+                distance_m=distance_for_overlay,
+                out_path=perspective_display_path,
+            )
+        except Exception as exc:
+            perspective_display_path = perspective_base_path
+            st.warning(f"Could not draw perspective overlay: {exc}")
+
+    else:
+        perspective_display_path = demo_visual_dir / f"{scene_id}_{query_token}_{a_token}_{b_token}_3d_fallback.png"
+
+        try:
+            render_scene_3d_static(
+                scene_id=scene_id,
+                scene_df=sdf,
+                load_points=mod.load_points,
+                selected_a=grounded_a,
+                selected_b=grounded_b,
+                distance_m=distance_for_overlay,
+                out_path=perspective_display_path,
+            )
+        except Exception as exc:
+            perspective_display_path = None
+            st.warning(f"Could not render 3D fallback: {exc}")
+
+else:
+    if perspective_base_path is not None:
+        perspective_display_path = perspective_base_path
+    else:
+        try:
+            if not scene3d_fallback_path.exists():
+                render_scene_3d_static(
+                    scene_id=scene_id,
+                    scene_df=sdf,
+                    load_points=mod.load_points,
+                    selected_a=None,
+                    selected_b=None,
+                    distance_m=None,
+                    out_path=scene3d_fallback_path,
+                )
+            perspective_display_path = scene3d_fallback_path
+        except Exception as exc:
+            perspective_display_path = None
+            st.warning(f"Could not render 3D fallback: {exc}")
+
+
+# ------------------------------------------------------------
+# Visual dashboard
+# ------------------------------------------------------------
+
+left, middle, right = st.columns([1.15, 1.15, 0.90])
+
+with left:
+    st.caption("Top-down view")
+    st.image(str(topdown_display_path), caption=f"{scene_id} | {row['query_id']}", width="stretch")
+
+with middle:
+    st.caption("Perspective 3D scene")
+
+    if perspective_display_path is not None and Path(perspective_display_path).exists():
+        st.image(str(perspective_display_path), caption="Perspective view", width="stretch")
+    else:
+        st.info("Perspective scene image unavailable.")
+
+with right:
+    st.caption("Query and result")
+
+    st.code(
+        f"""Query: {row['structured_query']}
+GT A: {gt_obj_a}
+GT B: {gt_obj_b}
+GT distance: {gt_distance:.4f} m""",
+        language="text",
+    )
+
+    if grounded_a and grounded_b:
+        st.code(
+            f"""Selected A: {grounded_a}
+Selected B: {grounded_b}""",
+            language="text",
+        )
+
+    if result is not None:
         show_compact_result(result, grounded_a, grounded_b, gt_obj_a, gt_obj_b, gt_distance)
+    else:
+        st.caption("Select objects or run the VLM to update the highlighted views.")
+
+    with st.expander("Prompt", expanded=False):
+        st.text_area("Prompt", prompt, height=260, label_visibility="collapsed")
+
+    if response is not None:
+        with st.expander("Raw VLM response", expanded=False):
+            st.code(response, language="text")
