@@ -23,13 +23,9 @@ distance between the two reconstructed object meshes.
 
 ## Demo
 
-A short system demo is available on YouTube:
+[![Demo video](https://img.youtube.com/vi/ke7fWR93Ydc/hqdefault.jpg)](https://youtu.be/ke7fWR93Ydc)
 
-[Watch the demo](https://www.youtube.com/watch?v=zgJ7WpDbcK8)
-
-The demo illustrates the main pipeline: top-down scene rendering, numbered
-candidate objects, textual object list construction, VLM-based object
-selection, and surface-based distance computation.
+▶️ [Watch the demo on YouTube](https://youtu.be/ke7fWR93Ydc)
 
 ## Repository scope
 
