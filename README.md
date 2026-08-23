@@ -4,6 +4,16 @@
 
 # Spatial Context Injection for Metric Distance Queries in 3D Indoor Scenes
 
+<!-- SCI_PIPELINE_FIGURE_START -->
+<p align="center">
+  <img src="assets/figures/sci_pipeline_overview.png" alt="Overview of the Spatial Context Injection pipeline for metric distance queries in 3D indoor scenes" width="100%">
+</p>
+
+<p align="center">
+  <em>Overview of the Spatial Context Injection pipeline for metric distance queries in 3D indoor scenes.</em>
+</p>
+<!-- SCI_PIPELINE_FIGURE_END -->
+
 This repository contains the code, benchmark metadata, prompts, figures,
 and processed outputs used in the paper:
 
