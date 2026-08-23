@@ -23,8 +23,6 @@ distance between the two reconstructed object meshes.
 
 ## Demo
 
-[![Demo video](https://img.youtube.com/vi/ke7fWR93Ydc/hqdefault.jpg)](https://youtu.be/ke7fWR93Ydc)
-
 ▶️ [Watch the demo on YouTube](https://youtu.be/ke7fWR93Ydc)
 
 ## Repository scope
